@@ -1,0 +1,11 @@
+{
+  "files": {
+    "run-native772-advance-r42-reliability-repair.py": "d3f48148f62e5028fd1f026ad347cd649f4ede76e7231e7f42251d48b66d8329",
+    "reliability-repair-phase18-r1.py": "d696a1570adc0ac33270c2ffafa4db90e0e58eb270850fa7d9e5138e8cd7e5d7",
+    "handoff-native-controller-r42-r1.py": "525d7e4c069ab12512bd03389d41335276a7c4d46eccb6d55b7dac567a8ee2c8",
+    "checks/R42_RELIABILITY_HOLD_CPU_ACCEPTANCE_R1.json": "5b441644ac72dc1636d45fb00c54d17a8602f1904351a716f5aa436e04a82305",
+    "checks/R42_WORKTREE_SOURCE_ORIGIN_R1.json": "7e017caaf1958478ce345bdc196c2f919ce092e79038102a3f3525e24d5157a4",
+    "checks/r42-reliability-hold-r1/test_reliability_hold.py": "77ad48c90f059775ed1b76799e3a46f671c6cbb01bd9e9da000b979a92363987"
+  },
+  "all_runtime_code_new_versions": true
+}

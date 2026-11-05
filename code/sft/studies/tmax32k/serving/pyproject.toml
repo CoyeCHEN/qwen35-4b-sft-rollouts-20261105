@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tmax-vllm-text-registration"
+version = "0.0.1"
+requires-python = ">=3.12"
+
+[project.entry-points."vllm.general_plugins"]
+tmax_text_registration = "tmax_text_registration:register"
+
+[tool.setuptools]
+py-modules = ["tmax_text_registration", "tmax_text_model"]

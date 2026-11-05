@@ -1,3 +1,12 @@
 *.zip
 *.part
 .env
+
+.venv*/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.safetensors
+*.arrow
+*.npz
+*.whl

@@ -1,0 +1,1139 @@
+{
+  "kind": "COMMON30_SIX_CHECKPOINTS_EIGHT_NATIVE_MODEL_JOBS_WHEEL6_R3",
+  "prepared_only": true,
+  "admitted": false,
+  "task_set_count": 30,
+  "model_checkpoint_count": 6,
+  "logical_model_trials": 180,
+  "native_job_count": 8,
+  "native_concurrency_ceiling": 8,
+  "model_n": 1,
+  "lanes": [
+    {
+      "lane": "gpu0-m1e3",
+      "gpu_index": 0,
+      "gpu_uuid": "GPU-7b40e1e7-c43c-ba4f-10ed-397f948eeed1",
+      "model_identity": "qwen35-reliability-new-m1-e3",
+      "HF_manifest_sha256": "2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+      "base_url": "http://172.30.249.1:18300/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "2ade6ec82b1b41c1ba6114294c8f2c45",
+        "pid": 558880,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+        "served_model_name": "qwen35-reliability-new-m1-e3"
+      },
+      "process_identity": {
+        "pid": 558880,
+        "start_ticks": "105365317",
+        "argv_sha256": "0a11e6d2929cf559139cf9f07a082b0819cbda1641c82ef496a31148cb4ea0b1"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 10,
+      "tasks": [
+        "regex-log",
+        "chess-best-move",
+        "filter-js-from-html",
+        "sparql-university",
+        "sam-cell-seg",
+        "train-fasttext",
+        "tune-mjcf",
+        "code-from-image",
+        "torch-tensor-parallelism",
+        "circuit-fibsqrt"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu0-m1e3_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu0-m1e3_JOB_WHEEL6_R3.json",
+          "sha256": "cc016b45c36ab3f305f80c0fcb45a356b57141dfe060709110568054d5ebbbe9",
+          "bytes": 9976
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu0-m1e3_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu0-m1e3_PROFILES_WHEEL6_R3.json",
+          "sha256": "b2382ff358caa0a1c4215dc84a85499625812d089f1402219ab06988f69efb3a",
+          "bytes": 17441
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu0-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu0-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "e96abab39e1ed3c1b214ffe515584edeb7bfd95cfb64092898d13f8087b17ecb",
+          "bytes": 173819
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu0-m1e3",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu0-m1e3/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu4-m1e3",
+      "gpu_index": 4,
+      "gpu_uuid": "GPU-9d89f519-51e1-68e2-b522-6e8c1bdc1130",
+      "model_identity": "qwen35-reliability-new-m1-e3",
+      "HF_manifest_sha256": "2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+      "base_url": "http://172.30.249.1:18303/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "989d23f01d61412a9b8e20df9228dd55",
+        "pid": 1501191,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+        "served_model_name": "qwen35-reliability-new-m1-e3"
+      },
+      "process_identity": {
+        "pid": 1501191,
+        "start_ticks": "106316301",
+        "argv_sha256": "37ae72e025ea95a4c311ec7fab42a785746e441b946043b33a04ae4d91fafa5b"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 10,
+      "tasks": [
+        "llm-inference-batching-scheduler",
+        "video-processing",
+        "polyglot-rust-c",
+        "mteb-leaderboard",
+        "build-cython-ext",
+        "portfolio-optimization",
+        "crack-7z-hash",
+        "build-pov-ray",
+        "cobol-modernization",
+        "configure-git-webserver"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu4-m1e3_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu4-m1e3_JOB_WHEEL6_R3.json",
+          "sha256": "28593662720032b99e14b09b85a9a7fba23f5cb9a9c136e8e6c08a151df63518",
+          "bytes": 10013
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu4-m1e3_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu4-m1e3_PROFILES_WHEEL6_R3.json",
+          "sha256": "abfbee613752da0974178998f15230e2b08bccfaae38fb8d8d5f1ab92792f3ac",
+          "bytes": 17104
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu4-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu4-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "9b1dd683eba520ee1e7ee41f16d8d3f44b02780cb30d2f781236c3cdebcd6b4a",
+          "bytes": 160272
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu4-m1e3",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu4-m1e3/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu5-m1e3",
+      "gpu_index": 5,
+      "gpu_uuid": "GPU-7b634c3e-13ae-5243-19dd-b6edddf9a543",
+      "model_identity": "qwen35-reliability-new-m1-e3",
+      "HF_manifest_sha256": "2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+      "base_url": "http://172.30.249.1:18309/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "9b5cb96ce29143bcacee765f3d0e4fda",
+        "pid": 1491947,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3",
+        "served_model_name": "qwen35-reliability-new-m1-e3"
+      },
+      "process_identity": {
+        "pid": 1491947,
+        "start_ticks": "106307623",
+        "argv_sha256": "ed769031d177234912956aa1ef2829f7f1bf9284774a520f4efb2e2addb48672"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 10,
+      "tasks": [
+        "extract-moves-from-video",
+        "adaptive-rejection-sampler",
+        "install-windows-3.11",
+        "mcmc-sampling-stan",
+        "feal-differential-cryptanalysis",
+        "constraints-scheduling",
+        "fix-git",
+        "write-compressor",
+        "winning-avg-corewars",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu5-m1e3_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu5-m1e3_JOB_WHEEL6_R3.json",
+          "sha256": "52651f1c4526ab8723324c230feb21e078ac4a05e4379ec4c53cccec449e5501",
+          "bytes": 10027
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu5-m1e3_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu5-m1e3_PROFILES_WHEEL6_R3.json",
+          "sha256": "e641ab5074b40df5bddfb130a3b60df320dd4f1c1261bbc5ece1ea5e68a3e046",
+          "bytes": 17415
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu5-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu5-m1e3_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "2e6e5f7668eecfb793bb40ec027e55e2d6d979db94690280a22105a214a61eaa",
+          "bytes": 167379
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu5-m1e3",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu5-m1e3/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu1-m2e1",
+      "gpu_index": 1,
+      "gpu_uuid": "GPU-e6b0a5b4-c14b-e336-1fba-2cda6693aa91",
+      "model_identity": "qwen35-reliability-new-m2-e1",
+      "HF_manifest_sha256": "03836dd3ce9a3a44cc4d374edcaa29e08623ee4c2cd293720f65d6631bbf24a6",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1",
+      "base_url": "http://172.30.249.1:18301/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "c806749ce8c748c79296dee7c0f09d97",
+        "pid": 1500848,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1",
+        "served_model_name": "qwen35-reliability-new-m2-e1"
+      },
+      "process_identity": {
+        "pid": 1500848,
+        "start_ticks": "106315858",
+        "argv_sha256": "8464a38788c35ab3755a7f0d17a5c2a32593ffe42c42d70756a348ac06c3a915"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 30,
+      "tasks": [
+        "regex-log",
+        "llm-inference-batching-scheduler",
+        "extract-moves-from-video",
+        "chess-best-move",
+        "video-processing",
+        "adaptive-rejection-sampler",
+        "filter-js-from-html",
+        "polyglot-rust-c",
+        "install-windows-3.11",
+        "sparql-university",
+        "mteb-leaderboard",
+        "mcmc-sampling-stan",
+        "sam-cell-seg",
+        "build-cython-ext",
+        "feal-differential-cryptanalysis",
+        "train-fasttext",
+        "portfolio-optimization",
+        "constraints-scheduling",
+        "tune-mjcf",
+        "crack-7z-hash",
+        "fix-git",
+        "code-from-image",
+        "build-pov-ray",
+        "write-compressor",
+        "torch-tensor-parallelism",
+        "cobol-modernization",
+        "winning-avg-corewars",
+        "circuit-fibsqrt",
+        "configure-git-webserver",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu1-m2e1_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu1-m2e1_JOB_WHEEL6_R3.json",
+          "sha256": "4769e2abfc9df3c08d851627e03ca98631550b801846f022a1fbd34637ba105e",
+          "bytes": 12901
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu1-m2e1_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu1-m2e1_PROFILES_WHEEL6_R3.json",
+          "sha256": "c769767dbeee43633014cc33cca34bbdc7517e94ca8ec253338beedf92b6ee7d",
+          "bytes": 51954
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu1-m2e1_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu1-m2e1_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "95c55972097d16579f32f0911bd6e3e1f7b83b74a4d9c15c3ef5f42e45a44b99",
+          "bytes": 501474
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu2-m0",
+      "gpu_index": 2,
+      "gpu_uuid": "GPU-995cb9ba-212b-9df4-f85b-f6f75757007b",
+      "model_identity": "qwen35-reliability-m0",
+      "HF_manifest_sha256": "e9624087f590acf307a1676ae1206c545d817209a67f78d1f62f9ac1ea34c4ff",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer",
+      "base_url": "http://172.30.249.1:18302/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "a02cabdbb4e043cdac91977ad38f5fe4",
+        "pid": 3721808,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer",
+        "served_model_name": "qwen35-reliability-m0"
+      },
+      "process_identity": {
+        "pid": 3721808,
+        "start_ticks": "104588387",
+        "argv_sha256": "e33cfe7a5709f68fd7696a44542b696f6b18dd4b6d5d11249afd139993849f0f"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 30,
+      "tasks": [
+        "regex-log",
+        "llm-inference-batching-scheduler",
+        "extract-moves-from-video",
+        "chess-best-move",
+        "video-processing",
+        "adaptive-rejection-sampler",
+        "filter-js-from-html",
+        "polyglot-rust-c",
+        "install-windows-3.11",
+        "sparql-university",
+        "mteb-leaderboard",
+        "mcmc-sampling-stan",
+        "sam-cell-seg",
+        "build-cython-ext",
+        "feal-differential-cryptanalysis",
+        "train-fasttext",
+        "portfolio-optimization",
+        "constraints-scheduling",
+        "tune-mjcf",
+        "crack-7z-hash",
+        "fix-git",
+        "code-from-image",
+        "build-pov-ray",
+        "write-compressor",
+        "torch-tensor-parallelism",
+        "cobol-modernization",
+        "winning-avg-corewars",
+        "circuit-fibsqrt",
+        "configure-git-webserver",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu2-m0_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu2-m0_JOB_WHEEL6_R3.json",
+          "sha256": "0c843a72139f395d45e270a502fe1b038da9e847f765df16785a91abdbc8cd38",
+          "bytes": 12877
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu2-m0_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu2-m0_PROFILES_WHEEL6_R3.json",
+          "sha256": "7b3e821c9ee32b400abf655e2bad0cc29c69ef82c781b5e9eefce8648862be28",
+          "bytes": 51894
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu2-m0_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu2-m0_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "e4f8a8ef061ceeb19e9def2e2564064c80438a808daead675a6f9d774ae38ae0",
+          "bytes": 501654
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu2-m0",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu2-m0/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu3-m2e5",
+      "gpu_index": 3,
+      "gpu_uuid": "GPU-6e9a5318-94e0-36dc-cb4a-95a22a0950d5",
+      "model_identity": "qwen35-reliability-new-m2-e5",
+      "HF_manifest_sha256": "c4b4c5ae2649d1de5312deda149ebdec0f08089a7ebaf99738faba1dbac16487",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5",
+      "base_url": "http://172.30.249.1:18308/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "76fd6ea31b5a48fcaa47277ecb1c4902",
+        "pid": 3725362,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5",
+        "served_model_name": "qwen35-reliability-new-m2-e5"
+      },
+      "process_identity": {
+        "pid": 3725362,
+        "start_ticks": "104589660",
+        "argv_sha256": "31e236b909f7203a0b883145f0fb99f1d4533f00369f794902944088686d9865"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 30,
+      "tasks": [
+        "regex-log",
+        "llm-inference-batching-scheduler",
+        "extract-moves-from-video",
+        "chess-best-move",
+        "video-processing",
+        "adaptive-rejection-sampler",
+        "filter-js-from-html",
+        "polyglot-rust-c",
+        "install-windows-3.11",
+        "sparql-university",
+        "mteb-leaderboard",
+        "mcmc-sampling-stan",
+        "sam-cell-seg",
+        "build-cython-ext",
+        "feal-differential-cryptanalysis",
+        "train-fasttext",
+        "portfolio-optimization",
+        "constraints-scheduling",
+        "tune-mjcf",
+        "crack-7z-hash",
+        "fix-git",
+        "code-from-image",
+        "build-pov-ray",
+        "write-compressor",
+        "torch-tensor-parallelism",
+        "cobol-modernization",
+        "winning-avg-corewars",
+        "circuit-fibsqrt",
+        "configure-git-webserver",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu3-m2e5_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu3-m2e5_JOB_WHEEL6_R3.json",
+          "sha256": "87e7fe199f7ba57187ccd81debe6430d861c8c248c4db7dbbc3372fff1a77b95",
+          "bytes": 12902
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu3-m2e5_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu3-m2e5_PROFILES_WHEEL6_R3.json",
+          "sha256": "c83a72040901a3209edf7f2a1fc761d00384d4ce7eae6001dd213a8cecfa09b7",
+          "bytes": 51954
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu3-m2e5_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu3-m2e5_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "b084f23a5a6df35a84d0a9d5a736544e0eff5c8f07c3d005bfabb9313d38b78d",
+          "bytes": 501534
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu3-m2e5",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu3-m2e5/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu6-m1e5",
+      "gpu_index": 6,
+      "gpu_uuid": "GPU-5026c220-7a86-e58e-baae-4921112354c1",
+      "model_identity": "qwen35-reliability-new-m1-e5",
+      "HF_manifest_sha256": "1edef547fa791ce2c8abca331ee7ac339b8e836806ebe06988a197b0c9eb9355",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5",
+      "base_url": "http://172.30.249.1:18306/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "d958648b8fa14c78a622d07a0029934d",
+        "pid": 1501586,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5",
+        "served_model_name": "qwen35-reliability-new-m1-e5"
+      },
+      "process_identity": {
+        "pid": 1501586,
+        "start_ticks": "106316795",
+        "argv_sha256": "36bfb56d70846cc2e91e505bcaa31a8dc6a0a00fc48deab8fd8de23659f0c004"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 30,
+      "tasks": [
+        "regex-log",
+        "llm-inference-batching-scheduler",
+        "extract-moves-from-video",
+        "chess-best-move",
+        "video-processing",
+        "adaptive-rejection-sampler",
+        "filter-js-from-html",
+        "polyglot-rust-c",
+        "install-windows-3.11",
+        "sparql-university",
+        "mteb-leaderboard",
+        "mcmc-sampling-stan",
+        "sam-cell-seg",
+        "build-cython-ext",
+        "feal-differential-cryptanalysis",
+        "train-fasttext",
+        "portfolio-optimization",
+        "constraints-scheduling",
+        "tune-mjcf",
+        "crack-7z-hash",
+        "fix-git",
+        "code-from-image",
+        "build-pov-ray",
+        "write-compressor",
+        "torch-tensor-parallelism",
+        "cobol-modernization",
+        "winning-avg-corewars",
+        "circuit-fibsqrt",
+        "configure-git-webserver",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu6-m1e5_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu6-m1e5_JOB_WHEEL6_R3.json",
+          "sha256": "883bda372da2f48dc29c7ddc6a3a9fce4497a273d7f835093548ea2f638cf7fe",
+          "bytes": 12900
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu6-m1e5_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu6-m1e5_PROFILES_WHEEL6_R3.json",
+          "sha256": "769bd53a900a0f5450dd9218f9dac3e80b11ec3687460273913f12e1d2d3fbbc",
+          "bytes": 51954
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu6-m1e5_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu6-m1e5_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "9a6e94c87595509d1925ecd5d26c8040d2199d775fcb1fca1e6fdf04c214d532",
+          "bytes": 501414
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu6-m1e5",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu6-m1e5/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    },
+    {
+      "lane": "gpu7-m2e3",
+      "gpu_index": 7,
+      "gpu_uuid": "GPU-5930b869-bd11-7161-d64a-aa1ab07b64ec",
+      "model_identity": "qwen35-reliability-new-m2-e3",
+      "HF_manifest_sha256": "e713769c6cb7c25c9af91186af8a5a93444fff435724bfcd740ebcb26af16258",
+      "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3",
+      "base_url": "http://172.30.249.1:18307/v1",
+      "expected_counter_identity": {
+        "service_instance_id": "ff0d5d14d2cd435d9ae08d05bc6760d7",
+        "pid": 1502474,
+        "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+        "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+        "processor_class": "Qwen3VLProcessor",
+        "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+        "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+        "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+        "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+        "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3",
+        "served_model_name": "qwen35-reliability-new-m2-e3"
+      },
+      "process_identity": {
+        "pid": 1502474,
+        "start_ticks": "106317273",
+        "argv_sha256": "f4f3b2103c56f94e0ca0c027a7e9c36e2da93adea33c991bffc2d795a52ed63d"
+      },
+      "native_K": 1,
+      "n_attempts": 1,
+      "native_retry": 0,
+      "task_count": 30,
+      "tasks": [
+        "regex-log",
+        "llm-inference-batching-scheduler",
+        "extract-moves-from-video",
+        "chess-best-move",
+        "video-processing",
+        "adaptive-rejection-sampler",
+        "filter-js-from-html",
+        "polyglot-rust-c",
+        "install-windows-3.11",
+        "sparql-university",
+        "mteb-leaderboard",
+        "mcmc-sampling-stan",
+        "sam-cell-seg",
+        "build-cython-ext",
+        "feal-differential-cryptanalysis",
+        "train-fasttext",
+        "portfolio-optimization",
+        "constraints-scheduling",
+        "tune-mjcf",
+        "crack-7z-hash",
+        "fix-git",
+        "code-from-image",
+        "build-pov-ray",
+        "write-compressor",
+        "torch-tensor-parallelism",
+        "cobol-modernization",
+        "winning-avg-corewars",
+        "circuit-fibsqrt",
+        "configure-git-webserver",
+        "qemu-alpine-ssh"
+      ],
+      "files": {
+        "job": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu7-m2e3_JOB_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu7-m2e3_JOB_WHEEL6_R3.json",
+          "sha256": "433fa4a80f8f3a85feea8ca603fc703e72619e3acbdf5b43263ad0ef3e6c0158",
+          "bytes": 12901
+        },
+        "profiles": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu7-m2e3_PROFILES_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu7-m2e3_PROFILES_WHEEL6_R3.json",
+          "sha256": "02ae40dfd6c14e670ae79cfd572a718a2c4a204ba739d92b42710f806349f64c",
+          "bytes": 51954
+        },
+        "contracts": {
+          "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/COMMON30_gpu7-m2e3_CONTRACTS_WHEEL6_R3.json",
+          "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-inputs-r1/COMMON30_gpu7-m2e3_CONTRACTS_WHEEL6_R3.json",
+          "sha256": "96f792352bc31faf4feeabe2456047ca75987a8401041c81f3a7e0e2c8974ebb",
+          "bytes": 501474
+        }
+      },
+      "control_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu7-m2e3",
+      "ready_lock": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu7-m2e3/ready.lock.json",
+      "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1"
+    }
+  ],
+  "task_order": [
+    "regex-log",
+    "llm-inference-batching-scheduler",
+    "extract-moves-from-video",
+    "chess-best-move",
+    "video-processing",
+    "adaptive-rejection-sampler",
+    "filter-js-from-html",
+    "polyglot-rust-c",
+    "install-windows-3.11",
+    "sparql-university",
+    "mteb-leaderboard",
+    "mcmc-sampling-stan",
+    "sam-cell-seg",
+    "build-cython-ext",
+    "feal-differential-cryptanalysis",
+    "train-fasttext",
+    "portfolio-optimization",
+    "constraints-scheduling",
+    "tune-mjcf",
+    "crack-7z-hash",
+    "fix-git",
+    "code-from-image",
+    "build-pov-ray",
+    "write-compressor",
+    "torch-tensor-parallelism",
+    "cobol-modernization",
+    "winning-avg-corewars",
+    "circuit-fibsqrt",
+    "configure-git-webserver",
+    "qemu-alpine-ssh"
+  ],
+  "sampling_manifest_sha256": "cf3e08b04fb455c3ef1c2c23a501cbf2a649328235f33f6b83cce6ff44f41858",
+  "abi_source_sha256": "8b72f4675c03d6914b3e1a902868942336ccd4c430a6263b47ad559dc77ae813",
+  "ABI_counts": {
+    "cp313": 14,
+    "cp312": 15,
+    "cp311": 1
+  },
+  "native_harbor_identity": {
+    "approved_source_commit": "2ad876b5490715d1fcc3bc7d3e17f4a7451636ca",
+    "runtime_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/native-campaign-runtime-r5-release5",
+    "wheel_sha256": null,
+    "status": "ROOT_SOURCE5_DEPLOYMENT_REPORTED; MODEL30_NATIVE_FOUR_STAGE_ACCEPTANCE_PENDING"
+  },
+  "environment_READY_claimed": 0,
+  "new_model_trials_started": 0,
+  "model_generation_calls": 0,
+  "source_stageb_sha256": "9697adb34d9230f990d299efc4444da32cc5245419d7ed79bdf2870bc45af1d9",
+  "allowed_effective_config_changes": [
+    "model.id",
+    "model.name",
+    "model.baseUrl",
+    "requestOptions.inputTokenCount.expectedIdentity"
+  ],
+  "source_verifier_contracts_sha256": "2ef02c73e08068e0fb077cafb830c523a8bc201148a8c47c3325d4c517a49414",
+  "source_verifier_profiles_sha256": "5ccef04204b3ab32945349782030078b77066b4605f5f1adc6443fc9aef4e684",
+  "composes": [
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/regex-log.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-regex-log-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/llm-inference-batching-scheduler.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-llm-inference-batching-scheduler-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/extract-moves-from-video.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-extract-moves-from-video-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/chess-best-move.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-chess-best-move-r3.compose.json",
+      "sha256": "13e1f0bed854e86cd1a7dbafd45c522a737b3d52aede52b0225f431a32c9977b",
+      "bytes": 1120,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/video-processing.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-video-processing-r3.compose.json",
+      "sha256": "0b85d5ad3f67ba100fe7f3e9cfc0a0c48989019b00e50865ef32f3521c69436e",
+      "bytes": 1139,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/adaptive-rejection-sampler.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-adaptive-rejection-sampler-r3.compose.json",
+      "sha256": "a925fda2315058a4587c93fcf46b4eb8b2d7bdd5ef844997a4f070da8f183826",
+      "bytes": 1498,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/filter-js-from-html.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-filter-js-from-html-r3.compose.json",
+      "sha256": "c9ee497d626c1981ad1588945f7d493b493968c60b24c236f10e43481b10c01e",
+      "bytes": 1142,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/polyglot-rust-c.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-polyglot-rust-c-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/install-windows-3.11.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-install-windows-3.11-r3.compose.json",
+      "sha256": "4cb2c73a98e7e42cde538469540a882bc0a7cb2e37bb06cd7dd4fa7c667fa3fc",
+      "bytes": 1143,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/sparql-university.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-sparql-university-r3.compose.json",
+      "sha256": "a71251b6e9ee820af4e5662013b6371484b4a1092b64fdef046ec0737fbbdfec",
+      "bytes": 1489,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/mteb-leaderboard.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-mteb-leaderboard-r3.compose.json",
+      "sha256": "93dbc0ad0ba96963ffbc98d1ff615e401f713903f7e61b1ae8ca1acaf0c2e949",
+      "bytes": 1121,
+      "ABI": "cp311",
+      "cache_manifest_sha256": "70e3a4eb7be67183738b2b11c83675235638ca3e0e3fa352c15246c8a1fa3689"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/mcmc-sampling-stan.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-mcmc-sampling-stan-r3.compose.json",
+      "sha256": "6aed79b57465cf1295602afba518d0281fa8fd65cc288c4b4b4044f1434d96bd",
+      "bytes": 1118,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/sam-cell-seg.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-sam-cell-seg-r3.compose.json",
+      "sha256": "ea1207f90fa50c332c2f84c6636ccd5aed9346e7c581dbc2e1d36c07b122a6ec",
+      "bytes": 3455,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/build-cython-ext.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-build-cython-ext-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/feal-differential-cryptanalysis.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-feal-differential-cryptanalysis-r3.compose.json",
+      "sha256": "a36c17750af36b6001f9be87f3a921b22eb1501c283b9623fdf12b3618c5bf02",
+      "bytes": 1154,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/train-fasttext.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-train-fasttext-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/portfolio-optimization.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-portfolio-optimization-r3.compose.json",
+      "sha256": "2e9283c826664d2480fe99b2711d44bf3a29d32ce416423165cf5d42a5f8d5fc",
+      "bytes": 1145,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/constraints-scheduling.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-constraints-scheduling-r3.compose.json",
+      "sha256": "13e1f0bed854e86cd1a7dbafd45c522a737b3d52aede52b0225f431a32c9977b",
+      "bytes": 1120,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/tune-mjcf.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-tune-mjcf-r3.compose.json",
+      "sha256": "369497cf8728085e28c31c8b1ce0fbb3648f0b101caf14aad1716b3ffde48ae8",
+      "bytes": 1132,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/crack-7z-hash.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-crack-7z-hash-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/fix-git.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-fix-git-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/code-from-image.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-code-from-image-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/build-pov-ray.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-build-pov-ray-r3.compose.json",
+      "sha256": "2508ae9da8180fbc2e1e4b4e112785bbc673a12bbe854e28ed7097b12d46de4b",
+      "bytes": 1485,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/write-compressor.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-write-compressor-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/torch-tensor-parallelism.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-torch-tensor-parallelism-r3.compose.json",
+      "sha256": "efd79b465aff54b984393221d6a1dca20de29d79462451132ff5d1b1cbdb4999",
+      "bytes": 1461,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/cobol-modernization.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-cobol-modernization-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/winning-avg-corewars.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-winning-avg-corewars-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/circuit-fibsqrt.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-circuit-fibsqrt-r3.compose.json",
+      "sha256": "bf72a419feaf4da3a49d46ea4e0b4eb7d2b978ba67e64a40d326b0241ecf7ae6",
+      "bytes": 1120,
+      "ABI": "cp313",
+      "cache_manifest_sha256": "c0c8d3062c2169a61f4a4003b2ab155c9d0966b4f426efe45b1084a30fab7ff0"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/configure-git-webserver.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-configure-git-webserver-r3.compose.json",
+      "sha256": "7c61d4c43f547ff2af8f7f6a0614ce101062c67e07b984b812dd0aba7202f062",
+      "bytes": 1469,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/common30-model8-native-wheel6-r3/deployment/compose/qemu-alpine-ssh.compose.json",
+      "target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-qemu-alpine-ssh-r3.compose.json",
+      "sha256": "da450a65e2795ecf06409af8887b2e7405aefd4c1a208538c8fb349aa748a992",
+      "bytes": 2192,
+      "ABI": "cp312",
+      "cache_manifest_sha256": "ec112b249cfb8ee8f79d488cbd107cf20ed1f572147037776816daf79a30594f"
+    }
+  ],
+  "harness": {
+    "source_commit": "e14ebe361c82b1d9ac1f5317e3d77bee1738ebd1",
+    "wheel_sha256": "8c84a8659c136b027c36c48a7100d956fdb58c873b347ef6b240b561cc75e85d",
+    "wheel_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/openharness-wheel6-artifacts-r1/open_harness_ai-0.3.0+rsi.reliability.20261104.6-py3-none-any.whl",
+    "foundation_io_sha256": "d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893"
+  },
+  "expected_Docker_Engine_ID": "59c8ba22-0aa4-4aed-bc43-4e1b5989fa22",
+  "qemu_archive_cache_delta": {
+    "merged": true,
+    "cache_manifest_target17": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/qemu-bullseye-public-apt-cache-r1/sealed/QEMU_BULLSEYE_SIGNED_THREE_DEB_CACHE_READY_R1.json",
+    "cache_manifest_sha256": "24a783e4835c33f107f7e39fbb9ee42068f34addb4222299fe8d8a5bb0d71727",
+    "actual_transfer_and_environment_Ready_claimed": false,
+    "source_files": {
+      "QEMU_SIGNED_CACHE_PROFILE_R1.json": "7f3c4636e0de4b9d99e07fe1c83a3ee1e2f9762f354088b1176d7750d84e3bdf",
+      "QEMU_SIGNED_CACHE_CONTRACT_R1.json": "926f1ca3f1e510064891bdd5e30c9e370d53bb6abf139bff7042b85c677eb926",
+      "qemu-signed-cache-native-r1.compose.json": "8e7a530b9fb447847ba2a0257096a461afc86425f2c52216a928d0838c7ab463"
+    }
+  },
+  "synthetic32_separate_denominator": {
+    "synthetic_trials": 32,
+    "common_trials": 180,
+    "total_authorized_logical_trials": 212,
+    "no_combined_score": true
+  },
+  "dispatch_control": "Existing sole Ceph-lock owner only; three M1E3 lanes run after their owned32 shard, other five wait actual ENV30 and own native ready locks; no custom runner provided",
+  "actual_process_observation": {
+    "kind": "COMMON30_EIGHT_ACTUAL18_SERVING_PROCESS_IDENTITIES_R1",
+    "at": 1793738307.1773732,
+    "passed": true,
+    "rows": [
+      {
+        "gpu_index": 0,
+        "gpu_uuid": "GPU-7b40e1e7-c43c-ba4f-10ed-397f948eeed1",
+        "unit": "qwen35-reliability-cold-new-m1-e3-gpu0-20261103-r1.service",
+        "process_identity": {
+          "pid": 558880,
+          "start_ticks": "105365317",
+          "argv_sha256": "0a11e6d2929cf559139cf9f07a082b0819cbda1641c82ef496a31148cb4ea0b1"
+        },
+        "unit_state": "MainPID=558880\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 1,
+        "gpu_uuid": "GPU-e6b0a5b4-c14b-e336-1fba-2cda6693aa91",
+        "unit": "qwen35-reliability-cold-new-m2-e1-gpu1-20261103-r1.service",
+        "process_identity": {
+          "pid": 1500848,
+          "start_ticks": "106315858",
+          "argv_sha256": "8464a38788c35ab3755a7f0d17a5c2a32593ffe42c42d70756a348ac06c3a915"
+        },
+        "unit_state": "MainPID=1500848\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 2,
+        "gpu_uuid": "GPU-995cb9ba-212b-9df4-f85b-f6f75757007b",
+        "unit": "qwen35-reliability-cold-m0-20261103-r1.service",
+        "process_identity": {
+          "pid": 3721808,
+          "start_ticks": "104588387",
+          "argv_sha256": "e33cfe7a5709f68fd7696a44542b696f6b18dd4b6d5d11249afd139993849f0f"
+        },
+        "unit_state": "MainPID=3721808\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 3,
+        "gpu_uuid": "GPU-6e9a5318-94e0-36dc-cb4a-95a22a0950d5",
+        "unit": "qwen35-reliability-cold-new-m2-e5-20261103-r1.service",
+        "process_identity": {
+          "pid": 3725362,
+          "start_ticks": "104589660",
+          "argv_sha256": "31e236b909f7203a0b883145f0fb99f1d4533f00369f794902944088686d9865"
+        },
+        "unit_state": "MainPID=3725362\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 4,
+        "gpu_uuid": "GPU-9d89f519-51e1-68e2-b522-6e8c1bdc1130",
+        "unit": "qwen35-reliability-cold-new-m1-e3-gpu4-20261103-r1.service",
+        "process_identity": {
+          "pid": 1501191,
+          "start_ticks": "106316301",
+          "argv_sha256": "37ae72e025ea95a4c311ec7fab42a785746e441b946043b33a04ae4d91fafa5b"
+        },
+        "unit_state": "MainPID=1501191\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 5,
+        "gpu_uuid": "GPU-7b634c3e-13ae-5243-19dd-b6edddf9a543",
+        "unit": "qwen35-reliability-cold-new-m1-e3-gpu5-20261103-r1.service",
+        "process_identity": {
+          "pid": 1491947,
+          "start_ticks": "106307623",
+          "argv_sha256": "ed769031d177234912956aa1ef2829f7f1bf9284774a520f4efb2e2addb48672"
+        },
+        "unit_state": "MainPID=1491947\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 6,
+        "gpu_uuid": "GPU-5026c220-7a86-e58e-baae-4921112354c1",
+        "unit": "qwen35-reliability-cold-new-m1-e5-gpu6-20261103-r1.service",
+        "process_identity": {
+          "pid": 1501586,
+          "start_ticks": "106316795",
+          "argv_sha256": "36bfb56d70846cc2e91e505bcaa31a8dc6a0a00fc48deab8fd8de23659f0c004"
+        },
+        "unit_state": "MainPID=1501586\nActiveState=active\nSubState=running\n"
+      },
+      {
+        "gpu_index": 7,
+        "gpu_uuid": "GPU-5930b869-bd11-7161-d64a-aa1ab07b64ec",
+        "unit": "qwen35-reliability-cold-new-m2-e3-gpu7-20261103-r1.service",
+        "process_identity": {
+          "pid": 1502474,
+          "start_ticks": "106317273",
+          "argv_sha256": "f4f3b2103c56f94e0ca0c027a7e9c36e2da93adea33c991bffc2d795a52ed63d"
+        },
+        "unit_state": "MainPID=1502474\nActiveState=active\nSubState=running\n"
+      }
+    ],
+    "model_generation_calls": 0
+  },
+  "required_per_task_agent_timeouts_sec": {
+    "regex-log": 10800,
+    "llm-inference-batching-scheduler": 10800,
+    "extract-moves-from-video": 10800,
+    "chess-best-move": 10800,
+    "video-processing": 10800,
+    "adaptive-rejection-sampler": 10800,
+    "filter-js-from-html": 10800,
+    "polyglot-rust-c": 10800,
+    "install-windows-3.11": 10800,
+    "sparql-university": 10800,
+    "mteb-leaderboard": 10800,
+    "mcmc-sampling-stan": 10800,
+    "sam-cell-seg": 10800,
+    "build-cython-ext": 10800,
+    "feal-differential-cryptanalysis": 10800,
+    "train-fasttext": 10800,
+    "portfolio-optimization": 10800,
+    "constraints-scheduling": 10800,
+    "tune-mjcf": 10800,
+    "crack-7z-hash": 10800,
+    "fix-git": 10800,
+    "code-from-image": 10800,
+    "build-pov-ray": 12000.0,
+    "write-compressor": 10800,
+    "torch-tensor-parallelism": 10800,
+    "cobol-modernization": 10800,
+    "winning-avg-corewars": 10800,
+    "circuit-fibsqrt": 10800,
+    "configure-git-webserver": 10800,
+    "qemu-alpine-ssh": 10800
+  },
+  "agent_timeout_profile_capability_required": {
+    "task": "build-pov-ray",
+    "required_sec": 12000,
+    "current_global_StageB_override_sec": 10800,
+    "status": "DECLARED_NATIVE_PROFILE_AGENT_TIMEOUT_12000_SOURCE5",
+    "other_29_profiles_omit_agent_timeout_sec": true
+  },
+  "R1_index_preserved_sha256": "22fc173739abced7e265576827b186af39b872a126e2a3667fbc5d432719956f",
+  "Job_JSON_bodies_unchanged_from_R1": false,
+  "Job_JSON_delta_from_R2": "Only environment.kwargs.staging_root changed to the root-selected campaigns-r2/<lane>/staging; all model/agent/tool/sampling/resource fields are unchanged.",
+  "sam_approved_delta": {
+    "source_index_sha256": "213b7d0d8581801ec4fd8efa817889cd75692ff217c8fdc13c156220e4c633ac",
+    "profile_sha256": "c572a367ac5260f99909861480a4777a6e04e04360df99837222b5039a22be1d",
+    "contract_sha256": "83b91d9bba9318be2f403bc2ccf93f33d92cc55fed06cf6d3a0a99ed99702d28",
+    "compose_sha256": "81fa4a8c8383a705872f28bba5469a9374bc9e6a1c314d4cd25a9c5538961c8d",
+    "public_weight_same_SHA": true,
+    "required_runtime_pin_count": 38,
+    "allowed_nonruntime_packaging_names": [
+      "pip",
+      "setuptools"
+    ],
+    "observed_managed_base_packaging": {
+      "pip": "25.2",
+      "setuptools": "80.9.0"
+    },
+    "cache_scope": "Verifier.env.PATH plus exact read-only public fetch binding; Agent environment does not inherit PATH override",
+    "actual_model_Ready_claimed": false
+  },
+  "shared_environment_scoring": "One shared set of30 actual official NOP scores: remaining28 native NOP Job plus QEMU/SAM singleton Results; model Prepare/Validate perform no NOP scoring. All180 real model runs still require their own actual official Verifier.",
+  "R2_index_preserved_sha256": "94e3d77be8598b1fc377afa3e24a34c8d6fce3640ece57f6550449ec3af57d0e"
+}

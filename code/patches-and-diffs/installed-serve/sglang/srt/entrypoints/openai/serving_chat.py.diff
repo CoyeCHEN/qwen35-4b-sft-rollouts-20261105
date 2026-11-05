@@ -1,0 +1,122 @@
+--- 03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/openai/serving_chat.py
++++ 02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/openai/serving_chat.py
+@@ -44,7 +44,7 @@
+     should_include_usage,
+     to_openai_style_logprobs,
+ )
+-from sglang.srt.function_call.core_types import ToolCallItem
++from sglang.srt.function_call.core_types import ToolCallItem, ToolCallParsingError
+ from sglang.srt.function_call.function_call_parser import FunctionCallParser
+ from sglang.srt.function_call.json_array_parser import JsonArrayParser
+ from sglang.srt.function_call.utils import get_json_schema_constraint
+@@ -344,12 +344,12 @@
+             request.skip_special_tokens = False
+             if not isinstance(request.tool_choice, str):
+                 tools = [
+-                    item.model_dump()
++                    orjson.loads(orjson.dumps(item.model_dump(exclude_unset=True), option=orjson.OPT_SORT_KEYS))
+                     for item in request.tools
+                     if item.function.name == request.tool_choice.function.name
+                 ]
+             else:
+-                tools = [item.model_dump() for item in request.tools]
++                tools = [orjson.loads(orjson.dumps(item.model_dump(exclude_unset=True), option=orjson.OPT_SORT_KEYS)) for item in request.tools]
+             if self.tool_call_parser:
+                 parser = FunctionCallParser(request.tools, self.tool_call_parser)
+                 tool_call_constraint = parser.get_structure_constraint(
+@@ -906,6 +906,9 @@
+                 )
+                 yield f"data: {usage_chunk.model_dump_json()}\n\n"
+ 
++        except ToolCallParsingError as e:
++            error = self._tool_parsing_error(e, content)
++            yield f"data: {json.dumps(error, ensure_ascii=False)}\n\n"
+         except ValueError as e:
+             if not stream_started:
+                 raise
+@@ -1005,13 +1008,18 @@
+                 and self.tool_call_parser
+             ):
+                 history_tool_calls_cnt = self._get_history_tool_calls_cnt(request)
+-                tool_calls, text, finish_reason = self._process_tool_calls(
+-                    text,
+-                    request.tools,
+-                    finish_reason,
+-                    request.tool_choice,
+-                    history_tool_calls_cnt,
+-                )
++                try:
++                    tool_calls, text, finish_reason = self._process_tool_calls(
++                        text,
++                        request.tools,
++                        copy.deepcopy(finish_reason),
++                        request.tool_choice,
++                        history_tool_calls_cnt,
++                    )
++                except ToolCallParsingError as e:
++                    return ORJSONResponse(
++                        status_code=422, content=self._tool_parsing_error(e, ret_item)
++                    )
+ 
+             choice_data = ChatCompletionResponseChoice(
+                 index=idx,
+@@ -1193,6 +1201,8 @@
+                         )
+                     )
+                 return ToolCallProcessingResult(tool_calls, text, finish_reason)
++            except ToolCallParsingError:
++                raise
+             except Exception as e:
+                 logger.error(f"Tool call parsing error: {e}")
+                 # Return error but don't fail the whole request
+@@ -1219,6 +1229,19 @@
+         token_logprobs = self._process_logprobs_tokens(logprobs, use_token_index=False)
+         return ChoiceLogprobs(content=token_logprobs)
+ 
++    @staticmethod
++    def _tool_parsing_error(error: ToolCallParsingError, content: Dict[str, Any]) -> dict:
++        meta = content["meta_info"]
++        response = ErrorResponse(
++            message=str(error), type="ResponseParsingError", code=422, param=None
++        ).model_dump()
++        response.update(
++            stage="tool_parser", response_id=meta["id"],
++            native_finish_reason=meta.get("finish_reason"), attribution="undetermined",
++            usage=UsageProcessor.calculate_response_usage([content]).model_dump(),
++        )
++        return {"error": response}
++
+     def _process_reasoning_stream(
+         self,
+         index: int,
+@@ -1240,7 +1263,12 @@
+                 request,
+             )
+         reasoning_parser = reasoning_parser_dict[index]
+-        return reasoning_parser.parse_stream_chunk(delta)
++        reasoning, normal = reasoning_parser.parse_stream_chunk(delta)
++        if self.reasoning_parser in ("qwen3", "qwen3-thinking") and content["meta_info"].get("finish_reason"):
++            final = reasoning_parser.detector.finish_stream()
++            reasoning += final.reasoning_text
++            normal += final.normal_text
++        return reasoning, normal
+ 
+     def _get_history_tool_calls_cnt(self, request: ChatCompletionRequest) -> int:
+         """Counts the number of tool calls in the request's message history.
+@@ -1344,6 +1372,16 @@
+             normal_text, calls = result.normal_text, result.calls
+         else:
+             normal_text, calls = parser.parse_stream_chunk(delta)
++            if self.tool_call_parser in ("qwen3_coder", "step3p5"):
++                if content["meta_info"].get("finish_reason"):
++                    final = parser.detector.finish_stream()
++                    normal_text += final.normal_text
++                    calls.extend(final.calls)
++                elif parser.detector._pending_error is not None:
++                    # Drain the existing generation to preserve its real finish reason.
++                    # An SSE comment is transport liveness, not assistant content.
++                    yield ": tool-parser-rejection-pending\n\n"
++                    return
+ 
+         # Yield normal text
+         if normal_text:

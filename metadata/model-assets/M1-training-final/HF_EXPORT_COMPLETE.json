@@ -1,0 +1,58 @@
+{
+  "model": "Qwen/Qwen3.5-4B",
+  "base_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "path": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5",
+  "complete_final_hf": true,
+  "optimizer_resume": false,
+  "resume_note": "Same-stage resume uses native complete checkpoint-N; M1-to-M2 loads these final weights with NEW Adam/scheduler.",
+  "files": [
+    {
+      "path": "chat_template.jinja",
+      "bytes": 7756,
+      "mtime_ns": 1793558495616657507,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+    },
+    {
+      "path": "config.json",
+      "bytes": 2926,
+      "mtime_ns": 1793558488864684747,
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e"
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 163,
+      "mtime_ns": 1793558488864684747,
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 9078620536,
+      "mtime_ns": 1793558495608657539,
+      "sha256": "1b0887b64ffe7c67662862c7dd383b99b523d618dc7169b41e950f87b86fd2e4"
+    },
+    {
+      "path": "preprocessor_config.json",
+      "bytes": 390,
+      "mtime_ns": 1793558741231856118,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 12807982,
+      "mtime_ns": 1793558741151856405,
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 15149,
+      "mtime_ns": 1793558741175856319,
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071"
+    },
+    {
+      "path": "trainer_state.json",
+      "bytes": 62969,
+      "mtime_ns": 1793558496272654900,
+      "sha256": "e14287e81881b53d1f969fb7e4167dbd95ba19639feefd5856cccab0d7a71328"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+name: Python Tests
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["main"]
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: read
+
+# CLI JSONL and artifact contracts use UTF-8 on both platforms.
+env:
+  PYTHONUTF8: "1"
+
+concurrency:
+  group: tests-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: test (${{ matrix.os == 'ubuntu-26.04' && 'ubuntu-latest' || matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-26.04, windows-2025]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Install the latest version of uv
+        uses: astral-sh/setup-uv@v8.1.0
+        with:
+          version: "latest"
+
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v5
+        with:
+          version: "latest"
+
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v2
+        with:
+          version: "latest"
+
+      - name: Set up Python 3.13
+        run: uv python pin 3.13
+
+      # dspy-rlm runs its REPL in a Deno sandbox; the deterministic dspy-rlm
+      # integration test needs Deno on the runner (no secret required).
+      - name: Install Deno
+        if: runner.os == 'Linux'
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Install dependencies
+        run: uv sync --all-packages --all-extras --locked
+
+      - name: Create diagnostic temporary root
+        id: pytest_temp
+        run: |
+          uv run --no-sync python -c "import os, tempfile; from pathlib import Path; root = Path(tempfile.gettempdir()) / 'harbor-pytest'; root.mkdir(parents=True, exist_ok=True); Path(os.environ['GITHUB_OUTPUT']).write_text('root=' + root.as_posix() + '\n')"
+
+      - name: Run non-runtime tests with coverage (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          uv run --no-sync pytest tests/ packages/rewardkit/tests packages/harbor-langsmith/tests packages/harbor-atif2otel/tests \
+            -m "not runtime" \
+            --basetemp="${{ steps.pytest_temp.outputs.root }}/unit" \
+            --junitxml=unit-results.xml --durations=20 \
+            --cov=src/harbor \
+            --cov-report=term-missing
+
+      # The podman runtime suite needs the Podman API socket: `podman compose`
+      # delegates to the docker-compose provider, which connects to it.
+      # Without the socket, PodmanEnvironment.preflight() fails and the suite
+      # is skipped.
+      - name: Start Podman API socket (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          systemctl --user enable --now podman.socket
+          podman info --format 'remote socket: {{.Host.RemoteSocket.Path}} (exists: {{.Host.RemoteSocket.Exists}})'
+
+      - name: Run runtime integration tests with coverage (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          uv run --no-sync pytest tests/ \
+            -m runtime \
+            --basetemp="${{ steps.pytest_temp.outputs.root }}/runtime" \
+            --junitxml=runtime-results.xml --durations=20 \
+            -n 4 \
+            --dist load \
+            --cov=src/harbor \
+            --cov-append \
+            --cov-report=xml \
+            --cov-report=term-missing
+
+      - name: Run all tests with coverage (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          uv run --no-sync pytest tests/ --basetemp="${{ steps.pytest_temp.outputs.root }}/unit" --junitxml=unit-results.xml --durations=20 --cov=src/harbor --cov-report=xml --cov-report=term-missing --ignore=tests/unit/agents/installed/test_agent_install_execution.py -m "not runtime and not windows_containers" -k "not test_full_task_mapping"
+
+      # A cold Server Core pull exceeded the fixture's native 600s build
+      # deadline on a real runner. Prepare the exact pinned base separately;
+      # native task budgets and force_build=True remain unchanged.
+      - name: Prepare pinned Windows container base image
+        if: runner.os == 'Windows'
+        timeout-minutes: 15
+        shell: pwsh
+        run: |
+          $from = Get-Content examples/tasks/hello-world-bat/environment/Dockerfile | Where-Object { $_ -match '^FROM\s+' } | Select-Object -First 1
+          if (-not $from) { throw "Windows fixture has no base image" }
+          $image = ($from -split '\s+')[1]
+          docker pull $image
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Run Windows container integration tests
+        if: runner.os == 'Windows'
+        run: |
+          uv run --no-sync pytest tests/ --basetemp="${{ steps.pytest_temp.outputs.root }}/windows-containers" --junitxml=runtime-results.xml -m "windows_containers" -v
+
+      - name: Upload coverage to Codecov
+        if: github.event_name == 'push' || github.event_name == 'pull_request'
+        uses: codecov/codecov-action@v6
+        with:
+          files: ./coverage.xml
+          fail_ci_if_error: false
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Collect test failure diagnostics
+        id: ci_diagnostics
+        if: failure() && steps.pytest_temp.outcome == 'success'
+        run: uv run --no-sync python scripts/collect_ci_test_artifacts.py "${{ steps.pytest_temp.outputs.root }}" ci-test-diagnostics.zip unit-results.xml runtime-results.xml
+
+      - name: Upload test failure diagnostics
+        if: failure() && steps.ci_diagnostics.outcome == 'success'
+        uses: actions/upload-artifact@v6
+        with:
+          name: test-diagnostics-${{ matrix.os }}
+          path: ${{ github.workspace }}/ci-test-diagnostics.zip
+          retention-days: 7
+          if-no-files-found: error
+
+  build:
+    name: Package Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: astral-sh/setup-uv@v8.1.0
+      - name: Build all workspace distributions
+        run: uv build --all-packages --python 3.12
+      - name: Install Harbor and optional Remote Docker wheels in isolation
+        run: |
+          uv venv /tmp/harbor-wheel-smoke --python 3.12
+          uv pip install --python /tmp/harbor-wheel-smoke/bin/python dist/harbor-*.whl dist/harbor_remote_docker-*.whl
+          cd /tmp
+          /tmp/harbor-wheel-smoke/bin/harbor --help
+          /tmp/harbor-wheel-smoke/bin/python -c "from harbor_remote_docker import RemoteDockerEnvironment; from harbor.agents.installed.open_harness import OpenHarnessAgent; from harbor.trial.trial import Trial; from harbor.verifier.verifier import Verifier"

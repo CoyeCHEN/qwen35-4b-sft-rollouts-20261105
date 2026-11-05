@@ -1,0 +1,123 @@
+{
+  "schema_version": "phase3-final-provenance-v1",
+  "status": "partial",
+  "run_date": "2026-10-12",
+  "scope": {
+    "benchmarks": ["alfworld", "clawgym", "tb21", "jobbench", "workspacebench_lite"],
+    "planned_unique_tasks": 50,
+    "tb_science": "excluded; no dispatch or recovery"
+  },
+  "final_source_identity": {
+    "harbor_git_commit": "7895780caf7485f0e04cf84e45e4d61c262d97e7",
+    "harbor_wheel_sha256": "0be824578b1e4176cc94f178f14ec1d9c973a9fa152d43748993c60bc2b86262",
+    "remote_docker_provider_wheel_sha256": "5b3010b289e262b67a9fa189028e1ea2711962145c3d4352d52be4fdda718b20",
+    "openharness_wheel_sha256": "40c30be4de7cf7772780a7d3f43f32abfe49b5fdc7e3bbe5c7c7b166dc7b9b15",
+    "note": "This is the final audited source/wheel identity. Existing model results below retain the Harbor/provider identities under which they actually ran."
+  },
+  "model_and_protocol": {
+    "model": "deepseek/deepseek-flash",
+    "task_manifest_sha256": "d5d92851ae00abdb062f330e630c24456db0838ca35da6b3a2308865cc23856e",
+    "cases_csv_sha256": "23df26376cb7ab81ce34f19718cc7438473e470d8b2d34147c20eb14444d0a77",
+    "task_manifest_frozen_before_new_model_execution": true,
+    "single_attempt_policy": true,
+    "max_concurrent_trials": 2,
+    "no_tb_science_dispatch": true
+  },
+  "runtime_wheels_used_by_attempts": {
+    "prior_editable_phase2": {
+      "harbor_commit": "a990aa56af22ce8069badf5aa9ea2ca7ada84b15",
+      "harbor_wheel_sha256": "editable-install-no-runtime-wheel",
+      "provider_wheel_sha256": null,
+      "openharness_wheel_sha256": "40c30be4de7cf7772780a7d3f43f32abfe49b5fdc7e3bbe5c7c7b166dc7b9b15",
+      "attempted": 17,
+      "valid_scored": 17
+    },
+    "venv_fix_wheel": {
+      "harbor_commit": "3754e16fcad376b0166babd5d81bf9cd35224e59",
+      "harbor_wheel_sha256": "047865afec33a622c7b8360812fbd3d3e03aa4a964345513726166c8e8725c11",
+      "provider_wheel_sha256": "2ee3bf5085d8072270abdeed34449714d57a74f4d35d0816f1f5a7849b6d3bc1",
+      "openharness_wheel_sha256": "40c30be4de7cf7772780a7d3f43f32abfe49b5fdc7e3bbe5c7c7b166dc7b9b15",
+      "attempted": 2,
+      "valid_scored": 2
+    },
+    "provider_timeout_fix_wheel": {
+      "harbor_commit": "3e34a001a03a8a361760edc076933f057a3bb05c",
+      "harbor_wheel_sha256": "047865afec33a622c7b8360812fbd3d3e03aa4a964345513726166c8e8725c11",
+      "provider_wheel_sha256": "7fc323570af1342364f9fd214bddc9d464be7bf0fac5a7adc4e037ad580a866b",
+      "openharness_wheel_sha256": "40c30be4de7cf7772780a7d3f43f32abfe49b5fdc7e3bbe5c7c7b166dc7b9b15",
+      "attempted": 4,
+      "valid_scored": 4
+    },
+    "managed_python_fixed_wheel": {
+      "harbor_commit": "049320dfbd5c68434e094cff564f0d1de07f6845",
+      "harbor_wheel_sha256": "e6ac3d99d5ab1a3c07e2a7f3784900b4fb7ffa17bd3991bd003795d239313625",
+      "provider_wheel_sha256": "c71ca6954ae56c8b4edfeb4a547522affb1f8bb70fb0b45afd062920aedd5b27",
+      "openharness_wheel_sha256": "40c30be4de7cf7772780a7d3f43f32abfe49b5fdc7e3bbe5c7c7b166dc7b9b15",
+      "attempted": 18,
+      "valid_scored": 6,
+      "note": "The 12 non-valid attempted rows are failures and are not converted into scores."
+    }
+  },
+  "provider_usage": {
+    "e2b": "alfworld and clawgym valid runs used harbor.environments.e2b_one_hour:OneHourE2BEnvironment",
+    "remote_docker": "TB2.1, JobBench and Workspace prepared runs used harbor_remote_docker:RemoteDockerEnvironment",
+    "remote_docker_smoke": {
+      "identity": "59369411446a46b38753fa1178af3b10",
+      "evidence_sha256": "ef5b1989fc99d74a071abf205738f840b8fed7439b5d334da88e0dc6152a9136",
+      "evidence_path": "/tmp/remote-docker-provider-smoke-20261012f-trial/remote-docker-59369411446a46b38753fa1178af3b10.jsonl",
+      "result": "passed: read-only rootfs, tmpfs, cap_drop, upload/download hash equality, cleanup"
+    }
+  },
+  "verification": {
+    "targeted_tests": "182 passed",
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "git_diff_check": "passed",
+    "wheel_venv": "/tmp/harbor-rsi-wheel-venv-20261012/bin/python",
+    "wheel_import_source": "site-packages; no Harbor source checkout import"
+  },
+  "new_benchmark_acceptance": {
+    "benchmark": "reasoning-gym",
+    "status": "static_offline_passed_runtime_pending",
+    "adapter_files_added_in_acceptance": 0,
+    "harbor_core_files_changed_for_acceptance": 0,
+    "generated_task": "reasoning-gym-arithmetic-basic-arithmetic-easy2fe5ac09-seed45-0",
+    "generation_command": "uv run --project adapters/reasoning-gym reasoning-gym --config adapters/reasoning-gym/easy.yaml --category arithmetic --dataset basic_arithmetic --size 1 --limit 1 --difficulty easy",
+    "deterministic_regeneration": true,
+    "oracle_reward": 1.0,
+    "invalid_answer_reward": 0.0,
+    "adapter_wheel_sha256": "6a888c55d4f64fc032d144f96eef43cb77fb6efc2d8370334d0513244644e8be",
+    "runtime_limit": "Docker default context unavailable; no model or container job dispatched",
+    "follow_up": "Pin reasoning-gym==0.1.25 in generated environment or record an image digest"
+  },
+  "workspace_final_wheel_preflight": {
+    "status": "blocked_before_model",
+    "model_calls": 0,
+    "task_id": "3",
+    "task_tree": "/tmp/phase3-workspace-harbor-tasks-final-20261012-1791773219318756722",
+    "provider_identity": "e3e14c7b7e274c1da8f6e3fec8f50132",
+    "provider_evidence": "/tmp/workspace-final-preflight-20261012/trial/remote-docker-e3e14c7b7e274c1da8f6e3fec8f50132.jsonl",
+    "start_transfer_cleanup": "passed",
+    "nested_binary_symlink_mode_hash": "passed",
+    "openharness_wheel_install": "passed",
+    "openharness_cli_version": "failed_exit_126_noexec_tmpfs",
+    "module_probe": "failed_native_shared_object_mapping_on_noexec_tmpfs",
+    "exec_mount_counterfactual": "passed",
+    "module_probe_identity": "9a799b5992ec4351a30eea920bee7f00",
+    "exec_mount_identity": "eca6b6e6596b4b018634c563aff2bec9",
+    "required_follow_up": "Provider-negotiated executable writable runtime mount; do not weaken official task noexec policy"
+  },
+  "artifact_policy": {
+    "historical_results_preserved": true,
+    "old_r2_results_not_merged_into_unique_case_counts": true,
+    "no_result_rewriting": true,
+    "no_tb_science_execution": true,
+    "no_global_docker_prune": true
+  },
+  "limitations": [
+    "WorkspaceBench Lite has no legal score: one infrastructure failure stopped the first-case gate and nine tasks remain not started.",
+    "The final 7895780 wheel and final provider wheel were validated by offline/remote no-model smoke but were not used to re-run the 29 existing legal scores.",
+    "17 legal scores were produced from an editable Harbor installation and remain separately identified.",
+    "ClawGym and JobBench use a DeepSeek Judge marked diagnostic rather than official-comparable."
+  ]
+}

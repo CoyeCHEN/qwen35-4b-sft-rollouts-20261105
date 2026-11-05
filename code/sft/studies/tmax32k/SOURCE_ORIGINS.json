@@ -1,0 +1,46 @@
+{
+  "scripts/final_weight_stats.py": {
+    "historical_sha256": "c1a863120873c4302633e9a7f1516eb36ea39e863416c59ee4758e0f573bb6c6",
+    "repository_sha256": "0192743e8a0195c9d110dd8ddaeeb8f9b3b9bf4dbafa90339f5726bc8c00e264"
+  },
+  "scripts/training_candidate.py": {
+    "historical_sha256": "4178dc859eaf97e0174959792c07e7164d35801c245b4fdeda2ce20c4d4a54ab",
+    "repository_sha256": "c9dd59c313d287afdc5c15c1d19d6e9c46c1edee1d7851d11aeac4b8687b9e41"
+  },
+  "scripts/verify_final_training_state.py": {
+    "historical_sha256": "6df1f98aca30b575b9f7269318e80566d19a12bb1b15c1f232dfbeb7bd0a2a28",
+    "repository_sha256": "12274e924ec0feb4296605eb87541ff815d7ca0bd8b361e278521933d2d49d58"
+  },
+  "scripts/aggregate_nll.py": {
+    "historical_sha256": "89bed5a4c422c27b146980bd4cef400713ccbfa25b452754fca1c18a5e241b5d",
+    "repository_sha256": "8795e55c2f736609043b881b0e6b602ef0b9ccbd1a4e7b3f98741a29430c5ed2"
+  },
+  "scripts/checkpoint_storage.py": {
+    "historical_sha256": "4908a3bffe52a9803d4b3b0eade82594256b4a2df84a87c66d046cd2551f87d8",
+    "repository_sha256": "495c482b31a4ea074f0386503b03475314e6c4bdc8f85e0ad5ddbc6b207721c6"
+  },
+  "scripts/gpu_job.py": {
+    "historical_sha256": "6da79776f77d05a66b4e46c1d761ef6914d6f729126c238c3ac7b44853bc653c",
+    "repository_sha256": "f38bbdfe2c85f767275e30abcb6d8708587e408fcc68966050c81ddcc9b0a214"
+  },
+  "scripts/finish_native_training.py": {
+    "historical_sha256": "76e8ec55111ba217be6b540fb08bdb655fc2debca49d45968cd2e69a14f13a54",
+    "repository_sha256": "3253dec7f1621f0791c2afbcfe2740d594a83c23b98b7bdbae6fccd3cfc847a4"
+  },
+  "scripts/region_nll.py": {
+    "historical_sha256": "26605c94de23211c6133d5b27d59235dbcab96c749ede285e44a218a3583275d",
+    "repository_sha256": "bf3dcf0d6939650630bdd6bd7d3d730236b4d6a0d7776d523331b2f9693d3f66"
+  },
+  "scripts/nvml_selected_device.py": {
+    "historical_sha256": "d8eb632335a9ee871f79232fb5ba785e8b77b373e90af32b99386ce58cb3e59e",
+    "repository_sha256": "b5ef3fef7ec2bbc625342375df1318b8848c8c89c1a48a4d41377228cc680a91"
+  },
+  "sources/original-train.py": {
+    "historical_sha256": "e6ff6e469add68c7c8fbc06f3b60eb10ae677d0dfc035c871b6731a17df6e0c8",
+    "repository_sha256": "e6ff6e469add68c7c8fbc06f3b60eb10ae677d0dfc035c871b6731a17df6e0c8"
+  },
+  "sources/original-sft_data.py": {
+    "historical_sha256": "019b6a7309ae602ae4480d9e50c540872d34625fb745a099780bf0a1c9e01327",
+    "repository_sha256": "019b6a7309ae602ae4480d9e50c540872d34625fb745a099780bf0a1c9e01327"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "at": 1793569393.3774095,
+  "cases": [
+    {
+      "case": "original_five_only_submitted",
+      "passed": true
+    },
+    {
+      "case": "active_continuation_adopted",
+      "passed": true
+    },
+    {
+      "case": "terminal_five_waits_for_existing_chess",
+      "passed": true
+    },
+    {
+      "case": "terminal_five_and_both_orphans_close_server",
+      "passed": true
+    },
+    {
+      "case": "failed_started_continuation_not_retried",
+      "passed": true
+    }
+  ],
+  "actual_trials_started": 0,
+  "actual_model_calls": 0,
+  "new_sources_sha256": {
+    "phase_progression18_r10.py": "45a5be9c49dfb311b62c4ad28f306b7baa9a88c3dfc214b107d47bea2c116aa2",
+    "run-native772-advance-r13.py": "42f4f6a5bc255f466f5683581a9c30c34b46ed932f7f8391eafd2d3e69ef1d08",
+    "read-only-monitor18-r19.py": "679e73019cd614ca9dc8b5995b149a9f720f60f3918eb944f495bfc1f8d032b2"
+  },
+  "source_sha256": "4f73938d46885cf382c0746b642becc087468dc89d9b84fae3e3d63e16a42b7d",
+  "original_training_entry_only_phase_import_and_deployment_identity_changed": true,
+  "original_attempts_not_rerun": true,
+  "original_results_not_fabricated": true,
+  "native149_release_sha256": "850d6f7ce472ca46a509df1740e2064285133d3cae3733bcc026bec7117929bc"
+}

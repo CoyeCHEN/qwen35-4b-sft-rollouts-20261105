@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "at": 1793565264.8070328,
+  "actual_training_source_sha256": "293ba2a7dca8569bb39e11bc0137a0e1180a0391402f10d49ff5b4ad00ce6c93",
+  "data_release_sha256": "fa4f07c05af4a8156547dbdda1cba60fb20e3c8626cd41cd40de4694e5f54821",
+  "m2_config_sha256": "1f48ed160a76bea910857bf16c94776f06e1d77a45c76047686303e72e91c716",
+  "m1_final_hf_manifest_sha256": "1edef547fa791ce2c8abca331ee7ac339b8e836806ebe06988a197b0c9eb9355",
+  "fixed_wheel_sha256": "1d27eef1ca6696275f306d8c653f7a266a4c7aea7321f0d47fd01b739c27fa18",
+  "controller_owner": {
+    "kind": "UNIQUE_NATIVE_ADVANCE_NODE18",
+    "host": "bm-220acn7",
+    "pid": 769128,
+    "boot_id": "5ed5b9fc-6915-46c8-b9ad-04e790f6b65b",
+    "start_ticks": "92354844",
+    "entry": "sft.runtime.public_stages.advance",
+    "deployment_revision": "r11-native-m2-formal-response-qualification-before-old4-old112",
+    "workspace": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace",
+    "collection_closed": true,
+    "old_four_deferred_until_801_terminal": true,
+    "started_at": 1793564466.2816536
+  },
+  "formal_deployment_sha256": "b01b16fbfffb65e17353bb50737d6ee123d3f2356c1e044b837437ca674f995b"
+}

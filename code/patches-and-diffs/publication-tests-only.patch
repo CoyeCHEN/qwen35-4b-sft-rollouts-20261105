@@ -1,0 +1,95 @@
+--- a/code/sft/tests/test_qwen35_codec.py
++++ b/code/sft/tests/test_qwen35_codec.py
+@@ -20,7 +20,21 @@
+         text=self.tok.decode(row['input_ids']);active=self.tok.decode([x for x in row['labels'] if x!=-100])
+         self.assertTrue(active.endswith('<|im_end|>\n'))
+         self.assertNotIn('USER_ONLY',active);self.assertNotIn('SYSTEM_ONLY',active);self.assertNotIn('OBS_ONLY',active)
+-        self.assertEqual(row['input_ids'],self.tok.apply_chat_template([c.normalize_message(m)for m in messages],tools=tools,tokenize=True,return_dict=False,add_generation_prompt=False,enable_thinking=True))
++        normalized = [c.normalize_message(m) for m in messages]
++        rendered = self.tok.apply_chat_template(normalized, tools=tools, tokenize=False,
++            add_generation_prompt=False, enable_thinking=True)
++        if scope == 'current':
++            prefix = self.tok.apply_chat_template(normalized[:-1], tools=tools, tokenize=False,
++                add_generation_prompt=True, enable_thinking=True)
++            prefix_ids = self.tok.apply_chat_template(normalized[:-1], tools=tools, tokenize=True,
++                return_dict=False, add_generation_prompt=True, enable_thinking=True)
++            self.assertTrue(rendered.startswith(prefix))
++            expected = prefix_ids + self.tok.encode(rendered[len(prefix):], add_special_tokens=False)
++            self.assertEqual(row['input_ids'][:len(prefix_ids)], prefix_ids)
++        else:
++            expected = self.tok.encode(rendered, add_special_tokens=False)
++        self.assertEqual(row['input_ids'], expected)
++        self.assertEqual(text, rendered)
+         return row,meta,text,active
+ 
+     def batch(self):
+@@ -118,7 +132,7 @@
+         messages=self.batch();messages[4]['tool_calls']=[dict(id='call-2',type='function',
+             function=dict(name='bash',arguments={'command':'printf 43'}))]
+         messages.extend([dict(role='tool',tool_call_id='call-2',content='OBS_ONLY:43'),
+-                         dict(role='assistant',content='DONE')])
++                         dict(role='assistant',reasoning_content='LAST_THINK',content='DONE')])
+         calls=self.task_calls(messages)
+         c.encode_multiturn_task(self.tok,calls)
+         changed=copy.deepcopy(calls)
+@@ -131,6 +145,13 @@
+         with self.assertRaisesRegex(ValueError,'CONTEXT_CHANGED'):
+             c.encode_multiturn_task(self.tok,changed)
+ 
++    def test_empty_thinking_task_requires_decision_segmentation(self):
++        messages = self.batch()
++        messages[-1].pop('reasoning_content')
++        calls = self.task_calls(messages)
++        with self.assertRaisesRegex(ValueError, 'REQUIRES_DECISION_SEGMENTATION'):
++            c.encode_multiturn_task(self.tok, calls)
++
+     def test_task_rejects_missing_or_duplicate_decisions_and_overflow(self):
+         calls=self.task_calls(self.batch())
+         with self.assertRaisesRegex(ValueError,'decision count'):
+--- a/code/sft/tests/test_runtime.py
++++ b/code/sft/tests/test_runtime.py
+@@ -58,7 +58,7 @@
+         from tests.test_checkpoint_archive import fixture
+         from sft.runtime.checkpoint_archive import durable_completion
+         output=self.root/'hot/runs/m1-64k';checkpoint=output/'checkpoint-1';fixture(checkpoint)
+-        identity=dict(stage='m1-64k',config_sha256='frozen-config-sha')
++        identity=dict(stage='m1-64k',config_sha256='frozen-config-sha',world_size=4)
+         durable_completion(checkpoint,identity)
+         validate_resume(checkpoint,output,'m1-64k','frozen-config-sha')
+         with self.assertRaisesRegex(ValueError,'configuration identity'):
+--- a/code/sft/tests/test_checkpoint_archive.py
++++ b/code/sft/tests/test_checkpoint_archive.py
+@@ -29,6 +29,7 @@
+         self.root = Path(self.temp.name)
+         self.source = self.root / 'run/checkpoint-1'
+         fixture(self.source)
++        archive.durable_completion(self.source, {'fixture_only': True, 'world_size': 4})
+         self.settings = {key: str(self.root / key) for key in ('pin_root', 'queue_root', 'failed_root', 'archive_root')}
+         self.settings['transfer_workers'] = 2
+         Path(self.settings['archive_root']).mkdir()
+@@ -38,7 +39,7 @@
+         self.temp.cleanup()
+ 
+     def test_rotation_archive_restore_and_corruption(self):
+-        archive.durable_completion(self.source, {'fixture_only': True})
++        archive.validate_checkpoint(self.source, world_size=4, require_marker=True)
+         entry = archive.enqueue(self.source, self.settings, 'test-job')
+         # Simulate Trainer rotation ONLY inside this temporary fixture.
+         import shutil
+--- a/code/sft/tests/test_checkpoint_observer.py
++++ b/code/sft/tests/test_checkpoint_observer.py
+@@ -43,9 +43,13 @@
+             scheduler=SimpleNamespace(state_dict=lambda:{'last_epoch':1})
+             trainer=SimpleNamespace(state=SimpleNamespace(global_step=1,is_world_process_zero=True),
+                 args=SimpleNamespace(output_dir=temp),model=object(),model_wrapped=object(),optimizer=object(),lr_scheduler=scheduler)
+-            callback=SimpleNamespace(selected=[('weight',None)],weight=lambda value:'fixed-master-hash',
++            callback=SimpleNamespace(runtime_recipe='unit_fixture', bounded_acceptance=False,
++                                     selected=[('weight',None)],weight=lambda value:'fixed-master-hash',
+                                      record=lambda event,state,**data:events.append(dict(event=event,**data)))
+             observer=CheckpointObserver(callback,lambda optimizer:{'Adam':'fixed'})
++            # The native checkpoint fixture has four ranks; CUDA stays disabled.
++            identity = observer.identity
++            observer.identity = lambda: identity() | {'world_size': 4}
+             def train(instance,*args,**kwargs):return None
+             def save(instance,*args,**kwargs):fixture(folder)
+             def last_callback(handler,args,state,control):

@@ -1,0 +1,20 @@
+# Full v0.1.0 run after single-task acceptance and an eight-task quota probe.
+jobs_dir: benchmarks/terminal_bench_science/results/full
+n_attempts: 1
+n_concurrent_trials: 8
+orchestrator:
+  retry:
+    max_retries: 0
+environment:
+  import_path: harbor.environments.e2b_resumable:ResumableE2BEnvironment
+  delete: true
+agents:
+  - import_path: harbor.agents.installed.open_harness:OpenHarnessAgent
+    model_name: deepseek/deepseek-flash
+    kwargs:
+      thinking: max
+      max_tokens: 131072
+    env:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+datasets:
+  - path: benchmarks/terminal_bench_science/datasets/v0.1.0

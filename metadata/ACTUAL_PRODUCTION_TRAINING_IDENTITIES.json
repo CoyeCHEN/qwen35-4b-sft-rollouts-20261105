@@ -1,0 +1,96 @@
+{
+  "at": 1793807366.9580173,
+  "source_commit": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42",
+  "training_source_hash": "293ba2a7dca8569bb39e11bc0137a0e1180a0391402f10d49ff5b4ad00ce6c93",
+  "files": [
+    {
+      "path": "new-sft/workspace/configs/new-cf416-m1.yaml",
+      "sha256": "d2a8559c638a4b829ae0a943e04ae27b629bfc59da8ca0fbfa7210d1cfc3e04d"
+    },
+    {
+      "path": "new-sft/workspace/configs/new-cf416-tmax356-m2.yaml",
+      "sha256": "1f48ed160a76bea910857bf16c94776f06e1d77a45c76047686303e72e91c716"
+    },
+    {
+      "path": "new-sft/workspace/configs/ds_z3.json",
+      "sha256": "3eb80a195fbe478894fba6339add22d47870259d26872c463fabaae75ede5e78"
+    },
+    {
+      "path": "new-sft/workspace/configs/actual-eleven-tool-contract.json",
+      "sha256": "975e71810adeac458bd29d29065655c891c769c765fd4f8a9811d37cca99d3cc"
+    },
+    {
+      "path": "new-sft/workspace/jobs/new772-new-cf416-m1/job.json",
+      "sha256": "486aa7978a2c2d1dea72d470df4c2fc0ddcbc9e6f4b67e58336ade3cf7bc2932"
+    },
+    {
+      "path": "new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/job.json",
+      "sha256": "f417c1efadc7171cd31c295c06738473ace0a522a5549d1d62819a80bb159f89"
+    },
+    {
+      "path": "new-sft/workspace/manifests/new-cf416-m1.json",
+      "sha256": "a31474ac16754dd59913a67a626c8a9a20e102c7e09a6b446197281488929c30"
+    },
+    {
+      "path": "new-sft/workspace/manifests/new-cf416-tmax356-m2.json",
+      "sha256": "875213c6b759e99cb899093e6a3d4b0a6054d6033363a6f248b4589ce97526ba"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/resolved-config-new772-new-cf416-m1-rank0.json",
+      "sha256": "cf272bdaebb30c62effb57afade4055980503501fae5473b23e361f5fcd5b87f"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/trainer_state.json",
+      "sha256": "e14287e81881b53d1f969fb7e4167dbd95ba19639feefd5856cccab0d7a71328"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/HF_EXPORT_COMPLETE.json",
+      "sha256": "1edef547fa791ce2c8abca331ee7ac339b8e836806ebe06988a197b0c9eb9355"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/FINAL_HF_ADMISSION.json",
+      "sha256": "a3eaa7a86a2960b90335b824c8889022eebffb801f553545743e6cd2a204bc5b"
+    },
+    {
+      "path": "runs/new-m1-cf416-128k-e5/CANONICAL_PROCESSOR_ASSETS.json",
+      "sha256": "5bc7391792df6e9d2d944de90010366bd0bc8adf686c97e41f3107f0c42e78fe"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/resolved-config-new772-new-cf416-tmax356-m2-rank0.json",
+      "sha256": "867434f3b4badce077dc9bd4a4aa80d86187c1d2c89df5b2914fedc0c2248b17"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/trainer_state.json",
+      "sha256": "2a5236d0f2f6d4540400b7cec8f0c3d4345ef1786f5a4eca19fa7b4b85512f71"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/HF_EXPORT_COMPLETE.json",
+      "sha256": "c4b4c5ae2649d1de5312deda149ebdec0f08089a7ebaf99738faba1dbac16487"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/FINAL_HF_ADMISSION.json",
+      "sha256": "6db963ecba083d380f5cf19abb51bec32c43b9f11bb170084eab3d2816e1ca3d"
+    },
+    {
+      "path": "runs/new-m2-tmax356-128k-e5/CANONICAL_PROCESSOR_ASSETS.json",
+      "sha256": "200a7ff1d427192b214b984a2d8f0cd17bc23ca3417ab5df2f74f7ee6ab48cd2"
+    }
+  ],
+  "original_data_and_Checkpoints_unchanged": true
+}

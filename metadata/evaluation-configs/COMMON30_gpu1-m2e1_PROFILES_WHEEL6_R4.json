@@ -1,0 +1,1293 @@
+{
+  "terminal-bench/regex-log": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-regex-log-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/llm-inference-batching-scheduler": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-llm-inference-batching-scheduler-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/extract-moves-from-video": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-extract-moves-from-video-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/chess-best-move": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-chess-best-move-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/video-processing": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-video-processing-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/adaptive-rejection-sampler": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-adaptive-rejection-sampler-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/filter-js-from-html": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-filter-js-from-html-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/polyglot-rust-c": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-polyglot-rust-c-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/install-windows-3.11": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-install-windows-3.11-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/sparql-university": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-sparql-university-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/mteb-leaderboard": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-mteb-leaderboard-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/mcmc-sampling-stan": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-mcmc-sampling-stan-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/sam-cell-seg": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-sam-cell-seg-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "GIT_CONFIG_GLOBAL": "/opt/rsi-public-sam-config/git-safe.config",
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_CONFIG_FILE": "/opt/rsi-public-sam-config/uv.toml",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_NO_INDEX": "false",
+        "UV_OFFLINE": "false",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python",
+        "PATH": "/opt/rsi-public-sam-fetch/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/build-cython-ext": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-build-cython-ext-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+        "PIP_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "PIP_NO_INDEX": "1"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/feal-differential-cryptanalysis": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-feal-differential-cryptanalysis-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/train-fasttext": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-train-fasttext-r4.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python",
+        "GIT_CONFIG_GLOBAL": "/opt/rsi-public-fasttext-source/git-safe.config"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/portfolio-optimization": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-portfolio-optimization-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/constraints-scheduling": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-constraints-scheduling-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/tune-mjcf": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-tune-mjcf-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/crack-7z-hash": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-crack-7z-hash-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/fix-git": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-fix-git-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/code-from-image": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-code-from-image-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/build-pov-ray": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-build-pov-ray-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    },
+    "agent_timeout_sec": 12000
+  },
+  "terminal-bench/write-compressor": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-write-compressor-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/torch-tensor-parallelism": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-torch-tensor-parallelism-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/cobol-modernization": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-cobol-modernization-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/winning-avg-corewars": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-winning-avg-corewars-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/circuit-fibsqrt": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-circuit-fibsqrt-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/configure-git-webserver": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-configure-git-webserver-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  },
+  "terminal-bench/qemu-alpine-ssh": {
+    "agent_env": {},
+    "environment": {
+      "cpu_enforcement_policy": "auto",
+      "delete": true,
+      "extra_allowed_hosts": [],
+      "extra_docker_compose": [
+        "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-public-qemu-alpine-ssh-r3.compose.json"
+      ],
+      "force_build": false,
+      "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+      "kwargs": {
+        "agent_runtime_volume": true,
+        "endpoint": "ssh://chenkeyi@127.0.0.1",
+        "project_namespace": "q35common30w6g1r1",
+        "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+        "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+        "verifier_test_volume": true
+      },
+      "memory_enforcement_policy": "auto",
+      "mounts": null,
+      "override_cpus": null,
+      "override_gpus": null,
+      "override_memory_mb": null,
+      "override_storage_mb": null,
+      "override_tpu": null,
+      "type": null
+    },
+    "verifier": {
+      "disable": false,
+      "env": {
+        "UV_CACHE_DIR": "/tmp/harbor-common30-verifier-uv-cache",
+        "UV_DOWNLOAD_URL": "file:///opt/rsi-public-verifier-cache/release",
+        "UV_FIND_LINKS": "/opt/rsi-public-verifier-cache/wheels",
+        "UV_NO_INDEX": "true",
+        "UV_OFFLINE": "true",
+        "UV_PYTHON_DOWNLOADS": "never",
+        "UV_PYTHON_INSTALL_DIR": "/opt/rsi-public-verifier-cache/python",
+        "APT_CONFIG": "/opt/rsi-public-qemu-apt/apt-verifier-cache.conf"
+      },
+      "max_timeout_sec": null,
+      "override_timeout_sec": null
+    }
+  }
+}

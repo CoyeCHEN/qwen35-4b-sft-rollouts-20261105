@@ -1,0 +1,182 @@
+{
+  "schema_version": 2,
+  "report": "docs/harbor-rsi-architecture-root-cause-v2.md",
+  "generated_at": "2026-10-11",
+  "scope": "Harbor-RSI phase-one native provider boundary convergence",
+  "identities": {
+    "official_harbor_fork_baseline": {
+      "version": "v0.23.0",
+      "commit": "1e5c5c6db929a10a140d05e606882c671ae20729",
+      "tag_object": "3c305dc5611e3600afc3c818735a82322f0264f8",
+      "source": "UPSTREAM.md"
+    },
+    "official_harbor_latest_main": {
+      "commit": "dc933be707feafbb9efcdf092cb8a0e391332617",
+      "timestamp_utc": "2026-10-11T04:40:12Z",
+      "subject": "fix(codex): chown auth.json to the image's agent user (#3594)",
+      "remote": "https://github.com/harbor-framework/harbor.git"
+    },
+    "harbor_rsi_latest_main": {
+      "commit": "5f7dfd3b9bf83dc51d18862cdd94c7a6b6779019",
+      "timestamp_utc": "2026-10-11T10:43:44Z",
+      "subject": "Merge pull request #4 from CoyeCHEN/codex/fix-baseline-ci",
+      "remote": "https://github.com/CoyeCHEN/harbor-rsi.git"
+    },
+    "phase_one_branch": {
+      "branch": "codex/native-provider-boundaries",
+      "commit": "0d465427d17dde9cc6306e068bc7517d6e8eafe2",
+      "timestamp": "2026-10-11T21:29:45+08:00",
+      "subject": "refactor: restore native provider boundaries",
+      "pull_request": "https://github.com/CoyeCHEN/harbor-rsi/pull/5",
+      "worktree": "/home/cky/harbor-rsi-phase1"
+    },
+    "wsl_worktree": {
+      "path": "/home/cky/workspace/RSI/harbor-rsi",
+      "git_checkout": false,
+      "status": "preserved_unmodified_by_phase_one",
+      "contains": ["uncommitted Remote Docker", "historical artifacts", "local changes"]
+    },
+    "audit_checkout": {
+      "path": "/home/cky/harbor-rsi-audit-20261011/harbor-rsi-latest",
+      "commit": "5f7dfd3b9bf83dc51d18862cdd94c7a6b6779019"
+    },
+    "open_harness": {
+      "repository": "https://github.com/RUCAIBox/open-harness2.git",
+      "commit": "f033d7255b34d4aa7958d0fb3bfcb03970aaccc9",
+      "timestamp_utc": "2026-10-07T11:01:45Z",
+      "cli_package": "open-harness-ai==0.3.0",
+      "harbor_eval_package": "openharness2-harbor==0.1.0",
+      "cli_contract": "openharness-cli-v1",
+      "wheel_sha256": "not_preserved_as_complete_hash_in_audit_checkout"
+    }
+  },
+  "official_execution_chain": [
+    {"stage": "benchmark_source", "owner": "benchmark"},
+    {"stage": "adapter_main", "owner": "adapter", "artifacts": ["task.toml", "instruction.md", "environment", "tests", "optional solution"]},
+    {"stage": "dataset_registry_or_local_dataset", "owner": "harbor_dataset"},
+    {"stage": "TaskClient.download_tasks", "owner": "harbor", "state": "cache/content_hash/task_identity"},
+    {"stage": "Job", "owner": "harbor", "state": "job_config/job_result"},
+    {"stage": "Trial", "owner": "harbor", "state": "trial_result/logs/locks"},
+    {"stage": "EnvironmentFactory", "owner": "harbor", "variants": ["built-in type", "environment.import_path"]},
+    {"stage": "BaseEnvironment", "owner": "provider", "operations": ["start", "stop", "exec", "upload", "download", "capability checks"]},
+    {"stage": "InstalledAgent", "owner": "agent adapter", "inputs": ["instruction", "environment", "AgentContext"]},
+    {"stage": "Verifier", "owner": "benchmark/harbor", "outputs": ["reward", "metrics", "verifier artifacts"]},
+    {"stage": "Result", "owner": "harbor", "outputs": ["TrialResult", "JobResult"]}
+  ],
+  "harbor_rsi_phase_one_chain": [
+    {"stage": "request_preflight", "file": "src/harbor/extensions/rsi/runner.py:preflight", "status": "kept"},
+    {"stage": "TaskClient.download_tasks", "file": "src/harbor/extensions/rsi/runner.py:resolve_tasks", "status": "default_materialization"},
+    {"stage": "optional_task_snapshot", "file": "src/harbor/extensions/rsi/runner.py:_prepare", "status": "explicit_only", "config": "execution.snapshot_tasks"},
+    {"stage": "native_Job_Trial", "file": "src/harbor/trial", "status": "restored_default"},
+    {"stage": "EnvironmentFactory", "file": "src/harbor/environments/factory.py", "status": "upstream_import_path"},
+    {"stage": "OpenHarnessAgent", "file": "src/harbor/agents/installed/open_harness.py:OpenHarnessAgent", "status": "BaseInstalledAgent"},
+    {"stage": "provider_execution", "variants": ["Docker", "E2B", "Modal", "Mock", "future RemoteDocker"], "status": "provider_selected_by_config"},
+    {"stage": "trial_recovery", "file": "src/harbor/trial/trial.py:_recover_after_failure", "status": "trial_local_infrastructure_errors"},
+    {"stage": "Verifier_and_Result", "status": "native"},
+    {"stage": "RSI_summary", "file": "src/harbor/extensions/rsi/report.py", "status": "provenance_only"}
+  ],
+  "components": [
+    {
+      "id": "openharness-inheritance",
+      "files": ["src/harbor/agents/installed/open_harness.py"],
+      "symbols": ["OpenHarnessAgent", "OpenHarnessOptions"],
+      "classification": "SIMPLIFY",
+      "change": "Pi/PiOptions inheritance replaced by BaseInstalledAgent/InstalledAgentOptions",
+      "evidence": "phase-one native Job tests; old import of Pi was unnecessary for CLI contract",
+      "risk": "current DeepSeek and openharness-cli-v1 options remain intentionally explicit",
+      "status": "implemented"
+    },
+    {
+      "id": "task-second-materialization",
+      "files": ["src/harbor/extensions/rsi/runner.py", "src/harbor/extensions/rsi/models.py"],
+      "symbols": ["resolve_tasks", "_prepare", "Execution.snapshot_tasks"],
+      "classification": "UPSTREAM",
+      "change": "default freeze/copy disabled; TaskClient cache is source of execution",
+      "evidence": "old default copy plus TB-Science materialization loss; explicit snapshot tests",
+      "risk": "legacy audits that depend on immutable second copy must opt in",
+      "status": "implemented"
+    },
+    {
+      "id": "trial-recovery-boundary",
+      "files": ["src/harbor/trial/trial.py", "src/harbor/trial/single_step.py", "src/harbor/models/trial/result.py"],
+      "symbols": ["_recover_after_failure", "_recover_outputs", "_record_infrastructure_error", "failure_phase"],
+      "classification": "FIX",
+      "change": "cleanup/artifact/finalization failures attach to owning Trial and preserve primary exception",
+      "evidence": "TB2.1 sibling cancellation history; fault-injection tests",
+      "risk": "old result readers must tolerate new fields",
+      "status": "implemented"
+    },
+    {
+      "id": "environment-import-path",
+      "files": ["src/harbor/environments/factory.py", "src/harbor/models/trial/config.py"],
+      "symbols": ["EnvironmentConfig.import_path", "EnvironmentFactory.create_environment_from_import_path"],
+      "classification": "UPSTREAM",
+      "change": "reuse existing custom Provider extension point",
+      "evidence": "official Harbor latest source",
+      "risk": "external provider package compatibility/capabilities must be validated",
+      "status": "implemented_without_new_registry"
+    },
+    {
+      "id": "remote-docker-hybrid",
+      "files": ["WSL-only src/harbor/environments/docker/docker.py", "WSL-only src/harbor/environments/docker/remote.py"],
+      "symbols": ["DockerEnvironment(remote=...)", "RemoteDockerWorkspace"],
+      "classification": "MOVE",
+      "change": "extract SSH/staging/remote compose/cp/ownership/cleanup into opt-in BaseEnvironment provider",
+      "evidence": "source diff and historical chown/controller-loss/bind-mount failures",
+      "risk": "remote daemon semantics cannot be assumed equivalent to local Docker",
+      "status": "not_extracted_in_phase_one"
+    },
+    {
+      "id": "legacy-rsi-runner",
+      "files": ["src/harbor/extensions/rsi/runner.py", "src/harbor/extensions/rsi/legacy/*"],
+      "symbols": ["preflight", "resolve_tasks", "legacy campaign launchers", "summary"],
+      "classification": "SIMPLIFY",
+      "change": "retain provenance and compatibility; remove mandatory freeze/readiness/second scheduler",
+      "evidence": "native Job tests and runner snapshot tests",
+      "risk": "legacy JobBench/WebShop campaigns need explicit migration",
+      "status": "partially_implemented"
+    }
+  ],
+  "root_causes": [
+    {"id": "RC-1", "claim": "second Task materialization created divergent input identity", "confidence": "confirmed", "category": "fork_regression", "minimal_counterfactual": "snapshot_tasks=false with native TaskClient cache"},
+    {"id": "RC-2", "claim": "cleanup/recovery exception propagation could cancel sibling Trials", "confidence": "confirmed", "category": "fork_regression", "minimal_counterfactual": "two concurrent Mock Trials with one cleanup failure"},
+    {"id": "RC-3", "claim": "OpenHarness/Pi inheritance added unnecessary Agent coupling", "confidence": "confirmed", "category": "fork_regression", "minimal_counterfactual": "same CLI wheel through BaseInstalledAgent"},
+    {"id": "RC-4", "claim": "Remote Docker hybrid changes local Docker semantics and adds controller dependencies", "confidence": "high_but_unverified_runtime", "category": "provider_design", "minimal_counterfactual": "same Task/Agent against Mock and extracted RemoteDocker provider"},
+    {"id": "RC-5", "claim": "special benchmark lifecycle requirements were represented in generic layers", "confidence": "partial", "category": "boundary_violation", "minimal_counterfactual": "artifact-to-verifier sandbox flow without Runner/Trial fork"},
+    {"id": "RC-6", "claim": "wheel ABI, GPU, image, data and quota failures are not inherently Harbor core regressions", "confidence": "confirmed_as_category", "category": "external_infrastructure", "minimal_counterfactual": "Oracle/NOP preflight and provider capability rejection"}
+  ],
+  "provider_capability_matrix": {
+    "local_docker": {"standard_dockerfile": "supported_by_upstream", "compose": "supported_by_upstream", "bind_mount": "supported_with_host_semantics", "remote_credentials": "none"},
+    "mock_provider": {"standard_dockerfile": "not_applicable", "compose": "contract_test_only", "bind_mount": "declared", "lifecycle": "fully_fault_injectable"},
+    "remote_docker_proposed": {"standard_dockerfile": "planned", "compose": "must_validate_remote_paths", "bind_mount": "reject_or_stage_explicitly", "mounted_capability": false, "cleanup": "identity_scoped", "controller_loss": "record_orphan_evidence", "status": "not_extracted"},
+    "e2b_modal": {"standard_dockerfile": "provider_specific", "compose": "capability_dependent", "gpu": "preflight_required", "status": "upstream_or_existing_provider"}
+  },
+  "validation": {
+    "focused_tests": {"result": "151 passed", "scope": "native Job/Trial, two Providers, CLI wheel, transfer, exit, verifier, recovery, runner"},
+    "ruff_changed_files": "passed",
+    "ruff_format_changed_files": "passed",
+    "ty_changed_source": "passed",
+    "full_ty": "not_clean; approximately 188 pre-existing optional/legacy diagnostics",
+    "paid_model_runs": "not_run",
+    "docker_149_runs": "not_run",
+    "full_benchmark_runs": "not_run"
+  },
+  "new_benchmark_probe": {
+    "benchmark": "featurebench-lite",
+    "reason": "standard Docker tasks plus explicit CPU/GPU/Modal configs without WorkspaceBench shared-workspace special case",
+    "official_required_changes": ["adapter task builder", "task metadata/config", "standard run config"],
+    "phase_one_rsi_required_changes": ["same Task builder", "request provenance/config", "select OpenHarness and Provider"],
+    "core_changes": 0,
+    "mandatory_freeze_or_readiness": false,
+    "provider_switch_changes_agent_task_verifier": false,
+    "evidence_limit": "static and offline architecture probe; no paid model or GPU run"
+  },
+  "open_questions": [
+    "extract and contract-test WSL RemoteDockerEnvironment",
+    "obtain complete SHA256 for every historical OpenHarness wheel used in result records",
+    "rebase against official Harbor dc933be7 after reviewing upstream changes",
+    "validate remote Compose, bind mount, ownership, controller-loss and large-transfer semantics",
+    "migrate legacy campaign launchers to native Job/Trial where benchmark semantics permit",
+    "perform one real no-model Docker smoke and one provider-switch smoke when infrastructure is available"
+  ]
+}

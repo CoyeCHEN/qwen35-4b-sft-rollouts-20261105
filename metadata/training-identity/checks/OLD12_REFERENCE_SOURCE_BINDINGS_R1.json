@@ -1,0 +1,86 @@
+[
+  {
+    "task_id": "build-pmars",
+    "call_id": "202b8482-4896-47d8-9b8e-88dbdcb2fb5d",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/build-pmars__r5UbYsr/result.json",
+    "result_sha256": "9fdcf65278094d3ed34d9b3a67605e3452e13b9fed5c0869d087c7902eaa6511",
+    "result_trial_id": "60103c3c-23c3-4919-b6df-6f760be550f8"
+  },
+  {
+    "task_id": "cancel-async-tasks",
+    "call_id": "6e1cdda2-0a37-4001-a736-f1ade7eac34c",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/cancel-async-tasks__HHm8oUw/result.json",
+    "result_sha256": "f1b3f158a0c040b0fd0949b8e6e0194de043261a053547de5ecd87b2bda41fe6",
+    "result_trial_id": "9bf6d866-4fe4-4595-b445-2c6d1707dec0"
+  },
+  {
+    "task_id": "code-from-image",
+    "call_id": "df1379e1-dc92-4000-9205-35a9d2686225",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/code-from-image__xAgHAT2/result.json",
+    "result_sha256": "1d0c668ce5087bedb152baa5a85dcde8c5825e9c7a2d39883ff8e419173e6d13",
+    "result_trial_id": "73076b50-ee3b-478e-923a-aec66ea7a461"
+  },
+  {
+    "task_id": "configure-git-webserver",
+    "call_id": "61787b70-f22f-42e0-b7d3-c0561ec9086d",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/configure-git-webserver__sa4LmmY/result.json",
+    "result_sha256": "a8b897e0c60868612bd0071d643d885fe4e605f4fa8486480466c7612bbc956d",
+    "result_trial_id": "700e5711-754e-47b7-ab46-79b06b777ab3"
+  },
+  {
+    "task_id": "constraints-scheduling",
+    "call_id": "b2274fe6-2b1f-41fb-92df-21da17e52bf5",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/constraints-scheduling__jnuZ69g/result.json",
+    "result_sha256": "bc09beb815e4367d02d68d3e05b783761fd11da8974e17a747d2ddeba28c8b8f",
+    "result_trial_id": "570a7046-78c0-4681-9f1b-00f4fd1bc415"
+  },
+  {
+    "task_id": "fix-code-vulnerability",
+    "call_id": "bc165d8b-d26a-4d8e-b4b6-b997e6603c10",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/fix-code-vulnerability__QqZ57Xj/result.json",
+    "result_sha256": "ba15d810d8439536d9231ac1334bf4947d79017b64e0725e13b4036bc6a873a0",
+    "result_trial_id": "7a7ca592-2b3c-4cb8-9766-6abfe3522efb"
+  },
+  {
+    "task_id": "fix-git",
+    "call_id": "b137a1cf-6c43-490d-9b1a-d7d8141ac47d",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/fix-git__z2vWToN/result.json",
+    "result_sha256": "c04c9ae9f390e712a56988366f9e08bdb42a4e3be45e2473cdc1b13eabc97cb9",
+    "result_trial_id": "be35c5ce-b3ab-4051-a28e-4936c25d889d"
+  },
+  {
+    "task_id": "git-leak-recovery",
+    "call_id": "17bcb774-5c25-410a-aef8-df69fddc54f4",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/git-leak-recovery__bjczCMa/result.json",
+    "result_sha256": "e90619d806cd114f645a07a2af3d324968adfb50331a106562c3c167af374fec",
+    "result_trial_id": "f530386d-8a96-49eb-9555-df161bd9ec98"
+  },
+  {
+    "task_id": "hf-model-inference",
+    "call_id": "b435c631-0a24-44d1-a3d9-3199ab7272c0",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/[REDACTED_SECRET_0042]/result.json",
+    "result_sha256": "a6e554bbae71fa6c627e1db6bf09ec1087f60392330edf67addd914ca4905984",
+    "result_trial_id": "00821ab1-a018-48eb-bce5-b847df529d31"
+  },
+  {
+    "task_id": "kv-store-grpc",
+    "call_id": "9fea761b-1d15-46ca-9b9c-282d31a88e7d",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/kv-store-grpc__tMKK6k2/result.json",
+    "result_sha256": "d71e6346d5b27f373d9f9da074c3713a0969acbe082e9a8aaf3f0cb6d188f850",
+    "result_trial_id": "b69d060f-e7a4-4d33-a73d-ada97025ed23"
+  },
+  {
+    "task_id": "nginx-request-logging",
+    "call_id": "18fe05c8-7eb6-4b92-841b-94cb777c304e",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/nginx-request-logging__eQVF2yS/result.json",
+    "result_sha256": "117b78411d65251cf72740596bb4d76a2deaebe7e3ae18ec3f28618d4e0e03b9",
+    "result_trial_id": "2c9d1af5-c7f9-4634-9a07-c54498f69e8a"
+  },
+  {
+    "task_id": "portfolio-optimization",
+    "call_id": "d81c9589-ab15-4554-a976-9ef6c225ac54",
+    "result_path": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-m1-m2-tb21-20261026/jobs/qwen35-m1-r1-20261026/portfolio-optimization__A5qgbnQ/result.json",
+    "result_sha256": "ada3a560d6c9178942fa5dfe2f6f8bf00d29f7f40cdc1daa7395f1ad03dfe077",
+    "result_trial_id": "67ed68cb-4cfc-4662-b8f4-a6a1c1dbd499"
+  }
+]

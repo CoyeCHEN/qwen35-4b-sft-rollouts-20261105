@@ -1,0 +1,78 @@
+{
+  "kind": "QWEN35_772_NATIVE_STAGE",
+  "stage": "new-cf416-tmax356-m2",
+  "source_dataset": "allenai/TMax-15K",
+  "source_revision": "e3ded940596cc611c9815684ba51a7e8ee0cffc9",
+  "source_primary_task_count": 356,
+  "supervision_scope": "all_assistant_once",
+  "original_provider_prefixes_verified": true,
+  "finish_enabled": true,
+  "tool_result_budget_enabled": true,
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "cutoff": 131072,
+  "tool_contract_sha256": "975e71810adeac458bd29d29065655c891c769c765fd4f8a9811d37cca99d3cc",
+  "release_manifest": "/ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/DATA_RELEASE.json",
+  "release_manifest_sha256": "fa4f07c05af4a8156547dbdda1cba60fb20e3c8626cd41cd40de4694e5f54821",
+  "parent_pool_manifest": "/ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/tmax/DATA_MANIFEST.json",
+  "parent_pool_manifest_sha256": "618d0370e5cf79001beb3d0ea0ca2e4995424c0456902a5aab49b3b557a2280d",
+  "no_truncation": true,
+  "task_groups_disjoint": true,
+  "formal_training_eligible": true,
+  "length_exclusion": "3886 overlong original targets explicitly quarantined corpus-wide; no token truncation",
+  "artifacts": [
+    {
+      "path": "dataset_dict.json",
+      "bytes": 35,
+      "sha256": "88b5b05fc757e76e7edc779db90e96cb6d76538b93165d6ce962a818801babf4"
+    },
+    {
+      "path": "train/data-00000-of-00002.arrow",
+      "bytes": 306787848,
+      "sha256": "5f6c9ea2e2bc6698a01d8e2680503998952285cf42742f8dbc493a605bcc430d"
+    },
+    {
+      "path": "train/data-00001-of-00002.arrow",
+      "bytes": 241690248,
+      "sha256": "9f4284cd40fc27818cb7c2c6beb99220f6e4e292d36b2d8b8511b12031c5a784"
+    },
+    {
+      "path": "train/dataset_info.json",
+      "bytes": 1360,
+      "sha256": "38ca4f094467fb0621bd37bf6f60593160e3fe2c3ae00503d991cdf73f05c8be"
+    },
+    {
+      "path": "train/state.json",
+      "bytes": 309,
+      "sha256": "f65142ab6e71e9e454e03db2934fbfce39802367890be7180428efdd06811c61"
+    },
+    {
+      "path": "validation/data-00000-of-00001.arrow",
+      "bytes": 60728232,
+      "sha256": "d289891e5f22b23c6927013ecbc90668d8cf0deb257573d47e92cc6aae67492a"
+    },
+    {
+      "path": "validation/dataset_info.json",
+      "bytes": 1298,
+      "sha256": "2d53dd9baa56a19f60d19178a46bdf379ee19ecf693d2d8a8ab5d55334e18c6a"
+    },
+    {
+      "path": "validation/state.json",
+      "bytes": 250,
+      "sha256": "a5d69f1759262119f8a7306f3fa7d6d15c6aad44912aff65c9033d087d490051"
+    }
+  ],
+  "counts": {
+    "train": {
+      "rows": 792,
+      "supervised_tokens": 7815211,
+      "independent_tasks": 325,
+      "targets": 9331
+    },
+    "validation": {
+      "rows": 86,
+      "supervised_tokens": 856073,
+      "independent_tasks": 31,
+      "targets": 987
+    }
+  }
+}

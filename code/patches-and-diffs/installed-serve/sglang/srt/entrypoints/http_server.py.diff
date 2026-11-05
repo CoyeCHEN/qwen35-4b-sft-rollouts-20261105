@@ -1,0 +1,31 @@
+--- 03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/http_server.py
++++ 02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/http_server.py
+@@ -93,6 +93,7 @@
+     V1RerankReqInput,
+ )
+ from sglang.srt.entrypoints.openai.serving_chat import OpenAIServingChat
++from sglang.srt.entrypoints.openai.serving_chat_token_count import OpenAIServingChatTokenCount
+ from sglang.srt.entrypoints.openai.serving_classify import OpenAIServingClassify
+ from sglang.srt.entrypoints.openai.serving_completions import OpenAIServingCompletion
+ from sglang.srt.entrypoints.openai.serving_embedding import OpenAIServingEmbedding
+@@ -1435,6 +1436,20 @@
+     return await raw_request.app.state.openai_serving_tokenize.handle_request(
+         request, raw_request
+     )
++
++
++@app.post("/v1/chat/count_tokens", response_class=ORJSONResponse, dependencies=[Depends(validate_json_request)])
++async def openai_chat_count_tokens(raw_request: Request):
++    """Measure a complete chat request without generation or scheduler dispatch."""
++    try:
++        payload = await raw_request.json()
++        state = raw_request.app.state
++        if not hasattr(state, "openai_serving_chat_token_count"):
++            state.openai_serving_chat_token_count = OpenAIServingChatTokenCount(state.openai_serving_chat)
++        return await state.openai_serving_chat_token_count.count(payload, raw_request)
++    except ValueError as error:
++        # Validation exception strings may include private prompt/image values.
++        return ORJSONResponse(status_code=400, content={"error": {"type": "TokenCountError", "message": type(error).__name__}})
+ 
+ 
+ @app.post(

@@ -1,0 +1,412 @@
+#!/usr/bin/env python3
+"""Generate a local Harbor dataset from the ALFWorld valid_unseen split.
+
+Each ALFWorld game becomes one Harbor task holding exactly one episode. Game
+enumeration comes from upstream ``AlfredTWEnv``, not from a directory walk of
+our own, so the split definition stays ALFWorld's.
+
+    python benchmarks/alfworld/build_dataset.py \
+        --alfworld-data "$ALFWORLD_DATA" \
+        --output benchmarks/alfworld/datasets/valid_unseen
+
+Output is deterministic: the same data root yields the same task identities,
+instructions and configuration on every run.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+TEMPLATES_DIR = HERE / "templates"
+BASE_CONFIG_PATH = HERE / "alfworld_base_config.yaml"
+
+# ALFWorld's valid_unseen split. 134 is the number of supported, solvable games
+# upstream enumerates for eval_out_of_distribution; see README.md.
+EXPECTED_TASK_COUNT = 134
+SPLIT = "valid_unseen"
+TRAIN_EVAL = "eval_out_of_distribution"
+TASK_ORG = "alfworld"
+
+# Upstream's own budget. general.training_method is 'dagger' in base_config.yaml,
+# so AlfredTWEnv.init_env reads dagger.training.max_nb_steps_per_episode and
+# passes it to TextWorld as max_episode_steps. TextWorld enforces it; we only
+# forward the same number, and never count steps ourselves.
+MAX_EPISODE_STEPS_CONFIG_PATH = ("dagger", "training", "max_nb_steps_per_episode")
+
+PRIVATE_DIR_IN_IMAGE = "/opt/alfworld-private"
+
+
+class BuildError(RuntimeError):
+    pass
+
+
+def _load_base_config() -> dict:
+    import yaml
+
+    return yaml.safe_load(BASE_CONFIG_PATH.read_text(encoding="utf-8"))
+
+
+def _resolve_max_episode_steps(config: dict) -> int:
+    method = config["general"]["training_method"]
+    if method != "dagger":
+        raise BuildError(
+            f"Unexpected general.training_method={method!r}: the episode budget "
+            "would come from a different config path than the pinned one."
+        )
+    node = config
+    for key in MAX_EPISODE_STEPS_CONFIG_PATH:
+        node = node[key]
+    return int(node)
+
+
+def enumerate_games(alfworld_data: Path) -> list[str]:
+    """Return the upstream game list for valid_unseen, sorted for determinism."""
+    os.environ["ALFWORLD_DATA"] = str(alfworld_data)
+    from alfworld.agents.environment.alfred_tw_env import AlfredTWEnv
+
+    config = _load_base_config()
+    env = AlfredTWEnv(config, train_eval=TRAIN_EVAL)
+    games = sorted(env.game_files)
+
+    data_path = os.path.expandvars(config["dataset"]["eval_ood_data_path"])
+    for game in games:
+        if not game.startswith(str(Path(data_path).resolve())) and not game.startswith(
+            data_path
+        ):
+            raise BuildError(
+                f"Game outside the {SPLIT} data path, refusing to mix splits: {game}"
+            )
+        if not _is_officially_solvable(Path(game)):
+            raise BuildError(
+                f"Official {SPLIT} game is not marked solvable=true: {game}"
+            )
+    return games
+
+
+def _task_type(game_file: Path) -> str:
+    traj = json.loads((game_file.parent / "traj_data.json").read_text(encoding="utf-8"))
+    return traj["task_type"]
+
+
+def _is_officially_solvable(game_file: Path) -> bool:
+    """Read the solvability marker embedded in the official game file."""
+    try:
+        game = json.loads(game_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise BuildError(f"cannot parse official game file {game_file}: {exc}") from exc
+    return game.get("solvable") is True
+
+
+def _task_name(game_file: Path) -> str:
+    """Stable, filesystem-safe task id derived from the game's own identity.
+
+    The scene directory already carries the task type and object names; the
+    trial digest disambiguates the several trials that can share a scene.
+    """
+    scene = game_file.parent.parent.name
+    trial = game_file.parent.name
+    digest = hashlib.sha256(f"{scene}/{trial}".encode()).hexdigest()[:8]
+    stem = f"{scene}-{digest}".lower()
+    safe = "".join(c if c.isalnum() or c in "-_" else "-" for c in stem)
+    while "--" in safe:
+        safe = safe.replace("--", "-")
+    return f"alfworld-{safe.strip('-')}"
+
+
+def _write(path: Path, content: str, *, executable: bool = False) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(content, encoding="utf-8")
+    if executable:
+        path.chmod(0o755)
+
+
+def _task_toml(name: str, max_episode_steps: int, task_type: str) -> str:
+    # [task].name must be 'org/name'; short_name (used for resource naming) is
+    # the part after the slash, which is also the task directory name.
+    # agent.user pins the non-root agent; verifier.user stays root so the
+    # verifier can reach the daemon's private socket.
+    return f"""# Generated by benchmarks/alfworld/build_dataset.py. Do not edit by hand.
+[task]
+name = "{TASK_ORG}/{name}"
+tags = ["alfworld", "{SPLIT}", "{task_type}"]
+
+[agent]
+user = "alfagent"
+timeout_sec = 3600.0
+
+[verifier]
+user = "root"
+timeout_sec = 300.0
+
+[environment]
+build_timeout_sec = 1800.0
+workdir = "/home/alfagent/work"
+
+[environment.healthcheck]
+command = "{PRIVATE_DIR_IN_IMAGE}/healthcheck.sh"
+interval_sec = 5.0
+timeout_sec = 240.0
+start_period_sec = 0.0
+start_interval_sec = 5.0
+retries = 3
+
+[metadata]
+alfworld_split = "{SPLIT}"
+alfworld_task_type = "{task_type}"
+alfworld_max_episode_steps = {max_episode_steps}
+"""
+
+
+def _daemon_config(max_episode_steps: int) -> str:
+    return (
+        json.dumps(
+            {
+                "game_file": f"{PRIVATE_DIR_IN_IMAGE}/game/game.tw-pddl",
+                "socket_path": "/run/alfworld/private.sock",
+                "agent_socket_path": "/run/alfworld/agent.sock",
+                "ready_path": "/run/alfworld/ready",
+                "max_episode_steps": max_episode_steps,
+            },
+            indent=2,
+            sort_keys=True,
+        )
+        + "\n"
+    )
+
+
+def _solve_sh(plan: list[str], seed: int) -> str:
+    lines = [
+        "#!/usr/bin/env bash",
+        "# Oracle solution: ALFWorld's own handcoded expert walkthrough.",
+        "#",
+        "# This proves the task is solvable and that the packaging, daemon, client",
+        "# and verifier agree. It is not the grading criterion: the verifier scores",
+        "# the episode's final state, and other action sequences may also succeed.",
+        "#",
+        f"# Generated from the upstream handcoded expert with random.seed({seed});",
+        "# see benchmarks/alfworld/scripts/expert_plan.py for why a seed is needed.",
+        "set -euo pipefail",
+        "",
+        "play.py observe",
+    ]
+    for action in plan:
+        lines.append(f"play.py act {json.dumps(action)}")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def _expert_plan(game_file: Path, max_episode_steps: int) -> tuple[list[str], int]:
+    """Collect the upstream handcoded expert walkthrough for one game.
+
+    Returns the winning action sequence and the seed that produced it. Runs in a
+    separate process: the expert wrapper mutates global TextWorld registration
+    state, and the eval path must never load it.
+    """
+    script = HERE / "scripts" / "expert_plan.py"
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            "--game-file",
+            str(game_file),
+            "--base-config",
+            str(BASE_CONFIG_PATH),
+            "--max-episode-steps",
+            str(max_episode_steps),
+        ],
+        capture_output=True,
+        text=True,
+        env={**os.environ},
+    )
+    if result.returncode != 0:
+        raise BuildError(
+            f"expert plan generation failed for {game_file}: {result.stderr.strip()[-500:]}"
+        )
+    payload = json.loads(result.stdout)
+    if not payload.get("won"):
+        tried = len(payload.get("attempts", []))
+        raise BuildError(
+            f"expert walkthrough did not win for {game_file} in {tried} seeded "
+            f"attempts within {max_episode_steps} steps"
+        )
+    return payload["plan"], int(payload["seed"])
+
+
+def build_task(
+    task_dir: Path,
+    game_file: Path,
+    *,
+    max_episode_steps: int,
+    with_oracle: bool,
+) -> dict:
+    task_type = _task_type(game_file)
+    name = task_dir.name
+
+    if task_dir.exists():
+        shutil.rmtree(task_dir)
+
+    env_dir = task_dir / "environment"
+    private_dir = env_dir / "private"
+
+    # Only the game file goes into the image. traj_data.json stays out: the eval
+    # path never loads the expert (upstream omits that wrapper for
+    # eval_out_of_distribution), and it holds the human walkthrough.
+    _write(
+        private_dir / "game" / "game.tw-pddl",
+        game_file.read_text(encoding="utf-8"),
+    )
+    _write(private_dir / "daemon-config.json", _daemon_config(max_episode_steps))
+    _write(private_dir / "daemon.py", (TEMPLATES_DIR / "daemon.py").read_text())
+
+    _write(env_dir / "Dockerfile", (TEMPLATES_DIR / "Dockerfile").read_text())
+    _write(env_dir / "play.py", (TEMPLATES_DIR / "play.py").read_text())
+    _write(
+        env_dir / "healthcheck.sh",
+        (TEMPLATES_DIR / "healthcheck.sh").read_text(),
+        executable=True,
+    )
+
+    instruction = (TEMPLATES_DIR / "instruction.md").read_text(encoding="utf-8")
+    _write(
+        task_dir / "instruction.md",
+        instruction.format(max_episode_steps=max_episode_steps),
+    )
+    _write(task_dir / "task.toml", _task_toml(name, max_episode_steps, task_type))
+    _write(
+        task_dir / "tests" / "test.sh",
+        (TEMPLATES_DIR / "test.sh").read_text(),
+        executable=True,
+    )
+
+    record = {
+        "name": name,
+        "task_type": task_type,
+        "split": SPLIT,
+        "max_episode_steps": max_episode_steps,
+        "scene": game_file.parent.parent.name,
+        "trial": game_file.parent.name,
+        "game_sha256": hashlib.sha256(game_file.read_bytes()).hexdigest(),
+    }
+
+    if with_oracle:
+        plan, seed = _expert_plan(game_file, max_episode_steps)
+        _write(
+            task_dir / "solution" / "solve.sh", _solve_sh(plan, seed), executable=True
+        )
+        record["oracle_steps"] = len(plan)
+        record["oracle_expert_seed"] = seed
+
+    return record
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--alfworld-data",
+        default=os.environ.get("ALFWORLD_DATA"),
+        help="ALFWorld data root (defaults to $ALFWORLD_DATA).",
+    )
+    parser.add_argument("--output", required=True, help="Dataset output directory.")
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Build only the first N games. For smoke runs; skips the 134 check.",
+    )
+    parser.add_argument(
+        "--task-type",
+        action="append",
+        default=None,
+        help="Restrict to a task type. Repeatable. Skips the 134 check.",
+    )
+    parser.add_argument(
+        "--no-oracle",
+        action="store_true",
+        help="Skip oracle walkthrough generation (much faster).",
+    )
+    args = parser.parse_args(argv)
+
+    if not args.alfworld_data:
+        parser.error("--alfworld-data or $ALFWORLD_DATA is required")
+    alfworld_data = Path(args.alfworld_data).expanduser().resolve()
+    if not alfworld_data.is_dir():
+        parser.error(f"ALFWorld data root does not exist: {alfworld_data}")
+
+    config = _load_base_config()
+    max_episode_steps = _resolve_max_episode_steps(config)
+
+    games = [Path(game) for game in enumerate_games(alfworld_data)]
+    print(f"upstream {SPLIT} enumeration: {len(games)} games", file=sys.stderr)
+
+    partial = args.limit is not None or args.task_type is not None
+    if len(games) != EXPECTED_TASK_COUNT:
+        raise BuildError(
+            f"Expected {EXPECTED_TASK_COUNT} {SPLIT} games, found {len(games)}. "
+            "Investigate before proceeding: check the ALFWorld version, that "
+            "json_2.1.1 data is fully extracted, that every game directory has "
+            "both game.tw-pddl and traj_data.json, and that task_types in "
+            "alfworld_base_config.yaml still lists all six types."
+        )
+
+    selected = games
+    if args.task_type:
+        wanted = set(args.task_type)
+        selected = [g for g in selected if _task_type(g) in wanted]
+    if args.limit is not None:
+        selected = selected[: args.limit]
+
+    output = Path(args.output).expanduser().resolve()
+    output.mkdir(parents=True, exist_ok=True)
+
+    records = []
+    for index, game in enumerate(selected, start=1):
+        name = _task_name(game)
+        print(f"[{index}/{len(selected)}] {name}", file=sys.stderr)
+        records.append(
+            build_task(
+                output / name,
+                game,
+                max_episode_steps=max_episode_steps,
+                with_oracle=not args.no_oracle,
+            )
+        )
+
+    names = [r["name"] for r in records]
+    if len(set(names)) != len(names):
+        raise BuildError("Task name collision; identities must be unique")
+
+    manifest = {
+        "split": SPLIT,
+        "train_eval": TRAIN_EVAL,
+        "alfworld_version": "0.4.2",
+        "max_episode_steps": max_episode_steps,
+        "upstream_game_count": len(games),
+        "task_count": len(records),
+        "upstream_solvable_count": len(games),
+        "partial": partial,
+        "base_config_sha256": hashlib.sha256(BASE_CONFIG_PATH.read_bytes()).hexdigest(),
+        "tasks": sorted(records, key=lambda r: r["name"]),
+    }
+    (output / "manifest.json").write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+
+    counts: dict[str, int] = {}
+    for record in records:
+        counts[record["task_type"]] = counts.get(record["task_type"], 0) + 1
+    print(f"\nwrote {len(records)} tasks to {output}", file=sys.stderr)
+    for task_type in sorted(counts):
+        print(f"  {task_type}: {counts[task_type]}", file=sys.stderr)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

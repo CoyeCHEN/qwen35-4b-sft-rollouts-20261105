@@ -1,0 +1,17 @@
+{
+  "harness_commit": "386aa0f81b803e64d09beb2fc046957f0ea1c02f",
+  "harness_wheel_sha256": "c971e605491a46665f5ade2b952ccfddbd1cc7d9bfcd05a0230320b3cf69a830",
+  "harbor_commit": "103d5569e559d5f99f45ef4fc6c7a3176c90801a",
+  "harbor_wheel_sha256": "be33c83ce680bc7562f8133a3ffeb6e0f752e5f6ecbb9cdf58e26c9ca2afb512",
+  "upstream_harness_audited_commit": "23636e329521746e7632a020fce045967c24aec5",
+  "upstream_harness_zym_audited_commit": "4b136692905ba5818620f99d55a7d9d77f2c0b9a",
+  "current_harbor_repository_base": "ad898548b1a61e93900df35893a3547e05af9d0a",
+  "hot_vllm_reuse_deployed": false,
+  "formal_results_migrated_or_rewritten": false,
+  "harness_pin_scope": "H2/ZYM FAIR1 candidate; every H0 condition keeps its distinct frozen wheel",
+  "h0_historical_anchor": {
+    "wheel_sha256": "af8d883fc883258557e4c00d1d57c8aeaea9e11e23d5ec2b81cb7314c41774fd",
+    "packaging_commit": "49f27b9ae8b19700d77f1e4e8c16c3977e25613e",
+    "code_parent_wheel_sha256": "7f74c3facee76b2b252f8a64a8ab83134451bf72972e9601288adc1626dcc037"
+  }
+}

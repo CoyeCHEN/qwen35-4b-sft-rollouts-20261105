@@ -1,0 +1,13 @@
+ARG BASE_IMAGE=openharness-webshop:small-64fa2a5-actionlimit-v2
+FROM ${BASE_IMAGE}
+
+RUN python -m pip install --no-cache-dir ijson==3.4.0
+
+COPY runtime/service.py /opt/webshop/service.py
+COPY runtime/full_environment.py /opt/webshop/full_environment.py
+COPY runtime/build_full_index.py /opt/webshop/build_full_index.py
+
+ENV WEBSHOP_PRODUCT_SET=official-full-1.18m \
+    WEBSHOP_FULL_ROOT=/opt/webshop/full
+
+CMD ["python", "/opt/webshop/service.py"]

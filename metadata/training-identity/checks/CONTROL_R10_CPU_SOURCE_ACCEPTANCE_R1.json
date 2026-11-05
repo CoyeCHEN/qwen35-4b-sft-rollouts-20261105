@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "at": 1793559984.782999,
+  "resource_boundary_tests": 9,
+  "live_gpu5_readiness": {
+    "ready": true,
+    "gpu_uuid": "GPU-7b634c3e-13ae-5243-19dd-b6edddf9a543",
+    "used_mib": 4,
+    "compute_pids": [],
+    "authorization_sha256": "435ddb90c38f5aac87609f9e0b4a4f799d7ca027d3854e58d24f0b1eb6f803da",
+    "max_observed_idle_remainder_mib": 4,
+    "observation_does_not_identify_the_residual_allocation_origin": true
+  },
+  "new_sources_sha256": {
+    "gpu5_readiness18_r1.py": "fe6e4e451922155b6ecf6cacdb55deee362b339bbbb16cc00868581d7b800668",
+    "new-validation-readouts18-r2.py": "acacdd2a7cb61c608ce60a7ce165d8cec87f34c81a2e46a1dbd1b9781c3019c1",
+    "score-frozen-validation18-r3.py": "b72cf6ee7501239c7199af9b1bf21442ee99b602e1d4410bce50a2ab6d0622a1",
+    "audit-native-cli-prefix-r2.py": "007f4c322994853712169d3d2e8b20c5d8a7aa08fc348a9570509b4902f310d1",
+    "audit-native-cli-smoke-r3.py": "c6a1fc68128b16e424d7d1fcc7efcc9dd2341f94c1085f16a41b11464b9137cc",
+    "admit-formal-native-cli18-r1.py": "5f59e4baa5b5aa6cbc875fece143512febc2f7beb3b0ed1127c61a538eb29cf0",
+    "phase_progression18_r7.py": "b01170c81f9e55a46b4d363d7367d3cf8faca85ada9e26f4d21fe7aa763c2332",
+    "run-native772-advance-r10.py": "aae3a5e1f2ae6394dda13de9241636956ccb43f823386a88f9252a8bb6db7ffd",
+    "read-only-monitor18-r16.py": "842a6b0c15845cc221b3beae4d9e09ffe090a565e2aa114040a898f17fabbc2e"
+  },
+  "research_recipe_or_frozen_data_or_wheel_modified": false,
+  "new_model_or_gpu_calls": 0,
+  "not_yet_deployed_to_controller": true
+}

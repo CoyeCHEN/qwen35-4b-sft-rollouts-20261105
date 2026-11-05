@@ -1,0 +1,14 @@
+{
+  "at": 1793592883.620755,
+  "engine149": {
+    "cpus": 40,
+    "memory_available": 243790864384,
+    "root_available": 237175672832
+  },
+  "max_native_pipelines": 17,
+  "upper_cpu_requested": 37,
+  "upper_task_memory_mib": 139264,
+  "official_resources_unchanged": true,
+  "model_gpus": 8,
+  "legacy_job_concurrency_unchanged": true
+}

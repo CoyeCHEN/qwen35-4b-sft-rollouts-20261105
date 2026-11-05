@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "at": 1793583984.3254988,
+  "all89_profile_extra_compose_files": 7,
+  "copied_missing": [
+    "/home/chenkeyi/.local/share/harbor-rsi/remote-preparation-20261015/asset-overlays/git-http1.compose.json",
+    "/home/chenkeyi/.local/share/harbor-rsi/remote-preparation-20261015/asset-overlays/hf-cache.compose.json",
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/apt-bullseye.compose.json",
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/github-official-origin.compose.json",
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/public-ca.compose.json",
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/sam-safe-cache.compose.json"
+  ],
+  "source_identities": {
+    "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new772-tb21-20261101/configs/agent-deps-r1.compose.json": {
+      "sha256": "0def5a172979ffa3409d366486f3ba7e90a8fed041d87c70e6ebc8bcda632a57",
+      "bytes": 369
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/remote-preparation-20261015/asset-overlays/git-http1.compose.json": {
+      "sha256": "b5216ca43e47e05a0a788f91bd7aea35585b7e50f4b46751fddfef12e514e7a1",
+      "bytes": 193
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/remote-preparation-20261015/asset-overlays/hf-cache.compose.json": {
+      "sha256": "a9e7986c74054711fa5307a076424774d34d9b1778d0a7e1f701176a287ce726",
+      "bytes": 451
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/apt-bullseye.compose.json": {
+      "sha256": "c933743c8891933c02d04f8e400c8ae04ba398721ef7c2bba2382c18292d0a13",
+      "bytes": 375
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/github-official-origin.compose.json": {
+      "sha256": "6d1e6d40fad7a9d369c68dd9e8b9d980355d9f410f3b11f80e4bbfad9e398a2b",
+      "bytes": 157
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/public-ca.compose.json": {
+      "sha256": "920196bf18c3432bbd8a0555ec64d417050236cc30e0cbfa152318d0b5b44bba",
+      "bytes": 288
+    },
+    "/home/chenkeyi/.local/share/harbor-rsi/tb21-completion-20261015/sam-safe-cache.compose.json": {
+      "sha256": "ba06593102cb97b607807a943a47cf9612a849356c72bf23d857f4e4f8131d5a",
+      "bytes": 742
+    }
+  },
+  "official_files_modified": false,
+  "new_model_or_task_calls": 0
+}

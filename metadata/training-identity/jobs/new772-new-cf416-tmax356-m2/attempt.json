@@ -1,0 +1,30 @@
+{
+  "job_id": "new772-new-cf416-tmax356-m2",
+  "config_sha256": "1f48ed160a76bea910857bf16c94776f06e1d77a45c76047686303e72e91c716",
+  "devices": {
+    "0": {
+      "uuid": "GPU-7b40e1e7-c43c-ba4f-10ed-397f948eeed1",
+      "used_mib": 4,
+      "total_mib": 81920
+    },
+    "1": {
+      "uuid": "GPU-e6b0a5b4-c14b-e336-1fba-2cda6693aa91",
+      "used_mib": 4,
+      "total_mib": 81920
+    },
+    "2": {
+      "uuid": "GPU-995cb9ba-212b-9df4-f85b-f6f75757007b",
+      "used_mib": 4,
+      "total_mib": 81920
+    },
+    "3": {
+      "uuid": "GPU-6e9a5318-94e0-36dc-cb4a-95a22a0950d5",
+      "used_mib": 4,
+      "total_mib": 81920
+    }
+  },
+  "returncode": 0,
+  "log": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/training.log",
+  "resume": null,
+  "formal_training": true
+}

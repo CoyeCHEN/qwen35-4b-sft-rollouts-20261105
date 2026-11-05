@@ -1,0 +1,235 @@
+{
+  "coarse_mapping": {
+    "software-engineering": "software",
+    "debugging": "software",
+    "system-administration": "systems",
+    "file-operations": "files",
+    "data-processing": "data",
+    "data-querying": "data",
+    "data-science": "data-science-ml",
+    "machine-learning": "data-science-ml",
+    "model-training": "data-science-ml",
+    "scientific-computing": "science-math",
+    "mathematics": "science-math",
+    "optimization": "science-math",
+    "security": "security",
+    "games": "interactive",
+    "personal-assistant": "interactive",
+    "video-processing": "media"
+  },
+  "normalization": "TMax domain underscore -> hyphen",
+  "reference_counts": {
+    "science-math": 13,
+    "security": 8,
+    "software": 31,
+    "data-science-ml": 15,
+    "interactive": 2,
+    "systems": 9,
+    "files": 5,
+    "data": 5,
+    "media": 1
+  },
+  "tb21_tasks": 89,
+  "evidence_policy": "Original public category and native skill labels only; no model outcomes read",
+  "tmax_skill_mapping": {
+    "Algorithmic": {
+      "coarse_categories": [
+        "data",
+        "data-science-ml",
+        "science-math",
+        "security",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Archives": {
+      "coarse_categories": [
+        "files"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Configuration": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Data Comprehension": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Data I/O": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Data Parsing": {
+      "coarse_categories": [
+        "files"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Data Processing": {
+      "coarse_categories": [
+        "data-science-ml",
+        "science-math",
+        "security",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Debugging": {
+      "coarse_categories": [
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Deployment": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "File I/O": {
+      "coarse_categories": [
+        "files"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Filesystem": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Forensics": {
+      "coarse_categories": [
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Graph Processing": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Manipulation": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Mathematical": {
+      "coarse_categories": [
+        "data",
+        "data-science-ml",
+        "science-math",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Multi-Language": {
+      "coarse_categories": [
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Navigation": {
+      "coarse_categories": [
+        "files"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Network": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Process/Service": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Query Construction": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Result Processing": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Shell Scripting": {
+      "coarse_categories": [
+        "systems"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Statistical": {
+      "coarse_categories": [
+        "science-math"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "String/Text": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Systems": {
+      "coarse_categories": [
+        "data",
+        "data-science-ml",
+        "science-math",
+        "security",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Testing": {
+      "coarse_categories": [
+        "data-science-ml",
+        "science-math",
+        "security",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Time Series": {
+      "coarse_categories": [
+        "data"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Transformation": {
+      "coarse_categories": [
+        "files"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    },
+    "Web Security": {
+      "coarse_categories": [
+        "security",
+        "software"
+      ],
+      "rule": "Skill is a separate coverage axis; domain determines category, no forced skill/category equivalence"
+    }
+  },
+  "difficulty_policy": "Stratify original labels within each pool; CF easy/medium/hard and TMax workflow complexity are not equivalent",
+  "limitations": [
+    "Lexical/template screening is not a proof against every semantic rewrite.",
+    "Source generation/scenario and identical verifier bundles conservatively define families; official author family IDs unavailable.",
+    "Cross-pool candidate generation ignores shingles present in more than 200 CF tasks; threshold verified using full sets."
+  ],
+  "unmapped_tasks": []
+}

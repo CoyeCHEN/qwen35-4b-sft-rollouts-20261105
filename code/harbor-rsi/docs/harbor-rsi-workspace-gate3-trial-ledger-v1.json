@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "benchmark": "WorkspaceBench Lite",
+  "scope": "Gate 3 r5 only",
+  "status": "failed",
+  "valid_scored": 0,
+  "agent_errors": 0,
+  "infrastructure_errors": 1,
+  "judge_errors": 0,
+  "not_started": ["7", "13", "15", "23", "33", "35", "37", "38", "44"],
+  "trials": [
+    {
+      "task_id": "3",
+      "trial_name": "workspace-gate3-task3-bridge-202__s6TpJsC",
+      "status": "infrastructure_failure",
+      "reward": null,
+      "agent_exit": 0,
+      "judge_api_request_observed": false,
+      "judge_api_request_confirmed_absent": false,
+      "failure_stage": "provider artifact/verifier cwd handoff",
+      "first_observed_error": "task_workdir_unavailable followed by Expected one regular file in transfer",
+      "model": "deepseek-flash",
+      "model_requests": 28,
+      "input_tokens": 801450,
+      "cache_tokens": 766208,
+      "output_tokens": 16869,
+      "agent_duration_seconds": 161.15,
+      "provider_identity": "83c26f8901674aa9a3d80c6b1219e0b6",
+      "provider_wheel_sha256_expected": "9cb6f95d93616584409fdeca4c9fb11457cc16f42b638fd306eec63b7531bbac",
+      "openharness_wheel_sha256": "09c874a34f985266548292ee17acc234f30cda4b850d0b492df2c55cd4656f1f",
+      "trial_result": "/home/cky/.local/state/harbor-rsi/workspace-gate3-r5-task3/workspace-gate3-r5-task3/workspace-gate3-task3-bridge-202__s6TpJsC/result.json",
+      "provider_evidence": "/home/cky/.local/state/harbor-rsi/workspace-gate3-r5-task3/workspace-gate3-r5-task3/workspace-gate3-task3-bridge-202__s6TpJsC/remote-docker-83c26f8901674aa9a3d80c6b1219e0b6.jsonl"
+    }
+  ],
+  "remaining_tasks_preserved": true,
+  "prior_gate2_and_r4_evidence_preserved": true
+}

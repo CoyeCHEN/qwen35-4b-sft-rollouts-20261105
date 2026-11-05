@@ -1,0 +1,1728 @@
+{
+  "at": 1793805210.835398,
+  "files": [
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5_base_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5_base_training.jinja",
+      "bytes": 2895,
+      "sha256": "6704b68c30e4532b6a762d6a3e1b92caa8ecfd75d0d0b24d7c764e86768ae071",
+      "git_blob": "2bcb8e8bd1027ee7e207cb6a71ddd21a8fd9f126",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5_base.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5_base.jinja",
+      "bytes": 2427,
+      "sha256": "44d5f08f3f72b837eaad09f13a54c1f9f4eb58d75240334548b7fd52a5437fa5",
+      "git_blob": "28028c056af412405debd878cdda0171e35fa5d1",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/__init__.py",
+      "bytes": 3712,
+      "sha256": "27724d3f394585e93a1a00b774f847aee935a13592fe7c02e1214b51d65aed11",
+      "git_blob": "2065b72b9b9064b41cf08a589d21eea4290a8c33",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5.jinja",
+      "bytes": 2507,
+      "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "git_blob": "bdf7919a96cfe43d50914a007b9c0877bd0ec27e",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/pyproject.toml",
+      "bytes": 10540,
+      "sha256": "a7e66beeab3bfe278eb9d86247c4b67c77240629cbad65002ed9fed9063ed2c0",
+      "git_blob": "6e78529629b658575381c17c10a24b27f752cc12",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5_vl.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5_vl.jinja",
+      "bytes": 1017,
+      "sha256": "a0bc6f6fc7a29a80017a433e8f03a1cc1236e838a944a2d034295a60c4f2fddb",
+      "git_blob": "6c226632394ae7474b0d4b13e15793eac2e21ee9",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5_vl_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5_vl_training.jinja",
+      "bytes": 3239,
+      "sha256": "31c85932a6d8826f0fe8d52b81767eba6b869128b0a7c7503d1e7baaad4e8043",
+      "git_blob": "46e34469a34f03fa8c12b7535307cc189997d14b",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3.jinja",
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "git_blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_5_nothink.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_5_nothink.jinja",
+      "bytes": 7755,
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "git_blob": "0ef09f214eaa6d9bca297988afc1454b5827b2c7",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen2_5_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen2_5_training.jinja",
+      "bytes": 2965,
+      "sha256": "0cd86fb80f520885e35040a8df321540e729d3358da41f27cf74d33103d94f62",
+      "git_blob": "fd7258ece606cb8b6b59a3fb28904282f6004ac4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_5_nothink_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_5_nothink_training.jinja",
+      "bytes": 8171,
+      "sha256": "f32fe3e21c20f59d193244181c8b4c324c73a8cd313ddf825633a9ecfd2afad2",
+      "git_blob": "098a4500287fe99701772f879e0ee76d4b9a97cb",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_5_think_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_5_think_training.jinja",
+      "bytes": 8168,
+      "sha256": "ccf356d8f238e287c047b1ef589850fd6b2b44e6cb29079e26c635fb9b8111ef",
+      "git_blob": "20456e8873d1cb35bb3edda412ec7e0191c3f634",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_5_think.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_5_think.jinja",
+      "bytes": 7756,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "git_blob": "a585dec894e63da457d9440ec6aa7caa16d20860",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_6_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_6_training.jinja",
+      "bytes": 8090,
+      "sha256": "c5a26eaf3aab77fdc4ec696540ff896713ff0764f552ce9f597ede99fc673034",
+      "git_blob": "955d920b6adace7ebd60c7309b304c8e8a9d0370",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_6.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_6.jinja",
+      "bytes": 7764,
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "git_blob": "a8755d827c0a7b614c246c4060dfd58ab352a8ff",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_template_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_template_utils.py",
+      "bytes": 74458,
+      "sha256": "af3fabc94ed3ec35f44d90e86fd0580f62138a8364b4f9adee0528daf5b1135c",
+      "git_blob": "1274c926fbb44d9f1b5850210b7120a86495774d",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_coder.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_coder.jinja",
+      "bytes": 6211,
+      "sha256": "5a38bfa05833266240066aedc497decc9b00cc0d3e3b8cceea98cf530196ab06",
+      "git_blob": "49b0e8d0ee7e655434942233b4b0ab2104d5247e",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_8_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_8_training.jinja",
+      "bytes": 9368,
+      "sha256": "320c2f734288f91c341c1c3c9690e4e6aba07a27852bf88d7c8481c880168288",
+      "git_blob": "42c78d315be2a8cfcb4bef507ec9f6c5988488a6",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_8.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_8.jinja",
+      "bytes": 8952,
+      "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "git_blob": "c0c686f9c38d70d179fb7b5f5aa7530bc913dda3",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_instruct_2507.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_instruct_2507.jinja",
+      "bytes": 2630,
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+      "git_blob": "70adff8a08fb31e0636f618564838d4bf3c05286",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_thinking_2507.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_thinking_2507.jinja",
+      "bytes": 4049,
+      "sha256": "3802169b2a02b81e6adb7ab4f64f91ff02db753c8c3a64a01c35192d3a61d8d7",
+      "git_blob": "2e2f69c390ddde1d05fefc214e9cf9afe775765b",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_thinking_2507_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_thinking_2507_training.jinja",
+      "bytes": 4269,
+      "sha256": "c50b6d89615b5ac4b938dc6805e8bee94485b64573e1463b1059ced0b317ef14",
+      "git_blob": "e3112f52f2dee9bd896b31ace5885cfe88d498e8",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_coder_next.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_coder_next.jinja",
+      "bytes": 6068,
+      "sha256": "c79a833039a43602150cce0902403d6e376c50930c1b2a139b2964e1f0c322a0",
+      "git_blob": "1ac848e36c5e24a7f31f64b5631eb8890ffe916f",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_training.jinja",
+      "bytes": 4360,
+      "sha256": "1d944ff8f268b611abb296cdd24d0f51981eef1c8647ac321c3a0258f61eb6c9",
+      "git_blob": "46d2694b8d0a98ac8764ea16f12c6167af2665da",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_instruct_2507_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_instruct_2507_training.jinja",
+      "bytes": 3165,
+      "sha256": "48e17aa3caf5bf20075b6e7366864ee943e00b6f0752aadfe8b670c2ab0291a5",
+      "git_blob": "2e30797390d4983e6e2fcbce9827f56d5ee364ae",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_v2.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_v2.jinja",
+      "bytes": 4116,
+      "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5",
+      "git_blob": "699ff8df401fe4788525e9c1f9b86a99eadd6230",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_v2_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_v2_training.jinja",
+      "bytes": 4320,
+      "sha256": "3e977d4c9748de8b52e15a81f29aee46ae856cf4aae084f0d143cecf3c45a3c8",
+      "git_blob": "776748bc4d7bc8e692f85a931d4c39e029a479c3",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_vl_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_vl_training.jinja",
+      "bytes": 5741,
+      "sha256": "66bd81986bf7f8abe6d7fb4a50341c8d8ae14b16637e8fb876bca7e7ef0b9c6f",
+      "git_blob": "137a64a1722352220eee524909ef631a37066541",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/chat_templates/qwen3_vl.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/chat_templates/qwen3_vl.jinja",
+      "bytes": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4",
+      "git_blob": "124386803f142761528f710e77ae483f5f8c4fc4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/trainer/sft_config.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/trainer/sft_config.py",
+      "bytes": 17862,
+      "sha256": "4a18512fbdc83c9d16be09ee68529cd4cc07e4243c9ad733686fd3cb70984d6b",
+      "git_blob": "1a937bc600dbd84ee9edce20dd89338567b1222c",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/data_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/data_utils.py",
+      "bytes": 42889,
+      "sha256": "24e80d9427de17026cc74e25a7b11612746d57d213317b82132ff1bc7ae9468b",
+      "git_blob": "908cd98379e24284ffa9407c730782a8c263b464",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/setup.py",
+      "bytes": 6572,
+      "sha256": "1a7fe144134dff38afa385c749c201d88827cea7692ba4007e58f9ccfd379275",
+      "git_blob": "d2cb423369e44d925a4dd00467fd7c2dc0ef28de",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/__init__.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/__init__.py",
+      "bytes": 4181,
+      "sha256": "90b0694c0baa4c61860c0a33845aa80f45e408993e9bca3fdf4f1b982677bfd8",
+      "git_blob": "e44cb54c20ae2c1972a77e4e6faf985e59eae4e9",
+      "status": "OK"
+    },
+    {
+      "label": "trl-current",
+      "source_path": "trl/trainer/sft_trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/fa0a9a0a9337c9634026b821173979c0e9c032f9/trl/trainer/sft_trainer.py",
+      "bytes": 102167,
+      "sha256": "ab992191b84cdc47e14c0b6baf4e6be724240da4b4d98f26341cdaba072e8e92",
+      "git_blob": "c44253301ed3ba30b8de1eeecf17c02fb8fa3553",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/agent_template/qwen.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/agent_template/qwen.py",
+      "bytes": 4613,
+      "sha256": "97f09773483c004087f548f7b15126ea9e0c8a54be68165a8a884d5d97ca5948",
+      "git_blob": "dddd0a6ec6444cadbbffbebe755a3a712b5436bc",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/template/base.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/template/base.py",
+      "bytes": 117407,
+      "sha256": "a2d14012e37058ad392c1f242e220fd69bb654f29887baffb04aa552f3dfbc16",
+      "git_blob": "b7b89db96f36f45a14b9926c9f2e9231ef3d3de7",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/agent_template/qwen3_coder.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/agent_template/qwen3_coder.py",
+      "bytes": 9946,
+      "sha256": "4c9c7a735e9265d37b6cf38eecc073d407cda51eab542a4d1c53b2bfb479f6ec",
+      "git_blob": "2e03c41aeab475a02e2eff417c6e1151a65d6a1a",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "tests/general/test_qwen3_coder_agent_template.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/tests/general/test_qwen3_coder_agent_template.py",
+      "bytes": 7668,
+      "sha256": "6b3120dc57d1715af402c8b80d5a330912cbaebfdeb9ae688639d20d772ae29e",
+      "git_blob": "03771b4a06284670caefe95790605db467bddf0f",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/template/templates/qwen.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/template/templates/qwen.py",
+      "bytes": 87082,
+      "sha256": "600a230bbe1b55ebbfc97c2d366d7aa4bd0b5ab3da5219816958d1e1363e5707",
+      "git_blob": "2a2a19c25da7e53f99e0535d03b73d0c4bb08b3a",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/pyproject.toml",
+      "bytes": 6901,
+      "sha256": "c0b3bebe48448192407ec134b9d5cbfab30ac2c7a768683752e80f32d2dcc953",
+      "git_blob": "2845e3b3ac0926d69fa41278af8cd393118f1ef2",
+      "status": "OK"
+    },
+    {
+      "label": "ms-swift-current",
+      "source_path": "swift/trainers/mixin.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/9853e4672d014e35e2b6ba1bfd26d8204100adbb/swift/trainers/mixin.py",
+      "bytes": 76497,
+      "sha256": "83a76c73a27300aa76861d78be4d7f24ab03120d3105fa16272ff4f7fbf86903",
+      "git_blob": "bb78057f663fef654d563fb9892542624e4f4057",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/setup.py",
+      "bytes": 12447,
+      "sha256": "1718a2560928bc54d5d62837e4bfebe0852380aac9df8f23b115d67e281ef80e",
+      "git_blob": "b66b5e2e3692658604c9515b1e0d1b4d34de27d0",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "bytes": 7862,
+      "sha256": "332ea31ed31cc81ddb72da28737e9868a55d295f9f1daa3e0ad0d57d56d4e657",
+      "git_blob": "5eaa42d0b22e3e97c835d974b0f33193b2613216",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_5/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_5/__init__.py",
+      "bytes": 1852,
+      "sha256": "177e529b113a13c350daf85823c601a3e82406430a776fb66c2ce3a490cb08bc",
+      "git_blob": "31497d8ea8eb93c8014cbcbc56146667a3bfe784",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/loss/loss_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/loss/loss_utils.py",
+      "bytes": 8826,
+      "sha256": "bbc1be115ce17493dcf2a94d0e9349ddc7fcc30760692c3b49f1c7dfb37cc0f0",
+      "git_blob": "023f2dd8b285ecb2430bda653f5b248f078d94d2",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/integrations/deepspeed.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/integrations/deepspeed.py",
+      "bytes": 36026,
+      "sha256": "9be7a56cf8670c17d78c9315e49e4ad9e9b3122c09f392c076f0e9c7d1939ab1",
+      "git_blob": "ab4df82dcdc4e94cf36c6db4488ba8ca3a5c82a8",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "bytes": 86510,
+      "sha256": "4463b8a108f678c166755101d95f188179f54143305953d78147de0389b80ebc",
+      "git_blob": "240faec313e7229f2576a25e71abae0e92d4de24",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "bytes": 27280,
+      "sha256": "5123ec4d0bff633dc688bc981bf6889cd30c05e60b8d3fd06078449043d97149",
+      "git_blob": "ddac4aec6cb4a2fc2380e217a3bec316a8517944",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "bytes": 3127,
+      "sha256": "3d2f98abc1c6eec61e4548171286b88f5e8173ac6d63954b8fd225b7e24cf25a",
+      "git_blob": "28049a4deb4c5fa42f00bc2e5c4a56ca2a689aef",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "bytes": 5831,
+      "sha256": "256314dd3a45e3f5b008c19bb539c93eb24812c4b29c9df5dd2c906b9763b6fe",
+      "git_blob": "bcba1a251beaa09e37028ad3ef46ccda578c74bb",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_next/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_next/__init__.py",
+      "bytes": 1821,
+      "sha256": "4b4933a713383f7de7404efd68893c2b95b9e27bdfbb7252e870a4efac8a3086",
+      "git_blob": "da5a29bc5ca7ea8da73170eeb04f3d90e4fe472c",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "bytes": 38686,
+      "sha256": "928f5b45b17d20fb73f982a4c832ed3306c4ab353eed0a524ccb07afe4f8ed01",
+      "git_blob": "fe9b12a95364ae667c26f0e261077be9f155b0e4",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/trainer_seq2seq.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/trainer_seq2seq.py",
+      "bytes": 18216,
+      "sha256": "ef04e36288986152b34a01d0661ed85f1d9792a459949e820e63e3f86cfa3d91",
+      "git_blob": "c3907ed2556cd6f3fd9340e0e888b150a46ca04b",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/trainer.py",
+      "bytes": 233556,
+      "sha256": "9cc2ae4feaab0f69af82ae38f17ff9065ec7a5e74401c9c3ccd3121b190188bf",
+      "git_blob": "f0c5c2cb0f50fbe2755b2c50772f71111e241f58",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/processing_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/processing_utils.py",
+      "bytes": 137590,
+      "sha256": "0d35b9a9a52a8ab71f706718236ff7c2b84bd927c66582c8628001fc3522bf4e",
+      "git_blob": "fb7e9f24dd159f2589fb64c8c167aef711ed42b1",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/tokenization_utils_base.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/tokenization_utils_base.py",
+      "bytes": 187890,
+      "sha256": "3ed837d5b2e867f2b0d9e76eb858e6ddb4dffa1abaa4dcfac758459a4238f901",
+      "git_blob": "48bc88e7828920c66bd3db0ee38ad5c2f2b8beaf",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/utils/chat_template_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/utils/chat_template_utils.py",
+      "bytes": 33242,
+      "sha256": "b8395f06ead2539c48e7d7f0fba5d085f9f30d6524ff2793546ed45b4a66b487",
+      "git_blob": "022aadc27aa9964d915eb34d8229199adac38b42",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/pyproject.toml",
+      "bytes": 8024,
+      "sha256": "9f3264aa7b7722a024593f452c41eaac7e7c322c71a51081f54fcc88c8647379",
+      "git_blob": "386a029f1e74693f34e65040c0e6f387c943c38a",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-current",
+      "source_path": "src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/4abc4e580a2252b2e7a1a86810ed337784f8942b/src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "bytes": 56196,
+      "sha256": "ca80f244a5721aa6d43bad6d14ecc1e2375180990f982263ecbf625f94019dfe",
+      "git_blob": "bc5e7d29f7c7d7e6e873a2b46c1b99ccdfc0eb58",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/setup.py",
+      "bytes": 68067,
+      "sha256": "d0ee2b591a71c0960c1c6ec12ae5cc820b9ecef7f4d15064f1b1b27f418dbe71",
+      "git_blob": "d1753d2bcfae7c4552b7c93a5f189d057d22d258",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/model_executor/models/colqwen3_5.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/model_executor/models/colqwen3_5.py",
+      "bytes": 9456,
+      "sha256": "9d55ec1981e70a98bf0b37e609ccc7cf8a8fe0b3ad6da32aba854491c8373670",
+      "git_blob": "7eddbe983eaaebf020544aec723e5f11ea483d21",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/entrypoints/openai/chat_completion/serving.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/entrypoints/openai/chat_completion/serving.py",
+      "bytes": 54769,
+      "sha256": "e1963254a29c630dfc558a1b8e7d0e3f2e3c6843f34984f96207032102d166bf",
+      "git_blob": "90f5af42dcf5e9f8d99a5acfd39f46a65f8341b1",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/model_executor/models/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/model_executor/models/qwen3_5.py",
+      "bytes": 27915,
+      "sha256": "f9f370f7b4988bd917c1dad4a4d6939e74c5fe4f5b7cea9cedfcf4c2a5637afe",
+      "git_blob": "6e370f180da5d7d2f5a3aa9f8e3f6d1869b0ee5f",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/model_executor/models/qwen3_5_mtp.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/model_executor/models/qwen3_5_mtp.py",
+      "bytes": 12273,
+      "sha256": "10868ab446c1e44828f8db3c729be592fdce5a51a0b447caca413a552081d6e5",
+      "git_blob": "b6b2c3851c916c67deafd6442df32ded2541aea3",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/model_executor/models/qwen3_next_mtp.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/model_executor/models/qwen3_next_mtp.py",
+      "bytes": 9250,
+      "sha256": "0a249210c49d8dcfaed853257f21ae9f497ad8e583cbf558c0c24c6ff2b2588b",
+      "git_blob": "9180dc876fce02f54a98331e8d736e9dd60f1974",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/model_executor/models/qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/model_executor/models/qwen3_next.py",
+      "bytes": 35664,
+      "sha256": "92ff95db994a56927008624de7e6fadcd0064efda6e11611e6057fb78af42884",
+      "git_blob": "de566b7b06a4ae2116cdc6697a24f71b997bd55a",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/__init__.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/__init__.py",
+      "bytes": 107,
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "git_blob": "208f01a7cb5ee04c88d276fec2082cd4e830884b",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/mtp.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/mtp.py",
+      "bytes": 11333,
+      "sha256": "01019860db10d86eee26ec4760bbc3f50b96eafd7ae771511338ca81b5370e43",
+      "git_blob": "dfdee2d90bc1adc4412db599f844d4a8f086ec26",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/model.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/model.py",
+      "bytes": 40983,
+      "sha256": "f8d7b28f416907e9c6a93440754b9ce01aed655a884b389e00082d3d78740f31",
+      "git_blob": "be483f5a88dd8d4c246244f1f94f82d23f24918c",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/ops/__init__.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/ops/__init__.py",
+      "bytes": 107,
+      "sha256": "e3c55cbb0d7a8bd47df6f3378835644645f5d3bc89b45793b5d5a02d013e5c58",
+      "git_blob": "208f01a7cb5ee04c88d276fec2082cd4e830884b",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/ops/fused_gdn_gated_norm.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/ops/fused_gdn_gated_norm.py",
+      "bytes": 4629,
+      "sha256": "b781b8e6d6bbeaa4332978ed9f309c4177d125a53de1c509427e779a8b1facfa",
+      "git_blob": "b090d6d5c2016a9d4fa1fbeb5222ba83e2561ae4",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/ops/fused_allreduce_norm_quant.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/ops/fused_allreduce_norm_quant.py",
+      "bytes": 6219,
+      "sha256": "5ceb4b16fdde4184b498d07ffbee8ee97e9ddd090b621f568c44961f104ab15d",
+      "git_blob": "eb9d9f23f35dff479586e4816a5d07535c42cb05",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/__init__.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/__init__.py",
+      "bytes": 1507,
+      "sha256": "d0104a30db160e6c23b87127086d6ff936dc8cb4665bde28d0ed858282f8c3c7",
+      "git_blob": "b6def84347435f64b62658543b7e2ec7a65d23c0",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/multimodal_gen/configs/models/encoders/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/multimodal_gen/configs/models/encoders/qwen3_5.py",
+      "bytes": 1175,
+      "sha256": "f858d18afaef8a88f7427e203f350588c64c0e91b13dfaf4128d95a11894fbed",
+      "git_blob": "4c4f94e50dfa23f98054b3cd17edfa3d52f3332a",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/v1/attention/backends/gdn_attn.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/v1/attention/backends/gdn_attn.py",
+      "bytes": 36105,
+      "sha256": "eec8ad6ef12ab3ef76bf969494d3700585f2dee398a23a5f416e21d7e574663c",
+      "git_blob": "f28b3e42adb3a4944220fbc8eec1d8501b29885f",
+      "status": "OK"
+    },
+    {
+      "label": "vllm-current",
+      "source_path": "vllm/models/qwen3_5/nvidia/ops/fused_norm_quant.py",
+      "url": "https://raw.githubusercontent.com/vllm-project/vllm/e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968/vllm/models/qwen3_5/nvidia/ops/fused_norm_quant.py",
+      "bytes": 7528,
+      "sha256": "2a4ef2e577a87a18be5155521be7bee7094f3779e396d63810efeea076bdc67a",
+      "git_blob": "65abf238b8322be25339a7cff4d448ee1eb0a329",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/arg_groups/model_overrides/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/arg_groups/model_overrides/qwen3_5.py",
+      "bytes": 1774,
+      "sha256": "5ced16dc4ee340f3e0a3a8668eb2fcd0d08225455e429903b5b2da18b23e8fb5",
+      "git_blob": "0948e3dfdfd1ece25d1fbb3680c4d29ca0df74d1",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/configs/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/configs/qwen3_5.py",
+      "bytes": 5186,
+      "sha256": "53f92b2be9d880716a1850cb4484ea2fa46408ab0b05be847ce0fa88edf71890",
+      "git_blob": "98de12f7eff0a09b6f3feb3c5051c4cc06b062c8",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/configs/qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/configs/qwen3_next.py",
+      "bytes": 15893,
+      "sha256": "d55b9516ab517b04180f3a0c6de650d98c5a7408235e52736a9132b101479ca0",
+      "git_blob": "f431a0096460afe2d17d9fc32145db903a09d506",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/entrypoints/openai/serving_completions.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/entrypoints/openai/serving_completions.py",
+      "bytes": 28555,
+      "sha256": "3cbac5afe3aef96e66e583a899cdc8f875696558a942919426d5068937b782aa",
+      "git_blob": "e381ddc3962333250fb0d5c72b1a84816db5c1d2",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/multimodal_gen/test/unit/test_qwen3_5_encoder.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/multimodal_gen/test/unit/test_qwen3_5_encoder.py",
+      "bytes": 11136,
+      "sha256": "3d4bcfbdf9a907c75bbcf8bb740f67960da133cac28e9c41866811ed28930b78",
+      "git_blob": "ffb874ca8ee8afae54dd8afa6fb42fc0fbfa8f1a",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/function_call/qwen3_coder_detector.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/function_call/qwen3_coder_detector.py",
+      "bytes": 21919,
+      "sha256": "8b3f3e908602f1e1c3e54715b7c3bd8465a3956a138a9ee313500756e4a17829",
+      "git_blob": "f006c538f98ea57a2ae1cce0888a188cbc7edf8c",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/multimodal_gen/runtime/models/encoders/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/multimodal_gen/runtime/models/encoders/qwen3_5.py",
+      "bytes": 15943,
+      "sha256": "1e644e5ca8f62a0de811859a47f62a3ccd45a170f6496427e1db2bd68f28a334",
+      "git_blob": "f65c1d8e4ba8d8f6ff2a5c2e3abd50996fae75ae",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/entrypoints/openai/serving_chat.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/entrypoints/openai/serving_chat.py",
+      "bytes": 164246,
+      "sha256": "06b368043c0a0a16ffc8078c62ed4d31e78a241d22b6a5166d71fcf7d5089c33",
+      "git_blob": "1718e93339f0b5549779cda22604a7f78ffbfa68",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/hardware_backend/npu/attention/ascend_gdn_backend.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/hardware_backend/npu/attention/ascend_gdn_backend.py",
+      "bytes": 16070,
+      "sha256": "0e7955da06a657ee14ca2b90ad99f5c49eba4234bc5381522e0c2fcd12f019f9",
+      "git_blob": "6ffd3f66995cb13e6abe09f9f1c345e01189f767",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/hardware_backend/xpu/attention/xpu_gdn_backend.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/hardware_backend/xpu/attention/xpu_gdn_backend.py",
+      "bytes": 5868,
+      "sha256": "852be78c232b3b33ea58d361ea93b535bab2777405cd2564640c94bc049ca1a9",
+      "git_blob": "558acf160e170a84d9149a1a41a4b92e39d91f74",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/layers/attention/linear/gdn_backend.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/layers/attention/linear/gdn_backend.py",
+      "bytes": 73292,
+      "sha256": "60a8e23cc341480c9116d77210d7c1f6a5f928f9d3c391b5f2edbeddc8153df5",
+      "git_blob": "5e827ff2e1e5df9981b3bdcb144ad3c85da38612",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/models/qwen3_5_text.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/models/qwen3_5_text.py",
+      "bytes": 13208,
+      "sha256": "2afcc1529ff4e89670723c68613ed407ccd4d429c7dc2c3594205db53e3a5309",
+      "git_blob": "2929314dc51c112db875f90ddb7dd9469dd2f78e",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/models/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/models/qwen3_5.py",
+      "bytes": 124092,
+      "sha256": "3aabe35ebbd0859bccdc7545db754280dd35c3542f8a0a47f10c0e793dde8da4",
+      "git_blob": "2191ddce80380af85f468d0f9f320155b73d3c89",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/models/qwen3_5_mtp.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/models/qwen3_5_mtp.py",
+      "bytes": 20124,
+      "sha256": "13c9feb1674e28083cd7b3364040a2f1d9f0e8b10d1d6dc06156abe54a695c36",
+      "git_blob": "e3450be475d2ea51280c7c51de8f13ad13ae4a8e",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/models/qwen3_next_mtp.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/models/qwen3_next_mtp.py",
+      "bytes": 6188,
+      "sha256": "235fe2fd863396067c007b2760752397f7eb98f13a5d5a9b8d9535bafd2b0f0f",
+      "git_blob": "4a1bc3ac9269138fa12d3a31f6bae319d7b1f837",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/models/qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/models/qwen3_next.py",
+      "bytes": 48786,
+      "sha256": "7a903e52700a1e0e4fa675601aebcf94a45825a49ac73f18aef706f6782fc608",
+      "git_blob": "5f5e89bd162f7bbf5a9b13a99c56c80e7d7b8817",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/setup.py",
+      "bytes": 13298,
+      "sha256": "a319913f58c151e0ddf7a18f893216077fd9bfe85a99089b538c9c347f76a80f",
+      "git_blob": "83ebcc3a36637f4b1468578b1f29efd37db3d62b",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/pyproject.toml",
+      "bytes": 5879,
+      "sha256": "95aa4fa91e42ceab625cd53a5afbe720f6bd1808dec16b1ff8563406418272b3",
+      "git_blob": "81b86371cb0f07762a8130b277b6138498c4ff55",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-current",
+      "source_path": "python/sglang/srt/parser/reasoning_parser.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/fd19cfb660f42bd3ceb6df7598bd343572e30d2c/python/sglang/srt/parser/reasoning_parser.py",
+      "bytes": 99527,
+      "sha256": "f619b4e2eb427deef6f1811daeafeb93d3c7944f7e965ef87821d06218c9251a",
+      "git_blob": "a30a7a19242fc5fb1ca1ec898703876bcdbc19cf",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/integrations/deepspeed.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/integrations/deepspeed.py",
+      "bytes": 33517,
+      "sha256": "583f4240079e658db4cc344c3da0e99cf66ef692da714164193549f602aeda35",
+      "git_blob": "9703f642f8bca27f12f197323a567b07faeff785",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/loss/loss_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/loss/loss_utils.py",
+      "bytes": 7177,
+      "sha256": "b2eaef4e73f1c335e2535ab3afc841eb58f876092bedf2b1a570157350ae19ee",
+      "git_blob": "51564d299e553f6ce09a8aea985fba60d42767d5",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "bytes": 7572,
+      "sha256": "e2ca3e05c3f3e7ed2c4f452043bc33640c67a24799adb054ba24fab6badfbd8c",
+      "git_blob": "ae9eb8f86c6d23bd6665e830b5f676b81dcb4494",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "bytes": 3127,
+      "sha256": "3d2f98abc1c6eec61e4548171286b88f5e8173ac6d63954b8fd225b7e24cf25a",
+      "git_blob": "28049a4deb4c5fa42f00bc2e5c4a56ca2a689aef",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "bytes": 27041,
+      "sha256": "0869637aa4055568cf509f386c1d3b71dc690661c7101f8801fe590e5a8d9488",
+      "git_blob": "710b63a28dba747379f1a7d95fda875e0700212f",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_next/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_next/__init__.py",
+      "bytes": 1001,
+      "sha256": "3ee3ef179c5c11f07150a8ea8996960a21de0de2ae4e635d7ee23ac2f6fe71b2",
+      "git_blob": "e4f87f71c621d8da2dc9caffd688cf9f1d19b11c",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "bytes": 97465,
+      "sha256": "641da34484f6b9769e28615c680cc4e3202afbf5bdbf1da7d56d5a3d678918c7",
+      "git_blob": "f8088ebdb80762dcc1e61e4f482ff6839378e71e",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_5/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_5/__init__.py",
+      "bytes": 1035,
+      "sha256": "e1d6bd33c0bfce7f782e2d186f84bcc0e42f8260eac85c10d16bb7808665a1b5",
+      "git_blob": "f3917b12515e7352e897519f2804f1d9fdc570a2",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "bytes": 33858,
+      "sha256": "a4b183d431d195a4297ab94cf6109051a2ed1e5f4bf8a9f9df120a3873beaaea",
+      "git_blob": "0bb527288bb9d000e3a36ab95e57a110b2b80ef3",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/processing_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/processing_utils.py",
+      "bytes": 101186,
+      "sha256": "ad05951bbc7bf529c67164a2eff384f9e4e40caceebcea0d471623c5de0b4609",
+      "git_blob": "bb1344a43dcf527ee522566bdbd913640495ca04",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "bytes": 52314,
+      "sha256": "75e6bbbed257cf5cbb43d3eb79a489eed351e017f399d7a71f9246ef1542b071",
+      "git_blob": "395f13d1420cc39deb7257e9472ce7a7144edc17",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/pyproject.toml",
+      "bytes": 5519,
+      "sha256": "87a4f3bdd9c64482e469310a4c33dd26cad9bac9f1ac3ba355f3263de15a04d6",
+      "git_blob": "710f64032aa938db2cba39049bd70fe50028ecd9",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/trainer.py",
+      "bytes": 215739,
+      "sha256": "14efc56b1e3f0fc30f797c5fd15ca59a02bfb0745dcc4697713ed5778cacc476",
+      "git_blob": "f434d78d404083ce9fc322fdd9dd07bb9259d863",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "bytes": 5420,
+      "sha256": "db529fd9d556c3d9646e1bee5a3493aa4cc05b8d33c51f364f04e12fd40805d2",
+      "git_blob": "bf26179ff3fdf6a624611d3caecb69df361415ef",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/utils/chat_template_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/utils/chat_template_utils.py",
+      "bytes": 25557,
+      "sha256": "b1f9ee2d4223677db1f6a6137ab413f5f69f91c418c99fd92165b5c55e77a326",
+      "git_blob": "6b23e2fa881d302e60f12528788d50d8ad2d50a1",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/trainer_seq2seq.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/trainer_seq2seq.py",
+      "bytes": 18217,
+      "sha256": "bec582f72e8a16a47aa4e7bc17d779015703d70c9ef3c1831aa2e51d54a314f1",
+      "git_blob": "ada588adbd215cb6b2c1c1f970a48ffbb0275a5e",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-train580",
+      "source_path": "src/transformers/tokenization_utils_base.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/049d2bf1220747b6d39e2a978b9f5fe0defa1dca/src/transformers/tokenization_utils_base.py",
+      "bytes": 175413,
+      "sha256": "51a96b8d23e365014cfcd44049fda9a40a41e76ab5ba80a7b687138d3523f00a",
+      "git_blob": "4e821dfd4e70dd6ebeb62b05599afa674086d5fe",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/setup.py",
+      "bytes": 13052,
+      "sha256": "87195f714a405fede6a52c8cbaf8210fee28e93c534e43f7db8f1bf56113a38b",
+      "git_blob": "9421a667b4fd724e000c734321f331c5deec1eeb",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/loss/loss_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/loss/loss_utils.py",
+      "bytes": 7061,
+      "sha256": "3df3438f0cb80cb7b903d6d06f522839756f4ca9301a02d793748ae099c27d9f",
+      "git_blob": "df269477e9ec010743a014a6ab04f62d4f46eeda",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_5/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_5/__init__.py",
+      "bytes": 1035,
+      "sha256": "e1d6bd33c0bfce7f782e2d186f84bcc0e42f8260eac85c10d16bb7808665a1b5",
+      "git_blob": "f3917b12515e7352e897519f2804f1d9fdc570a2",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "bytes": 14718,
+      "sha256": "2ec132e5ec5610d3c8110c65ed71cb4f49c98c49f1b79ead0ec973cdb949dd61",
+      "git_blob": "9237759388de71aaa9df5559e488edb599d1bcbf",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/integrations/deepspeed.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/integrations/deepspeed.py",
+      "bytes": 32527,
+      "sha256": "771159903d99a3daeb1b4f4cea9734c96a5f1acfabed601a1622138c88d6d4f4",
+      "git_blob": "084960c565fc37defa2de90e28705a6092959d39",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_5/tokenization_qwen3_5.py",
+      "bytes": 3127,
+      "sha256": "3d2f98abc1c6eec61e4548171286b88f5e8173ac6d63954b8fd225b7e24cf25a",
+      "git_blob": "28049a4deb4c5fa42f00bc2e5c4a56ca2a689aef",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_next/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_next/__init__.py",
+      "bytes": 1001,
+      "sha256": "3ee3ef179c5c11f07150a8ea8996960a21de0de2ae4e635d7ee23ac2f6fe71b2",
+      "git_blob": "e4f87f71c621d8da2dc9caffd688cf9f1d19b11c",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "bytes": 101574,
+      "sha256": "0e7410f5251e5c324a5628c5340ee3551f7a6a505ce398569fcc3b5f3ac07f7a",
+      "git_blob": "3a0d81c9b7bca2599b943c0e561e319d147fac60",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_next/configuration_qwen3_next.py",
+      "bytes": 12609,
+      "sha256": "3550e814866f7e6a76ba8994d585fedc9168eb436f0f5c91a7aa77c03e21e366",
+      "git_blob": "0f63bad9ed3990647da0faa520874291cd53fee2",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_next/modeling_qwen3_next.py",
+      "bytes": 56870,
+      "sha256": "3d2da762472e6b904cef1290d4ca03b15a6316f9269f6ca42f91bd60eb910337",
+      "git_blob": "b078d6ff9a77ce7741c6b886cddcacee821ed6b6",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_5/modular_qwen3_5.py",
+      "bytes": 33776,
+      "sha256": "b87fae46b15dad35e0da9bdaf7c287fe8990c167466d52309d27bfc24d73f6f7",
+      "git_blob": "a892c7d829e261259abdf6a39d7bee3201c55d44",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/models/qwen3_next/modular_qwen3_next.py",
+      "bytes": 38412,
+      "sha256": "26b60ffd1db2c7d501249018f6b50ca21af1e86ccd81961bd0d6c24b9fd32a77",
+      "git_blob": "cf6904e72ac66edcfe22e97e96dc118c069c12c4",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/processing_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/processing_utils.py",
+      "bytes": 96445,
+      "sha256": "ae4cbd32e65da321680b447c44bf8ace4f6562c1855f1d19c4e1f7df016b0525",
+      "git_blob": "f432846d8b1a46b2d02b4f40387825beea3d7638",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/trainer_seq2seq.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/trainer_seq2seq.py",
+      "bytes": 18138,
+      "sha256": "8cf4ee77168f8bbef50842fa8567e3906aebb428419e97669549d03407bd094f",
+      "git_blob": "2e1e6defcab055795754d21227c4ab085aada940",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/tokenization_utils_base.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/tokenization_utils_base.py",
+      "bytes": 174559,
+      "sha256": "027d4b65486a394891636652eb7022f0b0f9bf7065938a7ebcea83a3f05626df",
+      "git_blob": "dcbe26ead886b07d1fe72d744cb5a5251179b806",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/trainer.py",
+      "bytes": 215309,
+      "sha256": "060eda6fcd587e79caeca7c3f246ea7bab1af410479c9776584470b8f4ac48a8",
+      "git_blob": "90a0892a576b6f42438b05148a76ec5244e0c6ff",
+      "status": "OK"
+    },
+    {
+      "label": "transformers-serve530",
+      "source_path": "src/transformers/utils/chat_template_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/aad13b87ed59f2afcfaebc985f403301887a35fc/src/transformers/utils/chat_template_utils.py",
+      "bytes": 24660,
+      "sha256": "bd25b7a82fc65b130c4962eca634101cc0f73d97b7af6ec7916cde2954485d95",
+      "git_blob": "a90073b39a54e02e7890c559c298c3322f48c3c3",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/pyproject.toml",
+      "bytes": 3382,
+      "sha256": "d2d044de25f84d319338de30299437ee882650e2a998af50f617bfbb5964becf",
+      "git_blob": "7ff84c62e622a0bea2047378f22c370dbbff02ff",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/data/collator.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/data/collator.py",
+      "bytes": 30702,
+      "sha256": "d9c0c4d5583001c9e2f9825de7dbf2f57cd7c724d0b3c70b4e9cd61cda08edb2",
+      "git_blob": "16b41452ed8fbf71003948ac4779b6ef2905e03a",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/data/loader.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/data/loader.py",
+      "bytes": 13990,
+      "sha256": "f5f59ae8dcb65f95f16052d3c79645adbb02304ba3425682036a41728d0340d0",
+      "git_blob": "d3d44e6f3c25de0fa46c333be6a3a39d5f1dcfee",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/data/processor/supervised.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/data/processor/supervised.py",
+      "bytes": 12051,
+      "sha256": "f1b4b8db32179f7471e7c0bf45806533f8cabe8ade98d3a6b427d80a94b959cf",
+      "git_blob": "26f14c69a7a708fe8a0be712c8b4e27d939bde1f",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/hparams/parser.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/hparams/parser.py",
+      "bytes": 31814,
+      "sha256": "7448e98f3a1c4578c750b12c533d7074a2d2954d60be2440ad897deeb748244f",
+      "git_blob": "4252e2a31d4366098a1abf27c91a42da3ed207e7",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/data/template.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/data/template.py",
+      "bytes": 114366,
+      "sha256": "25681bdceb0d11e36a55455e293f16cb5c8f3d15b48df63eb1f3bdd863567932",
+      "git_blob": "d499b4e00e5d0da5b933448f637a0f1adc6a98a9",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/model/loader.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/model/loader.py",
+      "bytes": 10256,
+      "sha256": "ed132ebc37129345f88c882cb928e3ca5294954e4040d4eb7d64324f38022ae9",
+      "git_blob": "b162c8820affadf7e673076717f6c88919ee4f83",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/model/model_utils/liger_kernel.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/model/model_utils/liger_kernel.py",
+      "bytes": 5649,
+      "sha256": "51f0b7196857d5dddcb229f9145bd452cb685f249ff72c0e431b3f0c5a70cfe7",
+      "git_blob": "1698af63d485cc7eddc7baf297e170c1cf37bb75",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/train/sft/trainer.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/train/sft/trainer.py",
+      "bytes": 9834,
+      "sha256": "4016aa09576891d53f2f3ee8f0cd21cd0f5c80c8ee1f45ab964a00750253d7c9",
+      "git_blob": "993cba8393a58bfea712148c4f231ae03d48a97b",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/model/patcher.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/model/patcher.py",
+      "bytes": 24630,
+      "sha256": "56a0b012612507bcc2f44363c01199dd47d81733f998ebdcccc883b9d4da2d0a",
+      "git_blob": "0b198838a09f7845d66325697f464ed285ffce0d",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/configs/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/configs/qwen3_5.py",
+      "bytes": 4608,
+      "sha256": "bbd6b1f48e66b963721bc12a1fbfcebc8eee068403311710e534ccf9cc550c74",
+      "git_blob": "fddf783ab3e58d2042064cb9b5c73406319f45ae",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/configs/qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/configs/qwen3_next.py",
+      "bytes": 15152,
+      "sha256": "e2f4974d7fea4e1d13f52c501cb4640dc3103960b03755866153260acecefb0c",
+      "git_blob": "3bf153a225720273173c75d9e7823222a93a6571",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/train/sft/workflow.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/train/sft/workflow.py",
+      "bytes": 7207,
+      "sha256": "aaa1f92b66c4985fe1c1d47a6c28831a1cd0b107d77e3819c2ea174e37a1384b",
+      "git_blob": "b50f53ffd29041370ffa331332d4dc0bdf4284ed",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/entrypoints/openai/serving_chat.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/entrypoints/openai/serving_chat.py",
+      "bytes": 63102,
+      "sha256": "082921f16a712e2a01518756f692f16d514067dec10c893c59831c12fa831a55",
+      "git_blob": "d0d05e3a483eea27c5a19cf304d1c87cdd87e809",
+      "status": "OK"
+    },
+    {
+      "label": "llamafactory-production",
+      "source_path": "src/llamafactory/train/trainer_utils.py",
+      "url": "https://raw.githubusercontent.com/hiyouga/LLaMA-Factory/c683e59edd8f893abc5e1403184a1d0644817d2a/src/llamafactory/train/trainer_utils.py",
+      "bytes": 38281,
+      "sha256": "ff726b2be4a7c24e4c09eb22b0336481dea3a35631076e35bb63a571bf3c9111",
+      "git_blob": "a0e898e399e7d77d4dbe66f4327e9e04c390f4c2",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/entrypoints/openai/serving_completions.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/entrypoints/openai/serving_completions.py",
+      "bytes": 23172,
+      "sha256": "8fbdd95d6de409a6d97960d2c53871cdbb9801ab8b65ed612123fd5ee752ceba",
+      "git_blob": "9d089fc3219ec2ac046af1de68f0fb24c12f3411",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/function_call/qwen3_coder_detector.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/function_call/qwen3_coder_detector.py",
+      "bytes": 19855,
+      "sha256": "e5a6112dd41df1580ede5f52e928e58cb74985dfa5628fd94073fd6a0f20fb8d",
+      "git_blob": "9dd77903d429ba0e6a32cd6df5f916b793cacec6",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/layers/attention/linear/gdn_backend.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/layers/attention/linear/gdn_backend.py",
+      "bytes": 16899,
+      "sha256": "177b8128bfd4159574289a59b48189808592af3d0af4d9794fcec7fdb0d64b99",
+      "git_blob": "700ccfdf6aa3ba4fed8dcb2f88b07102490ed4cb",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/models/qwen3_5_mtp.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/models/qwen3_5_mtp.py",
+      "bytes": 13573,
+      "sha256": "d42cbb83dd19999463ded52966e290d8e3c365a38fda7f74f1ceb7953fc05390",
+      "git_blob": "3fa89fcda0a9693ae326c0f36f7f292c62976bd8",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/models/qwen3_next_mtp.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/models/qwen3_next_mtp.py",
+      "bytes": 4630,
+      "sha256": "173dae7b83421040c0b598945001c983fbc354ef9e67fa76e1864381652041cd",
+      "git_blob": "b2bdbbbe8705c0ad6985f55bbd30f2be308d9327",
+      "status": "OK"
+    },
+    {
+      "label": "trl-production024",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45/pyproject.toml",
+      "bytes": 3557,
+      "sha256": "fd61d42479b9590b89c3ca5890db08109bed8f4a72f332aec4e811a624860307",
+      "git_blob": "787415bec7905e7a8b49bb2fbd8ae0100d0f393a",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/parser/reasoning_parser.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/parser/reasoning_parser.py",
+      "bytes": 20087,
+      "sha256": "816f6fc3b2cad1160c075ec59f08daa8cf7027e0406c9c42ad04b010c5681475",
+      "git_blob": "c3dbb3116464fd330b11d96810af07ab40d01f50",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/models/qwen3_5.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/models/qwen3_5.py",
+      "bytes": 65940,
+      "sha256": "60b00905037611c751b2c44f956c82b065a25001dc6a3b9b6f8bf37eb797c050",
+      "git_blob": "2f430c2b9b28434451ea357377a110813b75c4c3",
+      "status": "OK"
+    },
+    {
+      "label": "sglang-production-base",
+      "source_path": "python/sglang/srt/models/qwen3_next.py",
+      "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/models/qwen3_next.py",
+      "bytes": 42035,
+      "sha256": "e079852eb64f9b22b76eba86022ddd24d66a8f4d336774121c39d0c12be03625",
+      "git_blob": "7e3862a8a61be9628f04d1d3b4c96870c95858b6",
+      "status": "OK"
+    },
+    {
+      "label": "trl-production024",
+      "source_path": "trl/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45/trl/__init__.py",
+      "bytes": 5703,
+      "sha256": "b3db711f9f3fe095c8938531148eb074ff735a67a7ed754c99b98fc77792aca7",
+      "git_blob": "6eabf828078db40f53f80fdd0b0382a7bc96b3b2",
+      "status": "OK"
+    },
+    {
+      "label": "trl-production024",
+      "source_path": "trl/data_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45/trl/data_utils.py",
+      "bytes": 34989,
+      "sha256": "48add872228a9b6d923483be8cb4dcb62e7c0e53253604c743c176b6e1dd9841",
+      "git_blob": "e80311c211153f8b25013b9a4b1277b88d32dd8a",
+      "status": "OK"
+    },
+    {
+      "label": "trl-production024",
+      "source_path": "trl/trainer/sft_config.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45/trl/trainer/sft_config.py",
+      "bytes": 13525,
+      "sha256": "0f41c14a936ee8bcef31f093c26daebce31eaf3c1c3cf68d6864cd584876fcdd",
+      "git_blob": "1d11a57b2c4c2cc5ffdd3174d423c69113e72c28",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "pyproject.toml",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/pyproject.toml",
+      "bytes": 5798,
+      "sha256": "4250192395f0de8fb013d18229e6c3a7ec8738a46e219b397cca556d5ebf1c1e",
+      "git_blob": "32c1ea23794409be093411553ba75f6aca866dc2",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/__init__.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/__init__.py",
+      "bytes": 3680,
+      "sha256": "e9b87503c7d9e03dda50f59afe6b8d05ce640d97bc010cdb720fa920bccd4a2e",
+      "git_blob": "ad55734ca9ccaf9a8a69176a2b845cc0ddc8c035",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_template_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_template_utils.py",
+      "bytes": 52492,
+      "sha256": "78d6a018a26c1d58d9bb9b47addd4d6d300c7054775b0be8acf4f59477d72764",
+      "git_blob": "563409dd5bb2457376cca5651856fbe7eb4222a7",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen2_5.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen2_5.jinja",
+      "bytes": 2507,
+      "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+      "git_blob": "bdf7919a96cfe43d50914a007b9c0877bd0ec27e",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen2_5_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen2_5_training.jinja",
+      "bytes": 2965,
+      "sha256": "0cd86fb80f520885e35040a8df321540e729d3358da41f27cf74d33103d94f62",
+      "git_blob": "fd7258ece606cb8b6b59a3fb28904282f6004ac4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen2_5_vl.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen2_5_vl.jinja",
+      "bytes": 1017,
+      "sha256": "a0bc6f6fc7a29a80017a433e8f03a1cc1236e838a944a2d034295a60c4f2fddb",
+      "git_blob": "6c226632394ae7474b0d4b13e15793eac2e21ee9",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen2_5_vl_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen2_5_vl_training.jinja",
+      "bytes": 3239,
+      "sha256": "31c85932a6d8826f0fe8d52b81767eba6b869128b0a7c7503d1e7baaad4e8043",
+      "git_blob": "46e34469a34f03fa8c12b7535307cc189997d14b",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3.jinja",
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8",
+      "git_blob": "01be9b307daa2d425f7c168c9fb145a286e0afb4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_5_nothink.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_5_nothink.jinja",
+      "bytes": 7755,
+      "sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+      "git_blob": "0ef09f214eaa6d9bca297988afc1454b5827b2c7",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_5_nothink_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_5_nothink_training.jinja",
+      "bytes": 8171,
+      "sha256": "f32fe3e21c20f59d193244181c8b4c324c73a8cd313ddf825633a9ecfd2afad2",
+      "git_blob": "098a4500287fe99701772f879e0ee76d4b9a97cb",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_5_think.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_5_think.jinja",
+      "bytes": 7756,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "git_blob": "a585dec894e63da457d9440ec6aa7caa16d20860",
+      "status": "OK"
+    },
+    {
+      "label": "trl-production024",
+      "source_path": "trl/trainer/sft_trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45/trl/trainer/sft_trainer.py",
+      "bytes": 65950,
+      "sha256": "570e544086f013195207c3c35dcc706e9bfae91d3f1ba67dfd2a279200c1b120",
+      "git_blob": "9014470b55c146bfd48a5bc6b7c30cadebdc1bdc",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_5_think_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_5_think_training.jinja",
+      "bytes": 8168,
+      "sha256": "ccf356d8f238e287c047b1ef589850fd6b2b44e6cb29079e26c635fb9b8111ef",
+      "git_blob": "20456e8873d1cb35bb3edda412ec7e0191c3f634",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_6_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_6_training.jinja",
+      "bytes": 8090,
+      "sha256": "c5a26eaf3aab77fdc4ec696540ff896713ff0764f552ce9f597ede99fc673034",
+      "git_blob": "955d920b6adace7ebd60c7309b304c8e8a9d0370",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_instruct_2507_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_instruct_2507_training.jinja",
+      "bytes": 3165,
+      "sha256": "48e17aa3caf5bf20075b6e7366864ee943e00b6f0752aadfe8b670c2ab0291a5",
+      "git_blob": "2e30797390d4983e6e2fcbce9827f56d5ee364ae",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_training.jinja",
+      "bytes": 4360,
+      "sha256": "1d944ff8f268b611abb296cdd24d0f51981eef1c8647ac321c3a0258f61eb6c9",
+      "git_blob": "46d2694b8d0a98ac8764ea16f12c6167af2665da",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_vl.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_vl.jinja",
+      "bytes": 5292,
+      "sha256": "3636d0f0bd6bef02654cdffdc447b79cb2cef8ab02cc75267345946291a489e4",
+      "git_blob": "124386803f142761528f710e77ae483f5f8c4fc4",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_instruct_2507.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_instruct_2507.jinja",
+      "bytes": 2630,
+      "sha256": "64f85b198065d0fba2a81f37e10ed68161ce2c19a754c7100e67e0ca2ee9c326",
+      "git_blob": "70adff8a08fb31e0636f618564838d4bf3c05286",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/trainer/sft_config.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/trainer/sft_config.py",
+      "bytes": 17714,
+      "sha256": "843f531bc70735d75c38990bd5a90e8946056469c60cf3507ec4d3c8c98ac96f",
+      "git_blob": "de1b554bbbe88d8c1693519f517224c223760b59",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_6.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_6.jinja",
+      "bytes": 7764,
+      "sha256": "e84f32a23fdda27689f868aa4a1a5621f41133e51a48d7f3efcbea2839574259",
+      "git_blob": "a8755d827c0a7b614c246c4060dfd58ab352a8ff",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/chat_templates/qwen3_vl_training.jinja",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/chat_templates/qwen3_vl_training.jinja",
+      "bytes": 5741,
+      "sha256": "66bd81986bf7f8abe6d7fb4a50341c8d8ae14b16637e8fb876bca7e7ef0b9c6f",
+      "git_blob": "137a64a1722352220eee524909ef631a37066541",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/data_utils.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/data_utils.py",
+      "bytes": 43142,
+      "sha256": "ebb8469c1e26b626ea3175e0fb9d870b94f0a370ed44cac4fae29ba49179a01e",
+      "git_blob": "29fa1df84c475e12b36bad984f2ec01380bc9dd8",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "setup.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/setup.py",
+      "bytes": 6572,
+      "sha256": "1a7fe144134dff38afa385c749c201d88827cea7692ba4007e58f9ccfd379275",
+      "git_blob": "d2cb423369e44d925a4dd00467fd7c2dc0ef28de",
+      "status": "OK"
+    },
+    {
+      "label": "trl-fix6363",
+      "source_path": "trl/trainer/sft_trainer.py",
+      "url": "https://raw.githubusercontent.com/huggingface/trl/3c21c2844c114d3e9676ed812d4e558298618086/trl/trainer/sft_trainer.py",
+      "bytes": 105128,
+      "sha256": "31b8bef624180fca9cd78c990383916e9f3be86281fe4e961d1f1867b536f958",
+      "git_blob": "e59a4b7e7ea82b1ab366a7bf51cf4751361f4404",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/agent_template/qwen.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/agent_template/qwen.py",
+      "bytes": 4613,
+      "sha256": "97f09773483c004087f548f7b15126ea9e0c8a54be68165a8a884d5d97ca5948",
+      "git_blob": "dddd0a6ec6444cadbbffbebe755a3a712b5436bc",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/__init__.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/__init__.py",
+      "bytes": 3529,
+      "sha256": "d345fd8f68077d11730ffe56747a52b1858550e8c21067ed55a1db2f79ab5caf",
+      "git_blob": "dbbc3e6f45efa1a377c3b324564f24a9021da84d",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/agent_template/qwen3_coder.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/agent_template/qwen3_coder.py",
+      "bytes": 10635,
+      "sha256": "dfa939ff2f6d6ef7bb62f07771e334ff81a66328d3831e60fd0979772c93e3ba",
+      "git_blob": "98093911a4b66acbc736d6b262dacebc3935b13e",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/template/base.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/template/base.py",
+      "bytes": 113590,
+      "sha256": "785b280095d9c6a91c3d52d4afcc16b1a57c90c2655ba216363d1b0d19eb408d",
+      "git_blob": "ad00a101509553984f0ab6f205484477e45e353b",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/template/templates/qwen.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/template/templates/qwen.py",
+      "bytes": 86099,
+      "sha256": "853360bc81c7a0411d80db4803a1c6ee5e9d59bb0c796f5014ee10393b572a49",
+      "git_blob": "fa0b48eefc9b79e5bc1336e530577badb4ec3781",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "tests/general/test_qwen3_5_agent_template.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/tests/general/test_qwen3_5_agent_template.py",
+      "bytes": 14344,
+      "sha256": "5cf144eaba2fa0494185a728aced4667d39443a653cb711e21feb1c208e69d7d",
+      "git_blob": "b8d7fae6579ce64cd4cab93a0d7af3b8c9107d54",
+      "status": "OK"
+    },
+    {
+      "label": "swift-fix10259",
+      "source_path": "swift/trainers/mixin.py",
+      "url": "https://raw.githubusercontent.com/modelscope/ms-swift/0d75a91a8e4e498e983022c260f99d624328604e/swift/trainers/mixin.py",
+      "bytes": 73544,
+      "sha256": "5db946649ceeec1cd0bf4fb0a90008d34da952efb20c304040926d7a913d57a2",
+      "git_blob": "a60697c19b15c78ebc472d5e9c51532be9fea213",
+      "status": "OK"
+    },
+    {
+      "label": "qwen35-official",
+      "source_path": "chat_template.jinja",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/chat_template.jinja",
+      "bytes": 7756,
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "status": "OK"
+    },
+    {
+      "label": "qwen35-official",
+      "source_path": "tokenizer_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/tokenizer_config.json",
+      "bytes": 16710,
+      "sha256": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+      "status": "OK"
+    },
+    {
+      "label": "qwen35-official",
+      "source_path": "config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/config.json",
+      "bytes": 3161,
+      "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+      "status": "OK"
+    },
+    {
+      "label": "qwen35-official",
+      "source_path": "generation_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/generation_config.json",
+      "status": "FAILED",
+      "error_type": "HTTPError"
+    },
+    {
+      "label": "qwen35-official",
+      "source_path": "preprocessor_config.json",
+      "url": "https://huggingface.co/Qwen/Qwen3.5-4B/resolve/851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a/preprocessor_config.json",
+      "bytes": 390,
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "status": "OK"
+    }
+  ],
+  "all_source_files_github_blob_verified": true
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "REAL_772_DISCARDED_CAPACITY_INPUTS",
+  "dp": 8,
+  "context": 262144,
+  "selected_rows": [
+    {
+      "pool": "calibforge",
+      "source_split": "validation",
+      "index_in_split": 96,
+      "input_sha256": "7f444dc97cc900f17879a6ff09c56fe9c3d826863f24691ec254e712cf6f8dc7",
+      "labels_sha256": "b85f2ba66255d30d22ef980b655683ac3a252bd160e6b5eafd0407cbf21ec6f4",
+      "text_tokens": 179587,
+      "loss_tokens": 138024,
+      "source_data_manifest_sha256": "512a20b12ae68a1fa6f1b6c12ec8946eac695466721c931b9f67596784168afc"
+    },
+    {
+      "pool": "calibforge",
+      "source_split": "train",
+      "index_in_split": 706,
+      "input_sha256": "ec774942eca78c6b13e6c2c21d892e28c2271ef2574dfd8477914116b50bcbc5",
+      "labels_sha256": "ab1b45899f25800044b9304495deeaecb80d7b041537c4c3f7b34d5d70f9ecaf",
+      "text_tokens": 220997,
+      "loss_tokens": 80474,
+      "source_data_manifest_sha256": "512a20b12ae68a1fa6f1b6c12ec8946eac695466721c931b9f67596784168afc"
+    },
+    {
+      "pool": "tmax",
+      "source_split": "train",
+      "index_in_split": 221,
+      "input_sha256": "b5f1ae779da39d22e1b9bc073752d2f36efc2c348ed089a9196bae86fd6c2e56",
+      "labels_sha256": "7a564b6b15b3c6217cb591c7220221f641d598a76b4b6f9e7ac8c62d46be6a8c",
+      "text_tokens": 189361,
+      "loss_tokens": 141768,
+      "source_data_manifest_sha256": "4d54c94f25c6df4ef6e3fe495c06628b65f17ed34d8add45d4f85c3a2ec58292"
+    },
+    {
+      "pool": "tmax",
+      "source_split": "validation",
+      "index_in_split": 55,
+      "input_sha256": "006d410e9d497a98cc32cf658aff96986162b4f80f02eb2566fdda407dbce27d",
+      "labels_sha256": "fec61b0a036bb91ac492463745afd3cfb6e8e59a68ec4988cc53cbc1430c9003",
+      "text_tokens": 227763,
+      "loss_tokens": 31604,
+      "source_data_manifest_sha256": "4d54c94f25c6df4ef6e3fe495c06628b65f17ed34d8add45d4f85c3a2ec58292"
+    }
+  ],
+  "diagnostic_exposures": 96,
+  "formal_training": false,
+  "diagnostic_weights_must_not_initialize_formal_training": true,
+  "cache_artifacts": [
+    {
+      "path": "dataset_dict.json",
+      "bytes": 21,
+      "sha256": "c172eebfc28c1400d6be4338ce7d00191507ffb4ae64c315f039585c894df5b7"
+    },
+    {
+      "path": "train/data-00000-of-00002.arrow",
+      "bytes": 233915800,
+      "sha256": "a48637d1e1bb520aeee75d7e918159fc58e2898d1e51a77ca629ec11ebea2f8e"
+    },
+    {
+      "path": "train/data-00001-of-00002.arrow",
+      "bytes": 237091480,
+      "sha256": "fe5dedc861b8f58f5c0ca7cdf469557d8f3be54367a53c7f95c7090692e6742c"
+    },
+    {
+      "path": "train/dataset_info.json",
+      "bytes": 1389,
+      "sha256": "ab5cd8dafb09ed92d8392149bd477d82b76802eece94becd401e90690296de2d"
+    },
+    {
+      "path": "train/state.json",
+      "bytes": 309,
+      "sha256": "2cb39d583fefe10e34ef18b9d9864d93292778e9b1aace1d11f22fec02cd2466"
+    }
+  ]
+}

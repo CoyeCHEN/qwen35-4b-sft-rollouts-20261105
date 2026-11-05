@@ -1,0 +1,98 @@
+{
+  "model": {
+    "id": "deepseek-flash",
+    "name": "DeepSeek V4.1 Flash",
+    "api": "openai-completions",
+    "provider": "deepseek",
+    "baseUrl": "https://api.deepseek.com",
+    "reasoning": true,
+    "input": [
+      "text",
+      "image"
+    ],
+    "thinkingLevelMap": {
+      "minimal": null,
+      "low": "low",
+      "medium": null,
+      "high": "high",
+      "max": "max"
+    },
+    "contextWindow": 262144,
+    "maxTokens": 384000,
+    "cost": {
+      "input": 0.3,
+      "output": 1.2,
+      "cacheRead": 0.006,
+      "cacheWrite": 0
+    }
+  },
+  "thinkingLevel": "max",
+  "tools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "edit_patch",
+    "trajectory_read",
+    "bash_job"
+  ],
+  "enableAgentTool": false,
+  "enableSkillTool": false,
+  "toolSearch": "off",
+  "resources": {
+    "autoDiscover": false,
+    "skillsEnabled": false,
+    "templatesEnabled": false,
+    "contextPaths": [],
+    "promptPaths": [],
+    "skillPaths": [],
+    "systemPromptFile": null,
+    "appendSystemPromptFile": null,
+    "skillAutoDiscover": false
+  },
+  "persist": true,
+  "sessionDir": "/logs/agent/openharness-sessions",
+  "recording": {
+    "enabled": true,
+    "directory": "/logs/agent/openharness-rollout"
+  },
+  "tokenObservation": {
+    "enabled": false
+  },
+  "requestOptions": {
+    "maxTokens": 65536,
+    "temperature": 1.0,
+    "timeout": 120
+  },
+  "retry": {
+    "enabled": true,
+    "maxRetries": 3,
+    "baseDelayMs": 2000,
+    "maxAgentDelayMs": 60000
+  },
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 81920,
+    "keepRecentTokens": 20000,
+    "maxTurns": 0
+  },
+  "toolResultBudget": {
+    "enabled": true
+  },
+  "backgroundJobs": {
+    "enabled": true,
+    "maxConcurrent": 2,
+    "maxOutputBytes": 20000000,
+    "keepProcesses": true,
+    "handoffTimeout": 600
+  },
+  "finish": {
+    "enabled": true
+  },
+  "timeBudget": {
+    "seconds": 0
+  }
+}

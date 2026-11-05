@@ -1,0 +1,6 @@
+# Historical serving environment, separate from training.
+vllm==0.19.1
+transformers==5.20.0
+httpx==0.28.1
+fastapi==0.143.2
+uvicorn==0.54.0

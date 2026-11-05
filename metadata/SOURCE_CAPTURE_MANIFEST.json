@@ -1,0 +1,1606 @@
+{
+  "at": 1793859003.385191,
+  "files": [
+    {
+      "relative": "installed-train/llamafactory/train/tuner.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/train/tuner.py",
+      "sha256": "1551833464b013f997d736b849a3e45a7d39b7d8a1c8cc88f7fc09cf05390abd",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/train/sft/workflow.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/train/sft/workflow.py",
+      "sha256": "aaa1f92b66c4985fe1c1d47a6c28831a1cd0b107d77e3819c2ea174e37a1384b",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/train/sft/trainer.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/train/sft/trainer.py",
+      "sha256": "4016aa09576891d53f2f3ee8f0cd21cd0f5c80c8ee1f45ab964a00750253d7c9",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/loader.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/loader.py",
+      "sha256": "f5f59ae8dcb65f95f16052d3c79645adbb02304ba3425682036a41728d0340d0",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/collator.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/collator.py",
+      "sha256": "d9c0c4d5583001c9e2f9825de7dbf2f57cd7c724d0b3c70b4e9cd61cda08edb2",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/template.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/template.py",
+      "sha256": "25681bdceb0d11e36a55455e293f16cb5c8f3d15b48df63eb1f3bdd863567932",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/formatter.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/formatter.py",
+      "sha256": "345728a904b0a0168003cd44424d068fcddf7ea0d3c2ec07718f68b19e879d77",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/converter.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/converter.py",
+      "sha256": "c596efb447fb50fc915f6aa5c4f228d5409fba83808e23015a1bcf3387a3ffbf",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/mm_plugin.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/mm_plugin.py",
+      "sha256": "a30cc247579ef836c76237a38aea8d473aad865a4cbd2a5a0e3a3534eb04787f",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/data/processor/supervised.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/data/processor/supervised.py",
+      "sha256": "f1b4b8db32179f7471e7c0bf45806533f8cabe8ade98d3a6b427d80a94b959cf",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/model/loader.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/model/loader.py",
+      "sha256": "ed132ebc37129345f88c882cb928e3ca5294954e4040d4eb7d64324f38022ae9",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/model/model_utils/liger_kernel.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/model/model_utils/liger_kernel.py",
+      "sha256": "51f0b7196857d5dddcb229f9145bd452cb685f249ff72c0e431b3f0c5a70cfe7",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/hparams/data_args.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/hparams/data_args.py",
+      "sha256": "b47368334b418b2e30720ae05d90108c2b0d99d7e66d89e72b26dd15dfaf1e7b",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/llamafactory/hparams/training_args.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory/hparams/training_args.py",
+      "sha256": "4e70536ef02e3ec17dd88d64f82021cf8f585d3808a62e3775b7751b87778690",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/trainer.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/trainer.py",
+      "sha256": "14efc56b1e3f0fc30f797c5fd15ca59a02bfb0745dcc4697713ed5778cacc476",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/trainer_seq2seq.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/trainer_seq2seq.py",
+      "sha256": "bec582f72e8a16a47aa4e7bc17d779015703d70c9ef3c1831aa2e51d54a314f1",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/data/data_collator.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/data/data_collator.py",
+      "sha256": "4ef2bde5be531e5fb3414b22e3f493f62fd46ee7b35448e05d7525179cac17ac",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/tokenization_utils_base.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/tokenization_utils_base.py",
+      "sha256": "51a96b8d23e365014cfcd44049fda9a40a41e76ab5ba80a7b687138d3523f00a",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/processing_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/processing_utils.py",
+      "sha256": "ad05951bbc7bf529c67164a2eff384f9e4e40caceebcea0d471623c5de0b4609",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/modeling_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/modeling_utils.py",
+      "sha256": "fd7701836d30d118e2226015e1e443b6fd0872dee2d6c111b60d8af47172f4a6",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/loss/loss_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/loss/loss_utils.py",
+      "sha256": "b2eaef4e73f1c335e2535ab3afc841eb58f876092bedf2b1a570157350ae19ee",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/generation/utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/generation/utils.py",
+      "sha256": "a3082935eb4f2bf0737b6c7bb1f54acd2f6274db77da08450cad0bb172191408",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/generation/configuration_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/generation/configuration_utils.py",
+      "sha256": "7c576299c1322eed53f34e5ec8cfe1f650d21d17e86c3ff6d09af06ec8bdca71",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "sha256": "641da34484f6b9769e28615c680cc4e3202afbf5bdbf1da7d56d5a3d678918c7",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "sha256": "e2ca3e05c3f3e7ed2c4f452043bc33640c67a24799adb054ba24fab6badfbd8c",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+      "sha256": "b51f77d783b4a88d503bf9198828d46f71e3ead3833da2631748188b159253ba",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/accelerate/accelerator.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate/accelerator.py",
+      "sha256": "d8d685282f6bee8a7d1b8ad3da4b6d17114f08fbe3fe01dea621b60c84c82fcb",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/accelerate/utils/deepspeed.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate/utils/deepspeed.py",
+      "sha256": "82dfa3c0ea4eb51b3a378b2886e48ed88df1d6a2e83bab986239cfacaa7a664e",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/accelerate/utils/operations.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate/utils/operations.py",
+      "sha256": "20075073050b71e40e975c86a56f8524510bf0536ba5d7a20286bf38d3da4dc8",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/accelerate/utils/modeling.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate/utils/modeling.py",
+      "sha256": "421a88fba25d6a50791fb54ea52e7eefd3beb678d1a131055176c09a87e820d6",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/accelerate/utils/random.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate/utils/random.py",
+      "sha256": "5effd9266f5e682d90eeb819cbd3a93ae9cab938a780c8834021f4d2a84d5711",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/engine.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/engine.py",
+      "sha256": "e35eaa313874d2b3bd5bc9169dad35405819df2dfb1e7abdffa0c2f03db36c75",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/zero/stage3.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/zero/stage3.py",
+      "sha256": "4ff3fdb4cbabaddfeaa866e43785b49a69cdfe35db4e0ceda6f1b432b6fbf9d7",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/zero/config.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/zero/config.py",
+      "sha256": "cf8beb53835f192afdf5a0c8a4b5bbf3fb09d1fdc767a0f46f66b1cdf38c650a",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/zero/partition_parameters.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/zero/partition_parameters.py",
+      "sha256": "c7866c302ef1a9757b0c437254e369f8934a2f7ceb371f6f7e54a5391d10c311",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/bf16_optimizer.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/bf16_optimizer.py",
+      "sha256": "12b5e15e30a6e4b4109ed13d8fb02fd97a48562fde79f5d8d876f6551588e500",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/ops/adam/cpu_adam.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/ops/adam/cpu_adam.py",
+      "sha256": "634fc0da21d455e20c187a9eb7f9668de961764e433c2d5da8f0da285282ffac",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/ops/adam/fused_adam.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/ops/adam/fused_adam.py",
+      "sha256": "e7f24193f52f04572738bd3f84faf94951404e69a6287148955491d5a9beb017",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/runtime/fp16/loss_scaler.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/runtime/fp16/loss_scaler.py",
+      "sha256": "91a5886bcc79e083926e1ce5dc8a72e267147a7ab4a1db0622230c28e39ca43e",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/deepspeed/utils/zero_to_fp32.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed/utils/zero_to_fp32.py",
+      "sha256": "bbeb8b1fe7d79563af43902ec91f2db0be8d145466043aae200ff05168a4d6ba",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/transformers/model/qwen3_5.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/transformers/model/qwen3_5.py",
+      "sha256": "92d31ebf4ab96f440f57c562290fa3fd68343006b3d6d83d289f205b7e855841",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/transformers/model/loss_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/transformers/model/loss_utils.py",
+      "sha256": "c62333897c1beb189d747c0cda760c8a5c647c61ba9c14d08cdcd68908769495",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/transformers/monkey_patch.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/transformers/monkey_patch.py",
+      "sha256": "e3c3102d2aeb2acfc407cd83f6cac9254b839222cb73ba5fdace6faa0b5e460f",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/transformers/functional.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/transformers/functional.py",
+      "sha256": "c95590df3a6b9aa35141f3ff06693bc5250c6902068fb903cd792b1340092584",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/ops/fused_linear_cross_entropy.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/ops/fused_linear_cross_entropy.py",
+      "sha256": "d6b7e171c1f3982c2d4baa70839101603be10380f558752a86b44dc6dfd8c024",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/ops/cross_entropy.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/ops/cross_entropy.py",
+      "sha256": "961f41ca7c06dab49be8182de1fed53165eb28ed87efaeed24afad1ecb0b78e8",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/ops/rms_norm.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/ops/rms_norm.py",
+      "sha256": "5f725509cafc9273ea1db1655a21ef958ef6b02affb0e8f9d25f4de1efb3dcd4",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/liger_kernel/transformers/rms_norm.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel/transformers/rms_norm.py",
+      "sha256": "840f9a59fb810f16ff15d70c12a0e6fe17dabf61671c554d2ddb972349223140",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/fla/modules/fused_norm_gate.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/fla/modules/fused_norm_gate.py",
+      "sha256": "d8654c43cbea15799a9863ba0758f46b86c411285adf34c3c96735ef984d88d5",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/fla/ops/gated_delta_rule/chunk.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/fla/ops/gated_delta_rule/chunk.py",
+      "sha256": "fd4e01dc22a8c139c2a6eb61e47ae472a50322e4b4fff006cc5039a4602b310e",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/fla/ops/gated_delta_rule/fused_recurrent.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/fla/ops/gated_delta_rule/fused_recurrent.py",
+      "sha256": "9c15dc68d37a150da5317431a51fe7def362264ac92770e32261c8557cd5889b",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-train/fla/ops/gated_delta_rule/wy_fast.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/fla/ops/gated_delta_rule/wy_fast.py",
+      "sha256": "bf24a66524ea56383fe6c9a97ae6b060ebe9490589c8499fba06d6172dc4510f",
+      "kind": "POST_RUN_INSTALLED_FILE; historical byte identity needs frozen evidence match"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/entrypoints/openai/serving_chat.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/entrypoints/openai/serving_chat.py",
+      "sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/entrypoints/openai/serving_completions.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/entrypoints/openai/serving_completions.py",
+      "sha256": "8fbdd95d6de409a6d97960d2c53871cdbb9801ab8b65ed612123fd5ee752ceba",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/entrypoints/openai/protocol.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/entrypoints/openai/protocol.py",
+      "sha256": "7ee2266bd5605edafa4a7740174c96820df9a8fa2e14a9ad1cac841ebf0f893a",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/parser/reasoning_parser.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/parser/reasoning_parser.py",
+      "sha256": "94131e8aa4407a16c2c468ad9df0a3a98a4b61725e1599e0a68bcf523513fdec",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/function_call/qwen3_coder_detector.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/function_call/qwen3_coder_detector.py",
+      "sha256": "b1a486cd7ac7341551859ac9095f86e915eaf194a65f736afb456df321ca77b5",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/function_call/function_call_parser.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/function_call/function_call_parser.py",
+      "sha256": "96abd2d67d1a66ee0d4669b6e34ee286e5ba1846df1a64d7f8000f6fd6417c15",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/function_call/base_format_detector.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/function_call/base_format_detector.py",
+      "sha256": "8c0f799c3ae2778f197b1e1bd7d81cfb8f34430b68fbc780a12bbc99743d0186",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/managers/tokenizer_manager.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/managers/tokenizer_manager.py",
+      "sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/managers/io_struct.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/managers/io_struct.py",
+      "sha256": "0e96e7f9bffe93feaa52f7eea4eb5abd33e3b92a2d82b0040d7584c962e01059",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/managers/scheduler.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/managers/scheduler.py",
+      "sha256": "1e342c442ffa1539f58181bf1a24d2c02a5b0cdcce7ed46c97a57f0cdb6b716c",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/sampling/sampling_params.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/sampling/sampling_params.py",
+      "sha256": "56af29990d95879324eb3499b6ec92eb9dda32de9e8034ea5359e4f116dba9fd",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/layers/sampler.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/layers/sampler.py",
+      "sha256": "476be765ba216e8da723e43a1dc0f0038426f68cc7ac2001bc3f47db69521b08",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/server_args.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/server_args.py",
+      "sha256": "921201ad646844722db62e7672b1a8a119d93269d7b39d84140bc2a470035f1d",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/models/qwen3_5.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/models/qwen3_5.py",
+      "sha256": "60b00905037611c751b2c44f956c82b065a25001dc6a3b9b6f8bf37eb797c050",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/models/qwen3_next.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/models/qwen3_next.py",
+      "sha256": "e079852eb64f9b22b76eba86022ddd24d66a8f4d336774121c39d0c12be03625",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/sglang/srt/utils/common.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang/srt/utils/common.py",
+      "sha256": "7c5d90c606574e71c4dd2b2ffeb7be214b1364d51fff986331beb5d7bd4bcacb",
+      "kind": "POST_RUN_INSTALLED_FILE; compare with historical request source hashes"
+    },
+    {
+      "relative": "installed-serve/transformers/tokenization_utils_base.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers/tokenization_utils_base.py",
+      "sha256": "027d4b65486a394891636652eb7022f0b0f9bf7065938a7ebcea83a3f05626df",
+      "kind": "POST_RUN_INSTALLED_FILE"
+    },
+    {
+      "relative": "installed-serve/transformers/generation/configuration_utils.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers/generation/configuration_utils.py",
+      "sha256": "7b55311128d01c46f787d35a7622ce0b99e7a6ed9f6b5573983ab340228b1ed1",
+      "kind": "POST_RUN_INSTALLED_FILE"
+    },
+    {
+      "relative": "installed-serve/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "sha256": "0e7410f5251e5c324a5628c5340ee3551f7a6a505ce398569fcc3b5f3ac07f7a",
+      "kind": "POST_RUN_INSTALLED_FILE"
+    },
+    {
+      "relative": "installed-serve/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+      "sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+      "kind": "POST_RUN_INSTALLED_FILE"
+    },
+    {
+      "relative": "licenses/train/accelerate/accelerate-1.11.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate-1.11.0.dist-info/METADATA",
+      "sha256": "e1af8b1facd98dca101c154b30e4ead62104841f549ca19a418054b2bc2d593a",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/accelerate/accelerate-1.11.0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/accelerate-1.11.0.dist-info/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/flash-linear-attention/flash_linear_attention-0.5.2.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/flash_linear_attention-0.5.2.dist-info/METADATA",
+      "sha256": "5ba189db45ddd61415bba9e71469bf396cec9b739192619b2fb95ee9bd1d892e",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/flash-linear-attention/flash_linear_attention-0.5.2.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/flash_linear_attention-0.5.2.dist-info/licenses/LICENSE",
+      "sha256": "41a83c8187efc1e3ccc21909e806a9e52338e69448554d9754706c3d1cd610e7",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchvision/torchvision-0.23.0.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchvision-0.23.0.dist-info/LICENSE",
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchvision/torchvision-0.23.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchvision-0.23.0.dist-info/METADATA",
+      "sha256": "f3e83af19eaec8195f920dd36176654b45701547a63edc139369d560ae6553b8",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/liger_kernel/liger_kernel-0.8.4.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel-0.8.4.dist-info/METADATA",
+      "sha256": "05deca9091c13b1c818cde6d1bfd5db3a9d3c5d6e3af88cd500183dccb4dc0d8",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/liger_kernel/liger_kernel-0.8.4.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/liger_kernel-0.8.4.dist-info/licenses/LICENSE",
+      "sha256": "3a1ccb0c7274b68e1af2ca1d54b10b662085ca56753400182ecf87ae33f2d1a8",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/tokenizers/tokenizers-0.22.2.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/tokenizers-0.22.2.dist-info/METADATA",
+      "sha256": "15a5ddaf489f592b77e0a934c0eeb46b51130a94064ca129232afdb0a3868efc",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchaudio/torchaudio-2.8.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchaudio-2.8.0.dist-info/METADATA",
+      "sha256": "39c912d16311486d17ad8cfdc3ce7b532703706c410b140a74c9511fa8687fef",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchaudio/torchaudio-2.8.0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchaudio-2.8.0.dist-info/licenses/LICENSE",
+      "sha256": "93a58861a858cc108e6b6b833e08e76e8b2a66339e4a8007c8a5a8c1ff9c40d6",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/flash_attn/flash_attn-2.8.3.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/flash_attn-2.8.3.dist-info/LICENSE",
+      "sha256": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/flash_attn/flash_attn-2.8.3.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/flash_attn-2.8.3.dist-info/METADATA",
+      "sha256": "e06c67f26e0ed2da0e259965e83382fb99d7b20fa26d3d3ee559004a64e76ad8",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/flash_attn/flash_attn-2.8.3.dist-info/direct_url.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/flash_attn-2.8.3.dist-info/direct_url.json",
+      "sha256": "b2dbc057ef288f061516e4755a6eaa6a27842ffb35f66aaf5203bf6d25ce456d",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/deepspeed/deepspeed-0.19.8.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed-0.19.8.dist-info/METADATA",
+      "sha256": "9b343addda3e671bc5c6d2f800e97f868470690ff95869ee164bb8b517922964",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/deepspeed/deepspeed-0.19.8.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/deepspeed-0.19.8.dist-info/licenses/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/transformers/transformers-5.8.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers-5.8.0.dist-info/METADATA",
+      "sha256": "8101e28f040c4fbf9d7b7c1d633eb2fb173e74a497db93e8ccae4922ae3b9e78",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/transformers/transformers-5.8.0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers-5.8.0.dist-info/licenses/LICENSE",
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torch/torch-2.8.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torch-2.8.0.dist-info/METADATA",
+      "sha256": "57ede492698857503164f9ab76185bc0d70aafd1e0078e3ea4f137a56320433c",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torch/torch-2.8.0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torch-2.8.0.dist-info/licenses/LICENSE",
+      "sha256": "3994910182010c5641a62d98bf6e549a1f59dffad6325536ff1dd46b48bcbdd5",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchdata/torchdata-0.11.0.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchdata-0.11.0.dist-info/LICENSE",
+      "sha256": "196325a76d2a489b3c10b7b73cbf5761519e0faf12750e63cda33b4abb624319",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/torchdata/torchdata-0.11.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/torchdata-0.11.0.dist-info/METADATA",
+      "sha256": "7cd5c69c59511b1df4e908de1127c14eb5d02188aaa771c353c5e7838492c32c",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/llamafactory/llamafactory-0.9.6.dev0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory-0.9.6.dev0.dist-info/METADATA",
+      "sha256": "d164864b1902ec3863a67837f20cd999390e656af639eee56d2ba6de0ac4a9b2",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/llamafactory/llamafactory-0.9.6.dev0.dist-info/direct_url.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory-0.9.6.dev0.dist-info/direct_url.json",
+      "sha256": "8cb1cf87f0019c14f559dbf466ee7626f76ae4f8e176dc64149d04f286191e0b",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/train/llamafactory/llamafactory-0.9.6.dev0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/llamafactory-0.9.6.dev0.dist-info/licenses/LICENSE",
+      "sha256": "50e6751797c50dedd75ef1b8a0d9e42f5f8472e9fbce91f34718e9f97b0c780a",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_overlay/sglang/sglang-0.5.10+rsi.reliability.20261103.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang-0.5.10+rsi.reliability.20261103.1.dist-info/METADATA",
+      "sha256": "e89a9d9fba1c371a4eb7d8326450328499433a829287a3ed771ebfeb1de09366",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_overlay/sglang/sglang-0.5.10+rsi.reliability.20261103.1.dist-info/direct_url.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-reliability-r1/lib/python3.11/site-packages/sglang-0.5.10+rsi.reliability.20261103.1.dist-info/direct_url.json",
+      "sha256": "98d6a62f6156f738c5f2e4beb70e9dac5089c65c4b001168fd5c29e8f5c8632c",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flash-attn-4/flash_attn_4-4.0.0b36.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flash_attn_4-4.0.0b36.dist-info/METADATA",
+      "sha256": "a1602864aa20b3f5ae040db60d30c4975fc02ae55803a4c6d2794338d5e89ffc",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flash-attn-4/flash_attn_4-4.0.0b36.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flash_attn_4-4.0.0b36.dist-info/licenses/LICENSE",
+      "sha256": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchaudio/torchaudio-2.9.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchaudio-2.9.1.dist-info/METADATA",
+      "sha256": "9e16d6e0470c3ec90c56d8fae77082f5b676c6ca20a38c630fb9a49a9ecaf528",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchaudio/torchaudio-2.9.1.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchaudio-2.9.1.dist-info/licenses/LICENSE",
+      "sha256": "93a58861a858cc108e6b6b833e08e76e8b2a66339e4a8007c8a5a8c1ff9c40d6",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flashinfer-cubin/flashinfer_cubin-0.6.7.post2.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flashinfer_cubin-0.6.7.post2.dist-info/METADATA",
+      "sha256": "7814198c6682960066cbf93214732f6f007487dee90f84ba197bff0951ba5ebf",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch/torch-2.9.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch-2.9.1.dist-info/METADATA",
+      "sha256": "a7976fb5ed9044fb2bf421b99d888356a3a180d9e9ddd6ac10a46230bf68fc1a",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch/torch-2.9.1.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch-2.9.1.dist-info/licenses/LICENSE",
+      "sha256": "776e43288ab54330aa1d942737754b0edef0e7a07b62b736b595136ca5ccae88",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchcodec/torchcodec-0.9.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchcodec-0.9.1.dist-info/METADATA",
+      "sha256": "0da845035948514866a73ba6ae778687f03ff7498f5c0890f882286a72ac7e81",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchcodec/torchcodec-0.9.1.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchcodec-0.9.1.dist-info/licenses/LICENSE",
+      "sha256": "8ef78c2d6e787b103a0548e73ba2cfe68bc469b5b0e6f5e7db649f1312f4f2a6",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/sglang/sglang-0.5.10.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/sglang-0.5.10.dist-info/METADATA",
+      "sha256": "4d37d2f40bd7208439aa36c2fea8e7ca4cbf8aff8f56545a7a00d01f7ff3ec28",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/sglang/sglang-0.5.10.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/sglang-0.5.10.dist-info/licenses/LICENSE",
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/sglang-kernel/sglang_kernel-0.4.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/sglang_kernel-0.4.1.dist-info/METADATA",
+      "sha256": "d9806403d0a4d6c8140f1525fb8310e4563211193507d8edbc31948de17a8bdd",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/sglang-kernel/sglang_kernel-0.4.1.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/sglang_kernel-0.4.1.dist-info/licenses/LICENSE",
+      "sha256": "1495e1e757ef4d0925a2350563cf5754bb23c51701a8ec4fb3c5cdcbedae6747",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/transformers/transformers-5.3.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers-5.3.0.dist-info/METADATA",
+      "sha256": "6259d7369e9280797efd57f4068b1df7e2c688df56f37729263e48ad4febc7fb",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/transformers/transformers-5.3.0.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers-5.3.0.dist-info/licenses/LICENSE",
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchao/torchao-0.9.0.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchao-0.9.0.dist-info/LICENSE",
+      "sha256": "64afbc6eb8882f839910cbf80e09a6377332ebe2e17b7ac501a3c3cca1faf77b",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchao/torchao-0.9.0.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchao-0.9.0.dist-info/METADATA",
+      "sha256": "fd71bb640fc5c2ae0d2168195a2cc18ed915fac57cb6f8119fba30dae560fc92",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/tokenizers/tokenizers-0.22.2.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/tokenizers-0.22.2.dist-info/METADATA",
+      "sha256": "15a5ddaf489f592b77e0a934c0eeb46b51130a94064ca129232afdb0a3868efc",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch_c_dlpack_ext/torch_c_dlpack_ext-0.1.5.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch_c_dlpack_ext-0.1.5.dist-info/METADATA",
+      "sha256": "7b320b8b0f9a541a2a6b20aa73088a0ec667515399a3b2725e26c4ca1eacb18d",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch_c_dlpack_ext/torch_c_dlpack_ext-0.1.5.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch_c_dlpack_ext-0.1.5.dist-info/licenses/LICENSE",
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch_memory_saver/torch_memory_saver-0.0.9.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch_memory_saver-0.0.9.dist-info/LICENSE",
+      "sha256": "8bcd3a479c52849141e24f7235027619809c48196ed5fad3c76bc7fe759d584f",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torch_memory_saver/torch_memory_saver-0.0.9.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torch_memory_saver-0.0.9.dist-info/METADATA",
+      "sha256": "4ad7474d881da57f75620fd75bf0a3aab0a21aa282e6b32dccc018397495b616",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchvision/torchvision-0.24.1.dist-info/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchvision-0.24.1.dist-info/LICENSE",
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/torchvision/torchvision-0.24.1.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/torchvision-0.24.1.dist-info/METADATA",
+      "sha256": "47b728a6239467a483594420a47b7f0157a2606553367a80e31245901ceeeb8e",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flashinfer-python/flashinfer/data/spdlog/include/spdlog/fmt/bundled/fmt.license.rst",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flashinfer/data/spdlog/include/spdlog/fmt/bundled/fmt.license.rst",
+      "sha256": "825c9324e70f8c839c8ba910543dd4a7daee243b86ef960594c11381a19980b8",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flashinfer-python/flashinfer_python-0.6.7.post2.dist-info/METADATA",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flashinfer_python-0.6.7.post2.dist-info/METADATA",
+      "sha256": "d9ccd04869e2dbdc00d95720d3ce8cae011aa2ee558bd84bc6a60a95af8b2685",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "licenses/serve_base/flashinfer-python/flashinfer_python-0.6.7.post2.dist-info/licenses/LICENSE",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/flashinfer_python-0.6.7.post2.dist-info/licenses/LICENSE",
+      "sha256": "cb67c224f503e0a063908950b12f89a7280c6e527dcffac972aa114e4bf3c5de",
+      "kind": "LICENSE_OR_DIST_METADATA"
+    },
+    {
+      "relative": "model-assets/M0-serving/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/config.json",
+      "sha256": "ddc63e1c717afa86c865bb5e01313d89d72bb53b97ad4a8a03ba8510c0621670",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M0-serving/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M0-serving/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M0-serving/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M0-serving/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M0-serving/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/generation_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/CANONICAL_PROCESSOR_ASSETS.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/CANONICAL_PROCESSOR_ASSETS.json",
+      "sha256": "5bc7391792df6e9d2d944de90010366bd0bc8adf686c97e41f3107f0c42e78fe",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/HF_EXPORT_COMPLETE.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/HF_EXPORT_COMPLETE.json",
+      "sha256": "1edef547fa791ce2c8abca331ee7ac339b8e836806ebe06988a197b0c9eb9355",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1-training-final/FINAL_HF_ADMISSION.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/FINAL_HF_ADMISSION.json",
+      "sha256": "a3eaa7a86a2960b90335b824c8889022eebffb801f553545743e6cd2a204bc5b",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/generation_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/CANONICAL_PROCESSOR_ASSETS.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/CANONICAL_PROCESSOR_ASSETS.json",
+      "sha256": "200a7ff1d427192b214b984a2d8f0cd17bc23ca3417ab5df2f74f7ee6ab48cd2",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/HF_EXPORT_COMPLETE.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/HF_EXPORT_COMPLETE.json",
+      "sha256": "c4b4c5ae2649d1de5312deda149ebdec0f08089a7ebaf99738faba1dbac16487",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2-training-final/FINAL_HF_ADMISSION.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/FINAL_HF_ADMISSION.json",
+      "sha256": "6db963ecba083d380f5cf19abb51bec32c43b9f11bb170084eab3d2816e1ca3d",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/generation_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M1E3-serving/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/generation_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E1-serving/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/config.json",
+      "sha256": "885f7f5909376e3b03176428565835c4b6d8ed8febe94867f3482f3789e4548e",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/tokenizer.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/tokenizer.json",
+      "sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/tokenizer_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/tokenizer_config.json",
+      "sha256": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/generation_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/generation_config.json",
+      "sha256": "c6d7b111043eeefcd620e30bf0963fa5bac15bd0c8392d9326ce4ec5e1577458",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/chat_template.jinja",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/chat_template.jinja",
+      "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/preprocessor_config.json",
+      "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "model-assets/M2E3-serving/video_preprocessor_config.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/video_preprocessor_config.json",
+      "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "kind": "MODEL_ADJUNCT_NO_WEIGHTS"
+    },
+    {
+      "relative": "training-identity/configs/runtime.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/runtime.json",
+      "sha256": "435ddb90c38f5aac87609f9e0b4a4f799d7ca027d3854e58d24f0b1eb6f803da",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/new-cf416-m1.yaml",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/new-cf416-m1.yaml",
+      "sha256": "d2a8559c638a4b829ae0a943e04ae27b629bfc59da8ca0fbfa7210d1cfc3e04d",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/ds_z3.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/ds_z3.json",
+      "sha256": "3eb80a195fbe478894fba6339add22d47870259d26872c463fabaae75ede5e78",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/actual-eleven-tool-contract.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/actual-eleven-tool-contract.json",
+      "sha256": "975e71810adeac458bd29d29065655c891c769c765fd4f8a9811d37cca99d3cc",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/job.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/job.json",
+      "sha256": "486aa7978a2c2d1dea72d470df4c2fc0ddcbc9e6f4b67e58336ade3cf7bc2932",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/manifests/new-cf416-m1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/manifests/new-cf416-m1.json",
+      "sha256": "a31474ac16754dd59913a67a626c8a9a20e102c7e09a6b446197281488929c30",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/job.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/job.json",
+      "sha256": "486aa7978a2c2d1dea72d470df4c2fc0ddcbc9e6f4b67e58336ade3cf7bc2932",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/attempt.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/attempt.json",
+      "sha256": "463848e1d480d7d20d88b4e8010a888b124482fb43162f12afd759838f0ab113",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/service.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/service.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/launcher.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/training.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/training.log",
+      "sha256": "e72da7874abe5d5c87432f3786359f76449fe60ce2c29ac60b7c1dcec8d07d0e",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/worker.lock",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-m1/HF_VERIFIED.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-m1/HF_VERIFIED.json",
+      "sha256": "b35643eb076c8f0646398ae70296b0a901d56dbc73d4e4c93e295c7654109074",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/resolved-config-new772-new-cf416-m1-rank0.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/resolved-config-new772-new-cf416-m1-rank0.json",
+      "sha256": "cf272bdaebb30c62effb57afade4055980503501fae5473b23e361f5fcd5b87f",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/trainer_state.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/trainer_state.json",
+      "sha256": "e14287e81881b53d1f969fb7e4167dbd95ba19639feefd5856cccab0d7a71328",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/preflight-evidence-rank0.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank0.jsonl",
+      "sha256": "782e9c4791b4ff22f44cf21bbcf080bf71d683fd4189ef0b70ea1b1dc02181b8",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/preflight-evidence-rank1.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank1.jsonl",
+      "sha256": "72d6b1016c70630a5edd3c7157a1d98845af758892de6194884e5e6025d03581",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/preflight-evidence-rank2.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank2.jsonl",
+      "sha256": "d6c69b0eaafc643654c1aea0d0f3e2827e536fdcb458552b1da6878119c2b3ff",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m1-cf416-128k-e5/preflight-evidence-rank3.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank3.jsonl",
+      "sha256": "c153731b974d9cc529e1f4aebf5d2f0583bbaa6b255565251ba4a404455ae61b",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/configs/runtime.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/runtime.json",
+      "sha256": "435ddb90c38f5aac87609f9e0b4a4f799d7ca027d3854e58d24f0b1eb6f803da",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/new-cf416-tmax356-m2.yaml",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/new-cf416-tmax356-m2.yaml",
+      "sha256": "1f48ed160a76bea910857bf16c94776f06e1d77a45c76047686303e72e91c716",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/ds_z3.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/ds_z3.json",
+      "sha256": "3eb80a195fbe478894fba6339add22d47870259d26872c463fabaae75ede5e78",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/configs/actual-eleven-tool-contract.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/actual-eleven-tool-contract.json",
+      "sha256": "975e71810adeac458bd29d29065655c891c769c765fd4f8a9811d37cca99d3cc",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/job.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/job.json",
+      "sha256": "f417c1efadc7171cd31c295c06738473ace0a522a5549d1d62819a80bb159f89",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/manifests/new-cf416-tmax356-m2.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/manifests/new-cf416-tmax356-m2.json",
+      "sha256": "875213c6b759e99cb899093e6a3d4b0a6054d6033363a6f248b4589ce97526ba",
+      "kind": "FROZEN_CONFIG_OR_JOB"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/job.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/job.json",
+      "sha256": "f417c1efadc7171cd31c295c06738473ace0a522a5549d1d62819a80bb159f89",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/attempt.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/attempt.json",
+      "sha256": "6a8389c937bcaa2c8de6139deac446719cdb2b53f011228c8043884022fe54cb",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/service.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/service.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/launcher.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/launcher.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/training.log",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/training.log",
+      "sha256": "3dc3bbf03bb55c2113df114987b58b2dead8d85da553cb68757c02eac644739f",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/worker.lock",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/jobs/new772-new-cf416-tmax356-m2/HF_VERIFIED.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/jobs/new772-new-cf416-tmax356-m2/HF_VERIFIED.json",
+      "sha256": "6c89ebe534a1fa55c12f3139c248034d87f383e6869c7a33e0e87a56cbf7f58d",
+      "kind": "FROZEN_JOB_MEMBER"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/resolved-config-new772-new-cf416-tmax356-m2-rank0.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/resolved-config-new772-new-cf416-tmax356-m2-rank0.json",
+      "sha256": "867434f3b4badce077dc9bd4a4aa80d86187c1d2c89df5b2914fedc0c2248b17",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/trainer_state.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/trainer_state.json",
+      "sha256": "2a5236d0f2f6d4540400b7cec8f0c3d4345ef1786f5a4eca19fa7b4b85512f71",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank0.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank0.jsonl",
+      "sha256": "b4b99015e7645b88f5110a7fb00b5e1bc8b91da09c804b65318c73484ace8a98",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank1.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank1.jsonl",
+      "sha256": "6ee74ffc9fce5cce517adbe2b6d498aa4d981ae715bdef160bcc228e436f9ccd",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank2.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank2.jsonl",
+      "sha256": "e22fe3ee4c05beefaa1306d0da8166b44231487a5f2efd536eb7bc4a4e9dc06d",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank3.jsonl",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank3.jsonl",
+      "sha256": "7c98a99698fa9a815fcde8d293a2bb749388e5da7512565e0a219749b9ecf580",
+      "kind": "HISTORICAL_EFFECTIVE_CONFIG_OR_LOG"
+    },
+    {
+      "relative": "training-identity/checks/R39_OLD112_R2_SOURCE_DEPLOYMENT_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R39_OLD112_R2_SOURCE_DEPLOYMENT_R1.json",
+      "sha256": "dc86beba9ed1dfa2ebbd444a451b0f6829e42742b82d7c2808027279d851fcb8",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R10_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R10_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "sha256": "45109c7745844c09e7bf2aae42d59b4ca5dbf69cce9c1dc4919f3452d7aa5beb",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R41_NODE18_NEW_SOURCE_DEPLOYMENT_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R41_NODE18_NEW_SOURCE_DEPLOYMENT_R1.json",
+      "sha256": "d4b1707ea7082068be75eda653c521744ecf51e8baa0445e2d6193b9ed7ec5ee",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R42_WORKTREE_SOURCE_ORIGIN_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R42_WORKTREE_SOURCE_ORIGIN_R1.json",
+      "sha256": "7e017caaf1958478ce345bdc196c2f919ce092e79038102a3f3525e24d5157a4",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/OLD12_REFERENCE_SOURCE_BINDINGS_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/OLD12_REFERENCE_SOURCE_BINDINGS_R1.json",
+      "sha256": "b596a9528fdd1f17a3c9b1873f278e614e4982888c1018ed4db98563abac7066",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/M0_NEW11_NATIVE_SERVING_COMMAND_R2.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/M0_NEW11_NATIVE_SERVING_COMMAND_R2.json",
+      "sha256": "963ffb3a73e9349c7ef5a816efa16a780e53d37fc7e270b34556b9f9c799f86d",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R13_CPU_SOURCE_ACCEPTANCE_R2.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R13_CPU_SOURCE_ACCEPTANCE_R2.json",
+      "sha256": "98075759cf5f617d3978985081b8f72d43b81b18871140e0f25d5088fa9f1512",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R11_LIVE_SOURCE_IDENTITY_PRESERVATION_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R11_LIVE_SOURCE_IDENTITY_PRESERVATION_R1.json",
+      "sha256": "25e7ec0f5a8efd9a45a6ec69830bdebdb9f75ad31f077cd24cc54ca7ce57c26f",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/SOURCE_DEPLOYMENT_PLAN_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/SOURCE_DEPLOYMENT_PLAN_R1.json",
+      "sha256": "1b6d044d1616d46bd7349d982879c22e9ef00de55f1b6a5039fab422ce5fb18f",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/LONG_SEQUENCE_PARALLELISM_SOURCE_REVIEW_R6.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/LONG_SEQUENCE_PARALLELISM_SOURCE_REVIEW_R6.json",
+      "sha256": "cb314982f2f91c9578d6109be9cc2a6b54bcbc79a422dab46f2eed9476b90abb",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R13_LIVE_SOURCE_IDENTITY_PRESERVATION_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R13_LIVE_SOURCE_IDENTITY_PRESERVATION_R1.json",
+      "sha256": "beb071bd5b1ae3d2f240c3c0a25ee4f25955e2f4d042af261682eab91306e123",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/M0_NEW11_NATIVE_SERVING_COMMAND_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/M0_NEW11_NATIVE_SERVING_COMMAND_R1.json",
+      "sha256": "d85e05694b6f80628c086e928a48eb2bbc8cf22adfa8dfc261eb92f81fa969ab",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/DIAGNOSTIC30_EXTRA_COMPOSE_SOURCE_MIRROR_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/DIAGNOSTIC30_EXTRA_COMPOSE_SOURCE_MIRROR_R1.json",
+      "sha256": "d244757e1ad0b15d010544d11874f22f02a70cd8a5e9c4a39344f61b1d27dd70",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R50_COMBINED_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R50_COMBINED_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "sha256": "cb20c23b0ec7ed4d02f1e63ebc40da93ae79f89f76cd9c5345c77d8b93e59cc8",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/USER_DIAG150_RESOURCE_BOUND_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/USER_DIAG150_RESOURCE_BOUND_R1.json",
+      "sha256": "31cdb7225b5864a70cbfda89632a7d6249dbd06e393e9acd787a88f0f34ca479",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R35_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R35_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "sha256": "c2834b8e590f46a9def1ad141b2d0e1f2a1aca225213f1b11d99f69dbf4b9e4b",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R13_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R13_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "sha256": "612553d4f156d6945e4c77e335e9aba6db81e1bc9ed2e0f832a7a84e1e5e423a",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R38_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R38_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "sha256": "c46112db4c372a421ebfbc52ad86164e062fb1fcc41b78bc7d0983a831b3c808",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/COMMON30_OFFICIAL_SOURCE_SHA_READONLY_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/COMMON30_OFFICIAL_SOURCE_SHA_READONLY_R1.json",
+      "sha256": "92c42ee0ef6761c53b7e2a5391ff7354b07985f0fbd2183d37a7d9661292018f",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R40_SOURCE_STAGING_VERIFIED_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R40_SOURCE_STAGING_VERIFIED_R1.json",
+      "sha256": "dce9c256d41b65e7bcb00107874f6db52ffa2f50798dc9d5bd938e202ebcbba5",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R42_DEPLOYMENT_SOURCE_INDEX_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R42_DEPLOYMENT_SOURCE_INDEX_R1.json",
+      "sha256": "e7ff57274672ff901e65d89e6870f3c15c95605422b3e4de12d1375f0a44fc6e",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R13_SOURCE_PROOF_CORRECTION_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R13_SOURCE_PROOF_CORRECTION_R1.json",
+      "sha256": "b5f8e363e6b439b9d58eeaf96bc183c57476a4e0bbe17fb5a51cbc9e9c005272",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R36_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R36_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "sha256": "6d6c64d85dbb55b1036b02c75d4aa4e8721b5612ee4d92eba27d819f737bcfbb",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R11_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R11_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "sha256": "0dcacc292f5f616ee6f6d1e3078de49c2d1e823f4bee6608e98e209b2efff683",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/ENV59_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/ENV59_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "sha256": "91648d7b32a17b48d4e3bc3d6e7858d38462ba1f0f8e5603d93205934f85f60e",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/FORMAL_CONTROLLER18_SOURCE_REPLICA_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/FORMAL_CONTROLLER18_SOURCE_REPLICA_ACCEPTANCE_R1.json",
+      "sha256": "b45a25cb7633ee2584ff3c1dac81ea04529c6b08c2965f0c816fefed97879174",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/R37_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/R37_SOURCE_DEPLOYMENT_ACCEPTANCE_R1.json",
+      "sha256": "6b2083594f2f1fc7a5541ee2120dd998b55d020997ed13541e56eb27cc72227e",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/ENV59_EXTRACT_ELF_RECHECK_SOURCE_DEPLOYMENT_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/ENV59_EXTRACT_ELF_RECHECK_SOURCE_DEPLOYMENT_R1.json",
+      "sha256": "26de599cc64bf648fa6a88d93d57499b70dc8f7bfe60625b9dbd5da4341b6429",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/HARNESS_ENV_VERSIONS.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/HARNESS_ENV_VERSIONS.json",
+      "sha256": "3358a4d764821f16d94db1ddeb4590fd574cc6b1f53892a9cf9e28304554be18",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/ENV59_TORCH271_RECHECK_SOURCE_DEPLOYMENT_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/ENV59_TORCH271_RECHECK_SOURCE_DEPLOYMENT_R1.json",
+      "sha256": "1e75e53f1ec7151d7769945bd58a63b409b2a94b71a4a4b4cc606d0cebc03c97",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    },
+    {
+      "relative": "training-identity/checks/CONTROL_R12_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/CONTROL_R12_CPU_SOURCE_ACCEPTANCE_R1.json",
+      "sha256": "430a8a0c1837da441d857e4da9431566aabd420f1277bbdde55237f530c97653",
+      "kind": "EXISTING_FROZEN_IDENTITY"
+    }
+  ],
+  "missing": [
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/tokenization_utils_fast.py",
+      "relative": "installed-train/transformers/tokenization_utils_fast.py"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/models/qwen3_5/processing_qwen3_5.py",
+      "relative": "installed-train/transformers/models/qwen3_5/processing_qwen3_5.py"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/lib/python3.11/site-packages/transformers/models/qwen2/tokenization_qwen2_fast.py",
+      "relative": "installed-train/transformers/models/qwen2/tokenization_qwen2_fast.py"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/sglang/srt/parser/qwen3_detector.py",
+      "relative": "installed-serve/sglang/srt/parser/qwen3_detector.py"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/serve-new11-r1/lib/python3.11/site-packages/transformers/models/qwen3_5/processing_qwen3_5.py",
+      "relative": "installed-serve/transformers/models/qwen3_5/processing_qwen3_5.py"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/special_tokens_map.json",
+      "relative": "model-assets/M0-serving/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/added_tokens.json",
+      "relative": "model-assets/M0-serving/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/generation_config.json",
+      "relative": "model-assets/M0-serving/generation_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/processor_config.json",
+      "relative": "model-assets/M0-serving/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/CANONICAL_PROCESSOR_ASSETS.json",
+      "relative": "model-assets/M0-serving/CANONICAL_PROCESSOR_ASSETS.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/HF_EXPORT_COMPLETE.json",
+      "relative": "model-assets/M0-serving/HF_EXPORT_COMPLETE.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer/FINAL_HF_ADMISSION.json",
+      "relative": "model-assets/M0-serving/FINAL_HF_ADMISSION.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/special_tokens_map.json",
+      "relative": "model-assets/M1-training-final/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/added_tokens.json",
+      "relative": "model-assets/M1-training-final/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/processor_config.json",
+      "relative": "model-assets/M1-training-final/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/special_tokens_map.json",
+      "relative": "model-assets/M2-training-final/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/added_tokens.json",
+      "relative": "model-assets/M2-training-final/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/processor_config.json",
+      "relative": "model-assets/M2-training-final/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/special_tokens_map.json",
+      "relative": "model-assets/M1E3-serving/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/added_tokens.json",
+      "relative": "model-assets/M1E3-serving/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/processor_config.json",
+      "relative": "model-assets/M1E3-serving/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/CANONICAL_PROCESSOR_ASSETS.json",
+      "relative": "model-assets/M1E3-serving/CANONICAL_PROCESSOR_ASSETS.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/HF_EXPORT_COMPLETE.json",
+      "relative": "model-assets/M1E3-serving/HF_EXPORT_COMPLETE.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3/FINAL_HF_ADMISSION.json",
+      "relative": "model-assets/M1E3-serving/FINAL_HF_ADMISSION.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/special_tokens_map.json",
+      "relative": "model-assets/M2E1-serving/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/added_tokens.json",
+      "relative": "model-assets/M2E1-serving/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/processor_config.json",
+      "relative": "model-assets/M2E1-serving/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/CANONICAL_PROCESSOR_ASSETS.json",
+      "relative": "model-assets/M2E1-serving/CANONICAL_PROCESSOR_ASSETS.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/HF_EXPORT_COMPLETE.json",
+      "relative": "model-assets/M2E1-serving/HF_EXPORT_COMPLETE.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1/FINAL_HF_ADMISSION.json",
+      "relative": "model-assets/M2E1-serving/FINAL_HF_ADMISSION.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/special_tokens_map.json",
+      "relative": "model-assets/M2E3-serving/special_tokens_map.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/added_tokens.json",
+      "relative": "model-assets/M2E3-serving/added_tokens.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/processor_config.json",
+      "relative": "model-assets/M2E3-serving/processor_config.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/CANONICAL_PROCESSOR_ASSETS.json",
+      "relative": "model-assets/M2E3-serving/CANONICAL_PROCESSOR_ASSETS.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/HF_EXPORT_COMPLETE.json",
+      "relative": "model-assets/M2E3-serving/HF_EXPORT_COMPLETE.json"
+    },
+    {
+      "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch3/FINAL_HF_ADMISSION.json",
+      "relative": "model-assets/M2E3-serving/FINAL_HF_ADMISSION.json"
+    }
+  ],
+  "warning": "Post-run installed files are not silently claimed to be historical source. Match recorded source hashes / frozen Git blobs where available.",
+  "model_imports": 0,
+  "GPU_initialization": 0
+}

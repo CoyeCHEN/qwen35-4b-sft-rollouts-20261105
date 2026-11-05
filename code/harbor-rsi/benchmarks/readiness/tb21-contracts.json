@@ -1,0 +1,299 @@
+{
+  "terminal-bench/sam-cell-seg": {
+    "basis": "Frozen instruction.md explicitly promises Torch, TorchVision, MobileSAM, numpy, pandas, Pillow, OpenCV and tqdm. No segmentation output is prepared.",
+    "coverage": {
+      "runtime": {
+        "reason": "Imports and CPU native torchvision operation validate promised dependencies.",
+        "checks": [
+          "promised-imports"
+        ]
+      },
+      "network": {
+        "reason": "Task allows internet; bounded CPU wheel request validates direct route only, not full wheel stability.",
+        "checks": [
+          "torch-range"
+        ]
+      },
+      "assets": {
+        "reason": "Official verifier retrieves public MobileSAM weights; verify exact bytes and hash without staging private answer files.",
+        "checks": [
+          "sam-verifier-weights"
+        ]
+      },
+      "verifier": {
+        "reason": "Run the official APT/UV/Git requirement bootstrap with its pinned Python/packages, then import native libraries; no test answers or segmentation output.",
+        "checks": [
+          "sam-verifier-bootstrap"
+        ]
+      },
+      "agent": {
+        "reason": "Installed CLI must execute deterministic loopback tools, without a real model request.",
+        "checks": [
+          "installed-cli-tools",
+          "agent-credential-presence",
+          "bootstrap-env-restored"
+        ]
+      }
+    },
+    "checks": [
+      {
+        "id": "promised-imports",
+        "category": "runtime",
+        "command": "python -c 'import torch, torchvision, mobile_sam, numpy, pandas, cv2, PIL, tqdm, os, argparse; from torchvision.ops import nms; nms(torch.tensor([[0.,0.,1.,1.]]), torch.tensor([1.]), 0.5); print(torch.__version__, torchvision.__version__)'",
+        "timeout_sec": 300,
+        "phase": "agent",
+        "network": false
+      },
+      {
+        "id": "torch-range",
+        "category": "network",
+        "command": "python -c \"import urllib.request; u='https://download.pytorch.org/whl/cpu/torch-2.5.1%2Bcpu-cp311-cp311-linux_x86_64.whl'; r=urllib.request.urlopen(urllib.request.Request(u,headers={'Range':'bytes=0-1023'}),timeout=12); print(r.status,r.url,r.headers.get('Content-Range')); assert r.status==206; assert len(r.read(1025))==1024\"",
+        "timeout_sec": 20,
+        "phase": "agent",
+        "network": true
+      },
+      {
+        "id": "installed-cli-tools",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python /opt/harbor-readiness/cli_contract_probe.py /harbor/agent-runtime/harbor-open-harness-venv/bin/open-harness",
+        "timeout_sec": 60,
+        "network": false
+      },
+      {
+        "id": "sam-verifier-bootstrap",
+        "category": "verifier",
+        "phase": "verifier",
+        "command": "bash -c 'set -euo pipefail; apt-get update; apt-get install -y curl git libgl1; curl --connect-timeout 5 --max-time 30 -LsSf https://astral.sh/uv/0.9.5/install.sh | sh; source \"$HOME/.local/bin/env\"; uvx --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match -p 3.11 -w torch==2.5.1 -w torchvision==0.20.1 -w pandas==2.3.2 -w timm==1.0.19 -w opencv-python==4.12.0.88 -w shapely==2.1.1 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 -w git+https://github.com/ChaoningZhang/MobileSAM.git@34bbbfdface3c18e5221aa7de6032d7220c6c6a1 --from pytest==8.4.1 python -c '\"'\"'import torch, torchvision, pandas, timm, cv2, shapely, pytest, mobile_sam; from torchvision.ops import nms; nms(torch.tensor([[0.,0.,1.,1.]]),torch.tensor([1.]),0.5); print(torch.__version__,torchvision.__version__,timm.__version__)'\"'\"''",
+        "timeout_sec": 900,
+        "network": true
+      },
+      {
+        "id": "sam-verifier-weights",
+        "category": "assets",
+        "phase": "verifier",
+        "command": "bash -c 'set -eu; curl -fL --retry 0 --connect-timeout 5 --max-time 180 --max-filesize 40728226 -o /tmp/harbor-readiness-sam-weights.pt https://github.com/ChaoningZhang/MobileSAM/raw/master/weights/mobile_sam.pt; python -c '\"'\"'import hashlib; from pathlib import Path; p=Path('\"'\"'\"'\"'\"'\"'\"'\"'/tmp/harbor-readiness-sam-weights.pt'\"'\"'\"'\"'\"'\"'\"'\"'); b=p.read_bytes(); print(len(b),hashlib.sha256(b).hexdigest()); assert len(b)==40728226; assert hashlib.sha256(b).hexdigest()=='\"'\"'\"'\"'\"'\"'\"'\"'6dbb90523a35330fedd7f1d3dfc66f995213d81b29a5ca8108dbcdd4e37d6c2f'\"'\"'\"'\"'\"'\"'\"'\"''\"'\"''",
+        "timeout_sec": 240,
+        "network": true
+      },
+      {
+        "id": "agent-credential-presence",
+        "category": "agent",
+        "phase": "agent",
+        "command": "test -n \"$DEEPSEEK_API_KEY\"",
+        "timeout_sec": 10,
+        "network": false
+      },
+      {
+        "id": "bootstrap-env-restored",
+        "category": "agent",
+        "phase": "agent",
+        "command": "test -z \"${PIP_NO_INDEX-}\" && test -z \"${PIP_FIND_LINKS-}\"",
+        "timeout_sec": 10,
+        "network": false
+      }
+    ],
+    "inputs": []
+  },
+  "terminal-bench/filter-js-from-html": {
+    "basis": "Original tests/test.sh performs APT, pinned uv installer and pinned pytest/selenium bootstrap. Bootstrap-only checks do not run test_outputs.py.",
+    "coverage": {
+      "runtime": {
+        "not_required": true,
+        "reason": "Agent task is to implement the HTML filter; do not preinstall its solution dependencies."
+      },
+      "network": {
+        "reason": "Check the configured verifier proxy with an actual TLS request, not a listening port.",
+        "checks": [
+          "verifier-origin"
+        ]
+      },
+      "assets": {
+        "not_required": true,
+        "reason": "Task public inputs are supplied in its official image; no reviewed external model cache."
+      },
+      "verifier": {
+        "reason": "Execute APT and uv/pytest bootstrap equivalents before any answer-dependent test.",
+        "checks": [
+          "bootstrap"
+        ]
+      },
+      "agent": {
+        "reason": "Installed CLI must execute deterministic loopback tools, without a real model request.",
+        "checks": [
+          "installed-cli-tools",
+          "agent-credential-presence"
+        ]
+      }
+    },
+    "checks": [
+      {
+        "id": "bootstrap",
+        "category": "verifier",
+        "command": "bash -c 'set -euo pipefail; apt-get update; apt-get install -y curl; curl --connect-timeout 5 --max-time 30 -LsSf https://astral.sh/uv/0.9.5/install.sh | sh; source \"$HOME/.local/bin/env\"; uvx -p 3.13 -w pytest==8.4.1 -w selenium==4.38.0 -w bs4==0.0.2 -w pytest-json-ctrf==0.3.5 pytest --version'",
+        "timeout_sec": 120,
+        "phase": "verifier",
+        "network": true
+      },
+      {
+        "id": "verifier-origin",
+        "category": "network",
+        "command": "curl -fIL --connect-timeout 5 --max-time 15 https://github.com/astral-sh/uv/releases/tag/0.9.5",
+        "timeout_sec": 20,
+        "phase": "verifier",
+        "network": true
+      },
+      {
+        "id": "installed-cli-tools",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python /opt/harbor-readiness/cli_contract_probe.py /harbor/agent-runtime/harbor-open-harness-venv/bin/open-harness",
+        "timeout_sec": 60,
+        "network": false
+      },
+      {
+        "id": "agent-credential-presence",
+        "category": "agent",
+        "phase": "agent",
+        "command": "test -n \"$DEEPSEEK_API_KEY\"",
+        "timeout_sec": 10,
+        "network": false
+      }
+    ],
+    "inputs": []
+  },
+  "terminal-bench/fix-ocaml-gc": {
+    "basis": "Original verifier re-clones upstream OCaml and checks out tag_purposefully_broken_sweeping_changes; clone/bootstrap only, no code fixing or make.",
+    "coverage": {
+      "runtime": {
+        "not_required": true,
+        "reason": "Repairing and building OCaml is the task, not environment preparation."
+      },
+      "network": {
+        "reason": "Use exact upstream Git origin through configured verifier network.",
+        "checks": [
+          "git-bootstrap"
+        ]
+      },
+      "assets": {
+        "not_required": true,
+        "reason": "Original source tree is shipped in image; verifier clone is validated separately."
+      },
+      "verifier": {
+        "reason": "APT/uv bootstrap and pytest availability plus Git source access, never testing answers.",
+        "checks": [
+          "bootstrap"
+        ]
+      },
+      "agent": {
+        "reason": "Installed CLI must execute deterministic loopback tools, without a real model request.",
+        "checks": [
+          "installed-cli-tools",
+          "agent-credential-presence"
+        ]
+      }
+    },
+    "checks": [
+      {
+        "id": "git-bootstrap",
+        "category": "network",
+        "command": "git clone --no-checkout https://github.com/sadiqj/ocaml/ /tmp/harbor-readiness-ocaml && git -C /tmp/harbor-readiness-ocaml checkout tag_purposefully_broken_sweeping_changes && git -C /tmp/harbor-readiness-ocaml rev-parse HEAD",
+        "timeout_sec": 90,
+        "phase": "verifier",
+        "network": true
+      },
+      {
+        "id": "bootstrap",
+        "category": "verifier",
+        "command": "bash -c 'set -euo pipefail; apt-get update; apt-get install -y curl; curl --connect-timeout 5 --max-time 30 -LsSf https://astral.sh/uv/0.9.5/install.sh | sh; source \"$HOME/.local/bin/env\"; uvx -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version'",
+        "timeout_sec": 120,
+        "phase": "verifier",
+        "network": true
+      },
+      {
+        "id": "installed-cli-tools",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python /opt/harbor-readiness/cli_contract_probe.py /harbor/agent-runtime/harbor-open-harness-venv/bin/open-harness",
+        "timeout_sec": 60,
+        "network": false
+      },
+      {
+        "id": "agent-credential-presence",
+        "category": "agent",
+        "phase": "agent",
+        "command": "test -n \"$DEEPSEEK_API_KEY\"",
+        "timeout_sec": 10,
+        "network": false
+      }
+    ],
+    "inputs": []
+  },
+  "terminal-bench/reshard-c4-data": {
+    "basis": "Original verifier loads allenai/c4 data_files train shard en/c4-train.00009-of-01024.json.gz; agent sees a different shard. Verifier-private check only.",
+    "coverage": {
+      "runtime": {
+        "not_required": true,
+        "reason": "Reshard implementation and its dependency management remain agent work."
+      },
+      "network": {
+        "not_required": true,
+        "reason": "This declaration requires an exact offline cache; no dataset download is permitted during validation."
+      },
+      "assets": {
+        "reason": "Use the original datasets.load_dataset key under offline mode, then read the first record; a nonempty cache directory is insufficient.",
+        "checks": [
+          "exact-c4-key"
+        ]
+      },
+      "verifier": {
+        "reason": "Pinned verifier runtime must already exist in its configured uv cache.",
+        "checks": [
+          "verifier-runtime"
+        ]
+      },
+      "agent": {
+        "reason": "Installed CLI must execute deterministic loopback tools, without a real model request.",
+        "checks": [
+          "installed-cli-tools",
+          "agent-credential-presence"
+        ]
+      }
+    },
+    "checks": [
+      {
+        "id": "exact-c4-key",
+        "category": "assets",
+        "command": "HF_DATASETS_OFFLINE=1 HF_HUB_OFFLINE=1 uvx --offline -p 3.13 -w pytest==8.4.1 -w datasets==3.6.0 -w tqdm==4.67.1 -w pytest-json-ctrf==0.3.5 --from pytest python -c \"from datasets import load_dataset; d=load_dataset('allenai/c4',data_files={'train':['en/c4-train.00009-of-01024.json.gz']},split='train'); sources=list((d.info.download_checksums or {}).keys()); assert any('en/c4-train.00009-of-01024.json.gz' in s for s in sources), 'exact shard key missing in cache provenance'; assert not any('en/c4-train.00000-of-01024.json.gz' in s for s in sources), 'wrong-shard cache fallback'; print(len(d),d._fingerprint,[f['filename'] for f in d.cache_files]); assert d.cache_files; assert len(d)>0; assert d[0]['text']\"",
+        "timeout_sec": 60,
+        "phase": "verifier",
+        "network": false
+      },
+      {
+        "id": "verifier-runtime",
+        "category": "verifier",
+        "command": "uvx --offline -p 3.13 -w pytest==8.4.1 -w datasets==3.6.0 -w tqdm==4.67.1 -w pytest-json-ctrf==0.3.5 pytest --version",
+        "timeout_sec": 30,
+        "phase": "verifier",
+        "network": false
+      },
+      {
+        "id": "installed-cli-tools",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python /opt/harbor-readiness/cli_contract_probe.py /harbor/agent-runtime/harbor-open-harness-venv/bin/open-harness",
+        "timeout_sec": 60,
+        "network": false
+      },
+      {
+        "id": "agent-credential-presence",
+        "category": "agent",
+        "phase": "agent",
+        "command": "test -n \"$DEEPSEEK_API_KEY\"",
+        "timeout_sec": 10,
+        "network": false
+      }
+    ],
+    "inputs": []
+  }
+}

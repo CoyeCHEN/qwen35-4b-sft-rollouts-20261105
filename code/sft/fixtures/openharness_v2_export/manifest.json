@@ -1,0 +1,1 @@
+{"schema_version":"open-harness-rollout-v2","sessions":[{"schema_version":"open-harness-rollout-v2","session_id":"export-session","metadata":{"task_id":"dev-shell-export"},"runs":[{"run_id":"export-run","started_at":1,"ended_at":4,"status":"completed"}]}],"calls":1,"tools":1,"artifacts":0}

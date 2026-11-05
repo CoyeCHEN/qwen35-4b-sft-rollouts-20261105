@@ -1,0 +1,46 @@
+{
+  "host": "bm-220acn7",
+  "python": "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/bin/python",
+  "source_checkout": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/source-r4/repository",
+  "source_commit": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42",
+  "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/assets/source17-r1/student-tokenizer",
+  "hot_root": "/ssd/chenkeyi/qwen35-sft-772-20261101",
+  "capacity_config_template": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/capacity-template-r4.yaml",
+  "project_training_lock": "/data/chenkeyi/qwen35-sft-772-20261101/control/training.lock",
+  "max_concurrent_gpus": 4,
+  "authorized_gpu_uuids": [
+    "GPU-7b40e1e7-c43c-ba4f-10ed-397f948eeed1",
+    "GPU-e6b0a5b4-c14b-e336-1fba-2cda6693aa91",
+    "GPU-995cb9ba-212b-9df4-f85b-f6f75757007b",
+    "GPU-6e9a5318-94e0-36dc-cb4a-95a22a0950d5",
+    "GPU-9d89f519-51e1-68e2-b522-6e8c1bdc1130",
+    "GPU-7b634c3e-13ae-5243-19dd-b6edddf9a543",
+    "GPU-5026c220-7a86-e58e-baae-4921112354c1",
+    "GPU-5930b869-bd11-7161-d64a-aa1ab07b64ec"
+  ],
+  "planned_gpu_ids": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "service_prefix": "qwen35-772-new-sft",
+  "training_plan": "qwen35_772_cf_tmax",
+  "formal_training_authorized": true,
+  "formal_authorized_stage": "new-cf416-tmax356-m2",
+  "capacity_acceptance": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/verify-capacity772-131072-dp4/CAPACITY_ACCEPTANCE.json",
+  "tool_contract": "/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace/configs/actual-eleven-tool-contract.json",
+  "cf_retention_cache": "/ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/calibforge/cache-131072",
+  "hf_protocol_smoke_command": [
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/bin/python",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/cold-hf-native-cli-smoke-r3.py"
+  ],
+  "hf_admission_deployment": {
+    "command": [
+      "/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/bin/python",
+      "/ssd/chenkeyi/qwen35-sft-772-20261101/final-hf-admission18-r2.py"
+    ],
+    "source_sha256": "e6616b1b8a6a4d023a8d0e8f9e0a0e0c006efc39a13b3c2956c280a31e00a179",
+    "scope": "Completed native job packaging plus cold HF and native CLI verification, no changes to training recipe or running trial"
+  }
+}

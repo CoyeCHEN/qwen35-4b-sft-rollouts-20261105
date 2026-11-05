@@ -1,0 +1,14 @@
+{
+  "at": 1793677932.3685637,
+  "worktree": "/home/cky/workspace/RSI/worktrees/harbor-reliability-orchestration-20261103",
+  "base_commit": "0dfee7211318881095dd6e2869d81afd5b6a8de4",
+  "branch": "fix/reliability-orchestration-20261103",
+  "deployment_source_directory": "/home/cky/workspace/RSI/worktrees/harbor-reliability-orchestration-20261103/runtime-evidence/qwen35-reliability-r42",
+  "source_sha256": {
+    "reliability-repair-phase18-r1.py": "d696a1570adc0ac33270c2ffafa4db90e0e58eb270850fa7d9e5138e8cd7e5d7",
+    "handoff-native-controller-r42-r1.py": "525d7e4c069ab12512bd03389d41335276a7c4d46eccb6d55b7dac567a8ee2c8",
+    "run-native772-advance-r42-reliability-repair.py": "d3f48148f62e5028fd1f026ad347cd649f4ede76e7231e7f42251d48b66d8329",
+    "test_reliability_hold.py": "77ad48c90f059775ed1b76799e3a46f671c6cbb01bd9e9da000b979a92363987"
+  },
+  "freeze_artifacts_not_committed_or_pushed": true
+}

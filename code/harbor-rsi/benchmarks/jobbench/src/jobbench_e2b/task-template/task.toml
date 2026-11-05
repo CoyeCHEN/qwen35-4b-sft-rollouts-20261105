@@ -1,0 +1,62 @@
+# Harbor task manifest — rendered by src/jobbench_e2b/adapter.py.
+#
+# Placeholders are substituted at generation time; see render_task_toml().
+# Every generated file's hash is recorded in the dataset's manifest.json.
+
+schema_version = "1.4"
+
+[task]
+name = __TASK_NAME__
+authors = [{ name = "JobBench Team" }]
+description = "JobBench professional deliverable task"
+keywords = __KEYWORDS__
+
+[metadata]
+split = __SPLIT__
+profession = __PROFESSION__
+source_task = __SOURCE_TASK__
+network_required = __NETWORK_REQUIRED__
+instruction_sha256 = __INSTRUCTION_SHA256__
+judge_sha256 = __JUDGE_SHA256__
+jobbench_evaluator_commit = "__EVALUATOR_COMMIT__"
+
+[agent]
+# NOTE: no `user` here on purpose. E2B sandboxes run as root by default, and
+# naming a user that does not exist makes every exec fail.
+timeout_sec = 3600.0
+# NOTE: no `reasoning_effort` here — the task-level [agent] section only accepts
+# timeout_sec / user / network_mode / allowed_hosts. Anything else is silently
+# dropped by pydantic. Agent-specific knobs like reasoning_effort go on the
+# *job config* agent entry (`kwargs`) or via `--ak reasoning_effort=high`.
+
+[verifier]
+user = "root"
+timeout_sec = 3900.0
+# Defaults to shared. Flip to "separate" (and bake tests/ into a grader image)
+# when you want the agent to have no chance of touching the rubric.
+environment_mode = "shared"
+
+[verifier.env]
+JOBBENCH_TASK_ID = __SOURCE_TASK__
+JOBBENCH_PROFESSION = __PROFESSION__
+JOBBENCH_EVALUATED_MODEL = "${JOBBENCH_EVALUATED_MODEL}"
+JOBBENCH_JUDGE_WORKERS = "3"
+# judge.py is OpenAI-compatible and reads these three from the environment.
+JUDGE_API_BASE = "${JUDGE_API_BASE}"
+JUDGE_API_KEY = "${JUDGE_API_KEY}"
+JUDGE_MODEL = "${JUDGE_MODEL}"
+
+[environment]
+# Pick ONE of the two wiring styles (see README):
+#   A. runtime upload  — docker_image set, NO environment/Dockerfile
+#   B. baked image     — docker_image empty, environment/Dockerfile present
+__DOCKER_IMAGE_LINE__
+workdir = "__WORKDIR__"
+network_mode = __NETWORK_MODE__
+cpus = 4
+memory_mb = 8192
+# NOTE: no storage_mb. The E2B environment never reads it.
+
+[[artifacts]]
+source = "__WORKDIR__/output"
+destination = "output"

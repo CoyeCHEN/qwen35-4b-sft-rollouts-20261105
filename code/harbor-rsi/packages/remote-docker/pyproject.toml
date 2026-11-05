@@ -1,0 +1,16 @@
+[project]
+name = "harbor-remote-docker"
+version = "0.1.1"
+description = "Opt-in SSH Docker Environment provider for Harbor."
+requires-python = ">=3.12"
+dependencies = ["harbor>=0.23.0"]
+
+[tool.uv.sources]
+harbor = { workspace = true }
+
+[build-system]
+requires = ["uv_build>=0.8.4,<0.9.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "harbor_remote_docker"

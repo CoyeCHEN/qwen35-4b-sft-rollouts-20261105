@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-10-29T14:32:52.399436+00:00",
+  "route": [
+    "Qwen/Qwen3.5-4B@851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "NEW-CF500-M1",
+    "NEW-CF500-TMAX500-M2"
+  ],
+  "public_tasks_per_source": 500,
+  "attempts_per_task_max": 2,
+  "stop_after_first_qualified_success": true,
+  "total_attempts_cap": 2000,
+  "environment_failures_count_as_attempts": true,
+  "api_retry_accounted_separately": true,
+  "existing_cost_hard_cap_preserved": true,
+  "tools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "bash_job",
+    "trajectory_read",
+    "edit_patch"
+  ],
+  "finish": false,
+  "timeBudget": 0,
+  "old_training_data_diagnostic_only": true,
+  "legacy_cf_ab_future_dispatch": "SUSPEND_PENDING_LIVE_VERIFICATION",
+  "eval": {
+    "benchmark": "TB2.1",
+    "tasks": 89,
+    "n": 3,
+    "protocol": "same frozen student protocol; no expected-score stopping"
+  },
+  "source_commit_baseline": "d295fb011b3ec2d1b79ee15fcde95420b325408a",
+  "formal_new_training_started": false,
+  "paid_new_teacher_attempts": 0
+}

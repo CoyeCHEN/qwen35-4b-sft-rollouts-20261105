@@ -1,0 +1,35 @@
+{
+  "job_id": "new772-new-cf416-tmax356-m2",
+  "unit": "qwen35-772-new-sft-new772-new-cf416-tmax356-m2.service",
+  "stage": "new-cf416-tmax356-m2",
+  "gpu_ids": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "resume": null,
+  "probe_seconds": 0,
+  "status": "completed",
+  "submitted_at": 1793558901.342894,
+  "host": "bm-220acn7",
+  "config_sha256": "1f48ed160a76bea910857bf16c94776f06e1d77a45c76047686303e72e91c716",
+  "training_source_sha256": "293ba2a7dca8569bb39e11bc0137a0e1180a0391402f10d49ff5b4ad00ce6c93",
+  "source_commit": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42",
+  "data_manifest_sha256": "875213c6b759e99cb899093e6a3d4b0a6054d6033363a6f248b4589ce97526ba",
+  "no_local_heartbeat": true,
+  "automatic_restart": false,
+  "process": {
+    "pid": 1194582,
+    "startticks": "91798358",
+    "boot_id": "5ed5b9fc-6915-46c8-b9ad-04e790f6b65b"
+  },
+  "started_at": 1793558901.4039552,
+  "launcher_process": {
+    "pid": 1194738,
+    "startticks": "91798364",
+    "boot_id": "5ed5b9fc-6915-46c8-b9ad-04e790f6b65b"
+  },
+  "returncode": 0,
+  "ended_at": 1793586156.493954
+}

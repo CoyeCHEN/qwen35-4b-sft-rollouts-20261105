@@ -1,0 +1,8 @@
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 6
+
+environment:
+  type: docker
+  force_build: false
+  delete: true

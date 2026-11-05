@@ -1,0 +1,42 @@
+[
+  {
+    "path": "scripts/build_report.py",
+    "sha256": "d50d9e66a5c6f71f2ead1f72b1109d6db3b072bcca66561d373f28ad67e023af"
+  },
+  {
+    "path": "scripts/case_notes.py",
+    "sha256": "28e20761ac65639e8b9312569c4030fdf000426fbe620c7e01e26717fee1c939"
+  },
+  {
+    "path": "scripts/collect_remote.py",
+    "sha256": "125c2009413a3d50d72e8ab17d74e3193ded95baf709e6ded70d44d968eacdfc"
+  },
+  {
+    "path": "scripts/collect_remote_r2.py",
+    "sha256": "5de1a0b813f984627c011d25f44e1b16313d1f51cf7777f7ee327bc67516e864"
+  },
+  {
+    "path": "scripts/export_closed_trajectories.py",
+    "sha256": "b768b37ef3022fe732754ba77a37e48019f792ff5e828ce80446a6f53169df03"
+  },
+  {
+    "path": "scripts/export_closed_trajectories_r2.py",
+    "sha256": "51e3fd34854d6f603f98c497c0337dba3a923f1d7343c07328a8eb4ccd2442a5"
+  },
+  {
+    "path": "scripts/summarize_for_review.py",
+    "sha256": "2e47afc2c3732fd97f69da24b0a6765480ced72bab8bb5f4c899a732022a3f7a"
+  },
+  {
+    "path": "scripts/test_viewer_dom.js",
+    "sha256": "613b9cd7eb22c8b89b449d9cad0e44cd54c289be107caa4287faee8b68e34df9"
+  },
+  {
+    "path": "scripts/validate_and_package.py",
+    "sha256": "0410a35adcef07f62e11c7ad0e791424b7e1780d3ce6b151725c6ac0b228f0c2"
+  },
+  {
+    "path": "scripts/viewer.js",
+    "sha256": "e364aa33d7601d3ce9f39f219d194f201607f9c8c0ab5aa9d8bb971b8b652a1f"
+  }
+]

@@ -1,0 +1,14 @@
+jobs_dir: benchmarks/terminal_bench_2_1/results/smoke
+n_attempts: 1
+n_concurrent_trials: 1
+environment:
+  import_path: harbor.environments.e2b_one_hour:OneHourE2BEnvironment
+  delete: true
+agents:
+  - import_path: harbor.agents.installed.open_harness:OpenHarnessAgent
+    model_name: deepseek/deepseek-flash
+    env:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+datasets:
+  - name: terminal-bench/terminal-bench-2-1
+    n_tasks: 1

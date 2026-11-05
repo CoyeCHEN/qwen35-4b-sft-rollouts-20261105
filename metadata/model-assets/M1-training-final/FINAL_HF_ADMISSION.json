@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "stage": "new-cf416-m1",
+  "export_manifest_sha256": "1edef547fa791ce2c8abca331ee7ac339b8e836806ebe06988a197b0c9eb9355",
+  "hf_load_smoke_sha256": "e783532dcd3506ea19218860a61f3efce76e837539ee7f45f24b93f918e82284",
+  "native_cli_smoke_sha256": "186eaa8686feb44a5b1be05cba190a301ecf27bf613050653d4eaebc93738a66",
+  "student_harness_wheel_sha256": "1d27eef1ca6696275f306d8c653f7a266a4c7aea7321f0d47fd01b739c27fa18",
+  "canonical_processor_assets_sha256": "5bc7391792df6e9d2d944de90010366bd0bc8adf686c97e41f3107f0c42e78fe",
+  "tokenizer_template_processor_files": {
+    "tokenizer_config.json": "3dd1cee8a0cb8f51800bcb47bd157eeef5bda2d39c85b7569892b9af95170071",
+    "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+    "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003",
+    "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+    "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+    "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
+  },
+  "source_sha256": "98ae4778f2089e3409281d3282d4b10cc625548f60717aa6bffd862c5963e99b",
+  "at": 1793558873.5412605
+}

@@ -1,0 +1,29 @@
+{
+  "at": 1793671921.8752885,
+  "passed": true,
+  "files": {
+    "old-four-after-selected267-phase18-r5.py": "832f1d88a49953a912cd9209568bd7299cc38191c59445af2f0731a64ab2c6e4",
+    "old-four-complete-readouts-phase18-r6.py": "47c3e4963e49ea0e3e02c814c4bc3033efd103df868695d17fae7a0ecbe14de4",
+    "old443-phase-readouts18-r6.py": "bfae3b83fe2a46b9bc11384d15cdea1a1646f4638839bc508d3b82db598757af",
+    "old443-readout18-r6.py": "f09821fd630c6125a2a243e4ab4e409d4360aff265f592d77b6f7869bdefd1c3",
+    "cold-old112-serving18-r5.py": "d8d9ae97b374e66f215e2a22378fca43c336442fb57e5397ba18cc133d3c48bb",
+    "old112-phase18-r7.py": "37532332091c8b7c12df28d92be141500415085bd2fa2e965c30e4d0a3227692",
+    "freeze-old-readout-selected267-deployment18-r4.py": "1bdb07c9e4d52a42fb3564b96b178c9cb17242d75dcd9e01178bb5e8d7d85180",
+    "checks/OLD_READOUT_SELECTED267_EXPECTED_REMOTE_FILES_R4.json": "a89c3b451e09af8ed4e79f653889826863e2d3b3dbf7f9737c88d5c6eb302f72",
+    "checks/OLD112_SELECTED267_QUALIFICATION_COMPOSITE_ACCEPTANCE_R1.json": "6cadd007714df4692f9bd80499614e921e26ad2b522def95eaaa050ec598fe5c",
+    "checks/SELECTED267_QUALIFICATION_GATE_CPU_ACCEPTANCE_R1.json": "966ea818e7c9dcae59794ea5a5018adef324204c0ba0d322b1f37119b83595ce",
+    "checks/FULL_CHAIN_QUALIFICATION_CPU_ACCEPTANCE_R1.json": "f6a64fbeeb9447b3a150683a2711619f70f6c2828fcc713fa99b107ea18de0d6",
+    "formal-native-eval-r1/scripts/run-user-evaluation-native18-r7.py": "a489a1eddd30ee87f78e19c59e2690921b9b82668afb27a59082d656934d8023",
+    "checks/r41-selected267-host-qualification-r1/SELECTED267_R7_FULL_CHAIN_CANDIDATE_INDEX_R1.json": "1c0b5a128c4559beb0affe77f9b761a3706881eea3bb8b159016123fc7837c26",
+    "checks/r41-selected267-host-qualification-r1/README.md": "aae9dc16abad23d75f0f0f681cc01289ae21f5e537872237695b17aec68bd454",
+    "checks/r41-selected267-host-qualification-r1/SELECTED267_R7_POST_TERMINAL_QUALIFICATION_CPU_R1.json": "e40d763a492178910dcc5a0024560cb0bbabdb9264c0db272596875bff0ca320",
+    "checks/r41-selected267-host-qualification-r1/SELECTED267_R7_QUALIFICATION_CANDIDATE_INDEX_R1.json": "e862c645a42c4ceaba41765c9d5d8c4b50b87536efda5aef41d21e79dfc4f072",
+    "checks/r41-selected267-host-qualification-r1/HANDOFF_AND_COMPOSITE_ACCEPTANCE_BOUNDARY_R1.md": "7db9d2df905934fa690e248656eab628bc4b474ec35b783dfd0aed1da4c527af",
+    "checks/r41-selected267-host-qualification-r1/INDEPENDENT_SELECTED267_R7_FULL_CHAIN_REVIEW_R1.json": "cd42b2fc8d52eaf134c17c6ffe191ebd85758a4aa9576aadbda10fb8d073685c",
+    "checks/r41-selected267-host-qualification-r1/FROZEN32_HOST_DOCKER_TRANSPORT_RULE_IMPACT_R1.json": "0f2f6b1a0311acfb0b7f536d7d46cd50a0b6fcb4eda812e5f224cd8fa33580bc",
+    "checks/r41-selected267-host-qualification-r1/FROZEN32_HOST_DOCKER_TRANSPORT_IMPACT_REVIEW_R1.json": "3427e92402428a16957584b46016db2b4d7f74968cf7cdf68912407d02a20175"
+  },
+  "archive_sha256": "17fb72afab3b82a20896766536d8899030ba0f87eb4a9db00d290b27fef7db38",
+  "existing_files_overwritten": 0,
+  "model_verifier_or_task_dispatches": 0
+}

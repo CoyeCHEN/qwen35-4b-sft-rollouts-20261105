@@ -1,0 +1,21 @@
+[
+  {
+    "label": "teacher-wheel",
+    "wheel": "open_harness_ai-0.3.0+rsi.summary.20261030-py3-none-any.whl",
+    "sha256": "c686ba3f429d8257a060cf6b6a6e4c5aa7d740f33b2d59180d9a2717b55d0db8",
+    "source_type": "Exact source members extracted from the historical wheel, not current main"
+  },
+  {
+    "label": "evaluation-wheel6",
+    "wheel": "open_harness_ai-0.3.0+rsi.reliability.20261104.6-py3-none-any.whl",
+    "sha256": "8c84a8659c136b027c36c48a7100d956fdb58c873b347ef6b240b561cc75e85d",
+    "source_type": "Exact source members extracted from the historical wheel, not current main"
+  },
+  {
+    "label": "exporter-base-wheel",
+    "wheel": "open_harness_ai-0.3.0-py3-none-any.whl",
+    "sha256": "47dc9cc9e37370be00589f690d2da7c5a08e964407dac6e94c57a2a2018da95d",
+    "source_type": "Exact wheel used by teacher-exporter-r8 sys.path for foundation.rollouts.export; copied from historical artifact path; remote identity cross-check separately",
+    "remote_149_sha256_crosscheck": true
+  }
+]

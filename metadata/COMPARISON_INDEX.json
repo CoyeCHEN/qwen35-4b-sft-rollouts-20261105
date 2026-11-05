@@ -1,0 +1,2967 @@
+[
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/tokenization_utils_base.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/tokenization_utils_base.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/tokenization_utils_base.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/trainer_seq2seq.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/trainer_seq2seq.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/trainer_seq2seq.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/trainer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/trainer.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/trainer.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/processing_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/processing_utils.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/processing_utils.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/modeling_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/modeling_utils.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/modeling_utils.py.diff",
+    "reference": "transformers-train580",
+    "public_blob_proof": {
+      "label": "train-transformers",
+      "path": "modeling_utils.py",
+      "sha": "fd7701836d30d118e2226015e1e443b6fd0872dee2d6c111b60d8af47172f4a6",
+      "blob": "31d59d2f4862f0d5c9ce5708deca08515a82ad95",
+      "ref": "transformers-train580"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/accelerate/accelerator.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/accelerate-production/src/accelerate/accelerator.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/accelerate/accelerator.py.diff",
+    "reference": "accelerate-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/fla/modules/fused_norm_gate.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/fla-production/fla/modules/fused_norm_gate.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/fla/modules/fused_norm_gate.py.diff",
+    "reference": "fla-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/fla/ops/gated_delta_rule/fused_recurrent.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/fla-production/fla/ops/gated_delta_rule/fused_recurrent.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/fla/ops/gated_delta_rule/fused_recurrent.py.diff",
+    "reference": "fla-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/fla/ops/gated_delta_rule/chunk.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/fla-production/fla/ops/gated_delta_rule/chunk.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/fla/ops/gated_delta_rule/chunk.py.diff",
+    "reference": "fla-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/fla/ops/gated_delta_rule/wy_fast.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/fla-production/fla/ops/gated_delta_rule/wy_fast.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/fla/ops/gated_delta_rule/wy_fast.py.diff",
+    "reference": "fla-production",
+    "public_blob_proof": {
+      "label": "fla-production",
+      "path": "ops/gated_delta_rule/wy_fast.py",
+      "sha": "bf24a66524ea56383fe6c9a97ae6b060ebe9490589c8499fba06d6172dc4510f",
+      "blob": "f4f223cdf92957e2b19d096eb7aa0e4ef71caf26",
+      "ref": "fla-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/utils/zero_to_fp32.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/utils/zero_to_fp32.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/utils/zero_to_fp32.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "utils/zero_to_fp32.py",
+      "sha": "bbeb8b1fe7d79563af43902ec91f2db0be8d145466043aae200ff05168a4d6ba",
+      "blob": "c019d1291182406c7ed34f3dcc8cd44a43eb3c73",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/bf16_optimizer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/bf16_optimizer.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/bf16_optimizer.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "runtime/bf16_optimizer.py",
+      "sha": "12b5e15e30a6e4b4109ed13d8fb02fd97a48562fde79f5d8d876f6551588e500",
+      "blob": "a50c240d63980466d9d32439642546821dc7be2b",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/engine.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/engine.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/engine.py.diff",
+    "reference": "deepspeed-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/ops/adam/fused_adam.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/ops/adam/fused_adam.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/ops/adam/fused_adam.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "ops/adam/fused_adam.py",
+      "sha": "e7f24193f52f04572738bd3f84faf94951404e69a6287148955491d5a9beb017",
+      "blob": "53f859e9cc87bde8f16760a4c23394ea1207af0c",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/ops/adam/cpu_adam.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/ops/adam/cpu_adam.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/ops/adam/cpu_adam.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "ops/adam/cpu_adam.py",
+      "sha": "634fc0da21d455e20c187a9eb7f9668de961764e433c2d5da8f0da285282ffac",
+      "blob": "bb1368b66156f922415662fd422ea4472ec81174",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/zero/config.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/zero/config.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/zero/config.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "runtime/zero/config.py",
+      "sha": "cf8beb53835f192afdf5a0c8a4b5bbf3fb09d1fdc767a0f46f66b1cdf38c650a",
+      "blob": "427b5507306c5eea823b155972864f07e3c9721a",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/zero/partition_parameters.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/zero/partition_parameters.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/zero/partition_parameters.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "runtime/zero/partition_parameters.py",
+      "sha": "c7866c302ef1a9757b0c437254e369f8934a2f7ceb371f6f7e54a5391d10c311",
+      "blob": "5b18225ddb57a71abe6eb457e1452f872ad711fa",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/zero/stage3.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/zero/stage3.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/zero/stage3.py.diff",
+    "reference": "deepspeed-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/deepspeed/runtime/fp16/loss_scaler.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/deepspeed-production/deepspeed/runtime/fp16/loss_scaler.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/deepspeed/runtime/fp16/loss_scaler.py.diff",
+    "reference": "deepspeed-production",
+    "public_blob_proof": {
+      "label": "deepspeed-production",
+      "path": "runtime/fp16/loss_scaler.py",
+      "sha": "91a5886bcc79e083926e1ce5dc8a72e267147a7ab4a1db0622230c28e39ca43e",
+      "blob": "1552c24811a4d529bbb46cdc79c6ad92e98ee210",
+      "ref": "deepspeed-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/train/tuner.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/train/tuner.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/train/tuner.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "train/tuner.py",
+      "sha": "1551833464b013f997d736b849a3e45a7d39b7d8a1c8cc88f7fc09cf05390abd",
+      "blob": "08ac5f87ebcd53c0f66e246ff06ac2ce7bb8e07e",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/mm_plugin.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/mm_plugin.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/mm_plugin.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "data/mm_plugin.py",
+      "sha": "a30cc247579ef836c76237a38aea8d473aad865a4cbd2a5a0e3a3534eb04787f",
+      "blob": "a299c93f06b6a2937ef51a752cc2f1ee70ff15ad",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/template.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/template.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/template.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/formatter.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/formatter.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/formatter.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "data/formatter.py",
+      "sha": "345728a904b0a0168003cd44424d068fcddf7ea0d3c2ec07718f68b19e879d77",
+      "blob": "1c080f8812d0d9feb320e949d39bfcb1a0e1e582",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/converter.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/converter.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/converter.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "data/converter.py",
+      "sha": "c596efb447fb50fc915f6aa5c4f228d5409fba83808e23015a1bcf3387a3ffbf",
+      "blob": "ad49deded441318e722cd07bfe331feff6c498a5",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/collator.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/collator.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/collator.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/loader.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/loader.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/loader.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/model/loader.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/model/loader.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/model/loader.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/hparams/training_args.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/hparams/training_args.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/hparams/training_args.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "hparams/training_args.py",
+      "sha": "4e70536ef02e3ec17dd88d64f82021cf8f585d3808a62e3775b7751b87778690",
+      "blob": "84f4d8e6cca1c26b9311780248d552f25639cffa",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/hparams/data_args.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/hparams/data_args.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/hparams/data_args.py.diff",
+    "reference": "llamafactory-production",
+    "public_blob_proof": {
+      "label": "train-llamafactory",
+      "path": "hparams/data_args.py",
+      "sha": "b47368334b418b2e30720ae05d90108c2b0d99d7e66d89e72b26dd15dfaf1e7b",
+      "blob": "68ee772cc62fb4e92fbf638e34b2567a41527fd9",
+      "ref": "llamafactory-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/train/sft/trainer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/train/sft/trainer.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/train/sft/trainer.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/train/sft/workflow.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/train/sft/workflow.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/train/sft/workflow.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/data/processor/supervised.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/data/processor/supervised.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/data/processor/supervised.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/llamafactory/model/model_utils/liger_kernel.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/llamafactory-production/src/llamafactory/model/model_utils/liger_kernel.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/llamafactory/model/model_utils/liger_kernel.py.diff",
+    "reference": "llamafactory-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/generation/utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/generation/utils.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/generation/utils.py.diff",
+    "reference": "transformers-train580",
+    "public_blob_proof": {
+      "label": "train-transformers",
+      "path": "generation/utils.py",
+      "sha": "a3082935eb4f2bf0737b6c7bb1f54acd2f6274db77da08450cad0bb172191408",
+      "blob": "7dc9d6669c2fb6729800cf26db532ffa9f33bf0d",
+      "ref": "transformers-train580"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/generation/configuration_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/generation/configuration_utils.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/generation/configuration_utils.py.diff",
+    "reference": "transformers-train580",
+    "public_blob_proof": {
+      "label": "train-transformers",
+      "path": "generation/configuration_utils.py",
+      "sha": "7c576299c1322eed53f34e5ec8cfe1f650d21d17e86c3ff6d09af06ec8bdca71",
+      "blob": "6f9f3755ecb4c9528b694c057c65264a570ea142",
+      "ref": "transformers-train580"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/data/data_collator.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/data/data_collator.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/data/data_collator.py.diff",
+    "reference": "transformers-train580",
+    "public_blob_proof": {
+      "label": "train-transformers",
+      "path": "data/data_collator.py",
+      "sha": "4ef2bde5be531e5fb3414b22e3f493f62fd46ee7b35448e05d7525179cac17ac",
+      "blob": "8412ab5ae25a942c3c2be029fa51101a5ee90f41",
+      "ref": "transformers-train580"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/loss/loss_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/loss/loss_utils.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/loss/loss_utils.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/qwen3_5/modeling_qwen3_5.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/qwen3_5/modeling_qwen3_5.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/qwen3_5/configuration_qwen3_5.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/qwen3_5/configuration_qwen3_5.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/qwen3_5/configuration_qwen3_5.py.diff",
+    "reference": "transformers-train580"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/qwen3_vl/processing_qwen3_vl.py.diff",
+    "reference": "transformers-train580",
+    "public_blob_proof": {
+      "label": "train-transformers",
+      "path": "models/qwen3_vl/processing_qwen3_vl.py",
+      "sha": "b51f77d783b4a88d503bf9198828d46f71e3ead3833da2631748188b159253ba",
+      "blob": "1ca435749ad2ba8e7ea390125bee00a48646b8e2",
+      "ref": "transformers-train580"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/accelerate/utils/random.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/accelerate-production/src/accelerate/utils/random.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/accelerate/utils/random.py.diff",
+    "reference": "accelerate-production",
+    "public_blob_proof": {
+      "label": "accelerate-production",
+      "path": "utils/random.py",
+      "sha": "5effd9266f5e682d90eeb819cbd3a93ae9cab938a780c8834021f4d2a84d5711",
+      "blob": "9dceb598cacc1c1d17b198e0a7c19789ab3b9f39",
+      "ref": "accelerate-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/accelerate/utils/modeling.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/accelerate-production/src/accelerate/utils/modeling.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/accelerate/utils/modeling.py.diff",
+    "reference": "accelerate-production",
+    "public_blob_proof": {
+      "label": "accelerate-production",
+      "path": "utils/modeling.py",
+      "sha": "421a88fba25d6a50791fb54ea52e7eefd3beb678d1a131055176c09a87e820d6",
+      "blob": "830249ffb1041b6cb29b6e7bdda1d7e47f28bc99",
+      "ref": "accelerate-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/accelerate/utils/deepspeed.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/accelerate-production/src/accelerate/utils/deepspeed.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/accelerate/utils/deepspeed.py.diff",
+    "reference": "accelerate-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/accelerate/utils/operations.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/accelerate-production/src/accelerate/utils/operations.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/accelerate/utils/operations.py.diff",
+    "reference": "accelerate-production",
+    "public_blob_proof": {
+      "label": "accelerate-production",
+      "path": "utils/operations.py",
+      "sha": "20075073050b71e40e975c86a56f8524510bf0536ba5d7a20286bf38d3da4dc8",
+      "blob": "11e9432ac218e6944c6d006f3dd1a5256f1dd0cb",
+      "ref": "accelerate-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/transformers/monkey_patch.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/transformers/monkey_patch.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/transformers/monkey_patch.py.diff",
+    "reference": "liger-production",
+    "public_blob_proof": {
+      "label": "liger-production",
+      "path": "transformers/monkey_patch.py",
+      "sha": "e3c3102d2aeb2acfc407cd83f6cac9254b839222cb73ba5fdace6faa0b5e460f",
+      "blob": "2cc8f1889db69633f8b47ee76de38beceb5fcd8a",
+      "ref": "liger-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/transformers/rms_norm.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/transformers/rms_norm.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/transformers/rms_norm.py.diff",
+    "reference": "liger-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/transformers/functional.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/transformers/functional.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/transformers/functional.py.diff",
+    "reference": "liger-production",
+    "public_blob_proof": {
+      "label": "liger-production",
+      "path": "transformers/functional.py",
+      "sha": "c95590df3a6b9aa35141f3ff06693bc5250c6902068fb903cd792b1340092584",
+      "blob": "87fd1aab9c429d2cd27203b7a9d2ce2a645cd327",
+      "ref": "liger-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/ops/rms_norm.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/ops/rms_norm.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/ops/rms_norm.py.diff",
+    "reference": "liger-production",
+    "public_blob_proof": {
+      "label": "liger-production",
+      "path": "ops/rms_norm.py",
+      "sha": "5f725509cafc9273ea1db1655a21ef958ef6b02affb0e8f9d25f4de1efb3dcd4",
+      "blob": "7b4e7f188d3e519e9eacc72f4bd6d4260ec68f54",
+      "ref": "liger-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/ops/fused_linear_cross_entropy.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/ops/fused_linear_cross_entropy.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/ops/fused_linear_cross_entropy.py.diff",
+    "reference": "liger-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/ops/cross_entropy.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/ops/cross_entropy.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/ops/cross_entropy.py.diff",
+    "reference": "liger-production",
+    "public_blob_proof": {
+      "label": "liger-production",
+      "path": "ops/cross_entropy.py",
+      "sha": "961f41ca7c06dab49be8182de1fed53165eb28ed87efaeed24afad1ecb0b78e8",
+      "blob": "b2bfba14474f84a804f272459d83f81a12f18553",
+      "ref": "liger-production"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/transformers/model/qwen3_5.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/transformers/model/qwen3_5.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/transformers/model/qwen3_5.py.diff",
+    "reference": "liger-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/liger_kernel/transformers/model/loss_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/liger-production/src/liger_kernel/transformers/model/loss_utils.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/liger_kernel/transformers/model/loss_utils.py.diff",
+    "reference": "liger-production"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/transformers/tokenization_utils_base.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-serve530/src/transformers/tokenization_utils_base.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/transformers/tokenization_utils_base.py.diff",
+    "reference": "transformers-serve530"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/server_args.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/server_args.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/server_args.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/server_args.py",
+      "sha": "921201ad646844722db62e7672b1a8a119d93269d7b39d84140bc2a470035f1d",
+      "blob": "d91ced805f5da9e7a0cb6cbdf4ee3e7fd498a696",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/utils/common.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/utils/common.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/utils/common.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/utils/common.py",
+      "sha": "7c5d90c606574e71c4dd2b2ffeb7be214b1364d51fff986331beb5d7bd4bcacb",
+      "blob": "f65f201adfaaebbd7740bffa4162ff4a0d1cdd4b",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/scheduler.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/scheduler.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/scheduler.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/managers/scheduler.py",
+      "sha": "1e342c442ffa1539f58181bf1a24d2c02a5b0cdcce7ed46c97a57f0cdb6b716c",
+      "blob": "67af2d0de9436b00d33ed05e76723aaac0ae0739",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/io_struct.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/io_struct.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/io_struct.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/managers/io_struct.py",
+      "sha": "0e96e7f9bffe93feaa52f7eea4eb5abd33e3b92a2d82b0040d7584c962e01059",
+      "blob": "bd979653458a43bab73dc88a01d1394d016cf402",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/parser/reasoning_parser.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/parser/reasoning_parser.py",
+    "status": "DIFFERENT",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/parser/reasoning_parser.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/function_call/function_call_parser.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/function_call/function_call_parser.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/function_call/function_call_parser.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/function_call/function_call_parser.py",
+      "sha": "96abd2d67d1a66ee0d4669b6e34ee286e5ba1846df1a64d7f8000f6fd6417c15",
+      "blob": "ca066e196d0f66ce735bc26a5e490e013db0f184",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/function_call/qwen3_coder_detector.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/function_call/qwen3_coder_detector.py",
+    "status": "DIFFERENT",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/function_call/qwen3_coder_detector.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/function_call/base_format_detector.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/function_call/base_format_detector.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/function_call/base_format_detector.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/function_call/base_format_detector.py",
+      "sha": "8c0f799c3ae2778f197b1e1bd7d81cfb8f34430b68fbc780a12bbc99743d0186",
+      "blob": "3163867bcd05cfeaf761034db220cb03fb1b590c",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/layers/sampler.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/layers/sampler.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/layers/sampler.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/layers/sampler.py",
+      "sha": "476be765ba216e8da723e43a1dc0f0038426f68cc7ac2001bc3f47db69521b08",
+      "blob": "e947a48cbde877aa814bb7bcb20c8679b466af53",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/sampling/sampling_params.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/sampling/sampling_params.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/sampling/sampling_params.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/sampling/sampling_params.py",
+      "sha": "56af29990d95879324eb3499b6ec92eb9dda32de9e8034ea5359e4f116dba9fd",
+      "blob": "a7f4c664ff5f25cc6cd5cd5bd547c256cf47dc82",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/models/qwen3_5.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/models/qwen3_5.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/models/qwen3_5.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/models/qwen3_next.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/models/qwen3_next.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/models/qwen3_next.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/openai/serving_completions.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/openai/serving_completions.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/entrypoints/openai/serving_completions.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/openai/serving_chat.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/openai/serving_chat.py",
+    "status": "DIFFERENT",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/entrypoints/openai/serving_chat.py.diff",
+    "reference": "sglang-production-base"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/openai/protocol.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/openai/protocol.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/entrypoints/openai/protocol.py.diff",
+    "reference": "sglang-production-base",
+    "public_blob_proof": {
+      "label": "serve-sglang",
+      "path": "srt/entrypoints/openai/protocol.py",
+      "sha": "7ee2266bd5605edafa4a7740174c96820df9a8fa2e14a9ad1cac841ebf0f893a",
+      "blob": "c40bd37d9f589f0f71c9f4f16af147a8342fa593",
+      "ref": "sglang-production-base"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/transformers/generation/configuration_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-serve530/src/transformers/generation/configuration_utils.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/transformers/generation/configuration_utils.py.diff",
+    "reference": "transformers-serve530",
+    "public_blob_proof": {
+      "label": "serve-transformers",
+      "path": "generation/configuration_utils.py",
+      "sha": "7b55311128d01c46f787d35a7622ce0b99e7a6ed9f6b5573983ab340228b1ed1",
+      "blob": "1e3b49247ecac40d4908a33b764cc7e50e1ae97c",
+      "ref": "transformers-serve530"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/transformers/models/qwen3_5/modeling_qwen3_5.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-serve530/src/transformers/models/qwen3_5/modeling_qwen3_5.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/transformers/models/qwen3_5/modeling_qwen3_5.py.diff",
+    "reference": "transformers-serve530"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-serve530/src/transformers/models/qwen3_vl/processing_qwen3_vl.py",
+    "status": "IDENTICAL_RECOVERED_FROM_VERIFIED_PUBLIC_GIT_BLOB",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/transformers/models/qwen3_vl/processing_qwen3_vl.py.diff",
+    "reference": "transformers-serve530",
+    "public_blob_proof": {
+      "label": "serve-transformers",
+      "path": "models/qwen3_vl/processing_qwen3_vl.py",
+      "sha": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+      "blob": "e25ecbda4b7ff4b59c342b76d97938dbef104439",
+      "ref": "transformers-serve530"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/pyproject.toml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/pyproject.toml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/pyproject.toml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/README.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/README.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/README.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/openharness_v2.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/openharness_v2.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/openharness_v2.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/rlbridge.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/rlbridge.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/rlbridge.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/__init__.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/__init__.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_batch_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_batch_dataset.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_batch_dataset.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_archive.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_archive.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_preparation_publish.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_preparation_publish.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_preparation_publish.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_min_lr_native_scheduler.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_min_lr_native_scheduler.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_min_lr_native_scheduler.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_advance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_advance.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_advance.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_eval_gather.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_eval_gather.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_eval_gather.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_world_size.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_world_size.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_world_size.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tmax_delivery.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tmax_delivery.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tmax_delivery.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_adapters.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_adapters.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_adapters.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_runtime.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_runtime.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_runtime.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_recorder_integrity.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_recorder_integrity.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_recorder_integrity.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_observer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_observer.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_observer.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_training_health.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_training_health.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_training_health.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_integration_contracts.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_integration_contracts.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_integration_contracts.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_current_recorder_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_current_recorder_contract.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_current_recorder_contract.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_recipe.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_recipe.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_recipe.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_security.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_security.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_security.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_launch_acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_launch_acceptance.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_launch_acceptance.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_batch_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_batch_contract.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_batch_contract.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_sources.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_sources.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/check_native_deployment.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/check_native_deployment.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/check_native_deployment.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_runtime.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_runtime.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_runtime.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_upstream_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_upstream_contract.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_upstream_contract.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_public_corpus.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_public_corpus.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_public_corpus.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_prepare.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_prepare.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_prepare.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tmax_native_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tmax_native_cpu.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tmax_native_cpu.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_collection.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_collection.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_collection.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_published_sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_published_sources.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_published_sources.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tokenization.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tokenization.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tokenization.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_native_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_native_cpu.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_native_cpu.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/remote_runtime_check.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/remote_runtime_check.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/remote_runtime_check.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_qwen35_codec.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_qwen35_codec.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_qwen35_codec.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_teacher_segments.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_teacher_segments.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_teacher_segments.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/__init__.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/__init__.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_dataset.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_dataset.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/sft_smoke.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/sft_smoke.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/sft_smoke.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/overnight_sft_pipeline_manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/overnight_sft_pipeline_manifest.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/overnight_sft_pipeline_manifest.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/sft_data_validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/sft_data_validation.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/sft_data_validation.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/zero_intrusion_capture.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/zero_intrusion_capture.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/zero_intrusion_capture.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/trajectory_validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/trajectory_validation.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/trajectory_validation.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/harbor_recorder_minimal_integration.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/harbor_recorder_minimal_integration.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/harbor_recorder_minimal_integration.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/runtime_smoke.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/runtime_smoke.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/runtime_smoke.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/versions.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/versions.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/versions.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/implementation_status.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/implementation_status.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/implementation_status.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/overnight_sft_pipeline_report.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/overnight_sft_pipeline_report.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/overnight_sft_pipeline_report.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/dev_candidate_audit.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/dev_candidate_audit.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/dev_candidate_audit.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/reliability.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/reliability.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/reliability.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/compatibility.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/compatibility.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/compatibility.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/QWEN35_LAUNCH_ACCEPTANCE.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/QWEN35_LAUNCH_ACCEPTANCE.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/QWEN35_LAUNCH_ACCEPTANCE.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/data.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/data.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/data.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/validation.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/validation.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/deployment.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/deployment.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/deployment.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/integration.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/integration.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/integration.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/check_tmax_tokenizer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/check_tmax_tokenizer.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/check_tmax_tokenizer.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/build_tmax_batch_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/build_tmax_batch_dataset.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/build_tmax_batch_dataset.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/convert_rollouts.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/convert_rollouts.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/convert_rollouts.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/build_tmax_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/build_tmax_dataset.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/build_tmax_dataset.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/collection.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/collection.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/collection.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/dataset.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/dataset.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/versions.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/versions.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/versions.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/public_corpus.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/public_corpus.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/public_corpus.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/published.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/published.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/published.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/validation.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/validation.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/validation.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/security.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/security.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/security.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/candidates.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/candidates.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/candidates.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/schema.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/schema.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/schema.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/public_corpus_audit.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/public_corpus_audit.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/public_corpus_audit.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/teacher_segments.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/teacher_segments.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/teacher_segments.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/__main__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/__main__.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/__main__.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/prepare.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/prepare.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/prepare.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/qwen35.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/qwen35.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/qwen35.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/sources.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/sources.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/model-sha256.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/model-sha256.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/model-sha256.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/tokenization.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/tokenization.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/tokenization.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/__init__.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/__init__.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/rlbridge/rollout.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/rlbridge/rollout.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/rlbridge/rollout.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/openharness_v2_export/manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/openharness_v2_export/manifest.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/openharness_v2_export/manifest.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/openharness_v2/manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/openharness_v2/manifest.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/openharness_v2/manifest.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/causal_loss_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/causal_loss_cpu.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/causal_loss_cpu.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/rank_exit.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/rank_exit.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/rank_exit.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/ga32_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/ga32_cpu.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/ga32_cpu.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/qwen_liger_loss_gpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/qwen_liger_loss_gpu.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/qwen_liger_loss_gpu.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/.github/workflows/cpu.yml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/.github/workflows/cpu.yml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/.github/workflows/cpu.yml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/policies/evaluation-exclusion.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/policies/evaluation-exclusion.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/policies/evaluation-exclusion.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/policies/m1-quality.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/policies/m1-quality.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/policies/m1-quality.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m2-128k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m2-128k.yaml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m2-128k.yaml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m1-64k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m1-64k.yaml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m1-64k.yaml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m2-96k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m2-96k.yaml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m2-96k.yaml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/ds_z3.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/ds_z3.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/ds_z3.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/eval_gather.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/eval_gather.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/eval_gather.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/config.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/config.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/config.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/checkpoint_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/checkpoint_archive.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/checkpoint_archive.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/new_entry_acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/new_entry_acceptance.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/new_entry_acceptance.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/calibforge.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/calibforge.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/calibforge.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/acceptance.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/acceptance.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/hf_export.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/hf_export.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/hf_export.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/checkpoint_observer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/checkpoint_observer.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/checkpoint_observer.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/readiness.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/readiness.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/readiness.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/batch_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/batch_contract.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/batch_contract.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/jobs.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/jobs.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/jobs.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/paths.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/paths.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/paths.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/launch.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/launch.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/launch.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/canary.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/canary.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/canary.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/monitor.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/monitor.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/monitor.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/identity.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/identity.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/identity.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/training_health.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/training_health.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/training_health.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/public_stages.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/public_stages.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/public_stages.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/calibforge_advance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/calibforge_advance.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/calibforge_advance.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/lf_train.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/lf_train.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/lf_train.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/__init__.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/__init__.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-arms.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-arms.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-arms.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-model-identities.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-model-identities.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-model-identities.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/README.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/README.md",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/README.md.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-environments.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-environments.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-environments.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/commit_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/commit_archive.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/commit_archive.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/prepare_arm.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/prepare_arm.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/prepare_arm.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-distributions.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-distributions.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-distributions.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/VALIDATION_SUMMARY.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/VALIDATION_SUMMARY.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/VALIDATION_SUMMARY.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/deliver_model.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/deliver_model.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/deliver_model.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/SOURCE_ORIGINS.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/SOURCE_ORIGINS.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/SOURCE_ORIGINS.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/protocol-pins.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/protocol-pins.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/protocol-pins.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/sources/original-train.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/sources/original-train.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/sources/original-train.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/sources/original-sft_data.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/sources/original-sft_data.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/sources/original-sft_data.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/pyproject.toml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/pyproject.toml",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/pyproject.toml.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/tmax_text_model.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/tmax_text_model.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/tmax_text_model.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/tmax_text_registration.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/tmax_text_registration.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/tmax_text_registration.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/final_weight_stats.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/final_weight_stats.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/final_weight_stats.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/training_candidate.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/training_candidate.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/training_candidate.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/verify_final_training_state.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/verify_final_training_state.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/verify_final_training_state.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/aggregate_nll.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/aggregate_nll.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/aggregate_nll.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/checkpoint_storage.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/checkpoint_storage.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/checkpoint_storage.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/gpu_job.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/gpu_job.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/gpu_job.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/finish_native_training.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/finish_native_training.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/finish_native_training.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/region_nll.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/region_nll.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/region_nll.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/nvml_selected_device.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/nvml_selected_device.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/nvml_selected_device.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/inline_stream.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/inline_stream.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/inline_stream.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/boundary_safe_xml.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/boundary_safe_xml.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/boundary_safe_xml.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/content_proxy.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/content_proxy.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/content_proxy.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/payload.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/payload.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/payload.py.diff",
+    "reference": "project commit6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42; not an official Harbor implementation"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/tokenizer_manager.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/tokenizer_manager.py",
+    "status": "DIFFERENT",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/tokenizer_manager.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/managers/tokenizer_manager.py",
+    "verified_pinned_git_blob": "81424329a0c1b1470d63452ce65a120a9b639399"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/schedule_batch.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/schedule_batch.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/schedule_batch.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/managers/schedule_batch.py",
+    "verified_pinned_git_blob": "0b26be6c6d180fd608492333e5f3a602d8bc1c4b"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/scheduler_output_processor_mixin.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/scheduler_output_processor_mixin.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/scheduler_output_processor_mixin.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/managers/scheduler_output_processor_mixin.py",
+    "verified_pinned_git_blob": "496cd96656e59ce436eceb1a05c6bb68d6da56c9"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/session_controller.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/session_controller.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/session_controller.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/managers/session_controller.py",
+    "verified_pinned_git_blob": "caf165c32165768c22c3233a4ddb3888e2943093"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/constrained/base_grammar_backend.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/constrained/base_grammar_backend.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/constrained/base_grammar_backend.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/constrained/base_grammar_backend.py",
+    "verified_pinned_git_blob": "e0738db9c88b8acf1a9f494291cbf6745f8cba4d"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/constrained/grammar_manager.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/constrained/grammar_manager.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/constrained/grammar_manager.py.diff",
+    "reference": "sglang-production-base",
+    "url": "https://raw.githubusercontent.com/sgl-project/sglang/1519acf37c23f2189adb93f57ca9cd2db1bebf18/python/sglang/srt/constrained/grammar_manager.py",
+    "verified_pinned_git_blob": "829675ec5afdd5f7fa3bfc315d0fd132717fddfc"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/tokenization_utils_tokenizers.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/tokenization_utils_tokenizers.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/tokenization_utils_tokenizers.py.diff",
+    "public_blob_proof": {
+      "reference": "transformers-train580",
+      "blob": "a700f0ad27ccebb40cc70190319abc5abc3f0622"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/utils/chat_template_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/utils/chat_template_utils.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/utils/chat_template_utils.py.diff",
+    "public_blob_proof": {
+      "reference": "transformers-train580",
+      "blob": "6b23e2fa881d302e60f12528788d50d8ad2d50a1"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/auto/processing_auto.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/auto/processing_auto.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/auto/processing_auto.py.diff",
+    "public_blob_proof": {
+      "reference": "transformers-train580",
+      "blob": "30c6fc520c4992e00b5c9f82a89cc3f3ef548047"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/auto/tokenization_auto.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/auto/tokenization_auto.py",
+    "status": "UPSTREAM_FILE_NOT_EXPORTED",
+    "diff": null,
+    "public_blob_proof": null
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/qwen3_vl/video_processing_qwen3_vl.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/qwen3_vl/video_processing_qwen3_vl.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/qwen3_vl/video_processing_qwen3_vl.py.diff",
+    "public_blob_proof": {
+      "reference": "transformers-train580",
+      "blob": "db867a73ffb8e0c6109fe092464fddad93c5d618"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-train/transformers/models/qwen2_vl/image_processing_qwen2_vl.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/transformers-train580/src/transformers/models/qwen2_vl/image_processing_qwen2_vl.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-train/transformers/models/qwen2_vl/image_processing_qwen2_vl.py.diff",
+    "public_blob_proof": {
+      "reference": "transformers-train580",
+      "blob": "57c7935e0250990dbb6ae0174e90baad3b377f59"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/utils/hf_transformers_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/utils/hf_transformers_utils.py",
+    "status": "UPSTREAM_FILE_NOT_EXPORTED",
+    "diff": null,
+    "public_blob_proof": null
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/configs/model_config.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/configs/model_config.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/configs/model_config.py.diff",
+    "public_blob_proof": {
+      "reference": "sglang-production-base",
+      "blob": "691f06411df0fe614047849438ef674248a3db2a"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/openai/serving_base.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/openai/serving_base.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/entrypoints/openai/serving_base.py.diff",
+    "public_blob_proof": {
+      "reference": "sglang-production-base",
+      "blob": "164ccdd5a503943348f10ac37b1cce232bd7ae10"
+    }
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/pyproject.toml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/pyproject.toml",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/pyproject.toml.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/README.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/README.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/README.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/openharness_v2.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/openharness_v2.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/openharness_v2.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/rlbridge.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/rlbridge.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/rlbridge.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/adapters/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/adapters/__init__.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/adapters/__init__.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_batch_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_batch_dataset.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_batch_dataset.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_archive.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_archive.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_preparation_publish.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_preparation_publish.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_preparation_publish.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_min_lr_native_scheduler.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_min_lr_native_scheduler.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_min_lr_native_scheduler.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_advance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_advance.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_advance.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_eval_gather.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_eval_gather.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_eval_gather.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_world_size.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_world_size.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_world_size.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tmax_delivery.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tmax_delivery.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tmax_delivery.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_adapters.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_adapters.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_adapters.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_runtime.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_runtime.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_runtime.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_recorder_integrity.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_recorder_integrity.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_recorder_integrity.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_checkpoint_observer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_checkpoint_observer.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_checkpoint_observer.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_training_health.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_training_health.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_training_health.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_integration_contracts.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_integration_contracts.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_integration_contracts.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_current_recorder_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_current_recorder_contract.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_current_recorder_contract.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_recipe.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_recipe.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_recipe.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_security.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_security.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_security.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_launch_acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_launch_acceptance.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_launch_acceptance.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_batch_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_batch_contract.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_batch_contract.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_sources.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_sources.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/check_native_deployment.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/check_native_deployment.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/check_native_deployment.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_runtime.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_runtime.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_runtime.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_upstream_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_upstream_contract.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_upstream_contract.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_public_corpus.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_public_corpus.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_public_corpus.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_calibforge_prepare.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_calibforge_prepare.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_calibforge_prepare.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tmax_native_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tmax_native_cpu.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tmax_native_cpu.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_collection.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_collection.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_collection.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_published_sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_published_sources.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_published_sources.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_tokenization.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_tokenization.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_tokenization.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_native_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_native_cpu.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_native_cpu.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/remote_runtime_check.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/remote_runtime_check.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/remote_runtime_check.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_qwen35_codec.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_qwen35_codec.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_qwen35_codec.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_teacher_segments.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_teacher_segments.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_teacher_segments.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/__init__.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/__init__.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/test_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/test_dataset.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/test_dataset.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/sft_smoke.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/sft_smoke.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/sft_smoke.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/overnight_sft_pipeline_manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/overnight_sft_pipeline_manifest.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/overnight_sft_pipeline_manifest.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/sft_data_validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/sft_data_validation.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/sft_data_validation.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/zero_intrusion_capture.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/zero_intrusion_capture.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/zero_intrusion_capture.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/trajectory_validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/trajectory_validation.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/trajectory_validation.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/harbor_recorder_minimal_integration.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/harbor_recorder_minimal_integration.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/harbor_recorder_minimal_integration.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/runtime_smoke.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/runtime_smoke.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/runtime_smoke.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/versions.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/versions.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/versions.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/implementation_status.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/implementation_status.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/implementation_status.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/overnight_sft_pipeline_report.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/overnight_sft_pipeline_report.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/overnight_sft_pipeline_report.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/reports/dev_candidate_audit.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/reports/dev_candidate_audit.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/reports/dev_candidate_audit.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/reliability.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/reliability.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/reliability.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/compatibility.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/compatibility.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/compatibility.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/QWEN35_LAUNCH_ACCEPTANCE.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/QWEN35_LAUNCH_ACCEPTANCE.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/QWEN35_LAUNCH_ACCEPTANCE.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/data.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/data.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/data.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/validation.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/validation.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/validation.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/deployment.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/deployment.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/deployment.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/docs/integration.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/docs/integration.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/docs/integration.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/check_tmax_tokenizer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/check_tmax_tokenizer.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/check_tmax_tokenizer.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/build_tmax_batch_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/build_tmax_batch_dataset.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/build_tmax_batch_dataset.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/convert_rollouts.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/convert_rollouts.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/convert_rollouts.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/examples/build_tmax_dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/examples/build_tmax_dataset.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/examples/build_tmax_dataset.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/collection.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/collection.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/collection.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/dataset.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/dataset.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/dataset.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/versions.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/versions.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/versions.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/public_corpus.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/public_corpus.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/public_corpus.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/published.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/published.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/published.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/validation.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/validation.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/validation.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/security.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/security.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/security.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/candidates.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/candidates.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/candidates.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/schema.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/schema.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/schema.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/public_corpus_audit.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/public_corpus_audit.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/public_corpus_audit.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/teacher_segments.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/teacher_segments.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/teacher_segments.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/__main__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/__main__.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/__main__.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/prepare.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/prepare.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/prepare.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/qwen35.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/qwen35.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/qwen35.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/sources.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/sources.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/sources.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/model-sha256.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/model-sha256.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/model-sha256.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/tokenization.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/tokenization.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/tokenization.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/__init__.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/__init__.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/rlbridge/rollout.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/rlbridge/rollout.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/rlbridge/rollout.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/openharness_v2_export/manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/openharness_v2_export/manifest.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/openharness_v2_export/manifest.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/fixtures/openharness_v2/manifest.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/fixtures/openharness_v2/manifest.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/fixtures/openharness_v2/manifest.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/causal_loss_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/causal_loss_cpu.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/causal_loss_cpu.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/rank_exit.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/rank_exit.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/rank_exit.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/ga32_cpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/ga32_cpu.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/ga32_cpu.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/tests/canaries/qwen_liger_loss_gpu.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/tests/canaries/qwen_liger_loss_gpu.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/tests/canaries/qwen_liger_loss_gpu.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/policies/evaluation-exclusion.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/policies/evaluation-exclusion.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/policies/evaluation-exclusion.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/policies/m1-quality.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/policies/m1-quality.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/policies/m1-quality.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m2-128k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m2-128k.yaml",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m2-128k.yaml.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m1-64k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m1-64k.yaml",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m1-64k.yaml.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/m2-96k.yaml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/m2-96k.yaml",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/m2-96k.yaml.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/templates/ds_z3.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/templates/ds_z3.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/templates/ds_z3.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/eval_gather.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/eval_gather.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/eval_gather.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/config.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/config.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/config.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/checkpoint_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/checkpoint_archive.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/checkpoint_archive.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/new_entry_acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/new_entry_acceptance.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/new_entry_acceptance.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/calibforge.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/calibforge.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/calibforge.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/acceptance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/acceptance.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/acceptance.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/hf_export.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/hf_export.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/hf_export.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/checkpoint_observer.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/checkpoint_observer.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/checkpoint_observer.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/readiness.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/readiness.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/readiness.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/batch_contract.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/batch_contract.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/batch_contract.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/jobs.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/jobs.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/jobs.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/paths.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/paths.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/paths.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/launch.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/launch.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/launch.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/canary.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/canary.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/canary.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/monitor.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/monitor.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/monitor.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/identity.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/identity.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/identity.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/training_health.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/training_health.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/training_health.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/public_stages.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/public_stages.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/public_stages.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/calibforge_advance.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/calibforge_advance.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/calibforge_advance.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/lf_train.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/lf_train.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/lf_train.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/sft/runtime/__init__.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/sft/runtime/__init__.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/sft/runtime/__init__.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-arms.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-arms.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-arms.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-model-identities.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-model-identities.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-model-identities.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/README.md",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/README.md",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/README.md.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-environments.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-environments.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-environments.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/commit_archive.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/commit_archive.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/commit_archive.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/prepare_arm.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/prepare_arm.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/prepare_arm.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/historical-distributions.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/historical-distributions.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/historical-distributions.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/VALIDATION_SUMMARY.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/VALIDATION_SUMMARY.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/VALIDATION_SUMMARY.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/deliver_model.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/deliver_model.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/deliver_model.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/SOURCE_ORIGINS.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/SOURCE_ORIGINS.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/SOURCE_ORIGINS.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/protocol-pins.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/protocol-pins.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/protocol-pins.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/sources/original-train.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/sources/original-train.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/sources/original-train.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/sources/original-sft_data.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/sources/original-sft_data.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/sources/original-sft_data.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/pyproject.toml",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/pyproject.toml",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/pyproject.toml.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/tmax_text_model.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/tmax_text_model.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/tmax_text_model.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/PRODUCTION_SOURCE_SHA256.json.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/serving/tmax_text_registration.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/serving/tmax_text_registration.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/serving/tmax_text_registration.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/final_weight_stats.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/final_weight_stats.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/final_weight_stats.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/training_candidate.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/training_candidate.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/training_candidate.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/verify_final_training_state.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/verify_final_training_state.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/verify_final_training_state.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/aggregate_nll.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/aggregate_nll.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/aggregate_nll.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/checkpoint_storage.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/checkpoint_storage.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/checkpoint_storage.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/gpu_job.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/gpu_job.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/gpu_job.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/finish_native_training.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/finish_native_training.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/finish_native_training.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/region_nll.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/region_nll.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/region_nll.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/scripts/nvml_selected_device.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/scripts/nvml_selected_device.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/scripts/nvml_selected_device.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/inline_stream.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/inline_stream.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/inline_stream.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/boundary_safe_xml.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/boundary_safe_xml.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/boundary_safe_xml.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/content_proxy.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/content_proxy.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/content_proxy.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/current_qwen/source-r4/studies/tmax32k/thinking/payload.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/project_same_commit_6f3/studies/tmax32k/thinking/payload.py",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/project_snapshot/studies/tmax32k/thinking/payload.py.diff",
+    "status": "PROJECT_SAME_COMMIT_COMPARISON_SEE_ORIGINAL_DIFF_AND_DELIVERY_REDACTIONS",
+    "reference": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/launch_server.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/launch_server.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/launch_server.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/tp_worker.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/tp_worker.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/managers/tp_worker.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/model_loader/weight_utils.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/model_loader/weight_utils.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/model_loader/weight_utils.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/model_loader/loader.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/model_loader/loader.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/model_loader/loader.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/model_executor/model_runner.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/model_executor/model_runner.py",
+    "status": "IDENTICAL",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/model_executor/model_runner.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  },
+  {
+    "actual": "02_PROJECT_SOURCE/installed-serve/sglang/srt/entrypoints/http_server.py",
+    "upstream": "03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/entrypoints/http_server.py",
+    "status": "DIFFERENT",
+    "diff": "03_UPSTREAM_AND_DIFF/diffs/installed-serve/sglang/srt/entrypoints/http_server.py.diff",
+    "reference": "sglang-production-base",
+    "pinned_commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+  }
+]

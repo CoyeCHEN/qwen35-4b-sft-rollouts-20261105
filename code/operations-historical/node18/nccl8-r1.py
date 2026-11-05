@@ -1,0 +1,11 @@
+import os,pathlib,json,torch,torch.distributed as dist
+R=pathlib.Path('/ssd/chenkeyi/qwen35-sft-772-20261101')
+local=int(os.environ['LOCAL_RANK']);torch.cuda.set_device(local)
+dist.init_process_group('nccl')
+x=torch.ones(16*1024*1024,device='cuda',dtype=torch.bfloat16)
+dist.all_reduce(x);torch.cuda.synchronize()
+assert torch.all(x==dist.get_world_size())
+out=dict(rank=dist.get_rank(),world_size=dist.get_world_size(),backend=dist.get_backend(),nccl=torch.cuda.nccl.version(),bf16=True,allreduce_elements=x.numel(),max_memory_allocated=torch.cuda.max_memory_allocated(),max_memory_reserved=torch.cuda.max_memory_reserved())
+(R/'checks'/('nccl8-rank'+str(dist.get_rank())+'.json')).write_text(json.dumps(out))
+dist.barrier();dist.destroy_process_group()
+if local==0:print(json.dumps(dict(passed=True,world_size=8,backend='nccl',real_bf16_allreduce=True)),flush=True)

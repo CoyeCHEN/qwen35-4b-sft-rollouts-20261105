@@ -1,0 +1,83 @@
+{
+  "kind": "QWEN35_772_NATIVE_STAGE",
+  "stage": "new-cf416-m1",
+  "source_dataset": "AweAI-Team/CalibForge",
+  "source_revision": "c2fae4c1f536461142b2a89a8b9423a8bc376088",
+  "source_primary_task_count": 416,
+  "supervision_scope": "all_assistant_once",
+  "original_provider_prefixes_verified": true,
+  "finish_enabled": true,
+  "tool_result_budget_enabled": true,
+  "model_revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "cutoff": 131072,
+  "tool_contract_sha256": "975e71810adeac458bd29d29065655c891c769c765fd4f8a9811d37cca99d3cc",
+  "release_manifest": "/ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/DATA_RELEASE.json",
+  "release_manifest_sha256": "fa4f07c05af4a8156547dbdda1cba60fb20e3c8626cd41cd40de4694e5f54821",
+  "parent_pool_manifest": "/ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/calibforge/DATA_MANIFEST.json",
+  "parent_pool_manifest_sha256": "1bc9091c2372667ee5f79043bc57fbcc3840556c176c8741300ce50a74e8b114",
+  "no_truncation": true,
+  "task_groups_disjoint": true,
+  "formal_training_eligible": true,
+  "length_exclusion": "3886 overlong original targets explicitly quarantined corpus-wide; no token truncation",
+  "artifacts": [
+    {
+      "path": "dataset_dict.json",
+      "bytes": 35,
+      "sha256": "88b5b05fc757e76e7edc779db90e96cb6d76538b93165d6ce962a818801babf4"
+    },
+    {
+      "path": "train/data-00000-of-00003.arrow",
+      "bytes": 433696632,
+      "sha256": "b0a7ab814508791fc02c5833e505d48f68d82407ac41edc673352fc184b87c19"
+    },
+    {
+      "path": "train/data-00001-of-00003.arrow",
+      "bytes": 422855472,
+      "sha256": "6c7c45bdced20d1cdd2c4f88a6a10132e191df8cfb493658a2ef0a4ed5e3ef30"
+    },
+    {
+      "path": "train/data-00002-of-00003.arrow",
+      "bytes": 428419272,
+      "sha256": "0130f0f6697ef0dc54c1a9b2dbf8487ec54a3cb1945d374e4f84f68b04b08a10"
+    },
+    {
+      "path": "train/dataset_info.json",
+      "bytes": 1378,
+      "sha256": "b5fa01bde612c124d73ccef287079d6f2907a7c3f7cb0f0d0f30cd3d5ab9083e"
+    },
+    {
+      "path": "train/state.json",
+      "bytes": 368,
+      "sha256": "49f1731918af916a3dd819030492faad6da5b3c1b2926b363996122c3bb63414"
+    },
+    {
+      "path": "validation/data-00000-of-00001.arrow",
+      "bytes": 123739584,
+      "sha256": "eb224dd44e6882f7a6b87c7038bd69855a5bbddffbbbe88542a3147cd92baffb"
+    },
+    {
+      "path": "validation/dataset_info.json",
+      "bytes": 1302,
+      "sha256": "cbf426c587aa51c7bc55f2dc70658e6739bb58aa8e4643aa77eee817237a6999"
+    },
+    {
+      "path": "validation/state.json",
+      "bytes": 250,
+      "sha256": "577e8307f7274350b52f40fb24fedcb76e761defbc53d8dc95798083e8c32f52"
+    }
+  ],
+  "counts": {
+    "train": {
+      "rows": 1270,
+      "supervised_tokens": 14562564,
+      "independent_tasks": 374,
+      "targets": 14407
+    },
+    "validation": {
+      "rows": 146,
+      "supervised_tokens": 1581455,
+      "independent_tasks": 42,
+      "targets": 1582
+    }
+  }
+}

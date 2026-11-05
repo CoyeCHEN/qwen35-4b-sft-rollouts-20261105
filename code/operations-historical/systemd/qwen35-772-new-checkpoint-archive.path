@@ -1,0 +1,7 @@
+[Unit]
+Description=Local immutable SFT archive queue
+[Path]
+DirectoryNotEmpty=/ssd/chenkeyi/qwen35-sft-772-20261101/archive-new-queue
+Unit=qwen35-772-new-checkpoint-archive.service
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+{
+  "excluded": [
+    {
+      "path": "code/harbor-rsi/artifacts",
+      "reason": "Runtime evidence/media excluded from source publication"
+    },
+    {
+      "path": "code/harbor-rsi/docs-mintlify/videos",
+      "reason": "Runtime evidence/media excluded from source publication"
+    }
+  ],
+  "private_harness": "All source/Wheels excluded; identity-only metadata is retained",
+  "weights": "No model weights or training corpus contents included"
+}

@@ -1,0 +1,40 @@
+# Harbor runtime config — main split. 65 tasks, 57 of which need web search.
+#
+# Use ../../scripts/run-jobbench.sh so the local OpenHarness wheel, model and
+# D-drive output paths are supplied consistently.
+#
+# 57 of the 65 main tasks declare network_required = true, so their sandboxes
+# get network access (set per-task in task.toml, not here). Expect higher
+# wall-clock per trial and more judge tokens than easy.
+#
+# `-p`/`datasets` and `-n` on the command line override the values here, which
+# is handy for smoke runs:
+#
+#   harbor run -c configs/easy.yaml -p datasets/easy/biostatisticians__task1
+#
+# Secrets are NOT stored here. Export them first (see .env.example):
+#
+#   set -a && source .env && set +a
+#
+# `[verifier.env]` templates like ${JUDGE_API_KEY} expand against the host
+# environment at Harbor start-up, so the exported values flow through.
+
+jobs_dir: jobs
+n_attempts: 1
+
+# Concurrency. E2B sandboxes are billed per running sandbox, and each trial
+# also holds a judge API call burst at the end — raise this gradually.
+n_concurrent_trials: 8
+
+environment:
+  type: e2b
+  # Set to false to reuse a previously built E2B template. The template is
+  # keyed on the task's environment contents + docker_image, so it is rebuilt
+  # automatically when either changes.
+  force_build: false
+  # Keep sandboxes alive after a trial for post-mortem inspection. Off by
+  # default — leaving it on leaks paid sandboxes.
+  delete: true
+
+# Agent and dataset are deliberately supplied by run-jobbench.sh. Keeping them
+# out of this file avoids stale wheel paths and accidental duplicate datasets.

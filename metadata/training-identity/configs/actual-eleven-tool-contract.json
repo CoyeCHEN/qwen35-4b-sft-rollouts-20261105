@@ -1,0 +1,42 @@
+{
+  "kind": "ACTUAL_772_FINAL_ELEVEN_TOOL_CONTRACT",
+  "audit_path": "/data/chenkeyi/qwen35-sft-772-20261101/provenance/ACTUAL_772_TOOL_PROMPT_PROTOCOL_AUDIT.json",
+  "audit_sha256": "3ed2adb8c60efe6ebf18070e582db515622bb7f4629111380844122f03eeab33",
+  "tools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "edit_patch",
+    "trajectory_read",
+    "bash_job",
+    "finish"
+  ],
+  "finish_enabled": true,
+  "background_jobs_enabled": true,
+  "tool_result_budget_enabled": true,
+  "tool_result_budget_max_chars": 200000,
+  "tool_result_budget_preview_chars": 2000,
+  "agent_skill_tool_search_enabled": false,
+  "time_budget_seconds": 0,
+  "actual_payload_counts": {
+    "tool_schema_sha256": {
+      "89ad662f58c4fe4df97187bae2c84ada041a8195b3ba9bfc0a6eccc909b66bfe": 30193
+    },
+    "provider_tools_sha256": {
+      "099b173339bdf84c6206669330ae5e7d1e04fdb17a8ae124303a76c98eab98e7": 30193
+    },
+    "system_prompt_sha256": {
+      "400cd2a6498f6f0b33dea4b15cdc6c2e8c75b450017aca7ea7e6045041fb6958": 30193
+    },
+    "teacher_config_sha256": {
+      "bf9069d53ec81d6f53a1a93f35bd61a0a8eadb42deafb4fc1c6540bf10afba2c": 767,
+      "e1cdfee7ac32629a070db50884f8bcc2bd1400d86d2cf781f59c2d6b57300d04": 5
+    }
+  },
+  "provider_hash_serialization": "json.dumps(sort_keys=True,ensure_ascii=False), UTF-8",
+  "historical_config_variants_preserved": true
+}

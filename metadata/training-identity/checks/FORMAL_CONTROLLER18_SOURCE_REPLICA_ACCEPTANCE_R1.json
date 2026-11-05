@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "at": 1793572518.1154473,
+  "source_manifest_sha256": "fb4a7f2af992e92540af62bf03b8e3eb1aee382c8049d444bd50398a626e943e",
+  "files": 1045,
+  "bytes": 115938186,
+  "all_source_and_package_sha_verified": true,
+  "actual_native_job_or_model_started": false,
+  "source_root": "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-controller18-source-r1"
+}

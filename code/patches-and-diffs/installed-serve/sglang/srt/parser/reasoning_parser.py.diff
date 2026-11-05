@@ -1,0 +1,40 @@
+--- 03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/parser/reasoning_parser.py
++++ 02_PROJECT_SOURCE/installed-serve/sglang/srt/parser/reasoning_parser.py
+@@ -155,9 +155,20 @@
+                     normal_text=normal_text, reasoning_text=reasoning_text
+                 )
+             if self.stream_reasoning:
+-                # Stream the content immediately
+-                self._buffer = ""
+-                return StreamingParseResult(reasoning_text=current_text)
++                # A closing marker may straddle chunks after ordinary text.
++                # Retain only its unfinished suffix, never emit it as reasoning.
++                pending = 0
++                markers = [self.think_end_token]
++                if self.tool_start_token:
++                    markers.append(self.tool_start_token)
++                for marker in markers:
++                    for size in range(1, min(len(current_text), len(marker) - 1) + 1):
++                        if current_text.endswith(marker[:size]):
++                            pending = max(pending, size)
++                self._buffer = current_text[-pending:] if pending else ""
++                return StreamingParseResult(
++                    reasoning_text=current_text[:-pending] if pending else current_text
++                )
+             else:
+                 return StreamingParseResult()
+ 
+@@ -167,6 +178,13 @@
+             return StreamingParseResult(normal_text=current_text)
+ 
+         return StreamingParseResult()
++
++    def finish_stream(self) -> StreamingParseResult:
++        """Flush an unfinished literal suffix without fabricating a closing marker."""
++        remaining, self._buffer = self._buffer, ""
++        if self._in_reasoning:
++            return StreamingParseResult(reasoning_text=remaining)
++        return StreamingParseResult(normal_text=remaining)
+ 
+ 
+ class DeepSeekR1Detector(BaseReasoningFormatDetector):

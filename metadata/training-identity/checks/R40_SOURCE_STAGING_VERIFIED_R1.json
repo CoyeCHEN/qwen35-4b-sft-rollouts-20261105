@@ -1,0 +1,21 @@
+{
+  "at": 1793664858.876469,
+  "passed": true,
+  "files": {
+    "formal-native-eval-r1/scripts/audit-native-host-docker-transport-r1.py": "c71e07ab40ec56468f761dc4babd908533491ccc9378e9974902d42a86d2ed3a",
+    "formal-native-eval-r1/scripts/read-diagnostic150-matrix18-r6.py": "f0ecc863e13004bf245527e21e177fee5113d2b943a0f3bd760726dbd691e3b7",
+    "run-native772-advance-r40-env-repair.py": "31b3b6284fe9dd3c3bce5b127d392bd7b0d8122b9e78b5ec2479e95aa3f19d48",
+    "winner267-phase18-r15.py": "2bcccfd64cf1352e9442bcabf903c68d10fcf036a4109d6b20f13dbb99b846c7",
+    "checks/r40-host-transport-qualification-r1/HOST_DOCKER_QUALIFICATION_CANDIDATE_INDEX_R1.json": "393f36119a5f62514bd71984845c8e8e1fb8ff36d63b7ca43bac9b8b2d3ba3f6",
+    "checks/r40-host-transport-qualification-r1/HOST_DOCKER_QUALIFICATION_CPU_CONTRACT_R1.json": "35b154ede31c25dfadaff9286d125ab89f52ff4d7f3c29e51d9eeb7819f7ec9b",
+    "checks/r40-host-transport-qualification-r1/R8_SOURCE_GUARD_UNKNOWN_AGGREGATE_CPU_R1.json": "88104b61acac24f1b5622f5ee03648f71f00f45aed9f62b9f455fa1bf6b539b1",
+    "checks/r40-host-transport-qualification-r1/test_host_docker_qualification_cpu_r1.py": "fc04bbef5a4ba956c03a0aee1d1102a92d097f61f8b43dd5c2958c6ace7c6402",
+    "checks/r40-host-transport-qualification-r1/HANDOFF_R1.md": "83e528da24bfd48ee680d7ec67054cf96d957eadcf00764592529ffa7ad4bc73",
+    "checks/r40-host-transport-qualification-r1/INDEPENDENT_R40_QUALIFICATION_WIRING_REVIEW_R1.json": "33674e05688a51f0aafc9fc4ca916659cc7f1adfcc7f731468bb2ebda9f058eb",
+    "checks/r40-host-transport-qualification-r1/ACTUAL18_TWO_NATIVE_EXCEPTION_AND_PROVIDER_BOUNDARIES_R1.json": "c33a6cbacd89da9f8ed19795f26891e1dbb6e03ab199dcdab9762a74177a5543",
+    "checks/r40-host-transport-qualification-r1/INFLIGHT_SSH255_TWO_LIVE_CLI_READONLY_EVIDENCE_20261103T0757_R1.json": "4acf38efb954e5b639daf2c38e2a808cd7e97e432979bb886494ef203f994d36"
+  },
+  "archive_sha256": "e682ed7d5c3942921319bcfed8ff1d556ae6d0476b524dfd1aac6abf3f3c131f",
+  "existing_files_overwritten": 0,
+  "model_or_verifier_dispatches": 0
+}

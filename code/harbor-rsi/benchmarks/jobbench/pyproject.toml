@@ -1,0 +1,24 @@
+[project]
+name = "jobbench-e2b"
+version = "0.1.0"
+description = "JobBench on Harbor + E2B: adapt upstream JobBench (or an existing JobBench-Harbor dataset) into E2B-runnable Harbor tasks."
+readme = "README.md"
+requires-python = ">=3.12"
+# No runtime dependencies on purpose: the adapter/migrator only use the stdlib,
+# and `harbor` itself is installed separately (it pulls in the e2b extra).
+dependencies = []
+
+[project.scripts]
+jobbench-e2b-adapter  = "jobbench_e2b.main:main"
+jobbench-e2b-migrate  = "jobbench_e2b.migrate:main"
+
+[build-system]
+requires = ["hatchling>=1,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/jobbench_e2b"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

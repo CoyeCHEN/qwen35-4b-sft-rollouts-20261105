@@ -1,0 +1,1 @@
+"""WorkspaceBench integration assets."""

@@ -1,0 +1,898 @@
+{
+  "at": 1793635330.976239,
+  "node": "18",
+  "source_only": true,
+  "candidate_index_sha256": "ab9d9db0c57420f24c3cd4adb1ae7760b630c993c515fbb31228a22f10393acf",
+  "files": [
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-env-preflight59-native18-r1.py",
+      "sha256": "4fb9a3e44048c6346b1dc5be20866b78762df4a8a5c6cefc5d440b23ceaa64bc",
+      "bytes": 9827,
+      "mode": "0644",
+      "archive_member": "files/0"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/audit-env-preflight59-native18-r1.py",
+      "sha256": "337f481e6186c2cdad235ddf8fa1d760497b38daed555fbdfccbbf1a6dc8eb2b",
+      "bytes": 4511,
+      "mode": "0644",
+      "archive_member": "files/1"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/env-preflight59-phase18-r1.py",
+      "sha256": "657d78682f8eeb1d546d9ca528d2cecd289663de8a5577c68e5c5aa733cd1c59",
+      "bytes": 7209,
+      "mode": "0644",
+      "archive_member": "files/2"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-controller18-docker-admission-env59-r1/bin/docker",
+      "sha256": "9619ab73a8be9c3fcc1768593a3214d622abae07abb915991ba2a80dd3b44528",
+      "bytes": 2208,
+      "mode": "0755",
+      "archive_member": "files/3"
+    },
+    {
+      "destination": "/data/chenkeyi/qwen35-sft-772-20261101/control/ENV_PREFLIGHT59_DOCKER_ADMISSION_POLICY_R1.json",
+      "sha256": "70e74e89b0d7e38cd744c1b9afd93b12871b73144ac23a58700b6303dbce234c",
+      "bytes": 1887,
+      "mode": "0644",
+      "archive_member": "files/4"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/SAMPLING_MANIFEST_59_REMAINDER_R1.json",
+      "sha256": "76c5e01fcb0bc26809e7ae058f92c4933fd57ae32bdf91e4c8c4462331552a48",
+      "bytes": 212991,
+      "mode": "0644",
+      "archive_member": "files/5"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/EXECUTION_RELEASE_R1.json",
+      "sha256": "0cb1a9b4589b4a36e84f68b20701cc44411cab8023771f12324062e4d8ce8da6",
+      "bytes": 22844,
+      "mode": "0644",
+      "archive_member": "files/6"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/bn-fit-modify.json",
+      "sha256": "c80b9584cc95eaaff118a88ff283d801d6e060dd42171355e32ee75979886d7f",
+      "bytes": 4406,
+      "mode": "0644",
+      "archive_member": "files/7"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/break-filter-js-from-html.json",
+      "sha256": "8c8077f72661401066c7fd9eb262a816101368bb7157ae98757e1ff5302263f9",
+      "bytes": 4649,
+      "mode": "0644",
+      "archive_member": "files/8"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/build-pmars.json",
+      "sha256": "b0839104b141d3d36c710af83ce7769ab4903c24011303b42ba24d55508f1e46",
+      "bytes": 4404,
+      "mode": "0644",
+      "archive_member": "files/9"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/caffe-cifar-10.json",
+      "sha256": "e5a81eb33c4ffd41959094b0606043de59c004faa6d22b3b25f1c8a619766d0a",
+      "bytes": 4413,
+      "mode": "0644",
+      "archive_member": "files/10"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/cancel-async-tasks.json",
+      "sha256": "ade61cd2945a2fd2f9f4f61e4158a7b00eaf367d7663f639c947f7b14c56e135",
+      "bytes": 4596,
+      "mode": "0644",
+      "archive_member": "files/11"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/compile-compcert.json",
+      "sha256": "a66594d001c9c97bdd9274676d402e7373d31f2a2ada1fc5b95af3f3f3c280d9",
+      "bytes": 4759,
+      "mode": "0644",
+      "archive_member": "files/12"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/count-dataset-tokens.json",
+      "sha256": "229c62716e1fd2fefce35d435da5665b49804ef4aa1d76b6f7480ad7411db59a",
+      "bytes": 51145,
+      "mode": "0644",
+      "archive_member": "files/13"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/custom-memory-heap-crash.json",
+      "sha256": "8373f892d91bea0ad583b1de8b48588870c248471c7d2741bb4cc18a251cc46a",
+      "bytes": 4510,
+      "mode": "0644",
+      "archive_member": "files/14"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/db-wal-recovery.json",
+      "sha256": "198117fc0dc98619919952b501ea726671ea647fd68982134bc616efd3b57d8e",
+      "bytes": 4313,
+      "mode": "0644",
+      "archive_member": "files/15"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/distribution-search.json",
+      "sha256": "ab276b7569457ab4a72df110c5091476e82652c8bc4a9e0f4a57961e89d58bbc",
+      "bytes": 4343,
+      "mode": "0644",
+      "archive_member": "files/16"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/dna-assembly.json",
+      "sha256": "314e9764250f374395b7d560f32c01b9bbb505547f5b3ea058a3eefd3f39365c",
+      "bytes": 4400,
+      "mode": "0644",
+      "archive_member": "files/17"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/dna-insert.json",
+      "sha256": "efbc600485fe12327d334ced62ee105d3a6e96e03cba3b8cd4b8b5c6aff720cf",
+      "bytes": 4385,
+      "mode": "0644",
+      "archive_member": "files/18"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/extract-elf.json",
+      "sha256": "051a02920612b56edefdf028cc7b4d7c462981895968f0b74720623b22c8832c",
+      "bytes": 4391,
+      "mode": "0644",
+      "archive_member": "files/19"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/feal-linear-cryptanalysis.json",
+      "sha256": "e1b5cb2fd8f3a8e9df3910b6752cfbc3ef27eb5c53606ab596288cbec81c5295",
+      "bytes": 4490,
+      "mode": "0644",
+      "archive_member": "files/20"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/financial-document-processor.json",
+      "sha256": "1b28266248490e5256f447935e96a6456aaf735d4c3fd3516055fa6365a23dbc",
+      "bytes": 4512,
+      "mode": "0644",
+      "archive_member": "files/21"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/fix-code-vulnerability.json",
+      "sha256": "acd22e87a1c8cfbe38ab79c12e85f01b5fc16f42f15654eefc04c44d994f8b6d",
+      "bytes": 4362,
+      "mode": "0644",
+      "archive_member": "files/22"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/fix-ocaml-gc.json",
+      "sha256": "8d6b7ee4d0f48f4ace004a985a283572a21c255c2f6ab4c8388741a7ac01c268",
+      "bytes": 4399,
+      "mode": "0644",
+      "archive_member": "files/23"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/gcode-to-text.json",
+      "sha256": "03a73581e6a2f316f1f64df0eb9b80e9802ac408991ba372a570eedff2a5522f",
+      "bytes": 4298,
+      "mode": "0644",
+      "archive_member": "files/24"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/git-leak-recovery.json",
+      "sha256": "206e06527656a110b97c8b6dbc804b8c8e6eab2877f69749d59494d1bddb55a4",
+      "bytes": 4327,
+      "mode": "0644",
+      "archive_member": "files/25"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/git-multibranch.json",
+      "sha256": "53b4fa7ce8f98c290e2fe3bb2d6e3f136c5b1c024d4cd0ac8848c7c3ec6afc61",
+      "bytes": 4418,
+      "mode": "0644",
+      "archive_member": "files/26"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/gpt2-codegolf.json",
+      "sha256": "fd657b0ba0a1ca3bf20495609da3c264bda22aa8299534123942ee73b8a5b85e",
+      "bytes": 4404,
+      "mode": "0644",
+      "archive_member": "files/27"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/headless-terminal.json",
+      "sha256": "da0afdbdab7345e02032e827c764bc6116d98472e39677c7eaaf0baa7bfa1bae",
+      "bytes": 4327,
+      "mode": "0644",
+      "archive_member": "files/28"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/hf-model-inference.json",
+      "sha256": "7ca9649099338ec477d71a5d78408b72de402bab75097f8b7206a95b7c441478",
+      "bytes": 51132,
+      "mode": "0644",
+      "archive_member": "files/29"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/kv-store-grpc.json",
+      "sha256": "37abe864af4f1df345895ba691f210519055e2f62e3470850e464241130dd38a",
+      "bytes": 4404,
+      "mode": "0644",
+      "archive_member": "files/30"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/large-scale-text-editing.json",
+      "sha256": "b067b7677df76df4cb47a6b4807cd11be7a2c4745cbd1efb8a5c899c9cc9806d",
+      "bytes": 4650,
+      "mode": "0644",
+      "archive_member": "files/31"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/largest-eigenval.json",
+      "sha256": "4001013998e1a55bd91f59984e8eab9a6def5bf2c6e889e35e2030bc852456c0",
+      "bytes": 4425,
+      "mode": "0644",
+      "archive_member": "files/32"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/log-summary-date-ranges.json",
+      "sha256": "98e629c0b284bb874975f07ead2436fef8e93ea9de1c0f9185e9734ebdbb6590",
+      "bytes": 4474,
+      "mode": "0644",
+      "archive_member": "files/33"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/mailman.json",
+      "sha256": "5d17ecf462618f1cb976f9364e27af0c15f3bca31d10ca9927a54e716eb7fd3f",
+      "bytes": 4364,
+      "mode": "0644",
+      "archive_member": "files/34"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/make-doom-for-mips.json",
+      "sha256": "43931824d36dec788d48a9b2a894478bac5d51eb54efb1b075379d9b61553099",
+      "bytes": 4604,
+      "mode": "0644",
+      "archive_member": "files/35"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/make-mips-interpreter.json",
+      "sha256": "66ef011a2c4155eddb36ea0ac4be6c62b42ad29f41954016faa2a476cf35e827",
+      "bytes": 4627,
+      "mode": "0644",
+      "archive_member": "files/36"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/merge-diff-arc-agi-task.json",
+      "sha256": "b0ad3e8736796bb943d172d82bd76370d6aad9c6f0952096f95bca21d6cb8fae",
+      "bytes": 4529,
+      "mode": "0644",
+      "archive_member": "files/37"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/model-extraction-relu-logits.json",
+      "sha256": "3f35a19a4f8ba200865e7f1e25735dfc48064c873573a6b764e6bcdfb3ec5326",
+      "bytes": 4509,
+      "mode": "0644",
+      "archive_member": "files/38"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/modernize-scientific-stack.json",
+      "sha256": "8e67226caf6b0f1363ed455557ab9c8a84b80bcfa340a3b7786e73deb9eb316a",
+      "bytes": 4495,
+      "mode": "0644",
+      "archive_member": "files/39"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/mteb-retrieve.json",
+      "sha256": "fa93cd8fde2f4fc5a9096b0175695f5a23130494fcff639cdee9031df5844bd2",
+      "bytes": 50993,
+      "mode": "0644",
+      "archive_member": "files/40"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/multi-source-data-merger.json",
+      "sha256": "74e4f43651907d7f636e7b85dcfbc977714de2b892b08e60e4d1a034313d4489",
+      "bytes": 4376,
+      "mode": "0644",
+      "archive_member": "files/41"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/nginx-request-logging.json",
+      "sha256": "c4a86841a082cbd11855423b50e136141158702d597396d5654ca7051d79ed39",
+      "bytes": 4460,
+      "mode": "0644",
+      "archive_member": "files/42"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/openssl-selfsigned-cert.json",
+      "sha256": "cdaf7e0d8bcbbf1a3eb617f4967c16faa056ba225962dd717bb4a28594cf24d7",
+      "bytes": 4474,
+      "mode": "0644",
+      "archive_member": "files/43"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/overfull-hbox.json",
+      "sha256": "b6bf3b34e8fd3ad1bd5d415f7baaa77c4ebfd0884fac68e1b3031a4ebaf7bcce",
+      "bytes": 4780,
+      "mode": "0644",
+      "archive_member": "files/44"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/password-recovery.json",
+      "sha256": "d9fb4cf503cc7a185e5f8ea351754f87fa099bab6d48b41bd6adad7767cd84fc",
+      "bytes": 4431,
+      "mode": "0644",
+      "archive_member": "files/45"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/path-tracing-reverse.json",
+      "sha256": "4e6efdfe653f8fe82d1ed93a26c13a69538ade9fe173b2d619143e229a4d399b",
+      "bytes": 4455,
+      "mode": "0644",
+      "archive_member": "files/46"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/path-tracing.json",
+      "sha256": "9cd30e6101d6b68a100bf027cb483bb0128f9093dcc78fb303f2dcf50275b4e8",
+      "bytes": 4399,
+      "mode": "0644",
+      "archive_member": "files/47"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/polyglot-c-py.json",
+      "sha256": "7416ef2608ce9fa4b117ff489cd808854e80f335e40cc4038f56a5d2562f250a",
+      "bytes": 4404,
+      "mode": "0644",
+      "archive_member": "files/48"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/protein-assembly.json",
+      "sha256": "79c2be2c865d99fdea148b38e6b07a37ff85b3f5472ab390a9b47e9c90bf8f98",
+      "bytes": 4427,
+      "mode": "0644",
+      "archive_member": "files/49"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/prove-plus-comm.json",
+      "sha256": "d17e45f50d628fc00ce5064a92975c69207c2059af036622b2400ced387ea008",
+      "bytes": 4418,
+      "mode": "0644",
+      "archive_member": "files/50"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/pypi-server.json",
+      "sha256": "e7c34b49830d7f1f88683b8dbbf1d7604647e968208ce1cc660a7e2e5140a606",
+      "bytes": 4390,
+      "mode": "0644",
+      "archive_member": "files/51"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/pytorch-model-cli.json",
+      "sha256": "90e56b2aed85a347f9592fbf117361e5c5d37580ced9935910d947509c74b839",
+      "bytes": 4432,
+      "mode": "0644",
+      "archive_member": "files/52"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/pytorch-model-recovery.json",
+      "sha256": "75dfb7d34cbb52901cc64aa6f29065d35a3bb008006e5f594e59391ca5ed876c",
+      "bytes": 4638,
+      "mode": "0644",
+      "archive_member": "files/53"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/qemu-startup.json",
+      "sha256": "1b973e9925496422bf466151f00aeb9b7bf2d32a773210dfd9c7afdac089fd85",
+      "bytes": 4840,
+      "mode": "0644",
+      "archive_member": "files/54"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/query-optimize.json",
+      "sha256": "e28aa594de153e2b190d246cf6c58e9a403153e8204ac4c61fc8008cb1e46f97",
+      "bytes": 4573,
+      "mode": "0644",
+      "archive_member": "files/55"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/raman-fitting.json",
+      "sha256": "c497cea54f317e83e73d860ce6bfd30a13eddfff52bafa1b4939e7fa32c71266",
+      "bytes": 4404,
+      "mode": "0644",
+      "archive_member": "files/56"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/regex-chess.json",
+      "sha256": "49d0de11a6a3bdf877f80ae9b3f4d1404c161b0bf9c4e74d8715408cc7079121",
+      "bytes": 4392,
+      "mode": "0644",
+      "archive_member": "files/57"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/reshard-c4-data.json",
+      "sha256": "fc98a25d7e879e5bcf888f5088568a935076b4ee3c363bc612aeeb680819351d",
+      "bytes": 4591,
+      "mode": "0644",
+      "archive_member": "files/58"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/rstan-to-pystan.json",
+      "sha256": "6ac164c869aecb81c758e4d64925f5280a4dc5bc0f9697376561a3427340495b",
+      "bytes": 4315,
+      "mode": "0644",
+      "archive_member": "files/59"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/sanitize-git-repo.json",
+      "sha256": "3b5bf896b04037d8b24e24cf3fce9c73c609197a7108fdb13848423c0886e19b",
+      "bytes": 4974,
+      "mode": "0644",
+      "archive_member": "files/60"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/schemelike-metacircular-eval.json",
+      "sha256": "e0e07f1d83ddf1347e5238a959b0761075743a70937b8b9d78965845bc6bd252",
+      "bytes": 15945,
+      "mode": "0644",
+      "archive_member": "files/61"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/sqlite-db-truncate.json",
+      "sha256": "1143a37b0dd7c1de4d53c0cf01b9ad1e9df324e4333f0f47fd7338234371cdf7",
+      "bytes": 4439,
+      "mode": "0644",
+      "archive_member": "files/62"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/sqlite-with-gcov.json",
+      "sha256": "85860b02618b24990e2e02b0520d1bb5c460e63c68999c7d2ccf7aa754a074d3",
+      "bytes": 4425,
+      "mode": "0644",
+      "archive_member": "files/63"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/torch-pipeline-parallelism.json",
+      "sha256": "7bc61e838705a14b1f5ef6e9d9d24146484d3d57541ab350b08b4d549fab072c",
+      "bytes": 4495,
+      "mode": "0644",
+      "archive_member": "files/64"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/specs/vulnerable-secret.json",
+      "sha256": "c7c87fc43886684b7d5e19166ac0f5b323f60ac3802e7e5321241ae28902dd9a",
+      "bytes": 4327,
+      "mode": "0644",
+      "archive_member": "files/65"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/537.compose.json",
+      "sha256": "db14211bf08786471c0a844bd64691ea098962c1ecbdb28ff150ce3bf3c2e64f",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/66"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/538.compose.json",
+      "sha256": "1715347dfa8df2a27e6177e25576047237c286bde86ee09248345044f16f06aa",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/67"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/539.compose.json",
+      "sha256": "07dc4838ce7433ba5852bd478b2a307803cc45dcdc02891afaeb782eb2357c41",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/68"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/540.compose.json",
+      "sha256": "989416071b61691b54dee6f8978fdeabd16a3fce515b874406b23982e441a0bf",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/69"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/541.compose.json",
+      "sha256": "a9b26d69baa7f7078268d64e1ebc7eee6cd1533ceaaa91ca0659fcdd528ce572",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/70"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/542.compose.json",
+      "sha256": "0e414a3f0f5c0af14e064be06fb34bd001c0a9d677551f7d1fbc31af38a72525",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/71"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/543.compose.json",
+      "sha256": "b64575465f0e040cabc5db906c742f67c23741c6f0694b6feb2cd22700789550",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/72"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/544.compose.json",
+      "sha256": "6122b68fed757b9c39be55f1429f919b1c4a374ae0089a362d40aec747a29109",
+      "bytes": 164,
+      "mode": "0644",
+      "archive_member": "files/73"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/545.compose.json",
+      "sha256": "fa5dbb541ec03f844b6b895b035327ee4073539adacbbc92932e4f9e6f70ce33",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/74"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/546.compose.json",
+      "sha256": "c64a88b03759db76dd50ecf85bbdd41ecae3b1c8a0ae50c483eb71e0348dc6ac",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/75"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/547.compose.json",
+      "sha256": "214ad980370a2c8e115e49c96d083dfce449a2652171c01bc8e8454c0190e469",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/76"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/548.compose.json",
+      "sha256": "d510770491b0e467d13fd19fdeb1678298fd2130188bb8997e3789900b42bc05",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/77"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/549.compose.json",
+      "sha256": "81edfae436b175a94ade0fbc19fea26c2b80f99ea0b1da353dfd5b337a311ce7",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/78"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/550.compose.json",
+      "sha256": "dfefbe92db72829364f3740bd15dca809ac8b451fd9e5adafcc96799cc223d16",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/79"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/551.compose.json",
+      "sha256": "01d083a2187aa9783e3a333648f624a7643bb680604101f320fb5d8103079383",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/80"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/552.compose.json",
+      "sha256": "fd22660d6ff7c3cc132895ff542c7979281b1b0340340c726ca1e65867ac7007",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/81"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/553.compose.json",
+      "sha256": "744dcc80ea521dc576a31a0e5daedc0035791886f64a025092838c1b8d05f591",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/82"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/554.compose.json",
+      "sha256": "b1e0403b187b852db4ac690c972c6f7374b59b0d55aac432624ca93130dc6830",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/83"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/555.compose.json",
+      "sha256": "1fa0192b6bb311f836b00d348d0bb90365a4478cb46c695b272f2c595eafe869",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/84"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/556.compose.json",
+      "sha256": "436c1e40b4c95c176ea3046c9ab03d27e08f491ed5b111814f87effac36a31b9",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/85"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/557.compose.json",
+      "sha256": "34753bf2b17240ae25542e7d4c896d28fa71dda11dc2eb25ec0286db684c6ba0",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/86"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/558.compose.json",
+      "sha256": "e4a88d7dd78bafe4862145016e526ce88477b384912c087addf9f8aac32e1082",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/87"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/559.compose.json",
+      "sha256": "21a7f696d9d88c7ea65fdc7ae34dffa29f5cd384bba28ccad4dc94efc62cc002",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/88"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/560.compose.json",
+      "sha256": "6e43875122f6ae8c9c6a830499917fdebefa135b64bf3a4f73cd310d8c3fa137",
+      "bytes": 164,
+      "mode": "0644",
+      "archive_member": "files/89"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/561.compose.json",
+      "sha256": "8e84afac501759a1b4a01fc1dcaf20893c93a2faea602a83515314ad5fda5353",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/90"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/562.compose.json",
+      "sha256": "7f5c49e32990111a653d242632df1ddbc9548e9b5f1c3daf05a0cae3bbaad67f",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/91"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/563.compose.json",
+      "sha256": "dddf6af82a4c0cce9219527b4182703bdb70fbf64cd9d558483d9fe68528b16b",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/92"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/564.compose.json",
+      "sha256": "2b55f9c5d40f0220200b1c2bde431bbe06bee40db10405374864fb3ae701a477",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/93"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/565.compose.json",
+      "sha256": "12ef11bc31cee6951151a07eb6d04328d7ba3ad5ef09e369bee9f3ed111dd2ad",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/94"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/566.compose.json",
+      "sha256": "5903ddd02d0a028c361a029df6eaf4aaf153d48d1e56bd361152b75bf6e07b54",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/95"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/567.compose.json",
+      "sha256": "0fe92531f04f1d8ad95acf492e215accce25c162b2e7708bae0ece12f951ef50",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/96"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/568.compose.json",
+      "sha256": "0ed2e2e85ca9a47802804edee7ff4140da51aa4bc0ca00de3f964db59f2feb68",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/97"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/569.compose.json",
+      "sha256": "3d1469e49cbde3f0f2c57ec5622776aa7573633214e73a5fc5a6b9ab0922c4bf",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/98"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/570.compose.json",
+      "sha256": "03a14ccc322cd801868544eb08b4984465f6c4b272bfb20f21b5fe4cee572869",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/99"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/571.compose.json",
+      "sha256": "7808b2066dfebbdfcde56b37fa28f70c171c9584934d09ec8fecb37ad87abb8a",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/100"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/572.compose.json",
+      "sha256": "9700f0211884363899c60a10c0cce4ccfe98b69fa7215dd8bc67b6ce8bc82828",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/101"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/573.compose.json",
+      "sha256": "e97b2128544da0de3edfca649dc6125d82848edf991e8e7ca48ffdf54db78d50",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/102"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/574.compose.json",
+      "sha256": "9d1c64c714efb24d26916c364a3d85abc1275835d37919971afca73b6c2efbb2",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/103"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/575.compose.json",
+      "sha256": "1fa04960ada7fdf29b2b59dd8da3c4d7a64903247e66e3fd9cd8e23e1b135f64",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/104"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/576.compose.json",
+      "sha256": "771cd6346c875489a98585cb10ee1aa82fe61526fda8e3d86f07ff9a966f7a51",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/105"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/577.compose.json",
+      "sha256": "0c65c0ce48a591ba4e0c629f1f29aa5d445871e0497327e361a3d1185c226ac8",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/106"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/578.compose.json",
+      "sha256": "436ff680fea64b74d560454f15a6d6ed95a42a4bb60edd6b651b7b4f17ecf995",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/107"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/579.compose.json",
+      "sha256": "75fa1f58e0301c90fe6a082e06d4d6c778a630f6c504e487b6f887e43c623557",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/108"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/580.compose.json",
+      "sha256": "55d8b27a9b4d2777721f8214430451768a03b3565931200eb065f1cfe1d4f1a6",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/109"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/581.compose.json",
+      "sha256": "2455ad40caf5c69af8f5dfbd3e822ac7d5b28475b30bf73815e2fd8ce29f15c6",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/110"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/582.compose.json",
+      "sha256": "6336eae215d3b7e17f2db35733e72d0b80f11f10577d71145a962f877d88594f",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/111"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/583.compose.json",
+      "sha256": "2fcc7f49c42cb34bf2f50e43b51f0f8a97f85cff1218932de7c6512e8e79cf56",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/112"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/584.compose.json",
+      "sha256": "450d2f76641b573f8f3d4ec73826641cb2439afcccdf73c038de82cff56118a0",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/113"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/585.compose.json",
+      "sha256": "b55bd41ca80dc0ce9c26bfb7b184679031cd272ad786565a7e2db12af5409acf",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/114"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/586.compose.json",
+      "sha256": "e23229e1e0e703ef14a91fa2e0be5edd8be67ee245d6203f137aa6948ce15fb9",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/115"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/587.compose.json",
+      "sha256": "97886e6c31bf2772fa1839af7a1d7dd584d9ae2d584eb5215a22c413e03ba123",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/116"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/588.compose.json",
+      "sha256": "4667249b650e1ed38e91c5b5dff61079a9b1f57b2cf36ff91e0ffe74ef873172",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/117"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/589.compose.json",
+      "sha256": "75e50bb4d02d1328e2bcafcb6d4ade71e7c445fa94d60924c5b2dec4aefa123f",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/118"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/590.compose.json",
+      "sha256": "55ccbb9e3c2b59ab9bcf2787785e8f4e077384311220b16a3f6ad35c020cd7b8",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/119"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/591.compose.json",
+      "sha256": "0e8854e12edb6551178a9aa52b0b1e5b5c0f2f2c7c9d07b918146c28924900af",
+      "bytes": 167,
+      "mode": "0644",
+      "archive_member": "files/120"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/592.compose.json",
+      "sha256": "14081a8136573fabcd98de00b37085c57d46687c6d6859a6a247d430f532cd00",
+      "bytes": 165,
+      "mode": "0644",
+      "archive_member": "files/121"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/593.compose.json",
+      "sha256": "966e2dc17a305ede6e1a1f62cb6491a7d0d328f589ace9344b2b5ac0c0c7b08d",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/122"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/594.compose.json",
+      "sha256": "313bc4d8f8c85fe893abdadb2bfe32e50ae5996434f441462a14e0fdcd0da3da",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/123"
+    },
+    {
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/ipam/595.compose.json",
+      "sha256": "62aa19aaffa827aa34fd65a82b7b060e5e3eab11b362598312b5e3879656b8c7",
+      "bytes": 166,
+      "mode": "0644",
+      "archive_member": "files/124"
+    }
+  ],
+  "created": 125,
+  "dependency_identities": {
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/env_preflight_shared_agent_r2.py": "ef94c3077b5d545578e4e3825d67c322fad64c8066831e4588f0b2a9037393d4",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/env_preflight30_probe_r1.py": "b7abd5487c2d8c23782235abac1bfd6ef6ff7f688e026a8b709f22d9b6655069",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/environment_evidence_audit_r4.py": "b331aeb01783e6f41aabf5c35b1e557926d46351df097604536010219c32a194",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/run-accepted-common30-disk-recovery18-r2.py": "a554a4c6c95f0411c11e393c81548a493a1f42f9f24ad6a7a700952c1ca36649",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-native-eval-r1/manifests/OFFICIAL_89_TASK_IDENTITIES.json": "1993184f63c8c67c6207e299bef87a9126573c9c664afaf3708f18e3a9f57f33",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight30/ENV_PREFLIGHT_30_MANIFEST.json": "a21e1fd39d18b55c4bb65be655587a0ca24bea0eb7447f856da4253d4aff6f50",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight30/environment-profiles-recheck-r2.json": "a94aae9b480083741df7ff6263426da95607b6e63c104c5967bcb2fef5bf4a38",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/configs/formal-controller18-deployment-r2.json": "de7f306c16b1c3f3d4548ab36828c635d363abdf2a357adc10fd88679f0e7b06",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight30/public-cache-recheck-r4/GPU_ROLE_DEPLOYMENT_R5.json": "b40af6d57d5898c7fa72a9c5e0b721f8c4f7e2ecc31d59b31f906c66eef1b1d3",
+    "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-native-eval-r1/scripts/run-formal-native-tb2118-r2.py": "9d5c4cfaa1d0d30ff669be07bd27e4e5f969641b59de4b8cf28587a169e3065c"
+  },
+  "sha_and_modes_match": true,
+  "model_or_Trial_dispatches": 0
+}

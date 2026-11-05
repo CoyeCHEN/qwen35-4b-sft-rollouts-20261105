@@ -1,0 +1,23 @@
+{
+  "benchmark": "WorkspaceBench",
+  "scope": "lite",
+  "source_repository": "https://github.com/OpenDataBox/Workspace-Bench",
+  "source_commit": "3fbd0f1a136720fece86786545983e26642c3db2",
+  "task_count": 100,
+  "task_asset_revision": "sha256:f47d396a4a75ea8125a3683807198d23183cb70a38bb1ca0137675ff972d4847",
+  "task_asset_files": 880,
+  "workspace_language": "en",
+  "workspace_directories": [
+    "chanpin_raw",
+    "kaifa_raw",
+    "research_raw",
+    "yunying_raw",
+    "houqin_raw"
+  ],
+  "runner": "workspacebench-native-isolated-container",
+  "judge": "workspacebench-native-rubric-judge",
+  "agent_contract": "openharness-cli-v1",
+  "default_agent_timeout_seconds": 2400,
+  "default_agent_concurrency": 1,
+  "default_judge_concurrency": 1
+}

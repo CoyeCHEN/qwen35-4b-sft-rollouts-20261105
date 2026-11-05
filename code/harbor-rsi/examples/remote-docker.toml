@@ -1,0 +1,12 @@
+# Personal deployment example. Use a host alias from ~/.ssh/config so no
+# address, username, jump host, or credential is embedded in the repository.
+[environment]
+import_path = "harbor_remote_docker:RemoteDockerEnvironment"
+
+[environment.kwargs]
+endpoint = "ssh://docker-build-host"
+staging_root = "/var/tmp/harbor-rsi"
+project_namespace = "harbor"
+command_timeout_sec = 120
+transfer_timeout_sec = 600
+cleanup_timeout_sec = 120

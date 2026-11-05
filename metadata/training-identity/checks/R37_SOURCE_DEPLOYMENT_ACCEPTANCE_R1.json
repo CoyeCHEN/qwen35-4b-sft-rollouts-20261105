@@ -1,0 +1,47 @@
+{
+  "at": 1793639301.1925368,
+  "all_sha_match": true,
+  "archive_sha256": "10afcaa81187f02e34689c90c4a0999fc3101eba9d1d49312580fbc241c7f676",
+  "kind": "R37_EXPLICIT_FIXTURE_R2_AND_ISOLATED_ENV59_AUDIT_DEPLOYMENT",
+  "parent_controller": "R36",
+  "common_env_recheck_index_sha256": "15725591db60587033d3fe68ee5382ba0646569d60d551fc1747caed57894379",
+  "harbor_wheel_unchanged": "6c0baaf5d19eead3b599d15894766f4e399ba3c24f2f5463615581a3a4cab0ca",
+  "files": [
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r37-deployment-candidate-r1/freeze-formal267-native-boundary18-r2.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/freeze-formal267-native-boundary18-r2.py",
+      "sha256": "61ff56ab614de96ec56f1c21f9930235d3d37a27c65473819caf4f0c311704f9",
+      "mode": "0644"
+    },
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r37-deployment-candidate-r1/run-native772-advance-r37-env-repair.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-native772-advance-r37-env-repair.py",
+      "sha256": "571c3d6b96d6797e26b8b5796b114d766a3c21e67d29db76cf7ab2391564e351",
+      "mode": "0644"
+    },
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r37-deployment-candidate-r1/winner267-phase18-r12.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/winner267-phase18-r12.py",
+      "sha256": "43c33322c2b019ab99db94407393fc9804e792c94e13d89e9c534dbd1fd0f10d",
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r2/EXECUTION_RELEASE_R2.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/extract-elf-recheck-r1/EXECUTION_RELEASE_R2.json",
+      "sha256": "73991b529bddb749133d17cb014a6ad9dc29aae8cf874901af29a7dee6f68d88",
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r2/audit-env-preflight59-native18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/audit-env-preflight59-native18-r3.py",
+      "sha256": "0b858cb912e93e18c2267d776e107e10d6723866dbd2dba915c4fc9936232b30",
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r2/env-preflight59-phase18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/env-preflight59-phase18-r3.py",
+      "sha256": "eec69e6a502b0b06d7f4f9602420e050b679fda2c9ba3c3c75c8423e72c5e3f8",
+      "mode": "0644"
+    }
+  ]
+}

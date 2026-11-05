@@ -1,0 +1,36 @@
+--- 03_UPSTREAM_AND_DIFF/sglang-production-base/python/sglang/srt/managers/tokenizer_manager.py
++++ 02_PROJECT_SOURCE/installed-serve/sglang/srt/managers/tokenizer_manager.py
+@@ -666,7 +666,20 @@
+         self,
+         obj: Union[GenerateReqInput, EmbeddingReqInput],
+     ):
+-        """Tokenize one request."""
++        """Prepare, validate and construct the ordinary generation request."""
++        input_text, input_ids, input_embeds, mm_inputs, token_type_ids = (
++            await self._prepare_one_request(obj)
++        )
++        self._validate_one_request(obj, input_ids)
++        return self._create_tokenized_object(
++            obj, input_text, input_ids, input_embeds, mm_inputs, token_type_ids
++        )
++
++    async def _prepare_one_request(
++        self,
++        obj: Union[GenerateReqInput, EmbeddingReqInput],
++    ):
++        """Shared native text/MM preprocessing; no generation or length admission."""
+         # Tokenize
+         input_embeds = None
+         input_text = obj.text
+@@ -766,10 +779,7 @@
+         else:
+             mm_inputs = None
+ 
+-        self._validate_one_request(obj, input_ids)
+-        return self._create_tokenized_object(
+-            obj, input_text, input_ids, input_embeds, mm_inputs, token_type_ids
+-        )
++        return input_text, input_ids, input_embeds, mm_inputs, token_type_ids
+ 
+     def _validate_rid_not_in_flight(
+         self, obj: Union[GenerateReqInput, EmbeddingReqInput]

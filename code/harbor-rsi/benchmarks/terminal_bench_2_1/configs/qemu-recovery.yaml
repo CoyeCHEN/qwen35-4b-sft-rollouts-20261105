@@ -1,0 +1,26 @@
+# Explicit environment recovery; never silently substituted in the full preset.
+# Supply the wheel with --agent-kwarg "wheel_path=$OPEN_HARNESS_WHEEL".
+jobs_dir: benchmarks/terminal_bench_2_1/results/qemu-recovery
+n_attempts: 1
+n_concurrent_trials: 2
+timeout_multiplier: 1.0
+orchestrator:
+  retry:
+    max_retries: 0
+environment:
+  import_path: harbor.environments.e2b_qemu_recovery:QemuRecoveryE2BEnvironment
+  delete: true
+agents:
+  - import_path: harbor.agents.installed.open_harness:OpenHarnessAgent
+    model_name: deepseek/deepseek-flash
+    kwargs:
+      thinking: max
+      max_tokens: 131072
+    env:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+datasets:
+  - name: terminal-bench/terminal-bench-2-1
+    ref: sha256:7d7bdc1cbedad549fc1140404bd4dc45e5fd0ea7c4186773687d177ad3a0699a
+    task_names:
+      - terminal-bench/qemu-alpine-ssh
+      - terminal-bench/qemu-startup

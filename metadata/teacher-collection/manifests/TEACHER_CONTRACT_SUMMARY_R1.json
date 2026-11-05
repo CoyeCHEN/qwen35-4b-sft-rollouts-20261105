@@ -1,0 +1,125 @@
+{
+  "created_at": "2026-10-29T18:54:00+00:00",
+  "status": "SUMMARY_CONTRACT_CORRECTED_REAL_CANARY_PENDING",
+  "harness_commit": "edad94f34c68948c951b594199f97a100164f730",
+  "wheel_sha256": "c686ba3f429d8257a060cf6b6a6e4c5aa7d740f33b2d59180d9a2717b55d0db8",
+  "config_sha256": "bf9069d53ec81d6f53a1a93f35bd61a0a8eadb42deafb4fc1c6540bf10afba2c",
+  "final_tool_names": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "edit_patch",
+    "trajectory_read",
+    "bash_job",
+    "finish"
+  ],
+  "environment": {
+    "OPEN_HARNESS_BACKGROUND_JOBS": "1",
+    "OPEN_HARNESS_FINISH": "1"
+  },
+  "toolResultBudget": {
+    "enabled": true,
+    "maxCharsPerBatch": 200000,
+    "previewChars": 2000,
+    "basis": "Native controller config defaults, not invented fields"
+  },
+  "model_provider": "deepseek",
+  "endpoint": "https://api.deepseek.com",
+  "harbor_model_name": "deepseek/deepseek-flash",
+  "api_model_alias": "deepseek-flash",
+  "thinking": {
+    "type": "enabled",
+    "reasoning_effort": "max"
+  },
+  "context": 262144,
+  "max_output": 65536,
+  "stream": true,
+  "temperature": {
+    "requested": 1,
+    "effective_semantics": "Ignored in Thinking mode according to official provider documentation",
+    "source": "https://api-docs.deepseek.com/guides/thinking_mode/",
+    "checked_at": "2026-10-29"
+  },
+  "agent_timeout_policy": "max(original_agent_timeout_sec,10800), per-Trial Campaign override only",
+  "verifier_timeout_policy": "Original unchanged",
+  "total_concurrency": 8,
+  "tasks_per_pool": 500,
+  "max_attempts_per_task": 2,
+  "max_total_attempts": 2000,
+  "canary_tasks_per_pool": 8,
+  "sampling_seed": 42,
+  "preexisting_jobs_unchanged": true,
+  "paid_attempts_dispatched": null,
+  "tool_schema_sha256": null,
+  "system_prompt_sha256": null,
+  "provider_payload_runtime_proof": null,
+  "raw_tool_results_policy": "Preserve original Recorder and complete referenced artifacts",
+  "sft_input_policy": "Exact model-visible Provider Payload, including budget projections and actual compaction history",
+  "requested_base_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "edit_patch",
+    "trajectory_read"
+  ],
+  "effective_selected_tools": [
+    "read",
+    "bash",
+    "edit",
+    "write",
+    "grep",
+    "find",
+    "ls",
+    "edit_patch",
+    "trajectory_read",
+    "bash_job"
+  ],
+  "background_job_activation_note": "bash_job selected once; finish auto-activates. Summary request options are explicitly configured in the separately versioned wheel.",
+  "offline_proof": {
+    "tool_names": [
+      "read",
+      "bash",
+      "edit",
+      "write",
+      "grep",
+      "find",
+      "ls",
+      "edit_patch",
+      "trajectory_read",
+      "bash_job",
+      "finish"
+    ],
+    "tool_schema_sha256": "89ad662f58c4fe4df97187bae2c84ada041a8195b3ba9bfc0a6eccc909b66bfe",
+    "system_prompt_sha256": "400cd2a6498f6f0b33dea4b15cdc6c2e8c75b450017aca7ea7e6045041fb6958",
+    "effective_tool_result_budget": {
+      "enabled": true,
+      "maxCharsPerBatch": 200000,
+      "previewChars": 2000
+    }
+  },
+  "base_harness_commit": "4e921481fecb035f4dd734808f27ba143533d773",
+  "base_source_archive_sha256": "f168895f49c0fa3d4033631f7b2c519e2743f0bba7747be3a865535611713be9",
+  "wheel_version": "0.3.0+rsi.summary.20261030",
+  "config_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-new-cf500-tmax500-20261029/configs/teacher-native-11tools-summary-r1.json",
+  "summary_request_options": {
+    "thinkingLevel": "max",
+    "maxTokens": 65536,
+    "temperature": 1,
+    "timeout": 120
+  },
+  "request_contract_scope": "Main agent AND auxiliary compaction/branch summary calls",
+  "changed_wheel_modules": [
+    "rsi_modules/controller/config.py",
+    "rsi_modules/memory/baseline.py"
+  ],
+  "previous_trials": "Preserved byte-for-byte; actual auxiliary contract violations excluded from qualified successes; never hot-modified",
+  "runtime_canary_acceptance": false
+}

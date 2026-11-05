@@ -1,0 +1,26 @@
+{
+  "runtime_source_changed": false,
+  "reason": "Bring archived fixtures/assertions into agreement with the already executed world-size and generation-boundary contract; add explicit segmentation rejection golden.",
+  "files": [
+    {
+      "path": "code/sft/tests/test_qwen35_codec.py",
+      "production_sha256": "d038f39f903c1b97505bf0a3cb04d9ee0d0f099c8070029f2e25416946fb1b43",
+      "published_sha256": "67e11afceffae3f040ade64567f20a86004096a85b6f6a6089554736ed265d5e"
+    },
+    {
+      "path": "code/sft/tests/test_runtime.py",
+      "production_sha256": "32b59404c161967b7f1e9bb9d0c9f26b4e3616e2f200eb7f1b83714b7c7e5250",
+      "published_sha256": "f7ca7d7bfaa615e3d3c731de806c3768000bc716f2719ca22c785e297f0e5d3f"
+    },
+    {
+      "path": "code/sft/tests/test_checkpoint_archive.py",
+      "production_sha256": "2fd5bf98990618e260479dc0b0b8e692a443395a9c168e9fd6c0bbc001545599",
+      "published_sha256": "f113199edacc0ef101bf90954eb392f51af769a4c7c924f1de494044ae91d120"
+    },
+    {
+      "path": "code/sft/tests/test_checkpoint_observer.py",
+      "production_sha256": "089bcd232eff672329c7e7f8b87c189cda30b3cda31285ea36be81e0878cb83b",
+      "published_sha256": "fe0063505782ffc953a57149e90088c06a29f6b2e86abe54f6987b75976d3f80"
+    }
+  ]
+}

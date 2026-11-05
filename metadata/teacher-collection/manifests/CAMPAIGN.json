@@ -1,0 +1,247 @@
+{
+  "campaign_id": "qwen35-new-cf500-tmax500-20261029",
+  "status": "ORIGINAL_ENVIRONMENT_CANARY_AND_COMPLETE_ENVIRONMENT_PREPARATION",
+  "updated_at": "2026-10-29T20:39:16.219492+00:00",
+  "authoritative_tool_revision": {
+    "attachment_sha256": "0dcd568354e79da997e218580f0f99d158d084ae3076e5f05e5bc4c1a8ee14c1",
+    "actual_tools": [
+      "read",
+      "bash",
+      "edit",
+      "write",
+      "grep",
+      "find",
+      "ls",
+      "edit_patch",
+      "trajectory_read",
+      "bash_job",
+      "finish"
+    ],
+    "finish": true,
+    "tool_result_budget": {
+      "enabled": true,
+      "maxCharsPerBatch": 200000,
+      "previewChars": 2000
+    }
+  },
+  "source_revisions": {
+    "calibforge": {
+      "dataset": "AweAI-Team/CalibForge",
+      "revision": "c2fae4c1f536461142b2a89a8b9423a8bc376088",
+      "original_tasks": 5431,
+      "subsets": {
+        "contrastive_solver": 4168,
+        "multi_solver": 1263
+      }
+    },
+    "tmax": {
+      "dataset": "allenai/TMax-15K",
+      "revision": "e3ded940596cc611c9815684ba51a7e8ee0cffc9",
+      "original_tasks": 14601
+    }
+  },
+  "task_scope": {
+    "selected_unique_per_pool": 500,
+    "total_unique_cap": 1000,
+    "total_attempt_cap": 2000,
+    "max_native_teacher_dispatches_per_task": 2,
+    "seed": 42,
+    "fixed_task_splits": {
+      "train": 450,
+      "validation": 50
+    },
+    "split_policy": "Full-source family split before sampling; success never changes validation membership",
+    "attempt_debit_policy": "Conservative: every native teacher dispatch counts, including setup failures"
+  },
+  "teacher": {
+    "service": "Existing authorized DeepSeek service",
+    "endpoint": "https://api.deepseek.com",
+    "harbor_model": "deepseek/deepseek-flash",
+    "service_alias": "deepseek-flash",
+    "thinking_enabled": true,
+    "reasoning_effort": "max",
+    "context": 262144,
+    "max_output": 65536,
+    "stream": true,
+    "temperature_sent": 1,
+    "temperature_effective_semantics": "Ignored by provider in thinking mode; official API documentation",
+    "http_idle_timeout_sec": 120,
+    "provider_max_retries": 3,
+    "compaction": {
+      "enabled": true,
+      "reserveTokens": 81920,
+      "keepRecentTokens": 20000,
+      "maxTurns": 0,
+      "summaryThinkingLevel": "max",
+      "summaryMaxTokens": 65536
+    },
+    "background": {
+      "enabled": true,
+      "maxConcurrent": 2,
+      "maxOutputBytes": 20000000,
+      "keepProcesses": true,
+      "handoffTimeout": 600
+    },
+    "timeBudget": 0,
+    "session": true,
+    "recorder": true,
+    "config_sha256": "bf9069d53ec81d6f53a1a93f35bd61a0a8eadb42deafb4fc1c6540bf10afba2c",
+    "request_contract_scope": "ALL_MODEL_CALLS_INCLUDING_AUXILIARY_SUMMARIES"
+  },
+  "artifacts": {
+    "harness_commit": "edad94f34c68948c951b594199f97a100164f730",
+    "wheel_sha256": "c686ba3f429d8257a060cf6b6a6e4c5aa7d740f33b2d59180d9a2717b55d0db8",
+    "harbor_runtime_wheel_sha256": "b58365884dafc939428be05abbf4fc4acb90eec0d1b142e595ba823c326f5b17",
+    "harbor_runtime_base_commit": "1541fb98fbfba5b170882f96be93d3cd5cf23646",
+    "harbor_adapter_patch_commit": "5ce25b2c9c2daaf0a451c9c6b5ff2b863c933066",
+    "tmax_source_adapter_commit": "7465d16106920c846d3f3ceb5d3590490438fe95",
+    "sft_segmenter_commit": "f974a81241baf0740f3d7602181f386313a5c90e",
+    "initial_harness_commit": "4e921481fecb035f4dd734808f27ba143533d773",
+    "initial_wheel_sha256": "47dc9cc9e37370be00589f690d2da7c5a08e964407dac6e94c57a2a2018da95d"
+  },
+  "backend": {
+    "kind": "Existing RemoteDocker",
+    "controller": "aibox-149",
+    "endpoint": "ssh://chenkeyi@127.0.0.1:5102",
+    "daemon_id": "c6e16cdf-e878-4cc5-84c8-78a56c54b5c5",
+    "public_image_cache_helper": "ruc-a800-17, download/export only; no teacher/GPU work",
+    "transfer_kib_per_sec": 8192,
+    "disk_free_reserve_gib": 100,
+    "global_native_concurrency": 8,
+    "scoped_ssh_config_sha256": "a68326b846b9e7fd461f34af97ea4892d9c76f54052c0aac7d7b093f0d90da1b",
+    "active_scoped_ssh_wrapper_sha256": "0ac887391923600761b6b666e8ff105b6da9fce57494aa4b8fec1646e6b4cfa5",
+    "active_scoped_ssh_config_sha256": "f7594747af02fd1ac8160c711c7cffffe4ae36f32985be11527af50686ec8b03",
+    "scoped_ssh_policy": "Standard ControlMaster per Docker client parent PID; 30-second idle persistence; no global SSH/daemon edits",
+    "native_eight_setup_proof": "checks/scoped-ssh-client2-native-install8.json"
+  },
+  "timeouts": {
+    "agent_policy": "max(original_agent_timeout,10800) campaign override; original files unchanged",
+    "current_cf_original_max": 7200,
+    "current_tmax_original": 600,
+    "verifier": "Original task value",
+    "resources": "Original task/native-converter declarations",
+    "external_prebuild_budget_sec": 3600,
+    "external_prebuild_budget_is_not_task_timeout": true
+  },
+  "first_canary": {
+    "unique_tasks_per_pool": 8,
+    "teacher_dispatches": 16,
+    "raw_first_outcomes": {
+      "calibforge": {
+        "reward_one": 6,
+        "reward_zero": 2,
+        "unscored_setup": 0
+      },
+      "tmax": {
+        "reward_one": 4,
+        "reward_zero": 1,
+        "unscored_setup": 3
+      }
+    },
+    "second_attempts_submitted": 6,
+    "total_teacher_dispatches_after_second_submission": 22,
+    "raw_reward_one_is_not_qualified_success": true,
+    "full_canary_gate_passed": false,
+    "corrective_second_attempts_submitted": 1,
+    "total_teacher_dispatches": 23,
+    "unique_teacher_tasks": 16
+  },
+  "student": {
+    "model": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "history_policy": "Pinned official Jinja retains thinking after last real user; identical serving renderer required",
+    "generation_prefix_policy": "Native thinking-enabled generation prefix is input, including supplied think opener",
+    "termination_policy": "im_end EOS supervised; post-EOS template newline input-only",
+    "observation_basis": "Actual recorded Provider Payload; no raw-output restoration into budget previews",
+    "length_views": [
+      131072,
+      262144
+    ],
+    "native_text_processor_extra_tokens": 66,
+    "native_padding_multiple": 8,
+    "reasoning_parser": "qwen3",
+    "tool_parser": "qwen3_coder",
+    "first_two_trials_projected_targets": 48,
+    "first_two_formal_loader_collator_and_parser_audits_passed": true,
+    "full_corpora_not_frozen_yet": true,
+    "all_canary_diagnostic_trials": 18,
+    "all_canary_original_decisions": 833,
+    "text_projected_decisions": 736,
+    "unsupported_multimodal_decisions": 97,
+    "unsupported_multimodal_trials": 2,
+    "overlength_decisions_128k": 110,
+    "overlength_decisions_256k": 0,
+    "all_cache_loader_and_parser_status": "PENDING_COMPLETE_PROOF_BUNDLE",
+    "original_environment_audit_candidate_trials": 7,
+    "original_environment_audit_candidate_targets": 219,
+    "active_cpu_audit_root": "/home/chenkeyi/workspace/RSI/runtime-evidence/qwen35-new-cf500-tmax500-20261029/validation/original-env-20261030",
+    "diagnostic_caches_are_not_training_corpora": true
+  },
+  "evidence": {
+    "root": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029",
+    "sampling_manifest": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/manifests/SAMPLING_MANIFEST.json",
+    "current_tmax_runtime_candidates": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/manifests/TMAX_RUNTIME_CANDIDATES_V2.jsonl",
+    "public_family_tb_link_review": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/checks/family-tb-source-links.json",
+    "native_tool_functional_checks": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/checks/native-tool-functional-diagnostics-v2.json",
+    "qualification": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/checks/collection-qualification.json",
+    "indexes": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/indexes",
+    "monitor": "Existing qwen35-tb21-monitor.timer, 20 minutes, retained",
+    "auto_controller": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/campaign-state.json",
+    "summary_contract_manifest": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new-cf500-tmax500-20261029/manifests/TEACHER_CONTRACT_SUMMARY_R1.json",
+    "corrected_controller_pid": 2505328
+  },
+  "outstanding": [
+    "Finish original-environment canaries and the extra never-tried acceptance task; never exceed two native dispatches per task",
+    "Audit all candidate successes against native verifier, normal closure, complete Recorder, actual payload and Qwen/Loader/serving semantics",
+    "Finish CF500 original image preparation and TMax500 original-runtime preparation; retain local failures and use only preregistered exact-stratum reserves before model attempts",
+    "Freeze final runnable 500+500 manifest and actual CANARY_GATE/TASKSET_READY evidence; native Job then continuously schedules all never-tried tasks at global concurrency eight",
+    "Apply at most one remaining attempt per unresolved task, with all previous dispatches including setup/contract variants debited",
+    "Freeze independent successful primary CF/TMax corpora, success/failure indexes, two DATA_MANIFESTs and DATA_AUDIT; report actual gaps and length/multimodal quarantines"
+  ],
+  "contract_revisions": [
+    {
+      "name": "initial-11tools",
+      "harness_commit": "4e921481fecb035f4dd734808f27ba143533d773",
+      "wheel_sha256": "47dc9cc9e37370be00589f690d2da7c5a08e964407dac6e94c57a2a2018da95d",
+      "config_sha256": "e1cdfee7ac32629a070db50884f8bcc2bd1400d86d2cf781f59c2d6b57300d04",
+      "preserved": true,
+      "auxiliary_violations": "Two first-canary CF trials: original datasci reward1 and software reward0; excluded from qualified successes when auxiliary request violates contract"
+    },
+    {
+      "name": "summary-r1",
+      "harness_commit": "edad94f34c68948c951b594199f97a100164f730",
+      "wheel_sha256": "c686ba3f429d8257a060cf6b6a6e4c5aa7d740f33b2d59180d9a2717b55d0db8",
+      "config_sha256": "bf9069d53ec81d6f53a1a93f35bd61a0a8eadb42deafb4fc1c6540bf10afba2c",
+      "summaryThinkingLevel": "max",
+      "summaryMaxTokens": 65536,
+      "default_behavior_preserved": true,
+      "main_tool_prompt_contract_unchanged": true,
+      "real_corrected_canary": "RUNNING"
+    }
+  ],
+  "task_environment_contract": {
+    "tmax": {
+      "workdir": "/home/user",
+      "HOME": "/home/user",
+      "source": "https://github.com/hamishivi/tmax/blob/6d3d606c0f9de6ceec9481f9ccc793936818fef0/rl_data/generator/env.py",
+      "source_sha256": "22ff11632c3dc090920cea4315c6e1e2da3e755c90b5752f9dc3766ce2d12919",
+      "original_sections": "Original %environment via one-time inherited BASH_ENV; original %startscript copied into image; default original workdir/HOME preserved",
+      "native_installed_cli_proof": "checks/tmax-original-directory-native-agent-r4-v2.json",
+      "native_noninteractive_export_proof": "checks/tmax-original-environment-native-agent-r4-v3.json",
+      "legacy_trials": "Old canaries retain official raw scores and all artifacts, but are excluded as original-environment variants"
+    }
+  },
+  "collection_checkpoint": {
+    "requested_native_teacher_attempts": 34,
+    "unique_teacher_tasks": 22,
+    "preliminary_qualified_primary_tasks": {
+      "calibforge": 5,
+      "tmax": 0
+    },
+    "primary_index_status": "Partial; six corrected TMax reward-one trials and one corrected CF trial are undergoing student audits",
+    "raw_reward_one_is_not_qualified_success": true,
+    "canary_gate_passed": false,
+    "full_run_dispatched": false
+  }
+}

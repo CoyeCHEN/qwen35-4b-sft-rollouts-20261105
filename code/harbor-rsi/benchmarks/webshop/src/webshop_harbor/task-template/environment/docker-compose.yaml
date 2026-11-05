@@ -1,0 +1,25 @@
+services:
+  main:
+    depends_on:
+      webshop:
+        condition: service_healthy
+    environment:
+      WEBSHOP_URL: http://webshop:3000
+
+  webshop:
+    image: __WEBSHOP_IMAGE__
+    pull_policy: never
+    environment:
+      WEBSHOP_GOAL_INDEX: "__GOAL_INDEX__"
+      WEBSHOP_MAX_STEPS: "__MAX_STEPS__"
+      WEBSHOP_PRODUCT_SET: "__PRODUCT_SET__"
+      WEBSHOP_FULL_ROOT: /opt/webshop/full
+__WEBSHOP_VOLUMES__
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:3000/health', timeout=2).read()"]
+      interval: 3s
+      timeout: 5s
+      retries: 60
+      start_period: 90s

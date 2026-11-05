@@ -1,0 +1,76 @@
+{
+  "kind": "INSTALLED_QWEN35_LONG_SEQUENCE_PARALLELISM_REVIEW",
+  "files_reviewed": 34,
+  "matches": [
+    {
+      "path": "llamafactory/hparams/parser.py",
+      "line": 363,
+      "text": "* mb_args.context_parallel_size",
+      "source_sha256": "7448e98f3a1c4578c750b12c533d7074a2d2954d60be2440ad897deeb748244f"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 44,
+      "text": "context_parallel_size: int = field(",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 52,
+      "text": "sequence_parallel: bool = field(",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 104,
+      "text": "\"Whether to compute per-token loss. When context_parallel_size > 1, \"",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 159,
+      "text": "if self.context_parallel_size < 1:",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 160,
+      "text": "raise ValueError(\"`context_parallel_size` must be >= 1.\")",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 163,
+      "text": "if self.sequence_parallel and self.tensor_model_parallel_size <= 1:",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "llamafactory/hparams/megatron_bridge_args.py",
+      "line": 164,
+      "text": "raise ValueError(\"`sequence_parallel` requires `tensor_model_parallel_size` > 1.\")",
+      "source_sha256": "0e0fc67960cbd754a4da9e2b360f58e6731de82e7fedaec8b04c73ee6e53dd02"
+    },
+    {
+      "path": "transformers/models/qwen3_5/modeling_qwen3_5.py",
+      "line": 1703,
+      "text": "_tp_plan = {\"lm_head\": \"colwise_gather_output\"}",
+      "source_sha256": "641da34484f6b9769e28615c680cc4e3202afbf5bdbf1da7d56d5a3d678918c7"
+    },
+    {
+      "path": "transformers/models/qwen3_5/configuration_qwen3_5.py",
+      "line": 59,
+      "text": "base_model_tp_plan = {",
+      "source_sha256": "e2ca3e05c3f3e7ed2c4f452043bc33640c67a24799adb054ba24fab6badfbd8c"
+    },
+    {
+      "path": "transformers/models/qwen3_5/modular_qwen3_5.py",
+      "line": 90,
+      "text": "base_model_tp_plan = {",
+      "source_sha256": "0869637aa4055568cf509f386c1d3b71dc690661c7101f8801fe590e5a8d9488"
+    }
+  ],
+  "actual_attempted_backend": "Pure ZeRO3 DP8, measured world8/DP8/GA4/global32",
+  "no_cp_or_tp_enabled": true,
+  "interpretation": "Model tensor-parallel metadata, if present, is not a validated LlamaFactory+ZeRO3 context-sharding path for recurrent Gated DeltaNet; no CP2 compatibility claimed",
+  "user_authorized_128k_fallback_evidence": "CONTEXT_128K_FALLBACK_EVIDENCE_R6.json"
+}

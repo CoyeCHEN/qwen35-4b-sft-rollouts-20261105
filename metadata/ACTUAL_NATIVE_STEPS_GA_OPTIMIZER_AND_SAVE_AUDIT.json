@@ -1,0 +1,333 @@
+{
+  "at": 1793809320.8856187,
+  "runs": [
+    {
+      "run": "new-m1-cf416-128k-e5",
+      "epochs": 5,
+      "optimizer_steps_per_rank": 200,
+      "ranks": [
+        {
+          "rank": 0,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank0.jsonl",
+          "source_sha256": "782e9c4791b4ff22f44cf21bbcf080bf71d683fd4189ef0b70ea1b1dc02181b8",
+          "optimizer_steps": 200,
+          "actual_forward_batches": 1590,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 195,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            40,
+            80,
+            120,
+            160,
+            200
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 1,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank1.jsonl",
+          "source_sha256": "72d6b1016c70630a5edd3c7157a1d98845af758892de6194884e5e6025d03581",
+          "optimizer_steps": 200,
+          "actual_forward_batches": 1590,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 195,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            40,
+            80,
+            120,
+            160,
+            200
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 2,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank2.jsonl",
+          "source_sha256": "d6c69b0eaafc643654c1aea0d0f3e2827e536fdcb458552b1da6878119c2b3ff",
+          "optimizer_steps": 200,
+          "actual_forward_batches": 1590,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 195,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            40,
+            80,
+            120,
+            160,
+            200
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 3,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preflight-evidence-rank3.jsonl",
+          "source_sha256": "c153731b974d9cc529e1f4aebf5d2f0583bbaa6b255565251ba4a404455ae61b",
+          "optimizer_steps": 200,
+          "actual_forward_batches": 1590,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 195,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            40,
+            80,
+            120,
+            160,
+            200
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        }
+      ],
+      "actual_global_forward_row_exposures": 6360,
+      "unique_train_rows": 1270,
+      "nominal_five_epoch_unique_row_exposures": 6350,
+      "native_sampler_padding_exposures": 10
+    },
+    {
+      "run": "new-m2-tmax356-128k-e5",
+      "epochs": 5,
+      "optimizer_steps_per_rank": 125,
+      "ranks": [
+        {
+          "rank": 0,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank0.jsonl",
+          "source_sha256": "b4b99015e7645b88f5110a7fb00b5e1bc8b91da09c804b65318c73484ace8a98",
+          "optimizer_steps": 125,
+          "actual_forward_batches": 990,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 120,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            25,
+            50,
+            75,
+            100,
+            125
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 1,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank1.jsonl",
+          "source_sha256": "6ee74ffc9fce5cce517adbe2b6d498aa4d981ae715bdef160bcc228e436f9ccd",
+          "optimizer_steps": 125,
+          "actual_forward_batches": 990,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 120,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            25,
+            50,
+            75,
+            100,
+            125
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 2,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank2.jsonl",
+          "source_sha256": "e22fe3ee4c05beefaa1306d0da8166b44231487a5f2efd536eb7bc4a4e9dc06d",
+          "optimizer_steps": 125,
+          "actual_forward_batches": 990,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 120,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            25,
+            50,
+            75,
+            100,
+            125
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        },
+        {
+          "rank": 3,
+          "source": "/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/preflight-evidence-rank3.jsonl",
+          "source_sha256": "7c98a99698fa9a815fcde8d293a2bb749388e5da7512565e0a219749b9ecf580",
+          "optimizer_steps": 125,
+          "actual_forward_batches": 990,
+          "forward_microbatches_per_optimizer_step": {
+            "8": 120,
+            "6": 5
+          },
+          "parallelism": {
+            "world_size": 4,
+            "data_parallel_group_size": 4,
+            "data_parallel_group_ranks": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "microbatch_per_gpu": 1,
+            "gradient_accumulation_steps": 8,
+            "effective_global_batch": 32
+          },
+          "nonfinite_sampled_grad_steps": [],
+          "final_optimizer_state_dtypes": [
+            "torch.float32"
+          ],
+          "final_optimizer_moment_bytes": 8411502592,
+          "final_fp32_master_partition_bytes": 4205751296,
+          "checkpoint_steps": [
+            25,
+            50,
+            75,
+            100,
+            125
+          ],
+          "all_native_checkpoint_sampled_training_state_unchanged": true
+        }
+      ],
+      "actual_global_forward_row_exposures": 3960,
+      "unique_train_rows": 792,
+      "nominal_five_epoch_unique_row_exposures": 3960,
+      "native_sampler_padding_exposures": 0
+    }
+  ],
+  "model_or_optimizer_updates_added": 0,
+  "limitation": "Native logs prove actual calls/dtypes and sampled finite gradients/state stability, not independent full-gradient correctness."
+}

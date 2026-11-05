@@ -1,0 +1,9 @@
+{"timestamp":0.9,"type":"run_start","data":{"run_id":"run-1"},"seq":1}
+{"seq":2,"timestamp":1.0,"type":"call_start","data":{"call_id":"call-1","run_id":"run-1","model":"fixture-teacher","input":[{"role":"system","content":"You are a shell agent."},{"role":"user","content":"Print hello."}],"input_origins":[],"request_options":{},"fidelity":"provider_payload"}}
+{"seq":3,"timestamp":1.1,"type":"call_payload","data":{"call_id":"call-1","call_payload":{"model":"fixture-teacher","messages":[{"role":"system","content":"You are a shell agent."},{"role":"user","content":"Print hello."}]}}}
+{"seq":4,"timestamp":1.2,"type":"call_end","data":{"call_id":"call-1","response":{"model":"fixture-teacher","content":[{"type":"toolCall","id":"tc-1","name":"shell","arguments":{"command":"printf hello"}}],"stopReason":"toolUse"},"status":"toolUse"}}
+{"seq":5,"timestamp":1.3,"type":"tool_start","data":{"execution_id":"exec-1","call_id":"call-1","tool_call_id":"tc-1","name":"shell","original_args":{"command":"printf hello"}}}
+{"seq":6,"timestamp":1.4,"type":"tool_prepared","data":{"execution_id":"exec-1","actual_args":{"command":"printf hello"}}}
+{"seq":7,"timestamp":1.5,"type":"tool_raw","data":{"execution_id":"exec-1","result":"hello"}}
+{"seq":8,"timestamp":1.6,"type":"tool_end","data":{"execution_id":"exec-1","status":"completed","is_error":false}}
+{"timestamp":1.7,"type":"run_end","data":{"run_id":"run-1","status":"completed"},"seq":9}

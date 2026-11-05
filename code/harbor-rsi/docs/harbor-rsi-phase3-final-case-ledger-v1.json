@@ -1,0 +1,215 @@
+{
+  "schema_version": "phase3-final-case-ledger-v1",
+  "scope": "five benchmarks, ten frozen unique tasks each; TB-Science excluded",
+  "status": "partial",
+  "counts": {
+    "planned": 50,
+    "attempted": 41,
+    "valid_scored": 29,
+    "agent_failed": 5,
+    "infrastructure_failed": 7,
+    "judge_failed": 0,
+    "external_blocked": 0,
+    "not_started": 9
+  },
+  "source": {
+    "cases_csv": "/home/cky/harbor-rsi-phase2/artifacts/benchmark-reports/phase3-5x10/cases.csv",
+    "cases_csv_sha256": "23df26376cb7ab81ce34f19718cc7438473e470d8b2d34147c20eb14444d0a77",
+    "task_manifest": "/home/cky/harbor-rsi-phase2/artifacts/benchmark-reports/phase3-5x10/task-manifest.json",
+    "task_manifest_sha256": "d5d92851ae00abdb062f330e630c24456db0838ca35da6b3a2308865cc23856e",
+    "prior_provenance": "/home/cky/harbor-rsi-phase2/artifacts/benchmark-reports/phase3-5x10/run-provenance.json",
+    "prior_provenance_sha256": "d29ed7d2e9db8b35aaa90399d8ba70393820fe7211be05bf2555453e45c57c8"
+  },
+  "task_content_sha256_source": "The complete task_id to content_sha256 mapping is preserved verbatim in the referenced cases.csv and task-manifest.json (both hashes are recorded above).",
+  "benchmarks": {
+    "alfworld": {
+      "planned": 10,
+      "attempted": 10,
+      "valid_scored": 10,
+      "agent_failed": 0,
+      "infrastructure_failed": 0,
+      "not_started": 0,
+      "judge_official": true,
+      "task_ids": [
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-9ca5ee7a",
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-d3dd14ff",
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-c4bb3794",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-7aedd6f9",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-46dac2cb",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-c8815f34",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-e9e68e0f",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-ba8540ad",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-8bad64de",
+        "alfworld-look_at_obj_in_light-cd-none-desklamp-308-969b9f2e"
+      ],
+      "valid_task_ids": [
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-9ca5ee7a",
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-d3dd14ff",
+        "alfworld-look_at_obj_in_light-alarmclock-none-desklamp-308-c4bb3794",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-7aedd6f9",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-46dac2cb",
+        "alfworld-look_at_obj_in_light-book-none-desklamp-308-c8815f34",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-e9e68e0f",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-ba8540ad",
+        "alfworld-look_at_obj_in_light-bowl-none-desklamp-308-8bad64de",
+        "alfworld-look_at_obj_in_light-cd-none-desklamp-308-969b9f2e"
+      ]
+    },
+    "clawgym": {
+      "planned": 10,
+      "attempted": 10,
+      "valid_scored": 10,
+      "agent_failed": 0,
+      "infrastructure_failed": 0,
+      "not_started": 0,
+      "judge_official": false,
+      "judge_note": "DeepSeek Judge; diagnostic and not directly comparable to an official Judge score",
+      "task_ids": [
+        "task-000001-87fbece76a",
+        "task-000002-b4b91cfdef",
+        "task-000003-8cf5d1c909",
+        "task-000004-b057985cb4",
+        "task-000005-3cc1b0801a",
+        "task-000006-3fc3ab1d45",
+        "task-000007-e28279196e",
+        "task-000008-0cb7fc7802",
+        "task-000009-7c73a3d77f",
+        "task-000010-0f3c3b25bd"
+      ],
+      "valid_task_ids": [
+        "task-000001-87fbece76a",
+        "task-000002-b4b91cfdef",
+        "task-000003-8cf5d1c909",
+        "task-000004-b057985cb4",
+        "task-000005-3cc1b0801a",
+        "task-000006-3fc3ab1d45",
+        "task-000007-e28279196e",
+        "task-000008-0cb7fc7802",
+        "task-000009-7c73a3d77f",
+        "task-000010-0f3c3b25bd"
+      ]
+    },
+    "tb21": {
+      "planned": 10,
+      "attempted": 10,
+      "valid_scored": 3,
+      "agent_failed": 2,
+      "infrastructure_failed": 5,
+      "not_started": 0,
+      "judge_official": true,
+      "task_ids": [
+        "openssl-selfsigned-cert",
+        "modernize-scientific-stack",
+        "qemu-alpine-ssh",
+        "qemu-startup",
+        "train-fasttext",
+        "winning-avg-corewars",
+        "financial-document-processor",
+        "torch-tensor-parallelism",
+        "regex-chess",
+        "build-pov-ray"
+      ],
+      "valid_task_ids": ["openssl-selfsigned-cert", "modernize-scientific-stack", "qemu-startup"],
+      "agent_failed_task_ids": ["winning-avg-corewars", "regex-chess"],
+      "infrastructure_failed_task_ids": [
+        "qemu-alpine-ssh",
+        "train-fasttext",
+        "financial-document-processor",
+        "torch-tensor-parallelism",
+        "build-pov-ray"
+      ],
+      "failure_causes": {
+        "reasoning_only_output_limit": ["winning-avg-corewars", "regex-chess"],
+        "native_deadline_then_unacknowledged_cancel": ["qemu-alpine-ssh"],
+        "native_3600s_deadline_during_serial_training": ["train-fasttext"],
+        "supervisor_hardcodes_missing_system_python3": [
+          "financial-document-processor",
+          "torch-tensor-parallelism"
+        ],
+        "setup_360s_deadline_waiting_compose_container_lookup": ["build-pov-ray"]
+      }
+    },
+    "jobbench": {
+      "planned": 10,
+      "attempted": 10,
+      "valid_scored": 6,
+      "agent_failed": 3,
+      "infrastructure_failed": 1,
+      "not_started": 0,
+      "judge_official": false,
+      "judge_note": "DeepSeek Judge; diagnostic and not directly comparable to an official Judge score",
+      "task_ids": [
+        "biostatisticians/task1",
+        "bookkeeping_accounting_and_auditing_clerks/task1",
+        "civil_engineers/task1",
+        "computer_and_information_research_scientists/task1",
+        "computer_and_information_systems_managers/task1",
+        "computer_user_support_specialists/task1",
+        "court_clerks/task1",
+        "data_entry_keyers/task1",
+        "financial_managers_branch_or_department/task1",
+        "human_resources_specialists/task1"
+      ],
+      "valid_task_ids": [
+        "biostatisticians/task1",
+        "bookkeeping_accounting_and_auditing_clerks/task1",
+        "computer_and_information_systems_managers/task1",
+        "computer_user_support_specialists/task1",
+        "court_clerks/task1",
+        "human_resources_specialists/task1"
+      ],
+      "agent_failed_task_ids": [
+        "civil_engineers/task1",
+        "data_entry_keyers/task1",
+        "financial_managers_branch_or_department/task1"
+      ],
+      "infrastructure_failed_task_ids": ["computer_and_information_research_scientists/task1"],
+      "failure_causes": {
+        "reasoning_only_output_limit": [
+          "data_entry_keyers/task1",
+          "financial_managers_branch_or_department/task1"
+        ],
+        "reasoning_only_output_limit_plus_false_rate_limit_label": ["civil_engineers/task1"],
+        "compose_up_failed_before_agent_setup": ["computer_and_information_research_scientists/task1"]
+      }
+    },
+    "workspacebench_lite": {
+      "planned": 10,
+      "attempted": 1,
+      "valid_scored": 0,
+      "agent_failed": 0,
+      "infrastructure_failed": 1,
+      "not_started": 9,
+      "judge_official": false,
+      "judge_note": "Workspace Judge was diagnostic in the prepared run; no legal score was produced",
+      "task_ids": ["3", "7", "13", "15", "23", "33", "35", "37", "38", "44"],
+      "infrastructure_failed_task_ids": ["3"],
+      "not_started_task_ids": ["7", "13", "15", "23", "33", "35", "37", "38", "44"],
+      "failure_causes": {
+        "remote_docker_upload_failed_before_cli_model_execution": ["3"]
+      }
+    }
+  },
+  "identity_summary": {
+    "valid_scored_by_execution_identity": {
+      "prior_editable_phase2": 17,
+      "venv_fix_wheel": 2,
+      "provider_timeout_fix_wheel": 4,
+      "managed_python_fixed_wheel": 6
+    },
+    "attempted_by_execution_identity": {
+      "prior_editable_phase2": 17,
+      "venv_fix_wheel": 2,
+      "provider_timeout_fix_wheel": 4,
+      "managed_python_fixed_wheel": 18
+    },
+    "not_started_planned_identity": 9,
+    "identity_caveat": "The 17 prior_editable_phase2 scores are retained legal scores but did not run from an isolated Harbor wheel. The nine not_started rows have no runtime identity and must not be counted as attempts."
+  },
+  "result_policy": {
+    "valid_scored": "Agent exited successfully and the verifier produced a legal reward; reward 0 is still a valid score.",
+    "agent_failed": "Agent/CLI error or nonzero exit; any verifier output is excluded from valid scoring.",
+    "infrastructure_failed": "Environment, transfer, lifecycle, timeout, or cleanup error; no synthetic reward is assigned.",
+    "not_started": "No model dispatch occurred."
+  }
+}

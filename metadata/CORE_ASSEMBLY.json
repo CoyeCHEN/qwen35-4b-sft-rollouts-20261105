@@ -1,0 +1,7 @@
+{
+  "sft_base_commit": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42",
+  "production_sft_runtime_sha256": "293ba2a7dca8569bb39e11bc0137a0e1180a0391402f10d49ff5b4ad00ce6c93",
+  "harbor_commit": "5ff23f631822aee52dd69febcbae279c5d777303",
+  "private_harness_source_included": false,
+  "private_harness_wheels_included": false
+}

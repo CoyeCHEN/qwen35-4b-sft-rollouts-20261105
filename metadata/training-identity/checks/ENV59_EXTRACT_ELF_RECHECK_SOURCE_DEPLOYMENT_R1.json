@@ -1,0 +1,56 @@
+{
+  "at": 1793638626.520221,
+  "passed": true,
+  "archive_sha256": "4f7edbd5a7ee174a4c80d9dc4ba318e9136d7b3e21d87a0f60bb8aaceb4f1bc8",
+  "candidate_index_sha256": "b3398a8730f7e08e77f7ebc2b773f71bf999778ce11ec8d4149fab19fa5a6aa4",
+  "rows": [
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/EXECUTION_RELEASE_R1.json",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/extract-elf-recheck-r1/EXECUTION_RELEASE_R1.json",
+      "sha256": "60272e7b9f1e009fc986034828dc6455d97549d53585ea7cebcadcb4ceac0cde",
+      "bytes": 23653,
+      "member": "files/0"
+    },
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/PLAN_R1.json",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/extract-elf-recheck-r1/PLAN_R1.json",
+      "sha256": "ecfc1b9c12ddcb5ca09ae72677b4592ef475d9f8c7391b996565af561b951385",
+      "bytes": 1613,
+      "member": "files/1"
+    },
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/audit-env-preflight59-native18-r2.py",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/audit-env-preflight59-native18-r2.py",
+      "sha256": "965dddd3259948660949ebedb61ee65e78fdf61858ba9da3355518b0623e4d94",
+      "bytes": 5618,
+      "member": "files/2"
+    },
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/cleanup-env59-extract-elf18-r1.py",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/cleanup-env59-extract-elf18-r1.py",
+      "sha256": "a858d1a75242c885969ab7a6da7b86c097fc57b845409fe06992b8810cab46d0",
+      "bytes": 4705,
+      "member": "files/3"
+    },
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/env-preflight59-phase18-r2.py",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/env-preflight59-phase18-r2.py",
+      "sha256": "fc8315eba1d376ca53655d58dea984a8ba65d184bd47abe2269cb2c3b75dcaab",
+      "bytes": 7579,
+      "member": "files/4"
+    },
+    {
+      "local_path": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-extract-elf-recheck-candidate-r1/run-env59-extract-elf-recheck18-r1.py",
+      "destination_node": "18",
+      "destination_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-env59-extract-elf-recheck18-r1.py",
+      "sha256": "5827b169ed14fb18559d84eff2dfa4ee5a692735e1a292fe955df59f135cce3f",
+      "bytes": 5083,
+      "member": "files/5"
+    }
+  ]
+}

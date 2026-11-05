@@ -1,0 +1,138 @@
+"""Readonly9-task E3n1 versus all3 E5 trials; no model/recipe selection."""
+import hashlib
+import importlib
+import json
+from pathlib import Path
+import time
+inspect_trial=importlib.import_module('audit-native-response-qualification-r1').inspect_trial
+from audit_trial_behavior_new772_r3 import analyze_behavior
+
+R=Path('/home/chenkeyi/.local/share/harbor-rsi/qwen35-new772-tb21-20261101')
+aggregate=importlib.import_module('compare-formal801-readonly-r7').aggregate
+EXPECTED_PREREG='472afd0e83e7bbcf748f8d5c5e6a04494774b45aea44052cef11bf03f0bc0434'
+EXPECTED_FORMAL='ca38c348707a111d7583114c4f222102194e46fb6343ebe16024d7079fab4b16'
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def read(p):return json.loads(p.read_text())
+def save(p,v):
+    tmp=p.with_name(p.name+'.tmp');tmp.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n');tmp.replace(p)
+
+
+def e3_directory(stage,task,original):
+    if stage!='new-m1':return original
+    proof=R/'manifests/E3_ORIGINAL_UNSTARTED_ACTUAL_NATIVE_TRIALS_R1.json'
+    if not proof.exists():return original
+    manifest=read(proof)
+    assert manifest['original_started_trials_rerun']==0
+    if task not in manifest['original_unstarted_tasks']:return original
+    selected=[x for x in manifest['actual_trials']if Path(x['task']['path']).name==task]
+    assert len(selected)==1
+    target=Path(manifest['native_continuation_job'])/selected[0]['trial_name']
+    assert not original.exists(), 'An original attempted task must never be redirected'
+    return target
+
+
+def interrupted_terminal(stage,task,directory):
+    if stage!='new-m1'or task not in ['regex-log','chess-best-move']:return None
+    failure=R/'checks/E3_NATIVE_CONTROLLER_OOM_SNAPSHOT_R1.json'
+    if not failure.exists():return None
+    snapshot=read(failure)
+    original=[x for x in snapshot['original_completed_results']if x['task']==task]
+    assert len(original)==1 and original[0]['result_exists']is False
+    assert sha(directory/'config.json')==original[0]['original_config_sha256']
+    root=R/'recovery/e3-controller-oom-20261102-r1'/task
+    marker=root/('RAW_RECORDER_VALIDATION.json'if task=='regex-log'else'ORIGINAL_ORPHAN_AGENT_CLOSED_AND_ARCHIVED.json')
+    if not marker.exists():return None
+    return dict(row_kind='DERIVED_CONTROLLER_INTERRUPTION_WITHOUT_NATIVE_RESULT',
+        task_id=task,trial_name=directory.name,trial_path=str(directory),trial_id=None,
+        native_result_exists=False,result_sha256=None,reward=None,
+        raw_official_score_valid=False,valid_score=False,protocol_issues=['native_controller_oom_missing_result'],
+        trajectory_complete=False,normal_close=False,exception_type='ControllerOOMInterrupted',
+        tool_argument_invalid=0,infrastructure_errors=['native_controller_oom'],failure_phase='controller',
+        diagnostic_exclusion_reason='UNKNOWN_CONTROLLER_OOM_INTERRUPTED',
+        stage=stage,epoch=3,repetition=1,original_config_sha256=sha(directory/'config.json'),
+        original_oom_snapshot_sha256=sha(failure),closure_evidence_sha256=sha(marker),
+        no_native_trial_uuid_or_reward_invented=True)
+
+
+def main():
+    prereg=R/'manifests/EPOCH3_DIAGNOSTIC_PREREGISTRATION.json';formal=R/'manifests/FORMAL_801_TRIAL_PLAN.json'
+    if sha(prereg)!=EXPECTED_PREREG or sha(formal)!=EXPECTED_FORMAL:raise ValueError('Preregistered comparison membership changed')
+    tasks=read(prereg)['tasks'];plan=read(formal)['trials']
+    if len(tasks)!=9 or len(set(tasks))!=9:raise ValueError('Expected exactly9 preregistered diagnostic tasks')
+    source_identity={n:sha(R/'scripts'/n)for n in ['audit-native-response-qualification-r1.py','audit-native-context-accounting-r2.py','eval_audit_new772.py','audit_trial_behavior_new772_r3.py','compare-formal801-readonly-r7.py']}
+    cache=R/'checks/EPOCH3_VS_EPOCH5_ROWS_R6.jsonl'
+    existing={r['trial_path']:r for r in(json.loads(line)for line in cache.open())}if cache.exists()else{}
+    rows=[];comparisons={};identities=set()
+    for stage in ['new-m1','new-m2']:
+        wanted={x['trial_name']:x for x in plan if x['task_id']in tasks and x['model_name']=='openai/qwen35-new772-'+stage+'-e5'}
+        if len(wanted)!=27:raise ValueError('Use all3 E5 trials on all9 tasks; no best-trial selection')
+        e3_job=R/'jobs'/('qwen35-new772-'+stage+'-epoch3-fixed-diagnostic')
+        e3_wanted={t+'__'+stage+'-e3-fixed-r1':dict(task_id=t,repetition=1)for t in tasks}
+        groups={3:[],5:[]}
+        for epoch,job,scope in [(3,e3_job,e3_wanted),(5,R/'jobs/qwen35-new772-tb21-n3',wanted)]:
+            for name,identity in scope.items():
+                directory=job/name
+                if epoch==3:directory=e3_directory(stage,identity['task_id'],directory)
+                result=directory/'result.json'
+                if not result.exists():
+                    interrupted=interrupted_terminal(stage,identity['task_id'],directory)if epoch==3 else None
+                    if interrupted:
+                        interrupted['comparison_audit_sources']=source_identity
+                        rows.append(interrupted);groups[epoch].append(interrupted)
+                    continue
+                configuration=read(directory/'config.json')
+                if configuration['agent']['kwargs']['wheel_sha256']!='1d27eef1ca6696275f306d8c653f7a266a4c7aea7321f0d47fd01b739c27fa18':raise ValueError('Comparable E3/E5 must actually use the same repaired wheel')
+                key=str(directory);row=existing.get(key)
+                if row:
+                    if row['result_sha256']!=sha(result)or row['comparison_audit_sources']!=source_identity:
+                        raise ValueError('Preserve changed Results or old analysis source; create a new derived version')
+                else:
+                    row=inspect_trial(directory)
+                    try:row['behavior']=analyze_behavior(directory)
+                    except Exception as error:row['behavior_audit_error']=repr(error)
+                    row.update(trial_path=key,comparison_audit_sources=source_identity,stage=stage,epoch=epoch,
+                        repetition=identity['repetition'])
+                if row['task_id']!=identity['task_id']or row['trial_id']in identities:raise ValueError('Comparison Task/Trial identity differs')
+                identities.add(row['trial_id']);rows.append(row);groups[epoch].append(row)
+        e3=aggregate(groups[3],9);e5=aggregate(groups[5],27)
+        for epoch,stats in [(3,e3),(5,e5)]:
+            stats['native_results']=sum(x.get('native_result_exists',True)for x in groups[epoch])
+            stats['controller_interrupted_without_native_result']=sum(not x.get('native_result_exists',True)for x in groups[epoch])
+        comparisons[stage]=dict(epoch3_n1=e3,epoch5_all3_trials=e5,
+            epoch5_rounds={str(i):aggregate([x for x in groups[5]if x['repetition']==i],9)for i in (1,2,3)},
+            complete=e3['terminal']==9 and e5['terminal']==27,
+            per_task={task:{'epoch'+str(epoch):[dict(trial_id=x['trial_id'],repetition=x['repetition'],reward=x['reward'],
+                native_result_exists=x.get('native_result_exists',True),official_score_valid=x['raw_official_score_valid'],protocol_valid=x['valid_score']and not x['protocol_issues']and not x.get('audit_error'),
+                normal_complete=x['trajectory_complete'],timeout=x['exception_type']=='AgentTimeoutError',
+                length_calls=(x.get('model_stop_reasons')or{}).get('length',0))for x in groups[epoch]if x['task_id']==task]
+                for epoch in (3,5)}for task in tasks})
+    temp=cache.with_name(cache.name+'.tmp');temp.write_text(''.join(json.dumps(x)+'\n'for x in rows));temp.replace(cache)
+    result=dict(checked_at=time.time(),preregistration_sha256=sha(prereg),formal_plan_sha256=sha(formal),
+        complete=all(x['complete']for x in comparisons.values()),models=comparisons,
+        different_doses_and_denominators=True,
+        epoch3_wheel_sha256='1d27eef1ca6696275f306d8c653f7a266a4c7aea7321f0d47fd01b739c27fa18',
+        epoch5_wheel_sha256='1d27eef1ca6696275f306d8c653f7a266a4c7aea7321f0d47fd01b739c27fa18',
+        same_repaired_harness_required=True,old_r4_diagnostics_excluded=True,epoch5_preselected=True,paired_seed_claimed=False,
+        all3_epoch5_trials_used=True,no_additional_trials_dispatched=True,raw_evidence_unchanged=True,
+        unresolved_terminal_tool_identity_response_is_unknown=True,previous_derived_r4_preserved=True,previous_derived_r5_preserved=True,
+        original_unstarted_continuation_only=True,original_oom_unknown_without_invented_native_result=True,
+        rows_sha256=sha(cache),audit_sources=source_identity,source_sha256=sha(Path(__file__)))
+    path=R/'checks/EPOCH3_VS_EPOCH5_COMPARISON_R6.json';save(path,result)
+    lines=['# Epoch3 / Epoch5 预登记9题比较','',
+        '本表仅使用R5修复版Harness重新评测的E3，以及相同R5的正式E5结果。旧R4诊断独立保留，不进入可比成绩。','',
+        'E3每题一次，E5使用正式n=3中同9题的全部三次；两组训练剂量、样本量不同，不声称配对Seed。Epoch5预先指定，不据此选Checkpoint或改配方。','',
+        '| 模型 | 阶段 | 终态/分母 | 已确认Reward成功 | 固定分母成功率 | 评分及协议覆盖 | 正常完整成功 | Timeout | length调用 | Thinking重复块比例 |',
+        '|---|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+    for stage,values in comparisons.items():
+        for label,key,den in [('E3 n1','epoch3_n1',9),('E5 n3','epoch5_all3_trials',27)]:
+            v=values[key];rate=f"{v['confirmed_mean_single_trial_success_fixed_denominator']:.2%}"if v['terminal']else'待执行'
+            repetition=v['thinking_repeated_block_fraction'];repetition='暂无可测记录'if repetition is None else f'{repetition:.2%}'
+            lines.append(f"| {stage} | {label} | {v['terminal']}/{den} | {v['confirmed_reward_successes']} | {rate} | {v['coverage']:.2%} | {v['normal_complete_successes']} | {v['agent_timeouts']} | {v['length_calls']} | {repetition} |")
+    lines+=['','E3控制器OOM导致的两个缺原生Result记录仅以明确的派生UNKNOWN表示；trial_id为null，不伪造UUID、Result或Reward。原未启动5题使用冻结接续映射，不重跑已开始题。原始R5表保留。UNKNOWN保留；原生SSE缺工具身份且根因未明的终止单列UNKNOWN，原Reward和R4派生表保留。结果未齐时固定分母确认率为下界，0条终态不当作模型零分。Thinking重复为预登记的单次调用内128字符块统计，工具重复同样只是观察代理，不证明语义上无进展。',
+        '',f'完整比较JSON SHA：`{sha(path)}`；派生行SHA：`{sha(cache)}`。']
+    (R/'reports').mkdir(exist_ok=True)
+    (R/'reports/EPOCH3_VS_EPOCH5_DIAGNOSTIC_R6.md').write_text('\n'.join(lines)+'\n')
+    print(json.dumps(dict(complete=result['complete'],terminal_comparison_rows=len(rows),expected_rows=72,actual_new_trials=0)))
+
+
+if __name__=='__main__':main()

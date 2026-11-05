@@ -1,0 +1,88 @@
+{
+  "at": 1793805183.2710335,
+  "references": {
+    "trl-current": {
+      "repo": "huggingface/trl",
+      "commit": "fa0a9a0a9337c9634026b821173979c0e9c032f9",
+      "kind": "current main pinned, not assumed correct",
+      "tree_sha": "fa0a9a0a9337c9634026b821173979c0e9c032f9"
+    },
+    "ms-swift-current": {
+      "repo": "modelscope/ms-swift",
+      "commit": "9853e4672d014e35e2b6ba1bfd26d8204100adbb",
+      "kind": "current main pinned, not assumed correct",
+      "tree_sha": "9853e4672d014e35e2b6ba1bfd26d8204100adbb"
+    },
+    "transformers-current": {
+      "repo": "huggingface/transformers",
+      "commit": "4abc4e580a2252b2e7a1a86810ed337784f8942b",
+      "kind": "current main pinned, not assumed correct",
+      "tree_sha": "4abc4e580a2252b2e7a1a86810ed337784f8942b"
+    },
+    "vllm-current": {
+      "repo": "vllm-project/vllm",
+      "commit": "e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968",
+      "kind": "current main pinned, not assumed correct",
+      "tree_sha": "e4991c1feb8ce6a11c3fa7e9d63974ee3fe25968"
+    },
+    "sglang-current": {
+      "repo": "sgl-project/sglang",
+      "commit": "fd19cfb660f42bd3ceb6df7598bd343572e30d2c",
+      "kind": "current main pinned, not assumed correct",
+      "tree_sha": "fd19cfb660f42bd3ceb6df7598bd343572e30d2c"
+    },
+    "transformers-train580": {
+      "repo": "huggingface/transformers",
+      "commit": "049d2bf1220747b6d39e2a978b9f5fe0defa1dca",
+      "requested_ref": "v5.8.0",
+      "kind": "actual production version public counterpart",
+      "tree_sha": "049d2bf1220747b6d39e2a978b9f5fe0defa1dca"
+    },
+    "transformers-serve530": {
+      "repo": "huggingface/transformers",
+      "commit": "aad13b87ed59f2afcfaebc985f403301887a35fc",
+      "requested_ref": "v5.3.0",
+      "kind": "actual production version public counterpart",
+      "tree_sha": "aad13b87ed59f2afcfaebc985f403301887a35fc"
+    },
+    "llamafactory-production": {
+      "repo": "hiyouga/LLaMA-Factory",
+      "commit": "c683e59edd8f893abc5e1403184a1d0644817d2a",
+      "requested_ref": "c683e59edd8f893abc5e1403184a1d0644817d2a",
+      "kind": "actual production version public counterpart",
+      "tree_sha": "c683e59edd8f893abc5e1403184a1d0644817d2a"
+    },
+    "sglang-production-base": {
+      "repo": "sgl-project/sglang",
+      "commit": "1519acf37c23f2189adb93f57ca9cd2db1bebf18",
+      "requested_ref": "v0.5.10",
+      "kind": "actual production version public counterpart",
+      "tree_sha": "1519acf37c23f2189adb93f57ca9cd2db1bebf18"
+    },
+    "trl-production024": {
+      "repo": "huggingface/trl",
+      "commit": "04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45",
+      "requested_ref": "v0.24.0",
+      "kind": "actual production version public counterpart",
+      "tree_sha": "04fd1203af4fc1e629f58e0ac0d0c5bb95f82a45"
+    },
+    "trl-fix6363": {
+      "repo": "huggingface/trl",
+      "commit": "3c21c2844c114d3e9676ed812d4e558298618086",
+      "merged": true,
+      "merge_commit": "63b7c3f547d3e06d0eae72712e36b7b64e9d5a45",
+      "base_commit": "1925183c91852c30088ed8ad53181e7b7147489e",
+      "kind": "specified bugfix exact PR head, merging status explicit",
+      "tree_sha": "3c21c2844c114d3e9676ed812d4e558298618086"
+    },
+    "swift-fix10259": {
+      "repo": "modelscope/ms-swift",
+      "commit": "0d75a91a8e4e498e983022c260f99d624328604e",
+      "merged": false,
+      "merge_commit": "361aca397018e7b0ef249b532c4dbefa73913de2",
+      "base_commit": "dbc395ff028efa4fb8510bfe2d7f7fcc28fd2344",
+      "kind": "specified bugfix exact PR head, merging status explicit",
+      "tree_sha": "0d75a91a8e4e498e983022c260f99d624328604e"
+    }
+  }
+}

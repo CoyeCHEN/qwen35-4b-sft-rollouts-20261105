@@ -1,0 +1,20 @@
+{
+  "status": "CPU_VALIDATED_PORTABLE_CANDIDATE_NOT_DEPLOYED",
+  "harbor_fault_tests": 40,
+  "sft_tests": 48,
+  "sft_skipped": 1,
+  "sft_subtests": 24,
+  "current_main_recorder_contract": "PASS",
+  "current_zym_recorder_contract": "PASS",
+  "candidate_gpu_sft_rerun": "NOT_RUN_INTENTIONALLY",
+  "candidate_new_remote_docker_gpu_full_acceptance": "NOT_RUN",
+  "production_trials_modified": 0,
+  "production_terminal_trials_rerun": 0,
+  "new_harness_wheel_deployed": false,
+  "type_check_scope": "Harbor example source with unresolved external runtime imports excluded; SFT three stdlib entrypoints at Python 3.12",
+  "source_training_gate": "historical actual checkpoints and state proofs reused; no retraining",
+  "actual_installed_base_candidate_adapter_cpu": "PASS",
+  "adapter_typecheck_baseline_diagnostics": 15,
+  "adapter_typecheck_new_diagnostics": 0,
+  "full_project_typecheck": "NOT_CLAIMED"
+}

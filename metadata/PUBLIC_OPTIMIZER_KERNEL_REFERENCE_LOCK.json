@@ -1,0 +1,104 @@
+{
+  "at": 1793813347.8861916,
+  "references": [
+    {
+      "package": "deepspeed-production",
+      "repo": "microsoft/DeepSpeed",
+      "tag": "v0.19.8",
+      "commit": "0eb3a8bcc6d9a8775478e5377482c4bf2dd23c1c",
+      "prefix": "deepspeed/",
+      "tree_sha": "0eb3a8bcc6d9a8775478e5377482c4bf2dd23c1c",
+      "files": [
+        {
+          "path": "deepspeed/runtime/zero/stage3.py",
+          "git_blob": "cb633e47d6bbb2f84a185867da5300810f7205bb",
+          "sha256": "4ff3fdb4cbabaddfeaa866e43785b49a69cdfe35db4e0ceda6f1b432b6fbf9d7"
+        },
+        {
+          "path": "deepspeed/runtime/engine.py",
+          "git_blob": "cce72e6e6cf8dcf7c1017848513126a9994e01e5",
+          "sha256": "e35eaa313874d2b3bd5bc9169dad35405819df2dfb1e7abdffa0c2f03db36c75"
+        }
+      ],
+      "status": "PINNED"
+    },
+    {
+      "package": "accelerate-production",
+      "repo": "huggingface/accelerate",
+      "tag": "v1.11.0",
+      "commit": "9a81156b4b46943fa64d098701c48c98c5f20243",
+      "prefix": "src/accelerate/",
+      "tree_sha": "9a81156b4b46943fa64d098701c48c98c5f20243",
+      "files": [
+        {
+          "path": "src/accelerate/utils/deepspeed.py",
+          "git_blob": "22db891c63d9bd48691acd87a15a206c270017a9",
+          "sha256": "82dfa3c0ea4eb51b3a378b2886e48ed88df1d6a2e83bab986239cfacaa7a664e"
+        },
+        {
+          "path": "src/accelerate/accelerator.py",
+          "git_blob": "fadd03b3314ec04ecdfc195d136a70ae6d03d32f",
+          "sha256": "d8d685282f6bee8a7d1b8ad3da4b6d17114f08fbe3fe01dea621b60c84c82fcb"
+        }
+      ],
+      "status": "PINNED"
+    },
+    {
+      "package": "liger-production",
+      "repo": "linkedin/Liger-Kernel",
+      "tag": "v0.8.4",
+      "commit": "43293d84d760e402e4fd974b12410a1d47c31761",
+      "prefix": "src/liger_kernel/",
+      "tree_sha": "43293d84d760e402e4fd974b12410a1d47c31761",
+      "files": [
+        {
+          "path": "src/liger_kernel/transformers/model/qwen3_5.py",
+          "git_blob": "00262ef0518881d7aca210f3bee4232bd007b4aa",
+          "sha256": "92d31ebf4ab96f440f57c562290fa3fd68343006b3d6d83d289f205b7e855841"
+        },
+        {
+          "path": "src/liger_kernel/transformers/model/loss_utils.py",
+          "git_blob": "508b3583d11d479df68dcec8e6ad82463b02a21e",
+          "sha256": "c62333897c1beb189d747c0cda760c8a5c647c61ba9c14d08cdcd68908769495"
+        },
+        {
+          "path": "src/liger_kernel/transformers/rms_norm.py",
+          "git_blob": "ed6123cc68e9597435f539db87e7215f10068c77",
+          "sha256": "840f9a59fb810f16ff15d70c12a0e6fe17dabf61671c554d2ddb972349223140"
+        },
+        {
+          "path": "src/liger_kernel/ops/fused_linear_cross_entropy.py",
+          "git_blob": "0dd376db3a5d9dd83d36d7e548b845fe3e17700c",
+          "sha256": "d6b7e171c1f3982c2d4baa70839101603be10380f558752a86b44dc6dfd8c024"
+        }
+      ],
+      "status": "PINNED"
+    },
+    {
+      "package": "fla-production",
+      "repo": "fla-org/flash-linear-attention",
+      "tag": "v0.5.2",
+      "commit": "9c8e42e762fce087c27b673af4922795d9edb85e",
+      "prefix": "fla/",
+      "tree_sha": "9c8e42e762fce087c27b673af4922795d9edb85e",
+      "files": [
+        {
+          "path": "fla/modules/fused_norm_gate.py",
+          "git_blob": "58c4deeec9cc7bac2f01ec4f546a81bbc340f043",
+          "sha256": "d8654c43cbea15799a9863ba0758f46b86c411285adf34c3c96735ef984d88d5"
+        },
+        {
+          "path": "fla/ops/gated_delta_rule/chunk.py",
+          "git_blob": "576278e92db520a22a8d5911b7f11067f519df1f",
+          "sha256": "fd4e01dc22a8c139c2a6eb61e47ae472a50322e4b4fff006cc5039a4602b310e"
+        },
+        {
+          "path": "fla/ops/gated_delta_rule/fused_recurrent.py",
+          "git_blob": "ca0c1edf2ad7332ae8af9647f0ea6e931fbc3ed5",
+          "sha256": "9c15dc68d37a150da5317431a51fe7def362264ac92770e32261c8557cd5889b"
+        }
+      ],
+      "status": "PINNED"
+    }
+  ]
+}

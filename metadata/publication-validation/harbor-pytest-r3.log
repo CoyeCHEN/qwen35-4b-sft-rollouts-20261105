@@ -1,0 +1,13 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-8.4.1, pluggy-1.7.0
+rootdir: /ssd/chenkeyi/qwen35-code-public-validation-20261105/source/harbor-rsi
+configfile: pyproject.toml
+asyncio: mode=Mode.AUTO, default_loop_scope=None
+collected 47 items
+
+tests/unit/test_remote_docker_provider.py ...........................    [ 57%]
+tests/unit/test_remote_docker_cancellation.py ...                        [ 63%]
+tests/unit/test_remote_docker_local_io.py ......                         [ 76%]
+tests/unit/test_remote_docker_probe_timeout.py ...........               [100%]
+
+============================== 47 passed in 0.83s ==============================

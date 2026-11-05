@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "at": 1793564374.340551,
+  "new_sources_sha256": {
+    "phase_progression18_r8.py": "49dad06fd4c36e09944ee34f205d7155548d8bbaac0358775562909163e188fb",
+    "run-native772-advance-r11.py": "ed88e8e66a1292e7a9989e90dbe3a4c61910d1612649832a415a73a370b25f1e",
+    "read-only-monitor18-r17.py": "45aae00636259c371d9ed2cda336cb764b99ebd731db041c705f7f052a40ce24"
+  },
+  "source_sha256": "068ca9f9aeeb291849993150944546aee3f6ccd899197f9b79d5cda50dd2d073",
+  "cases": [
+    {
+      "case": "terminal801_still_in_comparison_never_resumes",
+      "passed": true,
+      "existing_old_transitions_called": []
+    },
+    {
+      "case": "terminal801_without_strict_qualification_blocks",
+      "passed": true,
+      "existing_old_transitions_called": []
+    },
+    {
+      "case": "strictly_qualified_terminal801_enters_existing_old_transitions",
+      "passed": true,
+      "existing_old_transitions_called": [
+        "old4",
+        "old112"
+      ]
+    }
+  ],
+  "actual_gpu_or_model_calls": 0,
+  "actual_trial_dispatches": 0,
+  "mock_stage_actions_and_temp_output_only": true,
+  "actual_native_training_or_harbor_processes_unchanged": true,
+  "original_training_entry_differed_only_by_phase_import_and_deployment_identity": true,
+  "actual_all801_native_configs_equal_previous": true,
+  "actual_three_model_extended_protocol_admission_still_pending": true,
+  "native149_release_sha256": "b01b16fbfffb65e17353bb50737d6ee123d3f2356c1e044b837437ca674f995b",
+  "native149_activation_sha256": "69b4a92df78e3f848def680392017734f33842aa12d5c590bc542c57448f0916"
+}

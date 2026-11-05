@@ -1,0 +1,402 @@
+diff --git a/evaluation/docker/docker-compose.yaml b/evaluation/docker/docker-compose.yaml
+index 3ba00a1..6169f98 100644
+--- a/evaluation/docker/docker-compose.yaml
++++ b/evaluation/docker/docker-compose.yaml
+@@ -31,6 +31,12 @@ services:
+       - uv-cache:/root/.cache/uv
+       - npm-cache:/root/.npm
+       - openclaw-home:/root/.openclaw
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/tasks_lite:/workspace/Workspace-Bench/evaluation/tasks_lite:ro
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/filesys/chanpin_raw:/workspace/Workspace-Bench/evaluation/filesys/chanpin_raw:ro
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/filesys/kaifa_raw:/workspace/Workspace-Bench/evaluation/filesys/kaifa_raw:ro
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/filesys/research_raw:/workspace/Workspace-Bench/evaluation/filesys/research_raw:ro
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/filesys/yunying_raw:/workspace/Workspace-Bench/evaluation/filesys/yunying_raw:ro
++      - ${WORKSPACEBENCH_ASSET_EVAL:?Set WORKSPACEBENCH_ASSET_EVAL}/filesys/houqin_raw:/workspace/Workspace-Bench/evaluation/filesys/houqin_raw:ro
+ 
+   # This service is deliberately separate from the development runner above.
+   # run_isolated_benchmark.py creates one instance per task with `--rm`, so no
+@@ -74,6 +80,7 @@ services:
+       WORKSPACE_BENCH_DEEPAGENTS_SKILLS_DIR: /opt/workspace-bench/agent-homes/deepagents/.deepagents/skills
+       WORKSPACE_BENCH_DSH_SKILLS_DIR: /opt/workspace-bench/agent-homes/dsh/.dsh/skills
+       WORKSPACE_BENCH_TASK_STORAGE_QUOTA_MODE: ${WORKSPACE_BENCH_TASK_STORAGE_QUOTA_MODE:-docker-layer}
++      OPEN_HARNESS_SHARED_VENV: /opt/workspace-bench/openharness-state/venv
+       HOME: /tmp/home
+       XDG_CACHE_HOME: /tmp/cache
+       PIP_CACHE_DIR: /tmp/pip-cache
+@@ -82,6 +89,7 @@ services:
+       PYTHONDONTWRITEBYTECODE: "1"
+     volumes:
+       - ../..:/workspace/Workspace-Bench:ro
++      - openharness-state:/opt/workspace-bench/openharness-state
+     tmpfs:
+       - /tmp:rw,size=${WORKSPACE_BENCH_TASK_TMPFS:-20480m},mode=1777
+ 
+@@ -90,3 +98,4 @@ volumes:
+   uv-cache:
+   npm-cache:
+   openclaw-home:
++  openharness-state:
+diff --git a/evaluation/scripts/build_run_config.py b/evaluation/scripts/build_run_config.py
+index 62e8add..8a898d5 100755
+--- a/evaluation/scripts/build_run_config.py
++++ b/evaluation/scripts/build_run_config.py
+@@ -70,6 +70,7 @@ def _normalize_harness(value: str) -> str:
+     mapping = {
+         "codex": "Codex",
+         "openclaw": "OpenClaw",
++        "openharness": "OpenHarness",
+         "deepagent": "DeepAgent",
+         "claudecode": "ClaudeCode",
+         "claude-code": "ClaudeCode",
+@@ -231,7 +232,7 @@ def main() -> None:
+     parser.add_argument(
+         "--harness",
+         required=True,
+-        help="Codex, OpenClaw, DeepAgent, ClaudeCode, or DeepSeekHarness (dsh)",
++        help="Codex, OpenClaw, OpenHarness, DeepAgent, ClaudeCode, or DeepSeekHarness (dsh)",
+     )
+     parser.add_argument("--model", required=True, help="Model alias or custom model id")
+     parser.add_argument("--dataset", default="lite", choices=["smoke", "lite", "full"])
+diff --git a/evaluation/scripts/prepare_workdirs_for_run.py b/evaluation/scripts/prepare_workdirs_for_run.py
+index 952f481..ec960cf 100755
+--- a/evaluation/scripts/prepare_workdirs_for_run.py
++++ b/evaluation/scripts/prepare_workdirs_for_run.py
+@@ -1,5 +1,6 @@
+ #!/usr/bin/env python3
+ import argparse
++import json
+ import os
+ import re
+ import runpy
+@@ -56,8 +57,20 @@ def main() -> None:
+     if not task_path or not fs_map_file:
+         raise SystemExit("run config must include task_path and fs_map_file")
+ 
++    task_root = Path(task_path)
++    task_ids = cfg.get("task_ids")
++    selected_roles: set[str] = set()
++    for task_id in task_ids if isinstance(task_ids, list) else []:
++        metadata_path = task_root / str(task_id) / "metadata.json"
++        metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
++        role = str(metadata.get("file_system") or "").strip()
++        if role:
++            selected_roles.add(role)
++
+     os.environ["TASK_DIR"] = task_path
+     os.environ["FS_MAP_FILE"] = fs_map_file
++    if selected_roles:
++        os.environ["WORKSPACE_BENCH_ROLES"] = ",".join(sorted(selected_roles))
+     runpy.run_path(str(eval_root / "src" / "filesys_utils.py"), run_name="__main__")
+ 
+ 
+diff --git a/evaluation/scripts/run_isolated_benchmark.py b/evaluation/scripts/run_isolated_benchmark.py
+index 9915c1a..3f0615f 100644
+--- a/evaluation/scripts/run_isolated_benchmark.py
++++ b/evaluation/scripts/run_isolated_benchmark.py
+@@ -43,6 +43,16 @@ EVALUATION_ONLY_METADATA_KEYS = {
+ EVALUATION_ONLY_METADATA_PREFIXES = ("rubric_", "judge_", "ground_truth_")
+ 
+ 
++def _host_eval_path(path: str, eval_root: Path) -> Path:
++    """Map a path emitted in Docker back to the host checkout."""
++    candidate = Path(path)
++    try:
++        relative = candidate.relative_to(CONTAINER_EVAL_ROOT)
++    except ValueError:
++        return candidate
++    return eval_root / relative
++
++
+ def _safe_name(value: str) -> str:
+     return re.sub(r"[^A-Za-z0-9_.-]+", "-", str(value)).strip("-")[:48] or "task"
+ 
+@@ -102,8 +112,8 @@ def _split_benchmark_args(args: list[str]) -> tuple[list[str], list[str], str |
+     return base, requested_ids, persona, run_name or {"smoke": "Smoke", "lite": "Lite", "full": "Full"}[dataset]
+ 
+ 
+-def _selected_task_ids(eval_root: Path, *, dataset: str, requested: list[str], persona: str | None) -> list[str]:
+-    task_root = eval_root / ("tasks" if dataset == "full" else "tasks_lite")
++def _selected_task_ids(asset_eval_root: Path, *, dataset: str, requested: list[str], persona: str | None) -> list[str]:
++    task_root = asset_eval_root / ("tasks" if dataset == "full" else "tasks_lite")
+     if not task_root.is_dir():
+         raise SystemExit(f"task directory not found: {task_root}; download the selected dataset first")
+     metadata: list[dict[str, Json]] = []
+@@ -233,12 +243,13 @@ def _agent_visible_metadata(metadata: dict[str, Json]) -> dict[str, Json]:
+ def _prepare_agent_task_view(
+     eval_root: Path,
+     *,
++    asset_eval_root: Path,
+     dataset: str,
+     task_id: str,
+     view_token: str,
+ ) -> tuple[Path, dict[str, Json]]:
+     task_root_name = "tasks" if dataset == "full" else "tasks_lite"
+-    source_task_dir = eval_root / task_root_name / task_id
++    source_task_dir = asset_eval_root / task_root_name / task_id
+     metadata_path = source_task_dir / "metadata.json"
+     if not source_task_dir.is_dir() or not metadata_path.is_file():
+         raise SystemExit(f"task source not found: {source_task_dir}")
+@@ -300,11 +311,13 @@ def _prepare_container_output_mounts(
+     *,
+     hidden_root: Path,
+     runs_root: Path,
+-) -> tuple[Path, Path]:
++) -> tuple[Path, Path, Path]:
+     """Create bind-mount sources before Docker applies the read-only mask."""
+     empty_root = hidden_root / "empty"
++    empty_git_file = hidden_root / "empty.git"
+     hidden_output_root = hidden_root / "output"
+     empty_root.mkdir(parents=True, exist_ok=True)
++    empty_git_file.write_text("", encoding="utf-8")
+     (hidden_output_root / runs_root.name).mkdir(parents=True, exist_ok=True)
+ 
+     # The task container can run under a remapped UID (for example with
+@@ -312,7 +325,7 @@ def _prepare_container_output_mounts(
+     # so making the bind source writable does not expose other run results.
+     runs_root.mkdir(parents=True, exist_ok=True)
+     runs_root.chmod(0o777)
+-    return empty_root, hidden_output_root
++    return empty_root, empty_git_file, hidden_output_root
+ 
+ 
+ def _build_config(
+@@ -373,8 +386,16 @@ def main() -> int:
+     base_args, requested_ids, persona, run_name = _split_benchmark_args(raw_args)
+     dataset = str(_value_after(base_args, "--dataset", "lite") or "lite").lower()
+     eval_root = Path(__file__).resolve().parents[1]
++    asset_eval_root = Path(
++        os.environ.get("WORKSPACEBENCH_ASSET_EVAL", str(eval_root))
++    ).resolve()
+     compose_file = eval_root / "docker" / "docker-compose.yaml"
+-    task_ids = _selected_task_ids(eval_root, dataset=dataset, requested=requested_ids, persona=persona)
++    task_ids = _selected_task_ids(
++        asset_eval_root,
++        dataset=dataset,
++        requested=requested_ids,
++        persona=persona,
++    )
+     if not task_ids:
+         raise SystemExit("task selection is empty")
+     resources: dict[str, Json] = {
+@@ -437,22 +458,48 @@ def main() -> int:
+         view_token = f"{_safe_name(task_id)}-{uuid.uuid4().hex[:12]}"
+         agent_task_view, evaluation_metadata = _prepare_agent_task_view(
+             eval_root,
++            asset_eval_root=asset_eval_root,
+             dataset=dataset,
+             task_id=task_id,
+             view_token=view_token,
+         )
+         hidden_root = eval_root / ".generated" / "agent_task_views" / "_hidden" / view_token
+-        config = Path(config_path)
++        config = _host_eval_path(config_path, eval_root)
+         config_value = yaml.safe_load(config.read_text(encoding="utf-8"))
+         if not isinstance(config_value, dict):
+             raise SystemExit(f"invalid run config: {config}")
+-        output_dir = Path(str(config_value.get("output_dir") or ""))
++        output_dir = _host_eval_path(
++            str(config_value.get("output_dir") or ""), eval_root
++        )
+         runs_root = output_dir / (
+             f"{config_value.get('agent_name')}--"
+             f"{config_value.get('model_name')}--"
+             f"{config_value.get('run_name')}"
+         )
+-        empty_root, hidden_output_root = _prepare_container_output_mounts(
++        fs_map_path = _host_eval_path(
++            str(config_value.get("fs_map_file") or ""), eval_root
++        )
++        fs_map = json.loads(fs_map_path.read_text(encoding="utf-8"))
++        file_system = str(evaluation_metadata.get("file_system") or "")
++        work_dir_value = fs_map.get("work_dir", {}).get(file_system)
++        if not isinstance(work_dir_value, str) or not work_dir_value.strip():
++            raise SystemExit(
++                f"work directory mapping not found for task {task_id}: {file_system}"
++            )
++        work_dir_relative = Path(work_dir_value)
++        host_work_dir = (
++            work_dir_relative
++            if work_dir_relative.is_absolute()
++            else eval_root / work_dir_relative
++        )
++        container_work_dir = (
++            work_dir_relative
++            if work_dir_relative.is_absolute()
++            else CONTAINER_EVAL_ROOT / work_dir_relative
++        )
++        if not host_work_dir.is_dir():
++            raise SystemExit(f"prepared work directory not found: {host_work_dir}")
++        empty_root, empty_git_file, hidden_output_root = _prepare_container_output_mounts(
+             hidden_root=hidden_root,
+             runs_root=runs_root,
+         )
+@@ -492,7 +539,7 @@ def main() -> int:
+                     "ro",
+                 ),
+                 (
+-                    empty_root,
++                    empty_git_file,
+                     CONTAINER_REPO_ROOT / ".git",
+                     "ro",
+                 ),
+@@ -506,6 +553,11 @@ def main() -> int:
+                     CONTAINER_EVAL_ROOT / "output" / runs_root.name,
+                     "rw",
+                 ),
++                (
++                    host_work_dir,
++                    container_work_dir,
++                    "rw",
++                ),
+             ],
+         )
+         try:
+diff --git a/evaluation/src/agent_runner.py b/evaluation/src/agent_runner.py
+index 0622416..9ec125a 100644
+--- a/evaluation/src/agent_runner.py
++++ b/evaluation/src/agent_runner.py
+@@ -419,6 +419,14 @@ def _resolve_work_dir(meta: Dict[str, Json], fs_map: Dict[str, str]) -> str:
+     return str(fs_map.get("*") or "")
+ 
+ 
++def _copy2_portable(src: str, dst: str) -> None:
++    """Copy bytes even when a bind-mounted filesystem rejects copystat."""
++    try:
++        shutil.copy2(src, dst)
++    except PermissionError:
++        shutil.copyfile(src, dst)
++
++
+ def _copy_from_manifest(meta: Dict[str, Json], *, work_dir: str) -> List[str]:
+     created: List[str] = []
+     mp = meta.get("__metadata_path")
+@@ -433,15 +441,20 @@ def _copy_from_manifest(meta: Dict[str, Json], *, work_dir: str) -> List[str]:
+             continue
+         target_path = it.get("target_path")
+         stored_relpath = it.get("stored_relpath")
+-        if not isinstance(target_path, str) or not isinstance(stored_relpath, str):
++        filename = it.get("filename")
++        if not isinstance(stored_relpath, str):
+             continue
++        if not isinstance(filename, str) or not filename.strip():
++            filename = os.path.basename(stored_relpath.strip())
++        if not isinstance(target_path, str) or not target_path.strip():
++            target_path = filename
+         src = os.path.abspath(os.path.join(source_base, stored_relpath))
+         if not os.path.isfile(src):
+             continue
+         rel_target = _normalize_rel_path(target_path)
+         dst = os.path.abspath(os.path.join(work_dir, rel_target))
+         _ensure_dir(os.path.dirname(dst))
+-        shutil.copy2(src, dst)
++        _copy2_portable(src, dst)
+         created.append(dst)
+     return created
+ 
+@@ -725,7 +738,7 @@ def _copy_misplaced_outputs_to_target(
+         if os.path.abspath(dst) == os.path.abspath(src):
+             continue
+         _ensure_dir(os.path.dirname(dst))
+-        shutil.copy2(src, dst)
++        _copy2_portable(src, dst)
+         misplaced.append(
+             {
+                 "sourcePath": safe_rel,
+@@ -890,7 +903,7 @@ def _copy_outputs(*, output_paths: List[str], out_dir: str, preserve_root: Optio
+                 dst = os.path.join(out_abs, rel_dir, f"{b}_{i}{ext}")
+                 i += 1
+         _ensure_dir(os.path.dirname(dst))
+-        shutil.copy2(src, dst)
++        _copy2_portable(src, dst)
+         manifest.append(
+             {"sourcePath": rel, "outputPath": os.path.relpath(dst, out_dir).replace("\\", "/"), "sizeBytes": os.path.getsize(dst)}
+         )
+diff --git a/evaluation/src/filesys_utils.py b/evaluation/src/filesys_utils.py
+index c48f625..8db5449 100644
+--- a/evaluation/src/filesys_utils.py
++++ b/evaluation/src/filesys_utils.py
+@@ -1,6 +1,7 @@
+ from tqdm import tqdm
+ import os
+ import shutil
++import subprocess
+ import json
+ from pathlib import Path
+ import stat
+@@ -10,6 +11,21 @@ from typing import Callable, Tuple
+ 我们需要在每个任务完成后，回滚到任务开始前的文件系统状态结构。
+ """
+ 
++def _copytree_fast(src: Path, dst: Path) -> None:
++    """Use copy-on-write where available, then fall back to shutil."""
++    if dst.exists():
++        shutil.rmtree(dst)
++    dst.parent.mkdir(parents=True, exist_ok=True)
++    proc = subprocess.run(
++        ["cp", "-a", "--reflink=auto", f"{src}/.", str(dst)],
++        stdout=subprocess.PIPE,
++        stderr=subprocess.PIPE,
++        text=True,
++    )
++    if proc.returncode != 0:
++        shutil.copytree(src, dst)
++
++
+ def _chmod_writable(p: Path) -> None:
+     """
+     Best-effort: make path writable by current user so rollback can delete it.
+@@ -76,9 +92,7 @@ def make_filesys(raw_work_dir: str, standard_work_dir: str, role: str, task_dir:
+     if not tasks_root.is_dir():
+         raise NotADirectoryError(f"任务目录不是目录: {task_dir}")
+ 
+-    if standard_path.exists():
+-        shutil.rmtree(standard_path)
+-    shutil.copytree(raw_path, standard_path)
++    _copytree_fast(raw_path, standard_path)
+ 
+     standard_abs = standard_path.resolve()
+ 
+@@ -114,10 +128,10 @@ def make_filesys(raw_work_dir: str, standard_work_dir: str, role: str, task_dir:
+             filename = item.get("filename")
+             if not isinstance(stored_relpath, str) or not stored_relpath.strip():
+                 continue
+-            if not isinstance(target_path, str) or not target_path.strip():
+-                continue
+             if not isinstance(filename, str) or not filename.strip():
+                 filename = os.path.basename(stored_relpath.strip())
++            if not isinstance(target_path, str) or not target_path.strip():
++                target_path = filename
+             stored_relpath = stored_relpath.strip().replace("\\", "/").lstrip("/")
+             src = (task_path / stored_relpath).resolve()
+             if not str(src).startswith(str(task_path) + os.sep):
+@@ -159,6 +173,9 @@ def filesys_rollback(standard_work_dir: str, work_dir: str) -> None:
+ 
+     if not standard_path.exists():
+         return
++    if not work_path.exists():
++        _copytree_fast(standard_path, work_path)
++        return
+ 
+     # 收集标准目录中的所有文件和目录
+     standard_files = set()
+@@ -240,7 +257,19 @@ if __name__ == "__main__":
+     raw_work_dir = fs_map_all.get("raw_work_dir", {})
+     standard_work_dir = fs_map_all.get("standard_work_dir", {})
+     work_dir = fs_map_all.get("work_dir", {})
+-    roles = raw_work_dir.keys()
++    configured_roles = {
++        item.strip()
++        for item in os.environ.get("WORKSPACE_BENCH_ROLES", "").split(",")
++        if item.strip()
++    }
++    missing_roles = configured_roles.difference(raw_work_dir)
++    if missing_roles:
++        raise KeyError(f"Unknown workspace role(s): {sorted(missing_roles)}")
++    roles = [
++        role
++        for role in raw_work_dir
++        if not configured_roles or role in configured_roles
++    ]
+ 
+     for role in roles:
+ 

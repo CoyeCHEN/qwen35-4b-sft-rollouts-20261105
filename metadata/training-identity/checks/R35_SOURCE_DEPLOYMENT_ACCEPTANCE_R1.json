@@ -1,0 +1,96 @@
+{
+  "kind": "ROOT_MERGED_R35_LEASE_AND_ENVIRONMENT_WITH_STRICT_FUTURE_NATIVE_BOUNDARY_GATES",
+  "files": [
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/cold-old112-serving18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/cold-old112-serving18-r3.py",
+      "sha256": "3a7b6fe9d7ce601c93e67ef5f05af56de8d1fe81b0bdbc978d7b4cca62062f7b",
+      "bytes": 5308,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/old-four-after-selected267-phase18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old-four-after-selected267-phase18-r3.py",
+      "sha256": "bd3b8dddeeed32d0fbdabdd4c66838d2c69f5e5b62a3e5594d4646df3fb64dd6",
+      "bytes": 11526,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/old-four-complete-readouts-phase18-r2.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old-four-complete-readouts-phase18-r2.py",
+      "sha256": "81b479b0c10df40e63a47f616e8670733e89f69f97543a2abe2c53684dad83bb",
+      "bytes": 1564,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/old112-phase18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old112-phase18-r3.py",
+      "sha256": "11e3341ad29aeb7ac92a6af062fbf3df00c3f71646dd781fb20608c5e938731a",
+      "bytes": 9168,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/old443-phase-readouts18-r4.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old443-phase-readouts18-r4.py",
+      "sha256": "b749a8b301c156d0ff3d3ac2de9cea4991549bc62799d44118f12d545bff38ca",
+      "bytes": 3468,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/old443-readout18-r4.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old443-readout18-r4.py",
+      "sha256": "adb38397d4a76fcf868b331854a3d9a97662ab2c7e613c9483c9ff8650627146",
+      "bytes": 14812,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/read-only-monitor18-r32-campaign-scoped-native-observation.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/read-only-monitor18-r32-campaign-scoped-native-observation.py",
+      "sha256": "9022bf1edfe54fd770d6242cfb81dd0addae9743a4fad21874b604b1a42de5bc",
+      "bytes": 17257,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/read-priority32-gpu-leases149-r7.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/read-priority32-gpu-leases149-r7.py",
+      "sha256": "e535d928d12180b58f8ef28e09f83f9f4437c62bf73061d188c54e07fc13cc78",
+      "bytes": 22187,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/run-native772-advance-r35-env-repair.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-native772-advance-r35-env-repair.py",
+      "sha256": "208be9e47d10ae93c03d0e2d5758a7e1537bd8960d6b1b35bf0893e4d19d0a1b",
+      "bytes": 10644,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/start-priority32-cold-replicas18-r2.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/start-priority32-cold-replicas18-r2.py",
+      "sha256": "4d1981bef49a99dda7067cfaecc48962edaf5916e1e89ad263aaf519c718b9f5",
+      "bytes": 635,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r35-deployment-candidate-r1/winner267-phase18-r10.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/winner267-phase18-r10.py",
+      "sha256": "a77c28cf5806e48a448a1fb99f5b9fae3de93b29a8c878557f93b4b49b6e7195",
+      "bytes": 28867,
+      "mode": "0644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/detached-three-agent/r35-merged-gates-review-r1/INDEPENDENT_ROOT_MERGED_R35_GATE_REVIEW_R3.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/INDEPENDENT_ROOT_MERGED_R35_GATE_REVIEW_R3.json",
+      "sha256": "44a888a2efb0d978ecb5a7096a5b6afe93ba3355e1ca6299b3bb3999d8977f0a",
+      "bytes": 9525,
+      "mode": "0644"
+    }
+  ],
+  "current_native_workers_and_model_services_unchanged": true,
+  "original_framework_and_model_protocol_frozen": true,
+  "actual_dispatches_by_this_manifest": 0,
+  "at": 1793636258.707374,
+  "source_only": true,
+  "all_sha_match": true,
+  "archive_sha256": "3b1650536149e510e33510a8f77e0c12e503e55ccd09c6164866d4b79bd99e7f"
+}

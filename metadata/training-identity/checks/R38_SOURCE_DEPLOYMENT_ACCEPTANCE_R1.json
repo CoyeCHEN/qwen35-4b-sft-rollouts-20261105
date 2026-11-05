@@ -1,0 +1,126 @@
+{
+  "at": 1793643796.530082,
+  "passed": true,
+  "archive_sha256": "d79c2a36fde71a3930687d7f6da6d3b7e2caa7d12d2f086c6f76fe55aa2ffcd5",
+  "kind": "R38_REAL89_ENVIRONMENT_SHARED_PREPARATION_AND_ACTUAL_NATIVE_RUNTIME_GATES",
+  "parent_controller": "R37",
+  "new_files": [
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r38-deployment-candidate-r1/freeze-formal267-native-boundary18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/freeze-formal267-native-boundary18-r3.py",
+      "sha256": "6c941986ea87d9f964c8efc730de13bd6b3b986a2587d8ca20012cf974ee5398",
+      "mode": "0o644"
+    },
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r38-deployment-candidate-r1/old-four-complete-readouts-phase18-r4.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old-four-complete-readouts-phase18-r4.py",
+      "sha256": "84b767c4b38e3d91bca775b8216093b1bcc0925df985eb160aaeb21e2cbe25c1",
+      "mode": "0o644"
+    },
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r38-deployment-candidate-r1/run-native772-advance-r38-env-repair.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-native772-advance-r38-env-repair.py",
+      "sha256": "59e56ab4a1a685e7abc282e66cac13969d4cbbbd482f2f0b567d62eabba3908c",
+      "mode": "0o644"
+    },
+    {
+      "source": "runtime-evidence/qwen35-sft-772-node18-20261101/r38-deployment-candidate-r1/winner267-phase18-r13.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/winner267-phase18-r13.py",
+      "sha256": "a16bc186257e896ed9e1b36291fe418fef227325db40dd86d90fb5eadeb50efa",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-final-three-rechecks-candidate-r1/EXECUTION_RELEASE_R4.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/extract-elf-recheck-r1/EXECUTION_RELEASE_R4.json",
+      "sha256": "a87d07a2a80c6b43ce34ff0c4c43a33793f21420b8cb31a650004301b2d14bf2",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-final-three-rechecks-candidate-r1/PYPI_SERVER_NOP_ZERO_CLASSIFICATION_R1.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/classification-evidence/PYPI_SERVER_NOP_ZERO_CLASSIFICATION_R1.json",
+      "sha256": "b26923733612b56287af01c6becbd6bd7afb11ebaf9d30b2bfaf16cc912c5b24",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-final-three-rechecks-candidate-r1/PYPI_SERVER_ORIGINAL_DERIVED_FAIL_ROW_R1.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/classification-evidence/PYPI_SERVER_ORIGINAL_DERIVED_FAIL_ROW_R1.json",
+      "sha256": "0ba32a7af45ffea827b2c158f3355f73f161a69b2e3305bf556abb867f52dd5f",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-final-three-rechecks-candidate-r1/audit-env-preflight59-native18-r5.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/audit-env-preflight59-native18-r5.py",
+      "sha256": "20fc7664dd36d9c191e49a7a65e8fc4c8f558fac52ae7212aecbf91251919e44",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-final-three-rechecks-candidate-r1/env-preflight59-phase18-r5.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/env-preflight59-phase18-r5.py",
+      "sha256": "26f27e880298b90c5bffcc8a39fb57de2205c648201b37eb3b4ce9463209a5d5",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/selected267-pipeline-cache-r1/run-user-evaluation-native18-r6.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-native-eval-r1/scripts/run-user-evaluation-native18-r6.py",
+      "sha256": "422c7a7e6e71973a004b850b55ca7d68452a14ec07f3f284ebafc17dd21c9d79",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/selected267-pipeline-cache-r1/SELECTED267_PIPELINE_PUBLIC_CACHE_PLAN_R1.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/formal-native-eval-r1/manifests/SELECTED267_PIPELINE_PUBLIC_CACHE_PLAN_R1.json",
+      "sha256": "5db5cd8671c59269b703b3f97854704ca1a06054cc766ebc2185cfc669492c70",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/selected267-pipeline-cache-r1/run-selected267-pipeline-cache-nop18-r1.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-selected267-pipeline-cache-nop18-r1.py",
+      "sha256": "5bf2b79c6abbba3ad7e8b7e7e37d3b5fe4752252cab1d8dfe0c5a6d643cf1e50",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r1/freeze-old-readout-selected267-deployment18-r2.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/freeze-old-readout-selected267-deployment18-r2.py",
+      "sha256": "729576dc6e6ddfeef1448ef520da4a89462baa642235ca1e6eaa252c1f25e462",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r1/old112-phase18-r5.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old112-phase18-r5.py",
+      "sha256": "97fb8d99f76fe2eeb27a0a78042b6d6f3d47b86356e51a10aa9b8121706d55cf",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r1/OLD_READOUT_SELECTED267_EXPECTED_REMOTE_FILES_R2.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/OLD_READOUT_SELECTED267_EXPECTED_REMOTE_FILES_R2.json",
+      "sha256": "92ae0a22a0f80df1bbc6d801ec692be257c677000c0f89adf8fa856c0097164e",
+      "mode": "0o644"
+    }
+  ],
+  "verify_only": [
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-torch271-recheck-candidate-r1/cleanup-env59-torch27118-r1.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/cleanup-env59-torch27118-r1.py",
+      "sha256": "34185fb354d61de2092450563764b32d2a6fbce0bc4041fb382fbe27a5184ebb",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-torch271-recheck-candidate-r1/run-env59-torch271-recheck18-r1.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-env59-torch271-recheck18-r1.py",
+      "sha256": "b358076622137b07fca4c92da3740c3d61235b292ad5020edb3251c12e15881d",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-torch271-recheck-candidate-r1/PLAN_R1.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/torch271-recheck-r1/PLAN_R1.json",
+      "sha256": "ca6d483c2fdeca6470a4772931f507328ada487d188480126e5388113ac53362",
+      "mode": "0o644"
+    },
+    {
+      "source": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/common30-agent/env59-torch271-recheck-candidate-r1/EXECUTION_RELEASE_R1.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/environment-preflight59-r1/torch271-recheck-r1/EXECUTION_RELEASE_R1.json",
+      "sha256": "7c47a63c0b991e046a95e80799b74655014e7591a42ffddf94b0b968a313d33f",
+      "mode": "0o644"
+    }
+  ],
+  "model_requests_or_trial_attempts_or_healthy_workers_changed": false
+}

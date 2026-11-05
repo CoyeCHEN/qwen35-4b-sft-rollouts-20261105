@@ -1,0 +1,50 @@
+{
+  "status": "insufficient_for_m0_m1",
+  "source_revision": "harbor-rsi working source copy inspected 2026-10-14",
+  "training_groups": [
+    "harbor/extra-instruction-path",
+    "harbor/hello-workdir",
+    "harbor/hello-skills",
+    "harbor/hello-healthcheck",
+    "harbor/runtime-skill-merge"
+  ],
+  "candidates": [
+    {
+      "task_name": "reward-kit-example",
+      "task_id": "harbor/reward-kit-example",
+      "source_sha256": "5a623d577ba5c551a526d36810ac04c627e75aee35e9ed5df8dd7716fef8002e",
+      "canary_scan": "no match in task files excluding solution",
+      "resources": "CPU 1, 2G, 10G",
+      "verifier": "programmatic rewardkit",
+      "prior_status": "REVIEW_REQUIRED",
+      "reason": "previous teacher attempt ended with TemplateException before a valid Recorder trajectory"
+    },
+    {
+      "task_name": "separate-verifier-environment",
+      "task_id": "harbor/separate-verifier-environment",
+      "source_sha256": "9198071b04f8885f374c963e95adb93c966d72876e144e86b8bb53e2fab201c2",
+      "canary_scan": "no match in task files excluding solution",
+      "resources": "CPU 1, 2G, 10G, separate no-network verifier",
+      "verifier": "deterministic artifact checks",
+      "prior_status": "REVIEW_REQUIRED",
+      "reason": "previous attempt was cancelled before a usable trajectory; rerun would need a controlled infrastructure window"
+    },
+    {
+      "task_name": "llm-judge-example",
+      "task_id": "harbor/llm-judge-example",
+      "source_sha256": "e75b6dd5b48cbe725455271096b1e4e2f8686eb651f1e1ab48e2b09849ce2e6a",
+      "canary_scan": "no match in task files excluding solution",
+      "prior_status": "REVIEW_REQUIRED",
+      "reason": "LLM-judge reward is not deterministic enough for the first M0/M1 dev gate"
+    },
+    {
+      "task_name": "deepswe_tomlkit-toml-table-converters",
+      "task_id": "tomlkit-toml-table-converters",
+      "source_sha256": "3e5b1e77bb394ce5951b36a0a284de094c6f90f6a5cbcd56887ea07bc9409ffa",
+      "canary_scan": "no match in task files excluding solution",
+      "prior_status": "REVIEW_REQUIRED",
+      "reason": "8G image, network access, and up to 5400s agent budget exceed the low-cost smoke scope"
+    }
+  ],
+  "decision": "Do not report M0/M1 generalization until at least four candidates are rerun, independently frozen, and evaluated with the same serving protocol."
+}

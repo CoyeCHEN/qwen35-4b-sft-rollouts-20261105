@@ -61,3 +61,20 @@ a5f6cd5196935016897161f480606f206c84c24e83bf083a38abe54082290191
 运行链路：Harbor-RSI / OpenHarness；学生模型为Qwen3.5-4B的训练后Checkpoint。Terminal-Bench上游：[harbor-framework/terminal-bench](https://github.com/harbor-framework/terminal-bench)。
 
 任务、软件及第三方附件保留各自原始版权和许可证；本仓库不以统一许可证重新授权第三方内容。本数据是运行记录和故障诊断材料。
+
+
+## 全链路代码（2026-11-05 补充）
+
+已加入实际使用的数据处理、训练/恢复/HF导出、SGLang Serving、Harbor评测、远端运维及轨迹查看代码。**OpenHarness 本体和 Wheel 继续私有**，只发布版本/SHA/接口。
+
+- [完整源码与实际训练配置导航](docs/FULL_PIPELINE.zh-CN.md)
+- [环境、处理、训练、Serving、评测运行手册](docs/RUNBOOK.zh-CN.md)
+- [私有 Harness 依赖身份与安装边界](docs/PRIVATE_HARNESS_DEPENDENCY.md)
+- [公开前实际验证结果](docs/PUBLICATION_VALIDATION.md)
+- [SFT 源码](code/sft/) · [Harbor 源码](code/harbor-rsi/) · [数据处理](code/data-processing/) · [教师采集](code/teacher-collection/) · [Serving 实际模块](code/serving-installed-reference/) · [轨迹查看/打包](code/trajectory-review/)
+
+```bash
+python3 scripts/verify_source.py
+```
+
+源码快照保留真实版本和历史路径；运行完整链路仍需授权的 Harness 工件、模型、任务环境和训练数据。此次上传没有重新训练或派发评测，原 54 条 Release 保留。

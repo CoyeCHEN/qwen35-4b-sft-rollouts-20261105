@@ -1,0 +1,78 @@
+{
+  "kind": "R39_FROZEN_OLD112_R2_BINDING_ONLY",
+  "parent_index_sha256": "a9611e139850749f62c838d2cf40e6bcb16837aeaa6a329b9336bebe2befa740",
+  "old112_new_model_trials": 0,
+  "current_evaluation_protocol_or_gpu_owners_changed": false,
+  "files": [
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/old112_native_boundary149_r2.py",
+      "destination": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-old-m2-four-arm-20261101/scripts/old112_native_boundary149_r2.py",
+      "node": "149",
+      "sha256": "52f55b64049f99d424083a122b8cee1851cf93df3c1ed2b44203aa9e053c8ca7",
+      "bytes": 9896
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/native-handoff149-r14.py",
+      "destination": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-new772-tb21-20261101/scripts/native-handoff149-r14.py",
+      "node": "149",
+      "sha256": "112a80df2b7394b5df463aaad1e0e976a2c6b840c01d5b646617f86623e7d9a8",
+      "bytes": 6167
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/run-old112-native149-r4.py",
+      "destination": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-old-m2-four-arm-20261101/scripts/run-old112-native149-r4.py",
+      "node": "149",
+      "sha256": "3dd7aea6607216f83638dcf1a88b0f1fc37797a160330e46b344d468d27f02d2",
+      "bytes": 11960
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/old112-env-preflight149-r3.py",
+      "destination": "/home/chenkeyi/.local/share/harbor-rsi/qwen35-old-m2-four-arm-20261101/scripts/old112-env-preflight149-r3.py",
+      "node": "149",
+      "sha256": "b43888c395ccfe92313311181c5fe772f6c7077cd85b7006dcc133d5c4af71ea",
+      "bytes": 5118
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/freeze-old-readout-selected267-deployment18-r3.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/freeze-old-readout-selected267-deployment18-r3.py",
+      "node": "18",
+      "sha256": "fb2f04e74e9877ee5e2b35ba20e4cd7deff2751995f60fb1885bf999f1f78cd5",
+      "bytes": 3980
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/old112-phase18-r6.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old112-phase18-r6.py",
+      "node": "18",
+      "sha256": "862409b4af2f9aa1bc5fb77d1d0428ee1c7dbc506376a7eafe3778d83d4ef695",
+      "bytes": 9682
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/old-four-complete-readouts-phase18-r5.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/old-four-complete-readouts-phase18-r5.py",
+      "node": "18",
+      "sha256": "9ed8d4e18860f3dd63bcdf3da9e615598a86c8c3dbeee7948d1da3f11fa7f49f",
+      "bytes": 1564
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/synthetic32-agent/old112-native-boundary-candidate-r2/OLD_READOUT_SELECTED267_EXPECTED_REMOTE_FILES_R3.json",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/checks/OLD_READOUT_SELECTED267_EXPECTED_REMOTE_FILES_R3.json",
+      "node": "18",
+      "sha256": "b81909a06e018dcfd7ca2416bba4bb2c1c8481e7bbc1421cbbdde02dd3cdbe99",
+      "bytes": 27541
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r39-deployment-candidate-r1/run-native772-advance-r39-env-repair.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/run-native772-advance-r39-env-repair.py",
+      "node": "18",
+      "sha256": "8c4352d0342d2ce04b23ae2c9e060bd01b2db35d2d0448e3d1a311a900053f35",
+      "bytes": 11227
+    },
+    {
+      "local": "/home/cky/workspace/RSI/runtime-evidence/qwen35-sft-772-node18-20261101/r39-deployment-candidate-r1/winner267-phase18-r14.py",
+      "destination": "/ssd/chenkeyi/qwen35-sft-772-20261101/winner267-phase18-r14.py",
+      "node": "18",
+      "sha256": "c38dca12dfa84f1548e1d2f0b11597c68bd66dbf56dbff7fe8190749d77cdb40",
+      "bytes": 34374
+    }
+  ]
+}

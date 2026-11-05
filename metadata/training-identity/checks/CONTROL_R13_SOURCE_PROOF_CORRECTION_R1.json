@@ -1,0 +1,9 @@
+{
+  "at": 1793569455.1728432,
+  "first_checker_identity_list_incorrect": true,
+  "first_checker_not_used_for_handoff": true,
+  "corrected_checker_and_proof": "CONTROL_R13_CPU_SOURCE_ACCEPTANCE_R2.json",
+  "original_case_results_retained": true,
+  "model_data_training_or_harbor_configs_modified": false,
+  "actual_r13_handoff_cpu_proof_sha256": "98075759cf5f617d3978985081b8f72d43b81b18871140e0f25d5088fa9f1512"
+}

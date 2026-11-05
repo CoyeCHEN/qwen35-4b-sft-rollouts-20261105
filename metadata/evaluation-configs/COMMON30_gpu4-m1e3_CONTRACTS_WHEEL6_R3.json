@@ -1,0 +1,1135 @@
+{
+  "terminal-bench/llm-inference-batching-scheduler": {
+    "basis": "Independent native NOP on original frozen common30 Task llm-inference-batching-scheduler; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 005f980332355e2fe143d4ff4aac11828adf070594bbe7055399c238f06953ca Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 13)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\n0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n7868b85224291c6cb6759f9b5adb9745f486d226f62b16a614dd5a2a5ab2b35b  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/llm-inference-batching-scheduler/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/video-processing": {
+    "basis": "Independent native NOP on original frozen common30 Task video-processing; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 836bc8f77561680c6bf5b3f76905da87e8a2315e2885d36c3f9ee9a29fb99ef9 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'2c33f2b653d87337e78c48f50930a90a529edc7e8ac51e840556e04696d44981'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'toml==0.10.2'\"'\"', '\"'\"'opencv-contrib-python==4.11.0.86'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'2c33f2b653d87337e78c48f50930a90a529edc7e8ac51e840556e04696d44981'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w toml==0.10.2 -w opencv-contrib-python==4.11.0.86 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with toml==0.10.2 --with opencv-contrib-python==4.11.0.86 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'toml==0.10.2'\"'\"', '\"'\"'opencv-contrib-python==4.11.0.86'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'toml'\"'\"', '\"'\"'cv2'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 13)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\n0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n7868b85224291c6cb6759f9b5adb9745f486d226f62b16a614dd5a2a5ab2b35b  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/extra-cp313-full-caches-r1/video-processing/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/video-processing/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/polyglot-rust-c": {
+    "basis": "Independent native NOP on original frozen common30 Task polyglot-rust-c; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 12)\nassert sys.version_info[:3]==(3,12,12)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\nba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\naddeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n1dbaa624a09e15afe7efbdac08d42993135a68db8d34f986ef6977a6d77bdc3c  /harbor/public-cli-bootstrap/python/20260211/cpython-3.12.12+20260211-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/polyglot-rust-c/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/mteb-leaderboard": {
+    "basis": "Independent native NOP on original frozen common30 Task mteb-leaderboard; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 11)\nassert sys.version_info[:3]==(3,11,2)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\nb8bb0864c5a28024fac8a632c443c87c5aa6f215c0b126c449ae1a150412f31d  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n136a1c3fe4402b7008bc81cb62ee538481795b61a7e83df88dff3b3f02b726ff  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502  /opt/rsi-public-cli-wheels/soupsieve-2.10-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/mteb-leaderboard/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/build-cython-ext": {
+    "basis": "Independent native NOP on original frozen common30 Task build-cython-ext; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 0156c9c4085258b696ce424cf1ce96cba44d1263c5d73bdf54083fd80237f915 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\npip --version\npip install pytest==8.4.1 pytest-json-ctrf==0.3.5\npytest --version\npython -c 'import sys,pytest,json;assert sys.version_info[:2]==(3,13);assert pytest.__version__=='\"'\"'8.4.1'\"'\"';print(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'pytest'\"'\"':pytest.__version__,'\"'\"'source'\"'\"':'\"'\"'original system pip/python; managed interpreter not substituted'\"'\"','\"'\"'Task_tests_or_model_calls'\"'\"':0}))'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 13)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\n0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n7868b85224291c6cb6759f9b5adb9745f486d226f62b16a614dd5a2a5ab2b35b  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "reason": "This original direct-pip verifier receives exact public pure wheels through read-only find-links with PIP_NO_INDEX; native actual system-pip bootstrap remains mandatory. NOP has no model or CLI network requirement. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation.",
+        "checks": [
+          "native-model-and-counter-identity"
+        ]
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/build-cython-ext/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/portfolio-optimization": {
+    "basis": "Independent native NOP on original frozen common30 Task portfolio-optimization; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 25d5d5008edeab93d730b44f723687d2b08978f9f53750f62af8aeb1ecae90c6 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'9b581324b9766c80cb042af85f45f1023b6ba4339c38a34d2b272c6b9599968b'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'numpy==2.3.2'\"'\"', '\"'\"'setuptools==78.1.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'9b581324b9766c80cb042af85f45f1023b6ba4339c38a34d2b272c6b9599968b'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w numpy==2.3.2 -w setuptools==78.1.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with numpy==2.3.2 --with setuptools==78.1.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'numpy==2.3.2'\"'\"', '\"'\"'setuptools==78.1.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'numpy'\"'\"', '\"'\"'setuptools'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 13)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\n0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n7868b85224291c6cb6759f9b5adb9745f486d226f62b16a614dd5a2a5ab2b35b  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/extra-cp313-full-caches-r1/portfolio-optimization/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/portfolio-optimization/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/crack-7z-hash": {
+    "basis": "Independent native NOP on original frozen common30 Task crack-7z-hash; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 12)\nassert sys.version_info[:3]==(3,12,12)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\nba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\naddeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n1dbaa624a09e15afe7efbdac08d42993135a68db8d34f986ef6977a6d77bdc3c  /harbor/public-cli-bootstrap/python/20260211/cpython-3.12.12+20260211-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/crack-7z-hash/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/build-pov-ray": {
+    "basis": "Independent native NOP on original frozen common30 Task build-pov-ray; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 928d1497ad21aef0c456294e3784f1fddf8493410f23584da89f9e02ec6bd134 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'422c2f7270824578ae152c7b853f344839e89c5c529c3e9edff80dd08542df89'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pillow==11.1.0'\"'\"', '\"'\"'numpy==2.3.1'\"'\"', '\"'\"'scikit-image==0.25.0'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'422c2f7270824578ae152c7b853f344839e89c5c529c3e9edff80dd08542df89'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl imagemagick\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pillow==11.1.0 -w numpy==2.3.1 -w scikit-image==0.25.0 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pillow==11.1.0 --with numpy==2.3.1 --with scikit-image==0.25.0 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pillow==11.1.0'\"'\"', '\"'\"'numpy==2.3.1'\"'\"', '\"'\"'scikit-image==0.25.0'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'PIL'\"'\"', '\"'\"'numpy'\"'\"', '\"'\"'skimage'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 12)\nassert sys.version_info[:3]==(3,12,12)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\nba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\naddeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n1dbaa624a09e15afe7efbdac08d42993135a68db8d34f986ef6977a6d77bdc3c  /harbor/public-cli-bootstrap/python/20260211/cpython-3.12.12+20260211-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/extra-cp313-full-caches-r1/build-pov-ray/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/build-pov-ray/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/cobol-modernization": {
+    "basis": "Independent native NOP on original frozen common30 Task cobol-modernization; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA 4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\napt-get -o APT::Update::Error-Mode=any update\napt-get install -y curl\n",
+        "id": "original-public-os-bootstrap",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 300
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 13)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\n0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\n7868b85224291c6cb6759f9b5adb9745f486d226f62b16a614dd5a2a5ab2b35b  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-public-os-bootstrap",
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/cobol-modernization/IMAGE_READY_R1.json"
+    ]
+  },
+  "terminal-bench/configure-git-webserver": {
+    "basis": "Independent native NOP on original frozen common30 Task configure-git-webserver; trusted public dependency setup only, original files/Verifier time/resources unchanged. No OpenHarness/model Agent/Recorder readiness claim. Original test.sh SHA afafc3ffdaf911f7a93003c0746f217188099c174e5d3eb7dada17133df15895 Model R1 adds installed .6 CLI/ABI/privacy/scoped-install and exact native counter checks only; original verifier R2 checks remain byte-identical.",
+    "checks": [
+      {
+        "category": "assets",
+        "command": "/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,json,hashlib\nroot=pathlib.Path('\"'\"'/opt/rsi-public-verifier-cache'\"'\"');p=root/'\"'\"'manifest.json'\"'\"'\nassert hashlib.sha256(p.read_bytes()).hexdigest()=='\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"'\nm=json.loads(p.read_text());assert m['\"'\"'schema_version'\"'\"']==1 and m['\"'\"'uv_version'\"'\"']=='\"'\"'0.9.5'\"'\"'\nassert set(['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"'])<=set(m['\"'\"'requirements'\"'\"']) and '\"'\"'3.13'\"'\"' in m['\"'\"'python_requests'\"'\"']\nseen=set()\nfor row in m['\"'\"'files'\"'\"']:\n f=root/row['\"'\"'path'\"'\"'];assert f.resolve().is_relative_to(root.resolve()) and f.is_file() and not f.is_symlink()\n assert f.stat().st_size==row['\"'\"'bytes'\"'\"']\n with f.open('\"'\"'rb'\"'\"')as stream:assert hashlib.file_digest(stream,'\"'\"'sha256'\"'\"').hexdigest()==row['\"'\"'sha256'\"'\"']\n seen.add(row['\"'\"'path'\"'\"'])\nassert seen=={f.relative_to(root).as_posix()for f in root.rglob('\"'\"'*'\"'\"')if f.is_file()or f.is_symlink()}-{'\"'\"'manifest.json'\"'\"'}\nprint(json.dumps({'\"'\"'cache_manifest_sha256'\"'\"':'\"'\"'69f02c597ac1e585b12c98522cc3b7b3edf292fecf4ec017039668fb0fed7e4e'\"'\"','\"'\"'files'\"'\"':len(seen),'\"'\"'bytes'\"'\"':sum(r['\"'\"'bytes'\"'\"']for r in m['\"'\"'files'\"'\"']),'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'",
+        "id": "public-inputs-sha",
+        "network": false,
+        "phase": "agent",
+        "timeout_sec": 120
+      },
+      {
+        "category": "network",
+        "command": "set -eu\nrsi_uv_origin_probe_dir=$(mktemp -d /tmp/harbor-public-uv095-origin.XXXXXX)\ntrap 'rm -rf -- \"$rsi_uv_origin_probe_dir\"' EXIT\ntest \"$(command -v curl)\" = /usr/bin/curl\n/usr/bin/curl -LsSf https://astral.sh/uv/0.9.5/install.sh --connect-timeout 5 --max-time 25 --output \"$rsi_uv_origin_probe_dir/install.sh\" --write-out '%{http_code}\\n%{url_effective}\\n%{remote_ip}\\n' > \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n/opt/rsi-public-verifier-cache/python/cpython-3.13.9-linux-x86_64-gnu/bin/python3.13 -B -c 'import pathlib,hashlib,json,sys,urllib.parse,subprocess\nbody=pathlib.Path(sys.argv[1]);metadata=pathlib.Path(sys.argv[2]).read_text().splitlines()\nassert len(metadata)==3 and metadata[0]=='\"'\"'200'\"'\"'\nfinal=urllib.parse.urlsplit(metadata[1]);assert final.scheme=='\"'\"'https'\"'\"'\nraw=body.read_bytes();assert len(raw)==65983\nassert hashlib.sha256(raw).hexdigest()=='\"'\"'8402ab80d2ef54d7044a71ea4e4e1e8db3b20c87c7bffbc30bff59f1e80ebbd5'\"'\"'\nprint(json.dumps({'\"'\"'original_URL'\"'\"':'\"'\"'https://astral.sh/uv/0.9.5/install.sh'\"'\"','\"'\"'actual_final_URL_without_query'\"'\"':urllib.parse.urlunsplit((final.scheme,final.netloc,final.path,'\"'\"''\"'\"','\"'\"''\"'\"')),'\"'\"'HTTP'\"'\"':200,'\"'\"'actual_remote_IP'\"'\"':metadata[2],'\"'\"'transport'\"'\"':'\"'\"'native /usr/bin/curl with original -LsSf flags; additional probe-only time/output/metadata bounds'\"'\"','\"'\"'final_HTTPS_certificate_verified_by_curl_default'\"'\"':True,'\"'\"'bytes'\"'\"':len(raw),'\"'\"'sha256'\"'\"':hashlib.sha256(raw).hexdigest(),'\"'\"'curl_version'\"'\"':subprocess.check_output(['\"'\"'/usr/bin/curl'\"'\"','\"'\"'--version'\"'\"'],text=True).splitlines()[0],'\"'\"'model_generation_calls'\"'\"':0}))\n' \"$rsi_uv_origin_probe_dir/install.sh\" \"$rsi_uv_origin_probe_dir/http-metadata.txt\"\n",
+        "id": "original-uv095-installer-origin",
+        "network": true,
+        "phase": "verifier",
+        "timeout_sec": 35
+      },
+      {
+        "category": "verifier",
+        "command": "set -eu\nexport PYTHONDONTWRITEBYTECODE=1\nrsi_public_uv_dir=$(mktemp -d /tmp/harbor-common30-public-uv.XXXXXX)\ntrap 'rm -rf -- \"$rsi_public_uv_dir\"' EXIT\ntar -xzf /opt/rsi-public-verifier-cache/release/uv-x86_64-unknown-linux-gnu.tar.gz --strip-components=1 -C \"$rsi_public_uv_dir\"\n\"$rsi_public_uv_dir/uvx\" --no-config -p 3.13 -w pytest==8.4.1 -w pytest-json-ctrf==0.3.5 pytest --version\nCUDA_VISIBLE_DEVICES= \"$rsi_public_uv_dir/uv\" run --no-project --no-config -p 3.13 --with pytest==8.4.1 --with pytest-json-ctrf==0.3.5 python -c 'import importlib,importlib.metadata as metadata,json,sys\npins=['\"'\"'pytest==8.4.1'\"'\"', '\"'\"'pytest-json-ctrf==0.3.5'\"'\"']\nfor pin in pins:\n name,version=pin.split('\"'\"'=='\"'\"',1);assert metadata.version(name).split('\"'\"'+'\"'\"',1)[0]==version,(name,metadata.version(name))\nmodules=['\"'\"'pytest'\"'\"', '\"'\"'ctrf.main'\"'\"']\nfor module in modules:importlib.import_module(module)\nprint(json.dumps({'\"'\"'Python'\"'\"':sys.version,'\"'\"'versions'\"'\"':{p.split('\"'\"'=='\"'\"',1)[0]:metadata.version(p.split('\"'\"'=='\"'\"',1)[0])for p in pins},'\"'\"'public_modules_imported'\"'\"':modules,'\"'\"'Task_tests_or_model_calls'\"'\"':0}))\n'\n",
+        "id": "original-public-verifier-python-bootstrap",
+        "network": false,
+        "phase": "verifier",
+        "timeout_sec": 240
+      },
+      {
+        "id": "cli-and-privacy",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import pathlib,hashlib,importlib.metadata,json,foundation.io\nassert importlib.metadata.version(\"open-harness-ai\")==\"0.3.0+rsi.reliability.20261104.6\"\np=pathlib.Path(foundation.io.__file__); assert hashlib.sha256(p.read_bytes()).hexdigest()==\"d914ce0d3e4bfe1ecfcad7760a4ab83c019b8724f9884a88fdd12da8da2f0893\"\nassert not pathlib.Path(\"/tests/test.sh\").exists() and not pathlib.Path(\"/tests/test_outputs.py\").exists() and not pathlib.Path(\"/solution/solve.sh\").exists()\nprint(json.dumps(dict(installed_cli=\"0.3.0+rsi.reliability.20261104.6\",private_tests_absent=True,model_generation_calls=0)))'",
+        "timeout_sec": 15,
+        "network": false
+      },
+      {
+        "id": "install-env-scoped",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import os,json\nkeys=['\"'\"'PIP_NO_INDEX'\"'\"', '\"'\"'PIP_FIND_LINKS'\"'\"', '\"'\"'UV_NO_INDEX'\"'\"', '\"'\"'UV_FIND_LINKS'\"'\"', '\"'\"'UV_PYTHON_INSTALL_MIRROR'\"'\"']\nassert not [k for k in keys if k in os.environ]\nprint(json.dumps(dict(installation_only_keys_absent=keys,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "native-cli-ABI",
+        "category": "agent",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import sys,json\nassert sys.version_info[:2]==(3, 12)\nassert sys.version_info[:3]==(3,12,12)\nprint(json.dumps(dict(installed_CLI_python=sys.version,model_generation_calls=0)))'",
+        "timeout_sec": 20,
+        "network": false
+      },
+      {
+        "id": "public-cli-wheelhouse-sha",
+        "category": "assets",
+        "phase": "agent",
+        "command": "printf %s 'c66ae634e0b8228396b801741beb3294326d4b6102f7bba4041c0dfb58c29026  /opt/rsi-public-cli-wheels/anyio-4.16.0-py3-none-any.whl\nc647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309  /opt/rsi-public-cli-wheels/attrs-26.1.0-py3-none-any.whl\nd6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9  /opt/rsi-public-cli-wheels/beautifulsoup4-4.15.0-py3-none-any.whl\ne9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1  /opt/rsi-public-cli-wheels/certifi-2026.10.23-py3-none-any.whl\n63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86  /opt/rsi-public-cli-wheels/h11-0.16.0-py3-none-any.whl\n2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55  /opt/rsi-public-cli-wheels/httpcore-1.0.9-py3-none-any.whl\nd909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad  /opt/rsi-public-cli-wheels/httpx-0.28.1-py3-none-any.whl\nab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c  /opt/rsi-public-cli-wheels/idna-3.20-py3-none-any.whl\nd489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce  /opt/rsi-public-cli-wheels/jsonschema-4.26.0-py3-none-any.whl\n98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe  /opt/rsi-public-cli-wheels/jsonschema_specifications-2025.9.1-py3-none-any.whl\na189a0bedfd14009030fde5f85bb6f77c56897cb839b5c25315dd7d4e3e290ba  /opt/rsi-public-cli-wheels/markdownify-1.2.3-py3-none-any.whl\n145119e5eabcf80cbb13844a6b50a85c68bf99d376f8ed771e2a3c3b03e653ae  /opt/rsi-public-cli-wheels/partial_json_parser-0.2.1.1.post7-py3-none-any.whl\n33e4fb41ca352810eb4e9838aa0d82d6888a5f8bf682f43e99cce5faa666255c  /opt/rsi-public-cli-wheels/pypdf-6.21.4-py3-none-any.whl\nba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc  /opt/rsi-public-cli-wheels/pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl\n381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231  /opt/rsi-public-cli-wheels/referencing-0.37.0-py3-none-any.whl\naddeda51556dac7c1a2f14cda62db8b621cd12afba3091d03a96c72932387eab  /opt/rsi-public-cli-wheels/rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\n4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274  /opt/rsi-public-cli-wheels/six-1.17.0-py2.py3-none-any.whl\n8412826614f9c632227067d0985aeb9f584bd15efc852955430e097a9fe7afbf  /opt/rsi-public-cli-wheels/soupsieve-3.0.4-py3-none-any.whl\n481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8  /opt/rsi-public-cli-wheels/typing_extensions-4.16.0-py3-none-any.whl\ne62198eb19b136b88c330af83647b5a962cb99b6b1f066758568f12de1974849  /usr/local/bin/rg\n1dbaa624a09e15afe7efbdac08d42993135a68db8d34f986ef6977a6d77bdc3c  /harbor/public-cli-bootstrap/python/20260211/cpython-3.12.12+20260211-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz\n' | sha256sum -c -",
+        "timeout_sec": 30,
+        "network": false
+      },
+      {
+        "id": "native-model-and-counter-identity",
+        "category": "network",
+        "phase": "agent",
+        "command": "/harbor/agent-runtime/harbor-open-harness-venv/bin/python -B -c 'import urllib.request,json,hashlib\nbase='\"'\"'http://172.30.249.1:18303/v1'\"'\"'\nexpected={'\"'\"'service_instance_id'\"'\"': '\"'\"'989d23f01d61412a9b8e20df9228dd55'\"'\"', '\"'\"'pid'\"'\"': 1501191, '\"'\"'tokenizer_json_sha256'\"'\"': '\"'\"'5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42'\"'\"', '\"'\"'chat_template_sha256'\"'\"': '\"'\"'a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715'\"'\"', '\"'\"'serving_chat_source_sha256'\"'\"': '\"'\"'74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076'\"'\"', '\"'\"'tokenizer_manager_source_sha256'\"'\"': '\"'\"'df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8'\"'\"', '\"'\"'processor_class'\"'\"': '\"'\"'Qwen3VLProcessor'\"'\"', '\"'\"'processor_source_sha256'\"'\"': '\"'\"'e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a'\"'\"', '\"'\"'processor_config_sha256'\"'\"': '\"'\"'060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785'\"'\"', '\"'\"'image_processor_source_sha256'\"'\"': '\"'\"'78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0'\"'\"', '\"'\"'image_processor_config_sha256'\"'\"': '\"'\"'690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e'\"'\"', '\"'\"'model_path'\"'\"': '\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"', '\"'\"'served_model_name'\"'\"': '\"'\"'qwen35-reliability-new-m1-e3'\"'\"'}\nopener=urllib.request.build_opener(urllib.request.ProxyHandler({}))\nwith opener.open(base.removesuffix('\"'\"'/v1'\"'\"')+'\"'\"'/model_info'\"'\"',timeout=12)as response:\n assert response.status==200;meta=json.loads(response.read(65536))\nassert meta['\"'\"'model_path'\"'\"']=='\"'\"'/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m1-epoch3'\"'\"' and meta['\"'\"'weight_version'\"'\"']=='\"'\"'2e02fec581cbb3c802cd1e0e80ac2c9568bead3a9002338f4d661ea6ac94053d'\"'\"'\npayload=dict(model='\"'\"'qwen35-reliability-new-m1-e3'\"'\"',messages=[dict(role='\"'\"'user'\"'\"',content='\"'\"'Read-only native token-count identity probe; no generation.'\"'\"')],max_tokens=81920,stream=True,temperature=1,top_p=0.95,top_k=20,min_p=0,presence_penalty=1.5,repetition_penalty=1.0,chat_template_kwargs=dict(enable_thinking=True))\nwire=json.dumps(payload,separators=('\"'\"','\"'\"','\"'\"':'\"'\"')).encode()\nrequest=urllib.request.Request(base+'\"'\"'/chat/count_tokens'\"'\"',data=wire,headers={'\"'\"'Content-Type'\"'\"':'\"'\"'application/json'\"'\"'},method='\"'\"'POST'\"'\"')\nwith opener.open(request,timeout=20)as response:\n assert response.status==200;count=json.loads(response.read(1048576))\nassert count['\"'\"'exact'\"'\"']is True and count['\"'\"'service_identity'\"'\"']==expected\nassert count['\"'\"'model_generation_calls'\"'\"']==0 and count['\"'\"'context_length'\"'\"']==262144 and count['\"'\"'requested_output_tokens'\"'\"']==81920\nprint(json.dumps(dict(model_metadata=meta['\"'\"'weight_version'\"'\"'],input_tokens=count['\"'\"'input_tokens'\"'\"'],counter_identity=count['\"'\"'service_identity'\"'\"'],request_sha256=hashlib.sha256(wire).hexdigest(),model_generation_calls=0)))\n'",
+        "timeout_sec": 40,
+        "network": true
+      }
+    ],
+    "coverage": {
+      "agent": {
+        "reason": "Native OpenHarness .6 setup, committed CLI module identity, original per-Task Agent ABI, hidden-test boundary and install_env scope are actually checked before Agent.run.",
+        "checks": [
+          "cli-and-privacy",
+          "install-env-scoped",
+          "native-cli-ABI"
+        ]
+      },
+      "assets": {
+        "checks": [
+          "public-inputs-sha",
+          "public-cli-wheelhouse-sha"
+        ],
+        "reason": "Inside-container complete source manifests and public byte SHA/size must match frozen declarations; no hidden answers or tests are mounted by this public overlay."
+      },
+      "network": {
+        "checks": [
+          "original-uv095-installer-origin",
+          "native-model-and-counter-identity"
+        ],
+        "reason": "Original public OS dependency network and exact original curl installer/source URLs are real checks; cached Python package bytes do not stand in for them. Selected native model metadata and exact count-only identity are checked inside the actual container; zero generation."
+      },
+      "runtime": {
+        "not_required": true,
+        "reason": "Native Campaign checks actual node17 private Engine, original image/resources/workspace/disk and cleanup; no duplicate checker."
+      },
+      "verifier": {
+        "checks": [
+          "original-public-verifier-python-bootstrap"
+        ],
+        "reason": "Actual original requested interpreter and complete original Python requirements/imports bootstrap in trusted verifier phase; original official scoring still runs separately at its native timeout. SAM original VCS/index/weight are explicitly checked, never replaced with unrelated base wheels."
+      }
+    },
+    "inputs": [
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-verifier-cache-preparation-r1/base-pytest841-common-r1/sealed/manifest.json",
+      "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common29-image-prewarm-r2/image-prewarm/configure-git-webserver/IMAGE_READY_R1.json"
+    ]
+  }
+}

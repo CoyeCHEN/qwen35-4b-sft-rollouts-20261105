@@ -1,0 +1,17 @@
+{
+  "benchmark": "terminal-bench-science/terminal-bench-science",
+  "version": "v0.1.0",
+  "source_repository": "https://github.com/harbor-framework/terminal-bench-science",
+  "source_commit": "f81afac4f11048e77a15dfc8fb1dbfb897fea0ce",
+  "task_count": 70,
+  "dataset_revision": "sha256:0341d617c95a01594ca934019010625e3e2d2636b51f95952b87bd7235818316",
+  "gpu_tasks": 0,
+  "max_agent_resources": {
+    "cpus": 4,
+    "memory_mb": 16384,
+    "storage_mb": 51200
+  },
+  "verifier_mode": "separate",
+  "agent_network": "public",
+  "verifier_network": "no-network"
+}

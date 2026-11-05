@@ -1,0 +1,59 @@
+FROM python:3.9-bookworm
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64 \
+    PYTHONUNBUFFERED=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      openjdk-17-jre-headless gcc g++ && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN python -m pip install --no-cache-dir --upgrade "pip<24" && \
+    python -m pip install --no-cache-dir \
+      beautifulsoup4==4.11.1 \
+      cleantext==1.1.4 \
+      faiss-cpu==1.7.4 \
+      Flask==2.1.2 \
+      gym==0.24.0 \
+      numpy==1.22.4 \
+      pyserini==0.17.0 \
+      PyYAML==6.0 \
+      rank_bm25==0.2.2 \
+      requests==2.27.1 \
+      rich==12.4.4 \
+      scikit-learn==1.1.1 \
+      spacy==3.3.0 \
+      thefuzz==0.19.0 \
+      tqdm==4.64.0 \
+      Werkzeug==2.1.2 && \
+    python -m pip install --no-cache-dir \
+      https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0-py3-none-any.whl
+
+RUN python -m pip install --no-cache-dir "typing-extensions==4.5.0"
+
+WORKDIR /opt/webshop
+COPY webshop/ /opt/webshop/
+COPY runtime/service.py /opt/webshop/service.py
+COPY runtime/build_index.py /opt/webshop/build_index.py
+
+# Text mode never requests image tensors. This avoids installing the optional
+# image stack while preserving official search, state transitions and reward.
+RUN sed -i '/^import torch$/d' web_agent_site/envs/web_agent_text_env.py && \
+    sed -i '/web_agent_site_env/d' web_agent_site/envs/__init__.py && \
+    sed -i '/ImpactSearcher/d' /usr/local/lib/python3.9/site-packages/pyserini/search/__init__.py && \
+    sed -i '/from \.faiss/d' /usr/local/lib/python3.9/site-packages/pyserini/search/__init__.py && \
+    sed -i '/DprQueryEncoder/d' /usr/local/lib/python3.9/site-packages/pyserini/search/__init__.py && \
+    sed -i '/_impact_searcher/d' /usr/local/lib/python3.9/site-packages/pyserini/search/lucene/__init__.py && \
+    mkdir -p search_engine/resources_1k search_engine/indexes_1k && \
+    python build_index.py && \
+    cd search_engine && \
+    python -m pyserini.index.lucene \
+      --collection JsonCollection \
+      --input resources_1k \
+      --index indexes_1k \
+      --generator DefaultLuceneDocumentGenerator \
+      --threads 1 \
+      --storePositions --storeDocvectors --storeRaw
+
+EXPOSE 3000
+CMD ["python", "/opt/webshop/service.py"]

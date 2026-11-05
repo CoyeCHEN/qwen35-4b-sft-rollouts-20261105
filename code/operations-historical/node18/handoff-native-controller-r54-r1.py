@@ -1,0 +1,298 @@
+"""Single idle handoff: keep every native Job/service; hold superseded admission."""
+
+import fcntl
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+
+R = Path("/ssd/chenkeyi/qwen35-sft-772-20261101")
+C = Path("/data/chenkeyi/qwen35-sft-772-20261101/control")
+B = R / "environment-preflight30"
+NEW = "qwen35-772-native-advance-node18-20261103-r54-public-apt-native-nop.service"
+
+
+def read(path):
+    return json.loads(path.read_text())
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def identity(pid):
+    return dict(
+        pid=pid,
+        start_ticks=(Path("/proc") / str(pid) / "stat")
+        .read_text()
+        .rsplit(")", 1)[1]
+        .split()[19],
+    )
+
+
+def props(unit):
+    value = subprocess.check_output(
+        [
+            "systemctl",
+            "--user",
+            "show",
+            unit,
+            "-p",
+            "LoadState",
+            "-p",
+            "MainPID",
+            "-p",
+            "ActiveState",
+            "-p",
+            "Result",
+        ],
+        text=True,
+        timeout=5,
+    )
+    return dict(line.split("=", 1) for line in value.splitlines())
+
+
+def current_masters():
+    values = subprocess.check_output(
+        ["ps", "-u", str(os.getuid()), "-o", "pid=,args="], text=True
+    )
+    result = []
+    for line in values.splitlines():
+        fields = line.split(None, 1)
+        if len(fields) != 2:
+            continue
+        for slot in range(4):
+            title = "ssh: " + str(R / ".ssh-mux-r2" / (str(slot) + ".sock")) + " [mux]"
+            if fields[1].strip() == title:
+                pid = int(fields[0])
+                result.append(
+                    dict(
+                        **identity(pid),
+                        slot=slot,
+                        cgroup=(Path("/proc") / str(pid) / "cgroup")
+                        .read_text()
+                        .strip(),
+                    )
+                )
+    return result
+
+
+def main(plan_sha):
+    os.environ["XDG_RUNTIME_DIR"] = "/run/user/" + str(os.getuid())
+    plan_path = R / "checks/R54_PUBLIC_APT_NOP_PROMOTION_PLAN_R1.json"
+    assert sha(plan_path) == plan_sha
+    plan = read(plan_path)
+    owner = read(C / "NATIVE_ADVANCE_OWNER.json")
+    assert owner == plan["previous_owner"]
+    assert identity(owner["pid"])["start_ticks"] == owner["start_ticks"]
+    assert owner["pid"] == 2730110 and owner["start_ticks"] == "107472856"
+    old = owner["controller_unit"]
+    assert (
+        props(old)["ActiveState"] == "active" and props(NEW)["LoadState"] == "not-found"
+    )
+    assert not (
+        R / "formal-native-eval-r1/manifests/SELECTED267_ADMISSION_R1.json"
+    ).exists()
+    previous = B / "EXECUTION_RELEASE_R29.json"
+    assert (
+        sha(previous)
+        == "a738f2cb603b9ec7528af4b68616e85bfdcf048ad309ee2752cb7fd794e98a43"
+    )
+    sources = dict(read(previous)["source_sha256"])
+    sources.update(plan["new_source_sha256"])
+    sources[str(plan_path)] = plan_sha
+    for name, digest in sources.items():
+        assert sha(R / name) == digest, name
+    assert read(R / "reliability-repair/COMBINED_SOURCE_CPU_ACCEPTANCE_R1.json")[
+        "passed"
+    ]
+    prior = read(R / "checks/NATIVE_ADVANCE_R53_HANDOFF_COMPLETED.json")
+    actors = {}
+    units = set(prior["actors_before"])
+    units.update(
+        row["unit"]
+        for row in read(R / "reliability-repair/COLD_SERVICES_LAUNCHED_R1.json")[
+            "replicas"
+        ]
+    )
+    units.add("qwen35-reliability-recorder-privacy-20261103-r3.service")
+    units.add("qwen35-reliability-long-ab8-native-20261103-r2.service")
+    units.add("qwen35-reliability-cold-new-m1-e3-gpu0-20261103-r1.service")
+    units.add("qwen35-reliability-raw-spool-preservation-20261103-r1.service")
+    for path, digest, expected in [
+        (
+            R
+            / "reliability-repair/cold-m1e3-gpu5-r3/actual-run-r1/COLD_M1E3_GPU5_LAUNCHED_R3.json",
+            "cc15806c3e3ca4b7b93465f46deb272366f11dd3d52bd961ae447693f0550302",
+            1,
+        ),
+        (
+            R
+            / "reliability-repair/cold-four-checkpoints-r2/actual-run-r1/COLD_FOUR_CHECKPOINTS_LAUNCHED_R2.json",
+            "f1a43bd3eed73ccd60f084d1c456e017c91c09a8811a1390af3f0f77b87b3cd5",
+            4,
+        ),
+    ]:
+        assert sha(path) == digest
+        replicas = read(path)["replicas"]
+        assert len(replicas) == expected
+        units.update(row["unit"] for row in replicas)
+    units.add(
+        "qwen35-reliability-archived-native-abort-continuation-20261103-r1.service"
+    )
+    units.add("qwen35-reliability-raw-spool-preservation-chunks-20261103-r2.service")
+    units.add("qwen35-reliability-common29-ssd17-image-batch-20261103-r2.service")
+    units.add(
+        "qwen35-reliability-synthetic32-accepted27-ssd17-images-20261103-r1.service"
+    )
+    for unit in units:
+        state = props(unit)
+        if state["ActiveState"] == "active":
+            actors[unit] = identity(int(state["MainPID"]))
+    assert len(actors) >= 8
+    masters = current_masters()
+    assert all(old not in row["cgroup"] for row in masters), (
+        "Detach any Job-shared master owned by the controller before stopping it"
+    )
+    release = B / "EXECUTION_RELEASE_R30.json"
+    assert not release.exists()
+    dropin = (
+        Path.home()
+        / ".config/systemd/user"
+        / (NEW + ".d")
+        / "50-rsi-native-persistence.conf"
+    )
+    assert not dropin.exists()
+    dropin.parent.mkdir(parents=True, exist_ok=True)
+    dropin.write_text(
+        "[Unit]\nStartLimitIntervalSec=1200\nStartLimitBurst=3\n[Service]\nRestart=on-failure\nRestartSec=20s\n"
+    )
+    subprocess.run(["systemctl", "--user", "daemon-reload"], check=True, timeout=20)
+    for _ in range(60):
+        assert identity(owner["pid"])["start_ticks"] == owner["start_ticks"]
+        process = Path("/proc") / str(owner["pid"])
+        if (
+            process.joinpath("wchan").read_text().strip()
+            in ["hrtimer_nanosleep", "do_nanosleep"]
+            and not process.joinpath("task", str(owner["pid"]), "children")
+            .read_text()
+            .strip()
+        ):
+            assert current_masters() == masters
+            break
+        time.sleep(1)
+    else:
+        raise RuntimeError(
+            "Previous owner did not reach the native idle boundary; nothing stopped"
+        )
+    subprocess.run(["systemctl", "--user", "stop", old], check=True, timeout=30)
+    assert props(old)["ActiveState"] == "inactive"
+    with release.open("x") as stream:
+        stream.write(
+            json.dumps(
+                dict(
+                    at=time.time(),
+                    source_sha256=sources,
+                    previous_release_sha256=sha(previous),
+                    user_reliability_repair_admission_hold=True,
+                ),
+                indent=2,
+            )
+            + "\n"
+        )
+    log = R / "logs/native-advance-r54-public-apt-native-nop.log"
+    subprocess.run(
+        [
+            "systemd-run",
+            "--user",
+            "--unit=" + NEW,
+            "--property=MemoryMax=16G",
+            "--property=StandardOutput=append:" + str(log),
+            "--property=StandardError=append:" + str(log),
+            "--setenv=PYTHONPATH="
+            + str(R)
+            + ":"
+            + str(R / "formal-native-eval-r1/scripts"),
+            str(R / "env/harbor-native-eval-r1/bin/python"),
+            str(R / "run-native772-advance-r54-public-apt-native-nop.py"),
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+        timeout=10,
+    )
+    for _ in range(30):
+        current = read(C / "NATIVE_ADVANCE_OWNER.json")
+        state = props(NEW)
+        if (
+            state["MainPID"] != "0"
+            and current["pid"] == int(state["MainPID"])
+            and current["controller_unit"] == NEW
+        ):
+            break
+        time.sleep(1)
+    else:
+        raise RuntimeError(
+            "New owner has not acquired the original lock; inspect actual units without duplicating dispatch"
+        )
+    with (C / "unique-native-advance.lock").open("r") as lock:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            pass
+        else:
+            raise AssertionError("New owner is not holding the shared lock")
+    preserved = {}
+    for unit, before in actors.items():
+        if (Path("/proc") / str(before["pid"])).exists():
+            assert identity(before["pid"]) == before
+            preserved[unit] = "SAME_PID_AND_START_TICKS"
+        else:
+            actual = props(unit)
+            preserved[unit] = dict(
+                status="PROCESS_ENDED_INDEPENDENTLY_REQUIRES_NATIVE_TERMINAL_AUDIT",
+                actual_unit=actual,
+            )
+    current_master_rows = current_masters()
+    for before in masters:
+        if (Path("/proc") / str(before["pid"])).exists():
+            assert before in current_master_rows
+    value = dict(
+        passed=True,
+        at=time.time(),
+        old_owner=owner,
+        new_owner=current,
+        same_shared_lock_held=True,
+        old_controller_inactive=True,
+        actors_before=actors,
+        actor_checks=preserved,
+        shared_master_handles_before=masters,
+        shared_master_handles_after=current_master_rows,
+        source_sha256=sha(Path(__file__)),
+        new_release_sha256=sha(release),
+        plan_sha256=plan_sha,
+        legacy_trial_result_reward_recorder_and_job_configs_unchanged=True,
+        old_winner267_and_old_research_admission_held=True,
+    )
+    target = R / "checks/NATIVE_ADVANCE_R54_HANDOFF_COMPLETED.json"
+    with target.open("x") as stream:
+        stream.write(json.dumps(value, indent=2) + "\n")
+    print(
+        json.dumps(
+            dict(
+                passed=True,
+                new_owner=current,
+                actors_preserved=len(preserved),
+                receipt_sha256=sha(target),
+                new_release_sha256=sha(release),
+            )
+        )
+    )
+
+
+if __name__ == "__main__":
+    assert len(sys.argv) == 2
+    main(sys.argv[1])

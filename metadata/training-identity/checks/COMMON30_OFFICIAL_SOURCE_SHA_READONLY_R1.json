@@ -1,0 +1,1031 @@
+{
+  "at": 1793609520.2399566,
+  "passed": true,
+  "unique_tasks": 30,
+  "files": 140,
+  "sampling_manifest_sha256": "cf3e08b04fb455c3ef1c2c23a501cbf2a649328235f33f6b83cce6ff44f41858",
+  "rows": [
+    {
+      "task_id": "regex-log",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/regex-log/instruction.md",
+          "expected": "4f7ac05e70cf9220ea0f1e5a052c5f908cd0fa884e847d80b0bd51bae2e96f9c",
+          "actual": "4f7ac05e70cf9220ea0f1e5a052c5f908cd0fa884e847d80b0bd51bae2e96f9c",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/regex-log/task.toml",
+          "expected": "6bc98525852755caf1fe34c174c2f10f4328adb4ce6c1968dcafe1c877e4e160",
+          "actual": "6bc98525852755caf1fe34c174c2f10f4328adb4ce6c1968dcafe1c877e4e160",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/regex-log/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/regex-log/tests/test_outputs.py",
+          "expected": "345c3bd09ab6f6fe8c8361a58c0a47bf0a13b3fcb38a5ac7824e44ff855e8f72",
+          "actual": "345c3bd09ab6f6fe8c8361a58c0a47bf0a13b3fcb38a5ac7824e44ff855e8f72",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "llm-inference-batching-scheduler",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/instruction.md",
+          "expected": "0817374767533fbf51bb93345ee1bba266263c216c6cc55c096e71b4a1d37dfc",
+          "actual": "0817374767533fbf51bb93345ee1bba266263c216c6cc55c096e71b4a1d37dfc",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/task.toml",
+          "expected": "52aaac942f917e6a91ff658e0272195bd1cd842d41d71e302414c52603cc588b",
+          "actual": "52aaac942f917e6a91ff658e0272195bd1cd842d41d71e302414c52603cc588b",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/tests/__init__.py",
+          "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/tests/cost_model_for_tests.py",
+          "expected": "d3e810a99d40327fb8317f6512d879c52c6aeebdf5dcdc0c5e117c7df61c9ab9",
+          "actual": "d3e810a99d40327fb8317f6512d879c52c6aeebdf5dcdc0c5e117c7df61c9ab9",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/tests/test.sh",
+          "expected": "005f980332355e2fe143d4ff4aac11828adf070594bbe7055399c238f06953ca",
+          "actual": "005f980332355e2fe143d4ff4aac11828adf070594bbe7055399c238f06953ca",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/llm-inference-batching-scheduler/tests/test_outputs.py",
+          "expected": "80b06b7c4ba0db28832b767d48be74bb462d7f5df5798d9cb58c4f1160d96ffa",
+          "actual": "80b06b7c4ba0db28832b767d48be74bb462d7f5df5798d9cb58c4f1160d96ffa",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "extract-moves-from-video",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/extract-moves-from-video/instruction.md",
+          "expected": "6697dca6199359a7409962db4609ad5909a8fe2b35e606a61ea63f1d25e44858",
+          "actual": "6697dca6199359a7409962db4609ad5909a8fe2b35e606a61ea63f1d25e44858",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/extract-moves-from-video/task.toml",
+          "expected": "2c9e1b466871da3c3703ec3c6d9835f154b8f1cc34af1f1ba45d64fec56f3605",
+          "actual": "2c9e1b466871da3c3703ec3c6d9835f154b8f1cc34af1f1ba45d64fec56f3605",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/extract-moves-from-video/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/extract-moves-from-video/tests/test_outputs.py",
+          "expected": "565a7617602f33c0f103d6c9b39c95e0cfe72ba8eadf4d3f859cabfd9235467e",
+          "actual": "565a7617602f33c0f103d6c9b39c95e0cfe72ba8eadf4d3f859cabfd9235467e",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "chess-best-move",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/chess-best-move/instruction.md",
+          "expected": "6ba25be4e291a4ad04ae42b2dddefcdaef67ca45ca9d5dce661a2e517b19ce7a",
+          "actual": "6ba25be4e291a4ad04ae42b2dddefcdaef67ca45ca9d5dce661a2e517b19ce7a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/chess-best-move/task.toml",
+          "expected": "d8f01d3c84ed5836edbb49c6c3b3cc7b5b96d951cf01a0987467c9206fb22f9e",
+          "actual": "d8f01d3c84ed5836edbb49c6c3b3cc7b5b96d951cf01a0987467c9206fb22f9e",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/chess-best-move/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/chess-best-move/tests/test_outputs.py",
+          "expected": "a540714e0156fc14564badedcb48d1f7b69a4b457d876036535439b30cb8f286",
+          "actual": "a540714e0156fc14564badedcb48d1f7b69a4b457d876036535439b30cb8f286",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "video-processing",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/video-processing/instruction.md",
+          "expected": "15936f5e61823ae4794994d6e1b7e4e776b40968ea382405b868c501dfe032db",
+          "actual": "15936f5e61823ae4794994d6e1b7e4e776b40968ea382405b868c501dfe032db",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/video-processing/task.toml",
+          "expected": "be4fb42fccc5faa4862789cedd2c560eaa5758a2971989649a6dafeaeccc17aa",
+          "actual": "be4fb42fccc5faa4862789cedd2c560eaa5758a2971989649a6dafeaeccc17aa",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/video-processing/tests/test.sh",
+          "expected": "836bc8f77561680c6bf5b3f76905da87e8a2315e2885d36c3f9ee9a29fb99ef9",
+          "actual": "836bc8f77561680c6bf5b3f76905da87e8a2315e2885d36c3f9ee9a29fb99ef9",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/video-processing/tests/test_outputs.py",
+          "expected": "09b32dd6eb55db1ca024f63b4bb7ddc8b81dbd6003408892c175c0b3ffd17d30",
+          "actual": "09b32dd6eb55db1ca024f63b4bb7ddc8b81dbd6003408892c175c0b3ffd17d30",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/video-processing/tests/test_video.mp4",
+          "expected": "46b237abcaff81c7d3817f2943da1b913f4ab0106d62afb4be73f67259f09c7a",
+          "actual": "46b237abcaff81c7d3817f2943da1b913f4ab0106d62afb4be73f67259f09c7a",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "adaptive-rejection-sampler",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/adaptive-rejection-sampler/instruction.md",
+          "expected": "e6d28c28acd76bef61817427c74c2a29e3e8d75f535cbd708afcbfd02c54013f",
+          "actual": "e6d28c28acd76bef61817427c74c2a29e3e8d75f535cbd708afcbfd02c54013f",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/adaptive-rejection-sampler/task.toml",
+          "expected": "6ed7b37f74beb46e9d47b0f5fad53025667c9548baff4e96d467b56d429fab1a",
+          "actual": "6ed7b37f74beb46e9d47b0f5fad53025667c9548baff4e96d467b56d429fab1a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/adaptive-rejection-sampler/tests/test.sh",
+          "expected": "38b43560d173cc2b952c3a3e17b8a480216d84e33450515e047bcb0d806b1e0a",
+          "actual": "38b43560d173cc2b952c3a3e17b8a480216d84e33450515e047bcb0d806b1e0a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/adaptive-rejection-sampler/tests/test_outputs.py",
+          "expected": "547dc6e107f034f41703722aeceb6d0236e3fb69116fc3f2fbaba11884de352f",
+          "actual": "547dc6e107f034f41703722aeceb6d0236e3fb69116fc3f2fbaba11884de352f",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "filter-js-from-html",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/filter-js-from-html/instruction.md",
+          "expected": "48d6ac95e8ccb552195ce9fbdea86ba8d5d7ccf54e159c31590797802c5cf171",
+          "actual": "48d6ac95e8ccb552195ce9fbdea86ba8d5d7ccf54e159c31590797802c5cf171",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/filter-js-from-html/task.toml",
+          "expected": "f7f888951c97b8120371139bb78d39499c2d3cd7aa3836d57fd6d8b9e4199344",
+          "actual": "f7f888951c97b8120371139bb78d39499c2d3cd7aa3836d57fd6d8b9e4199344",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/filter-js-from-html/tests/test.sh",
+          "expected": "5d23dd089b388310e6d42317704a674340151c473a567cc44e1aee55bdbc6855",
+          "actual": "5d23dd089b388310e6d42317704a674340151c473a567cc44e1aee55bdbc6855",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/filter-js-from-html/tests/test_outputs.py",
+          "expected": "6b43e99fb1c47792a39307fe90df91adfde4a588497c08f3b7da7b3265ef2733",
+          "actual": "6b43e99fb1c47792a39307fe90df91adfde4a588497c08f3b7da7b3265ef2733",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "polyglot-rust-c",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/polyglot-rust-c/instruction.md",
+          "expected": "b0fbcd99a97fc886e4e198b6189b977409dada47cae0a87ac7dc185b440b2355",
+          "actual": "b0fbcd99a97fc886e4e198b6189b977409dada47cae0a87ac7dc185b440b2355",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/polyglot-rust-c/task.toml",
+          "expected": "3c41e83437068c62a3fdff74641899146e34907aefd9e47346213f47caeb82de",
+          "actual": "3c41e83437068c62a3fdff74641899146e34907aefd9e47346213f47caeb82de",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/polyglot-rust-c/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/polyglot-rust-c/tests/test_outputs.py",
+          "expected": "c6fc2ceb4de3651fef05b9577835603376c45d4f7ebefa833a8370e5accfb7aa",
+          "actual": "c6fc2ceb4de3651fef05b9577835603376c45d4f7ebefa833a8370e5accfb7aa",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "install-windows-3.11",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/install-windows-3.11/instruction.md",
+          "expected": "6757fff2157378201478ef17ff3da4d4992aa586fa577dd518c63b98bb1945c5",
+          "actual": "6757fff2157378201478ef17ff3da4d4992aa586fa577dd518c63b98bb1945c5",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/install-windows-3.11/task.toml",
+          "expected": "0485184bd16cc74883396115d93520bd25b36d23d61e248da88c0dceeab2eeac",
+          "actual": "0485184bd16cc74883396115d93520bd25b36d23d61e248da88c0dceeab2eeac",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/install-windows-3.11/tests/qemu-control.sh",
+          "expected": "42c251cd17147e31ed46939248ecbaa95f153cdb86c38e4f1bf0e991156c82bf",
+          "actual": "42c251cd17147e31ed46939248ecbaa95f153cdb86c38e4f1bf0e991156c82bf",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/install-windows-3.11/tests/test.sh",
+          "expected": "8c7a299c5ed8338d8d4f8a65db62d56c21496e62fe66e90719e417fd99c9423a",
+          "actual": "8c7a299c5ed8338d8d4f8a65db62d56c21496e62fe66e90719e417fd99c9423a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/install-windows-3.11/tests/test_outputs.py",
+          "expected": "3db01d3e273a589651f63a5275978b238f6182317276513c5f6a8596375799cb",
+          "actual": "3db01d3e273a589651f63a5275978b238f6182317276513c5f6a8596375799cb",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sparql-university",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sparql-university/instruction.md",
+          "expected": "22eeab47d3b27b06df2627b3c21cfbd579ed7dcc85ebcb7c4b3a241c3c35f449",
+          "actual": "22eeab47d3b27b06df2627b3c21cfbd579ed7dcc85ebcb7c4b3a241c3c35f449",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sparql-university/task.toml",
+          "expected": "47a6f6dd9ce0fc7631ef607e900fcd039b2d064ea90545645b49c678cddc9585",
+          "actual": "47a6f6dd9ce0fc7631ef607e900fcd039b2d064ea90545645b49c678cddc9585",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sparql-university/tests/test.sh",
+          "expected": "45902b57bd0f1dd6959216bc9943ab27bb349edc7ff557035a1ecc8732e4cc6b",
+          "actual": "45902b57bd0f1dd6959216bc9943ab27bb349edc7ff557035a1ecc8732e4cc6b",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sparql-university/tests/test_outputs.py",
+          "expected": "ecf15840fc14f1eeff2f3b6317d7f0febc8fa81f688d24e3054205ba13207b39",
+          "actual": "ecf15840fc14f1eeff2f3b6317d7f0febc8fa81f688d24e3054205ba13207b39",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sparql-university/tests/university_graph_test.ttl",
+          "expected": "368ce01d32513ee04dfe592784b0c976086e514c1eab9b3165a016ca7b0192cb",
+          "actual": "368ce01d32513ee04dfe592784b0c976086e514c1eab9b3165a016ca7b0192cb",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "mteb-leaderboard",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mteb-leaderboard/instruction.md",
+          "expected": "06ea44106eca0405c25bab00f5b3cfeb611c872093f6c0f82ed057839d1d13de",
+          "actual": "06ea44106eca0405c25bab00f5b3cfeb611c872093f6c0f82ed057839d1d13de",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mteb-leaderboard/task.toml",
+          "expected": "86574bd1c6c4fefd2e64eee9c2caa53d87c4bcf2e51547912440a0ddbd0badb8",
+          "actual": "86574bd1c6c4fefd2e64eee9c2caa53d87c4bcf2e51547912440a0ddbd0badb8",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mteb-leaderboard/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mteb-leaderboard/tests/test_outputs.py",
+          "expected": "b28f8fc8b7614801305813c402be52f4be1e75de6658ecdfdf9383aa793892cf",
+          "actual": "b28f8fc8b7614801305813c402be52f4be1e75de6658ecdfdf9383aa793892cf",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "mcmc-sampling-stan",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mcmc-sampling-stan/instruction.md",
+          "expected": "5554ddc6d7b069e965eda4936cd02fce45ed54f51cf38045e6c51aeb39bed943",
+          "actual": "5554ddc6d7b069e965eda4936cd02fce45ed54f51cf38045e6c51aeb39bed943",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mcmc-sampling-stan/task.toml",
+          "expected": "c1c0351670499e15b3818f7394894e2789f74fc2a61ea76eccab826c1a951a94",
+          "actual": "c1c0351670499e15b3818f7394894e2789f74fc2a61ea76eccab826c1a951a94",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mcmc-sampling-stan/tests/test.sh",
+          "expected": "349d2c34617a2959783847c9ad072396c0b119122258ca40cedf0be1db2c9a3e",
+          "actual": "349d2c34617a2959783847c9ad072396c0b119122258ca40cedf0be1db2c9a3e",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/mcmc-sampling-stan/tests/test_outputs.py",
+          "expected": "07e877edc933e3a98fda4a192eefb90addb41632c950773e83ecf5e97e839680",
+          "actual": "07e877edc933e3a98fda4a192eefb90addb41632c950773e83ecf5e97e839680",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "sam-cell-seg",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/instruction.md",
+          "expected": "370629c8a1b22896e5bb85d13411a860c496d294e70d0ec7ab98c2911c922150",
+          "actual": "370629c8a1b22896e5bb85d13411a860c496d294e70d0ec7ab98c2911c922150",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/task.toml",
+          "expected": "f0eb6af2acb87cb6fee67d77e8fdd55e3b331baf48999260bc5b6c4ac466c128",
+          "actual": "f0eb6af2acb87cb6fee67d77e8fdd55e3b331baf48999260bc5b6c4ac466c128",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/tests/correct_output.csv",
+          "expected": "726c8315003fe604bdfa5aca5081420d4da2a6d788f51fe83400536dc51fd36e",
+          "actual": "726c8315003fe604bdfa5aca5081420d4da2a6d788f51fe83400536dc51fd36e",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/tests/test.sh",
+          "expected": "7f2bc4976949fba258f1db6dedacb55377adc300d535ab849131744ce80bf8fd",
+          "actual": "7f2bc4976949fba258f1db6dedacb55377adc300d535ab849131744ce80bf8fd",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/tests/test_img.png",
+          "expected": "a0136a49776ad05b3444ed21d79f01e24d78dfd826c4f5ff5223d3bfc958559d",
+          "actual": "a0136a49776ad05b3444ed21d79f01e24d78dfd826c4f5ff5223d3bfc958559d",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/tests/test_metadata.csv",
+          "expected": "4473f27e274520b0d64e69dd1f893413aee916cc1767095d511ba93fe51eb607",
+          "actual": "4473f27e274520b0d64e69dd1f893413aee916cc1767095d511ba93fe51eb607",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/sam-cell-seg/tests/test_outputs.py",
+          "expected": "853165994896503e0f7657885a9f361695b2eb3ea8ba097403270378dd566847",
+          "actual": "853165994896503e0f7657885a9f361695b2eb3ea8ba097403270378dd566847",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "build-cython-ext",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-cython-ext/instruction.md",
+          "expected": "7e52874e45f88505bd21540229719de6639a401477557d814489981d472f0e34",
+          "actual": "7e52874e45f88505bd21540229719de6639a401477557d814489981d472f0e34",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-cython-ext/task.toml",
+          "expected": "c472f0e7522c128fb7f03e00b50c8cdf2e5e6474daa1e094e7441f4b54e770b2",
+          "actual": "c472f0e7522c128fb7f03e00b50c8cdf2e5e6474daa1e094e7441f4b54e770b2",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-cython-ext/tests/test.sh",
+          "expected": "0156c9c4085258b696ce424cf1ce96cba44d1263c5d73bdf54083fd80237f915",
+          "actual": "0156c9c4085258b696ce424cf1ce96cba44d1263c5d73bdf54083fd80237f915",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-cython-ext/tests/test_outputs.py",
+          "expected": "6549f1a8e04b6163ec08877e6f6b9868bf94563f3a3c72ac1fba9c512c31689e",
+          "actual": "6549f1a8e04b6163ec08877e6f6b9868bf94563f3a3c72ac1fba9c512c31689e",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "feal-differential-cryptanalysis",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/instruction.md",
+          "expected": "b4093780b283e5c9838997769fb7bca090e3f4cbbd2d7cb275ba60cdfd722572",
+          "actual": "b4093780b283e5c9838997769fb7bca090e3f4cbbd2d7cb275ba60cdfd722572",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/task.toml",
+          "expected": "dcb9f2f15047eee0be15ca18c39c357f89187a94aae6baeff276221e2383eecb",
+          "actual": "dcb9f2f15047eee0be15ca18c39c357f89187a94aae6baeff276221e2383eecb",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/feal.c",
+          "expected": "bd4e9fb31e38073414d8a1930b2e67bc59eaee17e52f58133f781d297073e885",
+          "actual": "bd4e9fb31e38073414d8a1930b2e67bc59eaee17e52f58133f781d297073e885",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/feal.h",
+          "expected": "d3ebd83bfbdb86f3543bda72a0693aabe478c6880ef78cb4a8e6c2e5a779759e",
+          "actual": "d3ebd83bfbdb86f3543bda72a0693aabe478c6880ef78cb4a8e6c2e5a779759e",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/feal_module.c",
+          "expected": "1ae1c8a31b099b5742b35a3d6b1b70a2509d8d13d79ab74535e038e9a3379363",
+          "actual": "1ae1c8a31b099b5742b35a3d6b1b70a2509d8d13d79ab74535e038e9a3379363",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/setup.py",
+          "expected": "d1d8f08966670ac8bfc1a9cfa8c16a6915eef2153a44ad6502daec2da83e08aa",
+          "actual": "d1d8f08966670ac8bfc1a9cfa8c16a6915eef2153a44ad6502daec2da83e08aa",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/test.sh",
+          "expected": "106c27394c96343c03b4fbac14faac85542bce6628bccc66a5fe036d77f72daf",
+          "actual": "106c27394c96343c03b4fbac14faac85542bce6628bccc66a5fe036d77f72daf",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/feal-differential-cryptanalysis/tests/test_outputs.py",
+          "expected": "585780e76d98094ad118d096f8c78f2281352dc9826e3687c4de152659631a3d",
+          "actual": "585780e76d98094ad118d096f8c78f2281352dc9826e3687c4de152659631a3d",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "train-fasttext",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/train-fasttext/instruction.md",
+          "expected": "b701c31f4c5eb6f7e9a6b74d62a52eb696dcae9548a8252c78c0fa850714f998",
+          "actual": "b701c31f4c5eb6f7e9a6b74d62a52eb696dcae9548a8252c78c0fa850714f998",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/train-fasttext/task.toml",
+          "expected": "994fda7c3081bbdd9f6d05d6279ef64faefa94c214d1e08fbcea656540e4fe91",
+          "actual": "994fda7c3081bbdd9f6d05d6279ef64faefa94c214d1e08fbcea656540e4fe91",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/train-fasttext/tests/private_test.tar.gz",
+          "expected": "8397bce0c447bca9b73ea66a0f258143701817c4b850fd905166c30a61d2d0e4",
+          "actual": "8397bce0c447bca9b73ea66a0f258143701817c4b850fd905166c30a61d2d0e4",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/train-fasttext/tests/test.sh",
+          "expected": "22c8b907ea8e19ffda8c10f4433e0e6ef9a74db0f0f4c61ed59c4035645147df",
+          "actual": "22c8b907ea8e19ffda8c10f4433e0e6ef9a74db0f0f4c61ed59c4035645147df",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/train-fasttext/tests/test_outputs.py",
+          "expected": "c5c6b10b89b5224dd1979e1b5c0f538ebd49b465a7aa3af4459c19df7c0fb4b0",
+          "actual": "c5c6b10b89b5224dd1979e1b5c0f538ebd49b465a7aa3af4459c19df7c0fb4b0",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "portfolio-optimization",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/portfolio-optimization/instruction.md",
+          "expected": "ffaadcbf9f576b5d5e087d2a06a4b525dd52c6b84d43eb9d85107f0a9aebcb5d",
+          "actual": "ffaadcbf9f576b5d5e087d2a06a4b525dd52c6b84d43eb9d85107f0a9aebcb5d",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/portfolio-optimization/task.toml",
+          "expected": "4918687e4e261a9852e39e5a554156733c071c17dc89c5f544f15f2ef744ce0a",
+          "actual": "4918687e4e261a9852e39e5a554156733c071c17dc89c5f544f15f2ef744ce0a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/portfolio-optimization/tests/portfolio_baseline_protected.py",
+          "expected": "ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+          "actual": "ff86bf940cb78cfc212c6788a04e81ab0a33ce995591608d114004b96b17d174",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/portfolio-optimization/tests/test.sh",
+          "expected": "25d5d5008edeab93d730b44f723687d2b08978f9f53750f62af8aeb1ecae90c6",
+          "actual": "25d5d5008edeab93d730b44f723687d2b08978f9f53750f62af8aeb1ecae90c6",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/portfolio-optimization/tests/test_outputs.py",
+          "expected": "800fc762b0a107b197d17cc2c094858490f02f09f47af4e3ee84253594f97fa7",
+          "actual": "800fc762b0a107b197d17cc2c094858490f02f09f47af4e3ee84253594f97fa7",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "constraints-scheduling",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/constraints-scheduling/instruction.md",
+          "expected": "342def78177f9bc41bea4d11af679bc385a9dda2ac8a1e425be384a5b7f937b6",
+          "actual": "342def78177f9bc41bea4d11af679bc385a9dda2ac8a1e425be384a5b7f937b6",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/constraints-scheduling/task.toml",
+          "expected": "7b9842de16d74e8faf8c7c0aa03b0b81145941cb12dd322d81ae23fc48607250",
+          "actual": "7b9842de16d74e8faf8c7c0aa03b0b81145941cb12dd322d81ae23fc48607250",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/constraints-scheduling/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/constraints-scheduling/tests/test_outputs.py",
+          "expected": "1422b345ba3aacdfc4184e962811b6379988435896c50d8cf62903e70990c5d1",
+          "actual": "1422b345ba3aacdfc4184e962811b6379988435896c50d8cf62903e70990c5d1",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "tune-mjcf",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/tune-mjcf/instruction.md",
+          "expected": "c7fb299b6c6d6c9a2dcd95c5938e6f902ddad1cb02aee875d369cb7eae584b1f",
+          "actual": "c7fb299b6c6d6c9a2dcd95c5938e6f902ddad1cb02aee875d369cb7eae584b1f",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/tune-mjcf/task.toml",
+          "expected": "27b6d4e5a23761cc1a24a695125d891be74a2930fb83a02a66221db0244b08b3",
+          "actual": "27b6d4e5a23761cc1a24a695125d891be74a2930fb83a02a66221db0244b08b3",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/tune-mjcf/tests/model_ref.xml",
+          "expected": "f3561cbea5bb024886e9627e795c8f60a3984bd749853073bbd433d0e49bf0b7",
+          "actual": "f3561cbea5bb024886e9627e795c8f60a3984bd749853073bbd433d0e49bf0b7",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/tune-mjcf/tests/test.sh",
+          "expected": "343a0604775b960f47cb7ed04bc0c4f9e23f8439c4ba44d6027f0cb245327e97",
+          "actual": "343a0604775b960f47cb7ed04bc0c4f9e23f8439c4ba44d6027f0cb245327e97",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/tune-mjcf/tests/test_outputs.py",
+          "expected": "3f20e17eb16bb51e236a9321ddc1331345838467473c5a6faf7e1c762af10bbc",
+          "actual": "3f20e17eb16bb51e236a9321ddc1331345838467473c5a6faf7e1c762af10bbc",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "crack-7z-hash",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/crack-7z-hash/instruction.md",
+          "expected": "f5f89400c549eefb2c245caa7770356737b7a12098e6879787e846d9cb5eb822",
+          "actual": "f5f89400c549eefb2c245caa7770356737b7a12098e6879787e846d9cb5eb822",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/crack-7z-hash/task.toml",
+          "expected": "8e192bcbe00e817419bde7ff9b562a5fa0c1e24ec4f3384cba4a31eda0a7b013",
+          "actual": "8e192bcbe00e817419bde7ff9b562a5fa0c1e24ec4f3384cba4a31eda0a7b013",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/crack-7z-hash/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/crack-7z-hash/tests/test_outputs.py",
+          "expected": "f18d7565f690727484ac43d012d36a4f386236419501e4a4277134a8e8fcfcc9",
+          "actual": "f18d7565f690727484ac43d012d36a4f386236419501e4a4277134a8e8fcfcc9",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "fix-git",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/fix-git/instruction.md",
+          "expected": "f98174e47ba5ce040f6fad22ef3cbca4dd27b3192868ea5d082077222c3ec4e8",
+          "actual": "f98174e47ba5ce040f6fad22ef3cbca4dd27b3192868ea5d082077222c3ec4e8",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/fix-git/task.toml",
+          "expected": "f59d711003b974e4ef8ed63556614e2ea9ea7d0e394af13b2071225e3fda7805",
+          "actual": "f59d711003b974e4ef8ed63556614e2ea9ea7d0e394af13b2071225e3fda7805",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/fix-git/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/fix-git/tests/test_outputs.py",
+          "expected": "6ae4dd70595cf7d1eb81bc342be319de338dc0e7fd67aab8645700047e31fb37",
+          "actual": "6ae4dd70595cf7d1eb81bc342be319de338dc0e7fd67aab8645700047e31fb37",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "code-from-image",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/code-from-image/instruction.md",
+          "expected": "8c3af6483e409defef9786da51f318ae2ca71afe2327b94471d2f0e2e367442c",
+          "actual": "8c3af6483e409defef9786da51f318ae2ca71afe2327b94471d2f0e2e367442c",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/code-from-image/task.toml",
+          "expected": "3a13c1e252bb8759f51215be0b2b2cb1b4c697f0dd570f2d7702cc28b28f08de",
+          "actual": "3a13c1e252bb8759f51215be0b2b2cb1b4c697f0dd570f2d7702cc28b28f08de",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/code-from-image/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/code-from-image/tests/test_outputs.py",
+          "expected": "b9b7cb0033116df88a4807404bf309190f92d62a89df2ce64cdcbf732efe084a",
+          "actual": "b9b7cb0033116df88a4807404bf309190f92d62a89df2ce64cdcbf732efe084a",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "build-pov-ray",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-pov-ray/instruction.md",
+          "expected": "56c8ecdd0084a07f8c97986c43af5c37ed03dd5aa994da6735cf59806162d1b2",
+          "actual": "56c8ecdd0084a07f8c97986c43af5c37ed03dd5aa994da6735cf59806162d1b2",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-pov-ray/task.toml",
+          "expected": "b90a47ec26c1191d3c523cc094ea96b170e42fbfe176ef1f814c57d05390c097",
+          "actual": "b90a47ec26c1191d3c523cc094ea96b170e42fbfe176ef1f814c57d05390c097",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-pov-ray/tests/reference_illum1.png",
+          "expected": "bb084f430bbc9d5b623a656920670dc06cee6d9132a9d550be4a1b99e41ab9e0",
+          "actual": "bb084f430bbc9d5b623a656920670dc06cee6d9132a9d550be4a1b99e41ab9e0",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-pov-ray/tests/test.sh",
+          "expected": "928d1497ad21aef0c456294e3784f1fddf8493410f23584da89f9e02ec6bd134",
+          "actual": "928d1497ad21aef0c456294e3784f1fddf8493410f23584da89f9e02ec6bd134",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/build-pov-ray/tests/test_outputs.py",
+          "expected": "64d6ce107503714ada346e5606832ee886be9950971cf81523e73d8ba28e8d37",
+          "actual": "64d6ce107503714ada346e5606832ee886be9950971cf81523e73d8ba28e8d37",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "write-compressor",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/instruction.md",
+          "expected": "c4fc3e73e44deeac95f1cd4a34a2d87e853b22ceec2b2824767f5f087b470bb2",
+          "actual": "c4fc3e73e44deeac95f1cd4a34a2d87e853b22ceec2b2824767f5f087b470bb2",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/task.toml",
+          "expected": "6066a509066433c97c417fea68c4e3e73996f698dcdcbabe07718835eea355a6",
+          "actual": "6066a509066433c97c417fea68c4e3e73996f698dcdcbabe07718835eea355a6",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/tests/original-data.txt",
+          "expected": "0fc483d0fb31128dfa41ed11adca56c88688888189826ef9daeafd7559b4fa4e",
+          "actual": "0fc483d0fb31128dfa41ed11adca56c88688888189826ef9daeafd7559b4fa4e",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/tests/original-decomp.c",
+          "expected": "7f8d9ef66943f912a217aa48f4ef5efc967b44c2b21d0f56df029b5ab413f62a",
+          "actual": "7f8d9ef66943f912a217aa48f4ef5efc967b44c2b21d0f56df029b5ab413f62a",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/write-compressor/tests/test_outputs.py",
+          "expected": "809f486053e3ffbce852111dee1f63d80ab31297bd33172389e50278bed384e2",
+          "actual": "809f486053e3ffbce852111dee1f63d80ab31297bd33172389e50278bed384e2",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "torch-tensor-parallelism",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/torch-tensor-parallelism/instruction.md",
+          "expected": "13bde2ab165d72a311e2bf066d5d6c3c8761bf9d3dd39d1b23eda23bc546b910",
+          "actual": "13bde2ab165d72a311e2bf066d5d6c3c8761bf9d3dd39d1b23eda23bc546b910",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/torch-tensor-parallelism/task.toml",
+          "expected": "72fd2a5500d1fe8795dcae76cccb1a29fb25894881a7475f2fa519c87d425a8d",
+          "actual": "72fd2a5500d1fe8795dcae76cccb1a29fb25894881a7475f2fa519c87d425a8d",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/torch-tensor-parallelism/tests/test.sh",
+          "expected": "a7e6c9408b2401e4e7448371f7ddc72f3284caccfb56277d3cd4e98051868cdf",
+          "actual": "a7e6c9408b2401e4e7448371f7ddc72f3284caccfb56277d3cd4e98051868cdf",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/torch-tensor-parallelism/tests/test_outputs.py",
+          "expected": "4ae4285e15fba1fcf13d7b7c0638ac8c2e2b0797c937abab1fb6b136fd508290",
+          "actual": "4ae4285e15fba1fcf13d7b7c0638ac8c2e2b0797c937abab1fb6b136fd508290",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "cobol-modernization",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/cobol-modernization/instruction.md",
+          "expected": "a87074f1141b7345394cd88053d0debb0dc8f7de95308882c6538ee9a3b359da",
+          "actual": "a87074f1141b7345394cd88053d0debb0dc8f7de95308882c6538ee9a3b359da",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/cobol-modernization/task.toml",
+          "expected": "4b620211dc3d6b1b989f0210c5ecd2f606974581c8bce27bd78659d48cf0cfbd",
+          "actual": "4b620211dc3d6b1b989f0210c5ecd2f606974581c8bce27bd78659d48cf0cfbd",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/cobol-modernization/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/cobol-modernization/tests/test_outputs.py",
+          "expected": "009180a7092583fc8143bb3ffc3957923aa0d61d0aac3a471f76eeb4aae54a88",
+          "actual": "009180a7092583fc8143bb3ffc3957923aa0d61d0aac3a471f76eeb4aae54a88",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "winning-avg-corewars",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/winning-avg-corewars/instruction.md",
+          "expected": "f8198a1644547b116b4b67384f6bb6b3a78e85076f8cda20079a77f2f3499242",
+          "actual": "f8198a1644547b116b4b67384f6bb6b3a78e85076f8cda20079a77f2f3499242",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/winning-avg-corewars/task.toml",
+          "expected": "a9b48765d03a66d966f6a162be203bc31e1d9d6e4abe616a2f4b42bac5dc246f",
+          "actual": "a9b48765d03a66d966f6a162be203bc31e1d9d6e4abe616a2f4b42bac5dc246f",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/winning-avg-corewars/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/winning-avg-corewars/tests/test_outputs.py",
+          "expected": "252f78e5ce87ae3cf5852f192889aef5bd693ab0a13a6bf94cbb2fdce3218e93",
+          "actual": "252f78e5ce87ae3cf5852f192889aef5bd693ab0a13a6bf94cbb2fdce3218e93",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "circuit-fibsqrt",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/circuit-fibsqrt/instruction.md",
+          "expected": "a7f500266a878d04ac9de39fba76220cfad216d8f6b8063bba93bebb3d4ab9ea",
+          "actual": "a7f500266a878d04ac9de39fba76220cfad216d8f6b8063bba93bebb3d4ab9ea",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/circuit-fibsqrt/task.toml",
+          "expected": "9f5aa1f7ebbbcec90fd109121e9bd509af3cfff6b4cec701bd91947988f40972",
+          "actual": "9f5aa1f7ebbbcec90fd109121e9bd509af3cfff6b4cec701bd91947988f40972",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/circuit-fibsqrt/tests/sim.c",
+          "expected": "700645ac6156cdc88ec1e210f7c7d8d9969bb42aec969c410597e8efca796173",
+          "actual": "700645ac6156cdc88ec1e210f7c7d8d9969bb42aec969c410597e8efca796173",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/circuit-fibsqrt/tests/test.sh",
+          "expected": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "actual": "4770437ea96c3cc84684b4f99d55fb148fcac09f9ea1e8ef49de487716e6c334",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/circuit-fibsqrt/tests/test_outputs.py",
+          "expected": "6117b8edb7d567b30e32b16a9244bec4c131ec01e9065d52f6f53f87e36f0438",
+          "actual": "6117b8edb7d567b30e32b16a9244bec4c131ec01e9065d52f6f53f87e36f0438",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "configure-git-webserver",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/configure-git-webserver/instruction.md",
+          "expected": "62151b7371bc364277a3c118bba755334c640fb0cefc7a5af106e6e763cf1d97",
+          "actual": "62151b7371bc364277a3c118bba755334c640fb0cefc7a5af106e6e763cf1d97",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/configure-git-webserver/task.toml",
+          "expected": "ebb40d72f689512cbd90d865d88ef966b6665ab215544f9247b898b7fa94751b",
+          "actual": "ebb40d72f689512cbd90d865d88ef966b6665ab215544f9247b898b7fa94751b",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/configure-git-webserver/tests/test.sh",
+          "expected": "afafc3ffdaf911f7a93003c0746f217188099c174e5d3eb7dada17133df15895",
+          "actual": "afafc3ffdaf911f7a93003c0746f217188099c174e5d3eb7dada17133df15895",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/configure-git-webserver/tests/test_outputs.py",
+          "expected": "526aee3dfe952cc4c7574361012712e389d6fba7222c005fc3e939fc53346b37",
+          "actual": "526aee3dfe952cc4c7574361012712e389d6fba7222c005fc3e939fc53346b37",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/configure-git-webserver/tests/verify.sh",
+          "expected": "49a02f5267a892824e023ce05eb1ac6132a44854cc47f20feba312c4a3d05568",
+          "actual": "49a02f5267a892824e023ce05eb1ac6132a44854cc47f20feba312c4a3d05568",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "task_id": "qemu-alpine-ssh",
+      "passed": true,
+      "files": [
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/qemu-alpine-ssh/instruction.md",
+          "expected": "8348c60490cb90bc690cba259dfe98996da4c3294c6d42bba1119b00c64de4de",
+          "actual": "8348c60490cb90bc690cba259dfe98996da4c3294c6d42bba1119b00c64de4de",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/qemu-alpine-ssh/task.toml",
+          "expected": "10a43ec6ee732eeba852c377f12e23178f7fa5a4868143f3699a15565ffb64c7",
+          "actual": "10a43ec6ee732eeba852c377f12e23178f7fa5a4868143f3699a15565ffb64c7",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/qemu-alpine-ssh/tests/test.sh",
+          "expected": "3b244479776c4ee3639631112799f2cde22cbb80ac10511715e3a8f32909c289",
+          "actual": "3b244479776c4ee3639631112799f2cde22cbb80ac10511715e3a8f32909c289",
+          "passed": true
+        },
+        {
+          "path": "/home/chenkeyi/.local/share/harbor-rsi/near-r3-20261015/tb21-formal-20261015T023432Z/tasks/qemu-alpine-ssh/tests/test_outputs.py",
+          "expected": "83ccb4bdcd259b342212bebefe395f289858b4dc55b2ee7ae0dab238ad2e9718",
+          "actual": "83ccb4bdcd259b342212bebefe395f289858b4dc55b2ee7ae0dab238ad2e9718",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "source_files_read_only": true,
+  "model_generation_calls": 0
+}

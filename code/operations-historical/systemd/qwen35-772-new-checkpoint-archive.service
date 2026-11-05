@@ -1,0 +1,17 @@
+[Unit]
+Description=Immutable OpenHarness SFT checkpoint archive
+StartLimitIntervalSec=60
+StartLimitBurst=3
+[Service]
+Type=oneshot
+Environment=OPENHARNESS_SFT_WORKSPACE=/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace
+Environment=PYTHONPATH=/ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/source-r4/repository
+ExecStart=/ssd/chenkeyi/qwen35-sft-772-20261101/env/train-r1/bin/python -m sft --workspace /ssd/chenkeyi/qwen35-sft-772-20261101/new-sft/workspace archive-worker
+TimeoutStartSec=2h
+MemoryMax=512M
+CPUQuota=100%
+Nice=10
+IOSchedulingClass=idle
+UMask=0027
+KillMode=control-group
+Restart=no

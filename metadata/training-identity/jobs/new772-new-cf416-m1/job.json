@@ -1,0 +1,35 @@
+{
+  "job_id": "new772-new-cf416-m1",
+  "unit": "qwen35-772-new-sft-new772-new-cf416-m1.service",
+  "stage": "new-cf416-m1",
+  "gpu_ids": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "resume": null,
+  "probe_seconds": 0,
+  "status": "completed",
+  "submitted_at": 1793504681.4673011,
+  "host": "bm-220acn7",
+  "config_sha256": "d2a8559c638a4b829ae0a943e04ae27b629bfc59da8ca0fbfa7210d1cfc3e04d",
+  "training_source_sha256": "293ba2a7dca8569bb39e11bc0137a0e1180a0391402f10d49ff5b4ad00ce6c93",
+  "source_commit": "6f3cae79028b5c2d313a3cd35ee7e7473c9b2f42",
+  "data_manifest_sha256": "a31474ac16754dd59913a67a626c8a9a20e102c7e09a6b446197281488929c30",
+  "no_local_heartbeat": true,
+  "automatic_restart": false,
+  "process": {
+    "pid": 3179152,
+    "startticks": "86376371",
+    "boot_id": "5ed5b9fc-6915-46c8-b9ad-04e790f6b65b"
+  },
+  "started_at": 1793504681.525152,
+  "launcher_process": {
+    "pid": 3179153,
+    "startticks": "86376376",
+    "boot_id": "5ed5b9fc-6915-46c8-b9ad-04e790f6b65b"
+  },
+  "returncode": 0,
+  "ended_at": 1793558731.3609655
+}

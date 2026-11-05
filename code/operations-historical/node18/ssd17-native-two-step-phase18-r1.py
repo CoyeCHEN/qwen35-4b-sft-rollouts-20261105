@@ -1,0 +1,215 @@
+"""Existing sole-controller leaf: two finite native systemd units on SSD17."""
+import hashlib
+import json
+import shlex
+import subprocess
+import time
+from pathlib import Path
+
+R=Path('/ssd/chenkeyi/qwen35-sft-772-20261101')
+C=Path('/data/chenkeyi/qwen35-sft-772-20261101/control')
+T='/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1'
+CONFIG = {'root': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1',
+ 'ssh_config': '/ssd/chenkeyi/qwen35-sft-772-20261101/control-ssh/backend17-exec-r1.conf',
+ 'ssh_config_sha256': 'b49e8d3be67ef1f991ba278418620929ec2b7925000b726ef9e71c8bf3f2c84f',
+ 'known_hosts_sha256': 'f6aaf5bc483e7c6f6902be06c2cdc4dd6eea2af4f7e2e60c3ce07bbbe31d57ef',
+ 'ssh_alias': 'rsi-ssd17',
+ 'plan': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/NATIVE_SSD17_FIXGIT_NOP_PLAN_R1.json',
+ 'plan_sha256': 'a6feabcab2ecf0bc559ec267e5f616e3adb8cea63a0b0b3c28f9d2cb3cb78658',
+ 'deployment': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/SSD17_BACKEND_DEPLOYMENT_R1.json',
+ 'deployment_sha256': '2da1abefed7fd9dd7ba72c2d0e903f869736a696d276cce9ee344aa3c1340a66',
+ 'image_ready': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/image-prewarm/fix-git/IMAGE_READY_R1.json',
+ 'image_source_sha256': '920b17f2161152a4a172e1ffa67d7a23740ae1c945855e883f0f9c03cdaad7ac',
+ 'engine_id': '59c8ba22-0aa4-4aed-bc43-4e1b5989fa22',
+ 'image_id': 'sha256:389b9c8247610c2c5be080b1ac00429007c2c69bf57f7f26c79f0f75ba2d5c74',
+ 'steps': {'runtime': {'unit': 'qwen35-ssd17-native-runtime-prepare-20261103-r1.service',
+                       'script': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/prepare-native-ssd17-runtime-r1.py',
+                       'source_sha256': '1e4114d354f2b936236e9a3e74d8dc2bd0bb5656a0509c38aa67759826904314',
+                       'python': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/controller17-r1/python/cpython-3.12.3-linux-x86_64-gnu/bin/python3.12',
+                       'admission': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_RUNTIME_ADMISSION_ACTUAL_R1.json',
+                       'intent': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_RUNTIME_NATIVE_DISPATCH_R1.json',
+                       'ack': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_RUNTIME_NATIVE_SYSTEMD_ACK_R1.json',
+                       'receipt': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/NATIVE_RUNTIME_CPU_READY_R1.json',
+                       'receipt_kind': 'SSD17_NATIVE_RUNTIME_CPU_READY_R1',
+                       'log': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/logs/runtime-native-r1.log',
+                       'started_paths': ['/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/native-runtime-r1']},
+           'nop': {'unit': 'qwen35-ssd17-fixgit-native-nop-20261103-r1.service',
+                   'script': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/run-native-ssd17-fixgit-nop-r1.py',
+                   'source_sha256': '9c4dfe4affbd5a3fe3818f9da136e3bb79d4b5830dbd1a1bfd19313df4873e5b',
+                   'python': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/native-runtime-r1/bin/python',
+                   'admission': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_NOP_ADMISSION_ACTUAL_R1.json',
+                   'intent': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_NOP_NATIVE_DISPATCH_R1.json',
+                   'ack': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/ROOT_NOP_NATIVE_SYSTEMD_ACK_R1.json',
+                   'receipt': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/actual-run-r1/SSD17_FIXGIT_NATIVE_NOP_ACCEPTANCE_R1.json',
+                   'receipt_kind': 'ACTUAL_SSD17_FIXGIT_NATIVE_NOP_ACCEPTANCE_R1',
+                   'log': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/logs/nop-native-r1.log',
+                   'started_paths': ['/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/actual-run-r1',
+                                     '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/jobs/qwen35-ssd17-fixgit-newwheel5-nop-20261103-r1']}},
+ 'nop_metadata': {'actual_native_configs': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/actual-run-r1/ACTUAL_NATIVE_TRIAL_R1.json',
+                  'actual_nop_agent_start': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/jobs/qwen35-ssd17-fixgit-newwheel5-nop-20261103-r1/fix-git__ssd17-newwheel5-nop-r1/ACTUAL_NATIVE_NOP_AGENT_START_R1.json',
+                  'raw_result': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/jobs/qwen35-ssd17-fixgit-newwheel5-nop-20261103-r1/fix-git__ssd17-newwheel5-nop-r1/result.json',
+                  'worker_exception': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/nop-fixgit-r1/actual-run-r1/FINITE_WORKER_EXCEPTION_R1.json'}}
+TEMPLATES = {'runtime': {'frozen': False,
+             'admitted': False,
+             'operation': 'PREPARE_SSD17_NATIVE_RUNTIME_R1',
+             'source_sha256': '1e4114d354f2b936236e9a3e74d8dc2bd0bb5656a0509c38aa67759826904314',
+             'plan_sha256': 'a6feabcab2ecf0bc559ec267e5f616e3adb8cea63a0b0b3c28f9d2cb3cb78658',
+             'unique_controller_node': '18',
+             'unique_controller_owner': None,
+             'limits': {'native_jobs': 0, 'native_trials': 0, 'concurrency': 0, 'model_generation_calls': 0},
+             'required_evidence': {}},
+ 'nop': {'frozen': False,
+         'admitted': False,
+         'operation': 'NATIVE_FIXGIT_SSD17_NOP_R1',
+         'source_sha256': '9c4dfe4affbd5a3fe3818f9da136e3bb79d4b5830dbd1a1bfd19313df4873e5b',
+         'plan_sha256': 'a6feabcab2ecf0bc559ec267e5f616e3adb8cea63a0b0b3c28f9d2cb3cb78658',
+         'unique_controller_node': '18',
+         'unique_controller_owner': None,
+         'limits': {'native_jobs': 1, 'native_trials': 1, 'concurrency': 1, 'model_generation_calls': 0},
+         'required_evidence': {'image_ready': {'path': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/image-prewarm/fix-git/IMAGE_READY_R1.json',
+                                               'sha256': None},
+                               'runtime_ready': {'path': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/NATIVE_RUNTIME_CPU_READY_R1.json',
+                                                 'sha256': None},
+                               'backend_deployment': {'path': '/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/SSD17_BACKEND_DEPLOYMENT_R1.json',
+                                                      'sha256': '2da1abefed7fd9dd7ba72c2d0e903f869736a696d276cce9ee344aa3c1340a66'}}}}
+
+REMOTE = r'''
+import hashlib,json,os,subprocess,sys,time
+from pathlib import Path
+c=json.loads(sys.argv[1]);owner=json.loads(sys.argv[2]);step=sys.argv[3];phase_sha=sys.argv[4];templates=json.loads(sys.argv[5])
+root=Path(c['root']);s=c['steps'][step]
+def read(p):return json.loads(Path(p).read_text())
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def artifact(path):
+ p=Path(path)
+ if not p.exists():return None
+ data=p.read_bytes();return dict(path=str(p),sha256=hashlib.sha256(data).hexdigest(),bytes=len(data),value=json.loads(data))
+def exclusive(path,value):
+ p=Path(path)
+ with p.open('x')as f:
+  f.write(json.dumps(value,indent=2)+'\n');f.flush();os.fsync(f.fileno())
+ fd=os.open(p.parent,os.O_RDONLY|os.O_DIRECTORY)
+ try:os.fsync(fd)
+ finally:os.close(fd)
+def props():
+ p=subprocess.run(['systemctl','--user','show',s['unit'],'-p','LoadState','-p','ActiveState','-p','SubState','-p','MainPID','-p','Result','-p','ExecMainStatus','-p','ExecMainStartTimestampMonotonic'],capture_output=True,text=True,timeout=4)
+ rows=dict(line.split('=',1)for line in p.stdout.splitlines()if '='in line)
+ if not rows or 'LoadState'not in rows:raise RuntimeError('Native unit metadata UNKNOWN:'+p.stderr[-500:])
+ pid=int(rows.get('MainPID','0'));rows['actual_process']=None
+ if pid:
+  p=Path('/proc')/str(pid)
+  try:
+   argv=[v.decode()for v in p.joinpath('cmdline').read_bytes().split(b'\0')if v]
+   expected=[s['python'],s['script'],'--plan',c['plan'],'--admission',s['admission']]
+   cg=p.joinpath('cgroup').read_text()
+   if argv!=expected or not any(line.endswith('/'+s['unit'])for line in cg.splitlines()):raise RuntimeError('Native unit process identity differs')
+   rows['actual_process']=dict(pid=pid,start_ticks=p.joinpath('stat').read_text().rsplit(')',1)[1].split()[19],argv=argv,cgroup=cg)
+  except FileNotFoundError:rows['process_state']='UNKNOWN_EXIT_DURING_QUERY'
+ return rows
+def validated_receipt(name):
+ v=artifact(c['steps'][name]['receipt'])
+ if v is None:return None
+ body=v['value'];spec=c['steps'][name]
+ if body['source_sha256']!=spec['source_sha256']or body['plan_sha256']!=c['plan_sha256']or body['kind']!=spec['receipt_kind']:raise RuntimeError('Actual receipt source/plan/kind differs:'+name)
+ if body.get('model_generation_calls')!=0:raise RuntimeError('Environment utility must not generate')
+ if body.get('passed')is True:
+  if name=='runtime':
+   if body['new_venv']!=str(root/'native-runtime-r1')or body['actual']['passed']is not True or body['actual']['python']!=str(root/'native-runtime-r1/bin/python')or not Path(body['actual']['python']).is_file():raise RuntimeError('Actual runtime receipt is not the private17 runtime')
+  else:
+   row=body['row'];reward=(row['official_verifier'].get('rewards')or{}).get('reward')
+   if row['status']!='PASS'or not row.get('native_trial_id')or row['actual_runtime']['engine_id']!=c['engine_id']or not row['cleanup']['complete']or row['official_verifier']['return_code']!=0 or reward not in[0,1]or body.get('eligible_for_student_model_trials')is not False:raise RuntimeError('Actual NOP acceptance is incomplete')
+ return v
+sources={p:sha(p)if Path(p).is_file()else None for p in[c['plan'],s['script'],c['deployment']]}
+if sources[c['plan']]!=c['plan_sha256']or sources[s['script']]!=s['source_sha256']or sources[c['deployment']]!=c['deployment_sha256']:raise RuntimeError('Frozen17 source/plan/deployment not ready or changed')
+p=props();admission=artifact(s['admission']);intent=artifact(s['intent']);ack=artifact(s['ack']);receipt=validated_receipt(step)
+v=dict(step=step,at=time.time(),unit=p,admission=admission,intent=intent,ack=ack,receipt=receipt,source_sha256=s['source_sha256'],plan_sha256=c['plan_sha256'],model_generation_calls=0,new_dispatch=False)
+if step=='nop':
+ v['native_metadata']={}
+ for name,path in c['nop_metadata'].items():
+  try:
+   item=artifact(path)
+   if item and name=='raw_result':
+    body=item['value'];item['value']={k:body.get(k)for k in['id','started_at','finished_at','agent_setup','agent_execution','verifier','verifier_result','exception_info','infrastructure_errors']}
+   v['native_metadata'][name]=item
+  except Exception as exc:v['native_metadata'][name]=dict(status='UNKNOWN',error=repr(exc),path=path)
+active=p.get('ActiveState')in['active','activating','deactivating']or int(p.get('MainPID','0'))>0
+if admission:
+ a=admission['value'];expected=templates[step]
+ if set(a)!=set(expected)or not(a['frozen']and a['admitted'])or any(a[k]!=expected[k]for k in['operation','source_sha256','plan_sha256','unique_controller_node','limits']):raise RuntimeError('Existing immutable admission identity differs')
+ # Its original owner is preserved across controlled parent handoffs.
+ if not isinstance(a['unique_controller_owner'],dict):raise RuntimeError('Existing admission owner missing')
+ if ack and ack['value'].get('returncode')!=0:v['status']='FAILED_NATIVE_START_NO_REPLAY'
+ elif active:v['status']='RUNNING_OR_NATIVE_FINALIZING'
+ elif p.get('ActiveState')=='failed'or(p.get('Result')not in[None,'','success']and p.get('LoadState')!='not-found'):v['status']='FAILED_NO_REPLAY'
+ elif receipt:v['status']='PASSED'if receipt['value'].get('passed')is True else'FAILED_RECEIPT_NO_REPLAY'
+ else:v['status']='REGISTERED_TERMINAL_UNKNOWN_NO_REPLAY'
+elif active or p.get('LoadState')!='not-found'or intent or ack or receipt or any(Path(x).exists()for x in s['started_paths']):
+ v['status']='PREEXISTING_NATIVE_EVIDENCE_WITHOUT_ADMISSION_NO_REPLAY'
+else:
+ required={}
+ if step=='nop':
+  runtime=validated_receipt('runtime');image=artifact(c['image_ready'])
+  v['runtime_prerequisite']=runtime;v['image_prerequisite']=image
+  runtime_unit=c['steps']['runtime']['unit']
+  q=subprocess.run(['systemctl','--user','show',runtime_unit,'-p','ActiveState','-p','MainPID','-p','Result'],capture_output=True,text=True,timeout=4)
+  rp=dict(x.split('=',1)for x in q.stdout.splitlines()if '='in x)
+  if not {'ActiveState','MainPID','Result'}<=set(rp):
+   v['status']='WAIT_RUNTIME_UNIT_QUERY_UNKNOWN';print(json.dumps(v));raise SystemExit(0)
+  if not runtime or runtime['value'].get('passed')is not True or rp.get('ActiveState')in['active','activating','deactivating']or int(rp.get('MainPID','0'))>0 or rp.get('ActiveState')=='failed':
+   v['status']='WAIT_REAL_RUNTIME_READY_AND_CLOSED';print(json.dumps(v));raise SystemExit(0)
+  if not image:
+   v['status']='WAIT_REAL_FIXGIT_IMAGE_READY';print(json.dumps(v));raise SystemExit(0)
+  im=image['value'];rows=im.get('rows',[])
+  if im.get('passed')is not True or im.get('source_sha256')!=c['image_source_sha256']or im.get('deployment_sha256')!=c['deployment_sha256']or len(rows)!=1 or rows[0].get('task_id')!='fix-git'or rows[0].get('actual_engine_id')!=c['engine_id']or rows[0].get('image_id')!=c['image_id']or rows[0].get('official_task_image')!='alexgshaw/fix-git:20260403':raise RuntimeError('Actual image-ready identity differs')
+  required=dict(image_ready={k:image[k]for k in['path','sha256']},runtime_ready={k:runtime[k]for k in['path','sha256']},backend_deployment=dict(path=c['deployment'],sha256=c['deployment_sha256']))
+ for path in[root/'tmp',root/'cache',root/'cache/pip',root/'cache/uv',root/'logs']:
+  path.mkdir(mode=0o700,parents=True,exist_ok=True)
+  if path.resolve()!=path or path.stat().st_uid!=os.getuid():raise RuntimeError('SSD local directory ownership differs')
+ a=dict(templates[step]);a.update(frozen=True,admitted=True,unique_controller_owner=owner,required_evidence=required)
+ exclusive(s['admission'],a)
+ exclusive(s['intent'],dict(at=time.time(),unit=s['unit'],source_sha256=s['source_sha256'],plan_sha256=c['plan_sha256'],unique_controller_owner=owner,phase_sha256=phase_sha,registered_once_before_native_start=True,admission_sha256=sha(s['admission'])))
+ command=['systemd-run','--user','--unit='+s['unit'],'--collect','--no-block','--property=MemoryMax=16G','--property=StandardOutput=append:'+s['log'],'--property=StandardError=append:'+s['log']]
+ for key,path in dict(TMPDIR=root/'tmp',XDG_CACHE_HOME=root/'cache',PIP_CACHE_DIR=root/'cache/pip',UV_CACHE_DIR=root/'cache/uv',PIP_DISABLE_PIP_VERSION_CHECK='1').items():command+=['--setenv='+key+'='+str(path)]
+ command+=[s['python'],s['script'],'--plan',c['plan'],'--admission',s['admission']]
+ result=subprocess.run(command,capture_output=True,text=True,timeout=6)
+ exclusive(s['ack'],dict(at=time.time(),returncode=result.returncode,stdout=result.stdout[-1500:],stderr=result.stderr[-1500:],command=command,admission_sha256=sha(s['admission']),phase_sha256=phase_sha))
+ v.update(status='NATIVE_START_REQUESTED'if result.returncode==0 else'NATIVE_START_FAILED_NO_REPLAY',new_dispatch=True,command=command,returncode=result.returncode,unit=props(),admission=artifact(s['admission']),intent=artifact(s['intent']),ack=artifact(s['ack']))
+print(json.dumps(v))
+'''
+
+def read(path):return json.loads(Path(path).read_text())
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def guard(owner):
+    if read(C/'NATIVE_ADVANCE_OWNER.json')!=owner:raise RuntimeError('Unique controller owner changed')
+    if(Path('/proc')/str(owner['pid'])/'stat').read_text().rsplit(')',1)[1].split()[19]!=str(owner['start_ticks']):raise RuntimeError('Unique controller process identity changed')
+    path=Path(CONFIG['ssh_config'])
+    if sha(path)!=CONFIG['ssh_config_sha256']:raise RuntimeError('Registered17 exec SSH configuration differs')
+    hosts=[shlex.split(line,comments=True)[1]for line in path.read_text().splitlines()if shlex.split(line,comments=True)and shlex.split(line,comments=True)[0].lower()=='userknownhostsfile']
+    if len(hosts)!=1 or sha(hosts[0])!=CONFIG['known_hosts_sha256']:raise RuntimeError('Registered17 private known_hosts differs')
+
+def remote(step,owner):
+    guard(owner)
+    payload=['/usr/bin/python3','-c',REMOTE,json.dumps(CONFIG),json.dumps(owner),step,sha(__file__),json.dumps(TEMPLATES)]
+    argv=['/usr/bin/ssh','-F',CONFIG['ssh_config'],'-T','-o','BatchMode=yes','-o','ConnectTimeout=5',CONFIG['ssh_alias'],shlex.join(payload)]
+    start=time.monotonic();p=subprocess.run(argv,capture_output=True,text=True,timeout=18)
+    if p.returncode:raise RuntimeError('SSD17 finite control RPC failed:'+p.stderr[-1500:])
+    value=json.loads(p.stdout);value['controller_rpc_seconds']=time.monotonic()-start;return value
+
+def advance(owner,state,launch):
+    """Called only by the existing unique controller; local launch is unused."""
+    guard(owner)
+    status=dict(at=time.time(),status='SSD17_NATIVE_TWO_FINITE_STEPS',model_generation_calls=0,unique_controller_owner=owner,phase_sha256=sha(__file__))
+    state['ssd17_native_two_step']=status
+    try:
+        runtime=remote('runtime',owner);status['runtime']=runtime
+        if runtime['status']!='PASSED':status['status']='SSD17_RUNTIME_'+runtime['status'];return
+        nop=remote('nop',owner);status['nop']=nop;status['status']='SSD17_NOP_'+nop['status']
+        if nop.get('receipt'):
+            body=nop['receipt']['value'];status['nop_environment_passed']=body.get('passed')
+            status['backend_task_network_and_model_metadata_ready']=body.get('backend_task_network_and_model_metadata_ready',False)
+            status['model_service_connectivity_status']=body.get('model_service_connectivity_status')
+            status['end_to_end_student_ready']=False;status['eligible_for_student_model_trials']=False
+    except Exception as error:
+        status.update(status='SSD17_NATIVE_CONTROL_REQUIRES_INSPECTION_NO_REPLAY',error=repr(error))
+
+if __name__=='__main__':raise SystemExit('Only the existing unique advance may call this leaf')

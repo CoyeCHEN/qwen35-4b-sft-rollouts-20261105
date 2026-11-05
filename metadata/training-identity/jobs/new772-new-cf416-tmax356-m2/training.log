@@ -1,0 +1,922 @@
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[transformers] warmup_ratio is deprecated and will be removed in v5.2. Use `warmup_steps` instead.
+[INFO|2026-11-02 02:48:41] llamafactory.hparams.parser:678 >> Process rank: 0, world size: 4, device: cuda:0, distributed training: True, compute dtype: torch.bfloat16
+[INFO|hub.py:364] 2026-11-02 02:48:41,023 >> Offline mode: forcing local_files_only=True
+[INFO|configuration_utils.py:778] 2026-11-02 02:48:41,024 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/config.json
+[INFO|2026-11-02 02:48:41] llamafactory.hparams.parser:678 >> Process rank: 3, world size: 4, device: cuda:3, distributed training: True, compute dtype: torch.bfloat16
+[INFO|configuration_utils.py:856] 2026-11-02 02:48:41,037 >> Model config Qwen3_5Config {
+  "architectures": [
+    "Qwen3_5ForConditionalGeneration"
+  ],
+  "dtype": "bfloat16",
+  "eos_token_id": 248046,
+  "hidden_size": 2560,
+  "image_token_id": 248056,
+  "model_type": "qwen3_5",
+  "pad_token_id": 248044,
+  "text_config": {
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "attn_output_gate": true,
+    "bos_token_id": null,
+    "dtype": "bfloat16",
+    "eos_token_id": 248044,
+    "full_attention_interval": 4,
+    "head_dim": 256,
+    "hidden_act": "silu",
+    "hidden_size": 2560,
+    "initializer_range": 0.02,
+    "intermediate_size": 9216,
+    "layer_types": [
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention"
+    ],
+    "linear_conv_kernel_dim": 4,
+    "linear_key_head_dim": 128,
+    "linear_num_key_heads": 16,
+    "linear_num_value_heads": 32,
+    "linear_value_head_dim": 128,
+    "mamba_ssm_dtype": "float32",
+    "max_position_embeddings": 262144,
+    "mlp_only_layers": [],
+    "model_type": "qwen3_5_text",
+    "mtp_num_hidden_layers": 1,
+    "mtp_use_dedicated_embeddings": false,
+    "num_attention_heads": 16,
+    "num_hidden_layers": 32,
+    "num_key_value_heads": 4,
+    "pad_token_id": null,
+    "partial_rotary_factor": 0.25,
+    "rms_norm_eps": 1e-06,
+    "rope_parameters": {
+      "mrope_interleaved": true,
+      "mrope_section": [
+        11,
+        11,
+        10
+      ],
+      "partial_rotary_factor": 0.25,
+      "rope_theta": 10000000,
+      "rope_type": "default"
+    },
+    "tie_word_embeddings": true,
+    "use_cache": false,
+    "vocab_size": 248320
+  },
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "video_token_id": 248057,
+  "vision_config": {
+    "deepstack_visual_indexes": [],
+    "depth": 24,
+    "dtype": "bfloat16",
+    "hidden_act": "gelu_pytorch_tanh",
+    "hidden_size": 1024,
+    "in_channels": 3,
+    "initializer_range": 0.02,
+    "intermediate_size": 4096,
+    "model_type": "qwen3_5_vision",
+    "num_heads": 16,
+    "num_position_embeddings": 2304,
+    "out_hidden_size": 2560,
+    "patch_size": 16,
+    "spatial_merge_size": 2,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 248054,
+  "vision_start_token_id": 248053
+}
+
+[INFO|hub.py:364] 2026-11-02 02:48:41,038 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:1595] 2026-11-02 02:48:41,038 >> Offline mode: forcing local_files_only=True
+[INFO|2026-11-02 02:48:41] llamafactory.hparams.parser:678 >> Process rank: 2, world size: 4, device: cuda:2, distributed training: True, compute dtype: torch.bfloat16
+[INFO|2026-11-02 02:48:41] llamafactory.hparams.parser:678 >> Process rank: 1, world size: 4, device: cuda:1, distributed training: True, compute dtype: torch.bfloat16
+[INFO|hub.py:364] 2026-11-02 02:48:42,493 >> Offline mode: forcing local_files_only=True
+[INFO|hub.py:364] 2026-11-02 02:48:42,495 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:268] 2026-11-02 02:48:42,495 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:342] 2026-11-02 02:48:42,496 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preprocessor_config.json
+[INFO|processing_utils.py:950] 2026-11-02 02:48:42,500 >> Offline mode: forcing local_files_only=True
+[INFO|processing_utils.py:1122] 2026-11-02 02:48:42,500 >> loading configuration file None
+[INFO|image_processing_base.py:268] 2026-11-02 02:48:42,500 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:342] 2026-11-02 02:48:42,500 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preprocessor_config.json
+[WARNING|logging.py:340] 2026-11-02 02:48:42,500 >> The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[INFO|image_processing_base.py:268] 2026-11-02 02:48:42,510 >> Offline mode: forcing local_files_only=True
+[INFO|image_processing_base.py:342] 2026-11-02 02:48:42,510 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/preprocessor_config.json
+[INFO|image_processing_base.py:385] 2026-11-02 02:48:42,511 >> Image processor Qwen2VLImageProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "merge_size": 2,
+  "patch_size": 16,
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 16777216,
+    "shortest_edge": 65536
+  },
+  "temporal_patch_size": 2
+}
+
+[INFO|hub.py:364] 2026-11-02 02:48:42,511 >> Offline mode: forcing local_files_only=True
+[INFO|configuration_utils.py:778] 2026-11-02 02:48:42,511 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/config.json
+[INFO|configuration_utils.py:856] 2026-11-02 02:48:42,523 >> Model config Qwen3_5Config {
+  "architectures": [
+    "Qwen3_5ForConditionalGeneration"
+  ],
+  "dtype": "bfloat16",
+  "eos_token_id": 248046,
+  "hidden_size": 2560,
+  "image_token_id": 248056,
+  "model_type": "qwen3_5",
+  "pad_token_id": 248044,
+  "text_config": {
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "attn_output_gate": true,
+    "bos_token_id": null,
+    "dtype": "bfloat16",
+    "eos_token_id": 248044,
+    "full_attention_interval": 4,
+    "head_dim": 256,
+    "hidden_act": "silu",
+    "hidden_size": 2560,
+    "initializer_range": 0.02,
+    "intermediate_size": 9216,
+    "layer_types": [
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention"
+    ],
+    "linear_conv_kernel_dim": 4,
+    "linear_key_head_dim": 128,
+    "linear_num_key_heads": 16,
+    "linear_num_value_heads": 32,
+    "linear_value_head_dim": 128,
+    "mamba_ssm_dtype": "float32",
+    "max_position_embeddings": 262144,
+    "mlp_only_layers": [],
+    "model_type": "qwen3_5_text",
+    "mtp_num_hidden_layers": 1,
+    "mtp_use_dedicated_embeddings": false,
+    "num_attention_heads": 16,
+    "num_hidden_layers": 32,
+    "num_key_value_heads": 4,
+    "pad_token_id": null,
+    "partial_rotary_factor": 0.25,
+    "rms_norm_eps": 1e-06,
+    "rope_parameters": {
+      "mrope_interleaved": true,
+      "mrope_section": [
+        11,
+        11,
+        10
+      ],
+      "partial_rotary_factor": 0.25,
+      "rope_theta": 10000000,
+      "rope_type": "default"
+    },
+    "tie_word_embeddings": true,
+    "use_cache": false,
+    "vocab_size": 248320
+  },
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "video_token_id": 248057,
+  "vision_config": {
+    "deepstack_visual_indexes": [],
+    "depth": 24,
+    "dtype": "bfloat16",
+    "hidden_act": "gelu_pytorch_tanh",
+    "hidden_size": 1024,
+    "in_channels": 3,
+    "initializer_range": 0.02,
+    "intermediate_size": 4096,
+    "model_type": "qwen3_5_vision",
+    "num_heads": 16,
+    "num_position_embeddings": 2304,
+    "out_hidden_size": 2560,
+    "patch_size": 16,
+    "spatial_merge_size": 2,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 248054,
+  "vision_start_token_id": 248053
+}
+
+[INFO|hub.py:364] 2026-11-02 02:48:42,523 >> Offline mode: forcing local_files_only=True
+[INFO|tokenization_utils_base.py:1595] 2026-11-02 02:48:42,524 >> Offline mode: forcing local_files_only=True
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[transformers] The `use_fast` parameter is deprecated and will be removed in a future version. Use `backend="torchvision"` instead of `use_fast=True`, or `backend="pil"` instead of `use_fast=False`.
+[INFO|video_processing_utils.py:600] 2026-11-02 02:48:43,966 >> Offline mode: forcing local_files_only=True
+[INFO|video_processing_utils.py:684] 2026-11-02 02:48:43,970 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/video_preprocessor_config.json
+[INFO|video_processing_utils.py:600] 2026-11-02 02:48:43,976 >> Offline mode: forcing local_files_only=True
+[INFO|video_processing_utils.py:684] 2026-11-02 02:48:43,976 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/video_preprocessor_config.json
+[INFO|video_processing_utils.py:727] 2026-11-02 02:48:43,977 >> Video processor Qwen3VLVideoProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": true,
+  "fps": 2,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "max_frames": 768,
+  "merge_size": 2,
+  "min_frames": 4,
+  "patch_size": 16,
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 25165824,
+    "shortest_edge": 4096
+  },
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen3VLVideoProcessor"
+}
+
+[INFO|processing_utils.py:1199] 2026-11-02 02:48:43,977 >> Processor Qwen3VLProcessor:
+- image_processor: Qwen2VLImageProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_processor_type": "Qwen2VLImageProcessor",
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "merge_size": 2,
+  "patch_size": 16,
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "size": {
+    "longest_edge": 16777216,
+    "shortest_edge": 65536
+  },
+  "temporal_patch_size": 2
+}
+
+- tokenizer: TokenizersBackend(name_or_path='/ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5', vocab_size=248044, model_max_length=262144, padding_side='right', truncation_side='right', special_tokens={'eos_token': '<|im_end|>', 'pad_token': '<|endoftext|>', 'audio_bos_token': '<|audio_start|>', 'audio_eos_token': '<|audio_end|>', 'audio_token': '<|audio_pad|>', 'image_token': '<|image_pad|>', 'video_token': '<|video_pad|>', 'vision_bos_token': '<|vision_start|>', 'vision_eos_token': '<|vision_end|>'}, added_tokens_decoder={
+	248044: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248045: AddedToken("<|im_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248046: AddedToken("<|im_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248047: AddedToken("<|object_ref_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248048: AddedToken("<|object_ref_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248049: AddedToken("<|box_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248050: AddedToken("<|box_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248051: AddedToken("<|quad_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248052: AddedToken("<|quad_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248053: AddedToken("<|vision_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248054: AddedToken("<|vision_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248055: AddedToken("<|vision_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248056: AddedToken("<|image_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248057: AddedToken("<|video_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248058: AddedToken("<tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248059: AddedToken("</tool_call>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248060: AddedToken("<|fim_prefix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248061: AddedToken("<|fim_middle|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248062: AddedToken("<|fim_suffix|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248063: AddedToken("<|fim_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248064: AddedToken("<|repo_name|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248065: AddedToken("<|file_sep|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248066: AddedToken("<tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248067: AddedToken("</tool_response>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248068: AddedToken("<think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248069: AddedToken("</think>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=False),
+	248070: AddedToken("<|audio_start|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248071: AddedToken("<|audio_end|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248072: AddedToken("<tts_pad>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248073: AddedToken("<tts_text_bos>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248074: AddedToken("<tts_text_eod>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248075: AddedToken("<tts_text_bos_single>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	248076: AddedToken("<|audio_pad|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+})
+- video_processor: Qwen3VLVideoProcessor {
+  "do_convert_rgb": true,
+  "do_normalize": true,
+  "do_rescale": true,
+  "do_resize": true,
+  "do_sample_frames": true,
+  "fps": 2,
+  "image_mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "image_std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "max_frames": 768,
+  "merge_size": 2,
+  "min_frames": 4,
+  "patch_size": 16,
+  "resample": 3,
+  "rescale_factor": 0.00392156862745098,
+  "return_metadata": false,
+  "size": {
+    "longest_edge": 25165824,
+    "shortest_edge": 4096
+  },
+  "temporal_patch_size": 2,
+  "video_processor_type": "Qwen3VLVideoProcessor"
+}
+
+
+{
+  "image_processor": {
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "image_processor_type": "Qwen2VLImageProcessor",
+    "image_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "merge_size": 2,
+    "patch_size": 16,
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "longest_edge": 16777216,
+      "shortest_edge": 65536
+    },
+    "temporal_patch_size": 2
+  },
+  "processor_class": "Qwen3VLProcessor",
+  "video_processor": {
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "do_sample_frames": true,
+    "fps": 2,
+    "image_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "image_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "max_frames": 768,
+    "merge_size": 2,
+    "min_frames": 4,
+    "patch_size": 16,
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "return_metadata": false,
+    "size": {
+      "longest_edge": 25165824,
+      "shortest_edge": 4096
+    },
+    "temporal_patch_size": 2,
+    "video_processor_type": "Qwen3VLVideoProcessor"
+  }
+}
+
+[WARNING|2026-11-02 02:48:44] llamafactory.data.template:149 >> You are using reasoning template. If the base model is NOT a reasoning model (i.e., it has a separate Instruct variant), please add `_nothink` suffix to disable thinking. For reasoning-only model families (e.g., Qwen3.6), the suffix is not needed. e.g., qwen3_vl_nothink
+[WARNING|2026-11-02 02:48:44] llamafactory.data.loader:149 >> Loading dataset from disk will ignore other data arguments.
+[INFO|2026-11-02 02:48:44] llamafactory.data.loader:144 >> Loaded tokenized dataset from /ssd/chenkeyi/qwen35-sft-772-20261101/frozen-data-772-r3/tmax/cache-131072.
+[INFO|hub.py:364] 2026-11-02 02:48:44,048 >> Offline mode: forcing local_files_only=True
+[INFO|configuration_utils.py:778] 2026-11-02 02:48:44,048 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/config.json
+[INFO|configuration_utils.py:856] 2026-11-02 02:48:44,056 >> Model config Qwen3_5Config {
+  "architectures": [
+    "Qwen3_5ForConditionalGeneration"
+  ],
+  "dtype": "bfloat16",
+  "eos_token_id": 248046,
+  "hidden_size": 2560,
+  "image_token_id": 248056,
+  "model_type": "qwen3_5",
+  "pad_token_id": 248044,
+  "text_config": {
+    "attention_bias": false,
+    "attention_dropout": 0.0,
+    "attn_output_gate": true,
+    "bos_token_id": null,
+    "dtype": "bfloat16",
+    "eos_token_id": 248044,
+    "full_attention_interval": 4,
+    "head_dim": 256,
+    "hidden_act": "silu",
+    "hidden_size": 2560,
+    "initializer_range": 0.02,
+    "intermediate_size": 9216,
+    "layer_types": [
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention",
+      "linear_attention",
+      "linear_attention",
+      "linear_attention",
+      "full_attention"
+    ],
+    "linear_conv_kernel_dim": 4,
+    "linear_key_head_dim": 128,
+    "linear_num_key_heads": 16,
+    "linear_num_value_heads": 32,
+    "linear_value_head_dim": 128,
+    "mamba_ssm_dtype": "float32",
+    "max_position_embeddings": 262144,
+    "mlp_only_layers": [],
+    "model_type": "qwen3_5_text",
+    "mtp_num_hidden_layers": 1,
+    "mtp_use_dedicated_embeddings": false,
+    "num_attention_heads": 16,
+    "num_hidden_layers": 32,
+    "num_key_value_heads": 4,
+    "pad_token_id": null,
+    "partial_rotary_factor": 0.25,
+    "rms_norm_eps": 1e-06,
+    "rope_parameters": {
+      "mrope_interleaved": true,
+      "mrope_section": [
+        11,
+        11,
+        10
+      ],
+      "partial_rotary_factor": 0.25,
+      "rope_theta": 10000000,
+      "rope_type": "default"
+    },
+    "tie_word_embeddings": true,
+    "use_cache": false,
+    "vocab_size": 248320
+  },
+  "tie_word_embeddings": true,
+  "transformers_version": "5.8.0",
+  "video_token_id": 248057,
+  "vision_config": {
+    "deepstack_visual_indexes": [],
+    "depth": 24,
+    "dtype": "bfloat16",
+    "hidden_act": "gelu_pytorch_tanh",
+    "hidden_size": 1024,
+    "in_channels": 3,
+    "initializer_range": 0.02,
+    "intermediate_size": 4096,
+    "model_type": "qwen3_5_vision",
+    "num_heads": 16,
+    "num_position_embeddings": 2304,
+    "out_hidden_size": 2560,
+    "patch_size": 16,
+    "spatial_merge_size": 2,
+    "temporal_patch_size": 2
+  },
+  "vision_end_token_id": 248054,
+  "vision_start_token_id": 248053
+}
+
+[INFO|2026-11-02 02:48:44] llamafactory.model.model_utils.kv_cache:144 >> KV cache is disabled during training.
+[INFO|2026-11-02 02:48:47] llamafactory.model.model_utils.liger_kernel:144 >> Liger kernel has been applied to the model.
+[INFO|modeling_utils.py:766] 2026-11-02 02:48:47,891 >> loading weights file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/model.safetensors
+[INFO|modeling_utils.py:839] 2026-11-02 02:48:47,891 >> Will use dtype=torch.bfloat16 as defined in model's config object
+[INFO|modeling_utils.py:3686] 2026-11-02 02:48:47,891 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[INFO|configuration_utils.py:1086] 2026-11-02 02:48:47,914 >> Generate config GenerationConfig {
+  "eos_token_id": 248046,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pad_token_id": 248044,
+  "use_cache": false
+}
+
+[INFO|configuration_utils.py:1037] 2026-11-02 02:48:50,705 >> loading configuration file /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m1-cf416-128k-e5/generation_config.json
+[INFO|configuration_utils.py:1086] 2026-11-02 02:48:50,705 >> Generate config GenerationConfig {
+  "eos_token_id": [
+    248046,
+    248044
+  ],
+  "pad_token_id": 248044,
+  "use_cache": true
+}
+
+[INFO|2026-11-02 02:48:50] llamafactory.model.model_utils.checkpointing:144 >> Gradient checkpointing enabled.
+[INFO|2026-11-02 02:48:50] llamafactory.model.patcher:144 >> Patched Qwen3.5 decoder forward to support cu_seqlens input only patch when do training.
+[INFO|2026-11-02 02:48:50] llamafactory.model.model_utils.attention:144 >> Using FlashAttention-2 for faster training and inference.
+[INFO|2026-11-02 02:48:50] llamafactory.model.adapter:144 >> DeepSpeed ZeRO3 detected, remaining trainable params in float32.
+[INFO|2026-11-02 02:48:50] llamafactory.model.adapter:144 >> Fine-tuning method: Full
+[INFO|2026-11-02 02:48:50] llamafactory.model.model_utils.visual:144 >> Set vision model not trainable: ['visual.pos_embed', 'visual.patch_embed', 'visual.blocks'].
+[INFO|2026-11-02 02:48:50] llamafactory.model.model_utils.visual:144 >> Set multi model projector not trainable: ['model.visual.merger'].
+[INFO|2026-11-02 02:48:50] llamafactory.model.loader:144 >> trainable params: 4,205,751,296 || all params: 4,539,265,536 || trainable%: 92.6527
+Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 8. Using DeepSpeed's value.
+[INFO|trainer.py:1469] 2026-11-02 02:48:53,417 >> ***** Running training *****
+[INFO|trainer.py:1470] 2026-11-02 02:48:53,417 >>   Num examples = 792
+[INFO|trainer.py:1471] 2026-11-02 02:48:53,417 >>   Num Epochs = 5
+[INFO|trainer.py:1472] 2026-11-02 02:48:53,417 >>   Num update steps per epoch = 25
+[INFO|trainer.py:1473] 2026-11-02 02:48:53,417 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:1476] 2026-11-02 02:48:53,417 >>   Total train batch size (w. parallel, distributed & accumulation) = 32
+[INFO|trainer.py:1477] 2026-11-02 02:48:53,417 >>   Gradient Accumulation steps = 8
+[INFO|trainer.py:1478] 2026-11-02 02:48:53,417 >>   Total optimization steps = 125
+[INFO|trainer.py:1479] 2026-11-02 02:48:53,419 >>   Number of trainable parameters = 4,205,751,296
+[INFO|trainer.py:2668] 2026-11-02 02:48:53,433 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 02:48:53,433 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 02:48:53,433 >>   Batch size = 1
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+[WARNING|logging.py:340] 2026-11-02 02:48:53,636 >> `use_return_dict` is deprecated! Use `return_dict` instead!
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+[transformers] `use_return_dict` is deprecated! Use `return_dict` instead!
+{'eval_loss': '0.8249', 'eval_runtime': '106.7', 'eval_samples_per_second': '0.806', 'eval_steps_per_second': '0.206', 'epoch': 0, 'num_input_tokens_seen': 0}
+[INFO|trainer.py:2668] 2026-11-02 02:50:40,153 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 02:50:40,153 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 02:50:40,153 >>   Batch size = 1
+{'cf_validation_loss': '0.7639', 'cf_validation_runtime': '223.2', 'cf_validation_samples_per_second': '0.654', 'cf_validation_steps_per_second': '0.166', 'epoch': 0, 'num_input_tokens_seen': 0}
+{'loss': '0.6909', 'grad_norm': '4.495', 'learning_rate': '0', 'epoch': '0.0404', 'num_input_tokens_seen': 700952, 'train_runtime': '482.9', 'train_tokens_per_second': '1451'}
+{'loss': '0.7717', 'grad_norm': '4.095', 'learning_rate': '1.429e-06', 'epoch': '0.08081', 'num_input_tokens_seen': 1461024, 'train_runtime': '630.8', 'train_tokens_per_second': '2316'}
+{'loss': '0.7961', 'grad_norm': '3.833', 'learning_rate': '2.857e-06', 'epoch': '0.1212', 'num_input_tokens_seen': 2462328, 'train_runtime': '876.5', 'train_tokens_per_second': '2809'}
+{'loss': '0.7069', 'grad_norm': '3.722', 'learning_rate': '4.286e-06', 'epoch': '0.1616', 'num_input_tokens_seen': 2895528, 'train_runtime': '948', 'train_tokens_per_second': '3054'}
+{'loss': '0.8191', 'grad_norm': '3.366', 'learning_rate': '5.714e-06', 'epoch': '0.202', 'num_input_tokens_seen': 3751328, 'train_runtime': '1146', 'train_tokens_per_second': '3272'}
+{'loss': '0.7121', 'grad_norm': '3.003', 'learning_rate': '7.143e-06', 'epoch': '0.2424', 'num_input_tokens_seen': 4598456, 'train_runtime': '1371', 'train_tokens_per_second': '3354'}
+{'loss': '0.7538', 'grad_norm': '2.907', 'learning_rate': '8.571e-06', 'epoch': '0.2828', 'num_input_tokens_seen': 5496992, 'train_runtime': '1556', 'train_tokens_per_second': '3532'}
+{'loss': '0.7658', 'grad_norm': '2.197', 'learning_rate': '1e-05', 'epoch': '0.3232', 'num_input_tokens_seen': 6591824, 'train_runtime': '1772', 'train_tokens_per_second': '3719'}
+{'loss': '0.8738', 'grad_norm': '1.875', 'learning_rate': '9.998e-06', 'epoch': '0.3636', 'num_input_tokens_seen': 7961872, 'train_runtime': '2028', 'train_tokens_per_second': '3926'}
+{'loss': '0.9139', 'grad_norm': '1.957', 'learning_rate': '9.994e-06', 'epoch': '0.404', 'num_input_tokens_seen': 9666136, 'train_runtime': '2411', 'train_tokens_per_second': '4009'}
+{'loss': '0.8241', 'grad_norm': '2.273', 'learning_rate': '9.986e-06', 'epoch': '0.4444', 'num_input_tokens_seen': 10345984, 'train_runtime': '2509', 'train_tokens_per_second': '4123'}
+{'loss': '0.7896', 'grad_norm': '2.366', 'learning_rate': '9.975e-06', 'epoch': '0.4848', 'num_input_tokens_seen': 11139536, 'train_runtime': '2698', 'train_tokens_per_second': '4128'}
+{'loss': '0.9426', 'grad_norm': '1.922', 'learning_rate': '9.96e-06', 'epoch': '0.5253', 'num_input_tokens_seen': 11957128, 'train_runtime': '2847', 'train_tokens_per_second': '4200'}
+{'loss': '0.685', 'grad_norm': '1.832', 'learning_rate': '9.943e-06', 'epoch': '0.5657', 'num_input_tokens_seen': 12982744, 'train_runtime': '3125', 'train_tokens_per_second': '4155'}
+{'loss': '0.6848', 'grad_norm': '2.019', 'learning_rate': '9.922e-06', 'epoch': '0.6061', 'num_input_tokens_seen': 13739320, 'train_runtime': '3343', 'train_tokens_per_second': '4110'}
+{'loss': '0.7608', 'grad_norm': '1.731', 'learning_rate': '9.898e-06', 'epoch': '0.6465', 'num_input_tokens_seen': 14467336, 'train_runtime': '3490', 'train_tokens_per_second': '4145'}
+{'loss': '0.6788', 'grad_norm': '1.993', 'learning_rate': '9.871e-06', 'epoch': '0.6869', 'num_input_tokens_seen': 15362712, 'train_runtime': '3706', 'train_tokens_per_second': '4145'}
+{'loss': '0.7639', 'grad_norm': '2.138', 'learning_rate': '9.841e-06', 'epoch': '0.7273', 'num_input_tokens_seen': 16185864, 'train_runtime': '3891', 'train_tokens_per_second': '4160'}
+{'loss': '0.8184', 'grad_norm': '1.879', 'learning_rate': '9.808e-06', 'epoch': '0.7677', 'num_input_tokens_seen': 17414952, 'train_runtime': '4173', 'train_tokens_per_second': '4173'}
+{'loss': '0.7917', 'grad_norm': '1.923', 'learning_rate': '9.772e-06', 'epoch': '0.8081', 'num_input_tokens_seen': 18557272, 'train_runtime': '4448', 'train_tokens_per_second': '4172'}
+{'loss': '0.7746', 'grad_norm': '2.4', 'learning_rate': '9.733e-06', 'epoch': '0.8485', 'num_input_tokens_seen': 19430560, 'train_runtime': '4653', 'train_tokens_per_second': '4176'}
+{'loss': '0.8123', 'grad_norm': '2.146', 'learning_rate': '9.691e-06', 'epoch': '0.8889', 'num_input_tokens_seen': 20794296, 'train_runtime': '5011', 'train_tokens_per_second': '4150'}
+{'loss': '0.7534', 'grad_norm': '2.407', 'learning_rate': '9.646e-06', 'epoch': '0.9293', 'num_input_tokens_seen': 21441744, 'train_runtime': '5117', 'train_tokens_per_second': '4190'}
+{'loss': '0.8577', 'grad_norm': '1.502', 'learning_rate': '9.598e-06', 'epoch': '0.9697', 'num_input_tokens_seen': 22453208, 'train_runtime': '5330', 'train_tokens_per_second': '4212'}
+{'loss': '0.7029', 'grad_norm': '2.316', 'learning_rate': '9.547e-06', 'epoch': '1', 'num_input_tokens_seen': 22907288, 'train_runtime': '5433', 'train_tokens_per_second': '4216'}
+[INFO|trainer.py:2668] 2026-11-02 04:19:26,287 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 04:19:26,287 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 04:19:26,287 >>   Batch size = 1
+{'eval_loss': '0.7873', 'eval_runtime': '105.5', 'eval_samples_per_second': '0.815', 'eval_steps_per_second': '0.209', 'epoch': '1', 'num_input_tokens_seen': 22907288}
+[INFO|trainer.py:2668] 2026-11-02 04:21:11,814 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 04:21:11,814 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 04:21:11,814 >>   Batch size = 1
+{'cf_validation_loss': '0.7405', 'cf_validation_runtime': '223.7', 'cf_validation_samples_per_second': '0.653', 'cf_validation_steps_per_second': '0.165', 'epoch': '1', 'num_input_tokens_seen': 22907288}
+[INFO|trainer.py:3815] 2026-11-02 04:25:00,701 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25
+[INFO|configuration_utils.py:542] 2026-11-02 04:25:00,712 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 04:25:00,712 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it]Writing model shards: 100%|██████████| 1/1 [00:04<00:00,  4.48s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 04:25:05,264 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 04:25:05,265 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 04:25:05,265 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/tokenizer_config.json
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 04:25:27,035 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 04:25:27,035 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 04:25:27,205 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 04:25:27,205 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-25/processor_config.json
+{'loss': '0.5756', 'grad_norm': '1.444', 'learning_rate': '9.493e-06', 'epoch': '1.04', 'num_input_tokens_seen': 23933360, 'train_runtime': '6004', 'train_tokens_per_second': '3986'}
+{'loss': '0.6261', 'grad_norm': '1.564', 'learning_rate': '9.436e-06', 'epoch': '1.081', 'num_input_tokens_seen': 24510456, 'train_runtime': '6102', 'train_tokens_per_second': '4017'}
+{'loss': '0.6085', 'grad_norm': '1.734', 'learning_rate': '9.377e-06', 'epoch': '1.121', 'num_input_tokens_seen': 25380984, 'train_runtime': '6282', 'train_tokens_per_second': '4041'}
+{'loss': '0.6696', 'grad_norm': '1.411', 'learning_rate': '9.315e-06', 'epoch': '1.162', 'num_input_tokens_seen': 26520984, 'train_runtime': '6519', 'train_tokens_per_second': '4068'}
+{'loss': '0.7117', 'grad_norm': '1.385', 'learning_rate': '9.25e-06', 'epoch': '1.202', 'num_input_tokens_seen': 27650288, 'train_runtime': '6771', 'train_tokens_per_second': '4084'}
+{'loss': '0.4972', 'grad_norm': '1.593', 'learning_rate': '9.182e-06', 'epoch': '1.242', 'num_input_tokens_seen': 28307472, 'train_runtime': '6880', 'train_tokens_per_second': '4114'}
+{'loss': '0.6632', 'grad_norm': '1.438', 'learning_rate': '9.112e-06', 'epoch': '1.283', 'num_input_tokens_seen': 29149240, 'train_runtime': '7073', 'train_tokens_per_second': '4121'}
+{'loss': '0.5802', 'grad_norm': '1.82', 'learning_rate': '9.039e-06', 'epoch': '1.323', 'num_input_tokens_seen': 29901776, 'train_runtime': '7236', 'train_tokens_per_second': '4132'}
+{'loss': '0.7561', 'grad_norm': '1.647', 'learning_rate': '8.964e-06', 'epoch': '1.364', 'num_input_tokens_seen': 31521280, 'train_runtime': '7573', 'train_tokens_per_second': '4162'}
+{'loss': '0.5543', 'grad_norm': '2.76', 'learning_rate': '8.887e-06', 'epoch': '1.404', 'num_input_tokens_seen': 32248528, 'train_runtime': '7736', 'train_tokens_per_second': '4169'}
+{'loss': '0.444', 'grad_norm': '1.635', 'learning_rate': '8.806e-06', 'epoch': '1.444', 'num_input_tokens_seen': 32813976, 'train_runtime': '7859', 'train_tokens_per_second': '4175'}
+{'loss': '0.6603', 'grad_norm': '1.578', 'learning_rate': '8.724e-06', 'epoch': '1.485', 'num_input_tokens_seen': 33874520, 'train_runtime': '8056', 'train_tokens_per_second': '4205'}
+{'loss': '0.5825', 'grad_norm': '1.768', 'learning_rate': '8.639e-06', 'epoch': '1.525', 'num_input_tokens_seen': 34619416, 'train_runtime': '8189', 'train_tokens_per_second': '4227'}
+{'loss': '0.6851', 'grad_norm': '1.727', 'learning_rate': '8.552e-06', 'epoch': '1.566', 'num_input_tokens_seen': 35695072, 'train_runtime': '8417', 'train_tokens_per_second': '4241'}
+{'loss': '0.586', 'grad_norm': '1.594', 'learning_rate': '8.463e-06', 'epoch': '1.606', 'num_input_tokens_seen': 36722040, 'train_runtime': '8713', 'train_tokens_per_second': '4214'}
+{'loss': '0.5377', 'grad_norm': '1.896', 'learning_rate': '8.372e-06', 'epoch': '1.646', 'num_input_tokens_seen': 37697040, 'train_runtime': '8945', 'train_tokens_per_second': '4215'}
+{'loss': '0.6467', 'grad_norm': '1.395', 'learning_rate': '8.279e-06', 'epoch': '1.687', 'num_input_tokens_seen': 38712328, 'train_runtime': '9220', 'train_tokens_per_second': '4199'}
+{'loss': '0.5437', 'grad_norm': '1.744', 'learning_rate': '8.184e-06', 'epoch': '1.727', 'num_input_tokens_seen': 39414072, 'train_runtime': '9362', 'train_tokens_per_second': '4210'}
+{'loss': '0.6363', 'grad_norm': '1.421', 'learning_rate': '8.087e-06', 'epoch': '1.768', 'num_input_tokens_seen': 40419464, 'train_runtime': '9578', 'train_tokens_per_second': '4220'}
+{'loss': '0.5887', 'grad_norm': '1.68', 'learning_rate': '7.988e-06', 'epoch': '1.808', 'num_input_tokens_seen': 41002392, 'train_runtime': '9676', 'train_tokens_per_second': '4238'}
+{'loss': '0.6775', 'grad_norm': '1.51', 'learning_rate': '7.887e-06', 'epoch': '1.848', 'num_input_tokens_seen': 42101128, 'train_runtime': '9941', 'train_tokens_per_second': '4235'}
+{'loss': '0.5927', 'grad_norm': '1.589', 'learning_rate': '7.784e-06', 'epoch': '1.889', 'num_input_tokens_seen': 43046968, 'train_runtime': '1.015e+04', 'train_tokens_per_second': '4242'}
+{'loss': '0.6631', 'grad_norm': '1.548', 'learning_rate': '7.68e-06', 'epoch': '1.929', 'num_input_tokens_seen': 44094632, 'train_runtime': '1.036e+04', 'train_tokens_per_second': '4257'}
+{'loss': '0.6584', 'grad_norm': '1.733', 'learning_rate': '7.575e-06', 'epoch': '1.97', 'num_input_tokens_seen': 44847064, 'train_runtime': '1.052e+04', 'train_tokens_per_second': '4264'}
+{'loss': '0.7394', 'grad_norm': '1.569', 'learning_rate': '7.468e-06', 'epoch': '2', 'num_input_tokens_seen': 45814576, 'train_runtime': '1.073e+04', 'train_tokens_per_second': '4268'}
+[INFO|trainer.py:2668] 2026-11-02 05:47:46,850 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 05:47:46,850 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 05:47:46,850 >>   Batch size = 1
+{'eval_loss': '0.7876', 'eval_runtime': '105.4', 'eval_samples_per_second': '0.816', 'eval_steps_per_second': '0.209', 'epoch': '2', 'num_input_tokens_seen': 45814576}
+[INFO|trainer.py:2668] 2026-11-02 05:49:32,233 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 05:49:32,233 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 05:49:32,233 >>   Batch size = 1
+{'cf_validation_loss': '0.7421', 'cf_validation_runtime': '224', 'cf_validation_samples_per_second': '0.652', 'cf_validation_steps_per_second': '0.165', 'epoch': '2', 'num_input_tokens_seen': 45814576}
+[INFO|trainer.py:3815] 2026-11-02 05:53:21,102 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50
+[INFO|configuration_utils.py:542] 2026-11-02 05:53:21,112 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 05:53:21,113 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.01s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.01s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 05:53:26,194 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 05:53:26,195 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 05:53:26,195 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/tokenizer_config.json
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 05:53:48,712 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 05:53:48,712 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 05:53:48,911 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 05:53:48,912 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-50/processor_config.json
+{'loss': '0.5442', 'grad_norm': '1.165', 'learning_rate': '7.359e-06', 'epoch': '2.04', 'num_input_tokens_seen': 46842640, 'train_runtime': '1.132e+04', 'train_tokens_per_second': '4137'}
+{'loss': '0.5547', 'grad_norm': '1.09', 'learning_rate': '7.25e-06', 'epoch': '2.081', 'num_input_tokens_seen': 47830096, 'train_runtime': '1.156e+04', 'train_tokens_per_second': '4139'}
+{'loss': '0.4664', 'grad_norm': '1.269', 'learning_rate': '7.139e-06', 'epoch': '2.121', 'num_input_tokens_seen': 48600024, 'train_runtime': '1.17e+04', 'train_tokens_per_second': '4152'}
+{'loss': '0.4884', 'grad_norm': '1.194', 'learning_rate': '7.027e-06', 'epoch': '2.162', 'num_input_tokens_seen': 49533016, 'train_runtime': '1.188e+04', 'train_tokens_per_second': '4170'}
+{'loss': '0.4613', 'grad_norm': '1.581', 'learning_rate': '6.913e-06', 'epoch': '2.202', 'num_input_tokens_seen': 50550776, 'train_runtime': '1.211e+04', 'train_tokens_per_second': '4174'}
+{'loss': '0.4941', 'grad_norm': '2.486', 'learning_rate': '6.799e-06', 'epoch': '2.242', 'num_input_tokens_seen': 51364224, 'train_runtime': '1.232e+04', 'train_tokens_per_second': '4169'}
+{'loss': '0.4938', 'grad_norm': '1.331', 'learning_rate': '6.684e-06', 'epoch': '2.283', 'num_input_tokens_seen': 52400104, 'train_runtime': '1.253e+04', 'train_tokens_per_second': '4183'}
+{'loss': '0.5602', 'grad_norm': '1.399', 'learning_rate': '6.568e-06', 'epoch': '2.323', 'num_input_tokens_seen': 53293896, 'train_runtime': '1.274e+04', 'train_tokens_per_second': '4183'}
+{'loss': '0.4938', 'grad_norm': '1.578', 'learning_rate': '6.451e-06', 'epoch': '2.364', 'num_input_tokens_seen': 54298608, 'train_runtime': '1.298e+04', 'train_tokens_per_second': '4184'}
+{'loss': '0.5276', 'grad_norm': '1.47', 'learning_rate': '6.334e-06', 'epoch': '2.404', 'num_input_tokens_seen': 55373616, 'train_runtime': '1.325e+04', 'train_tokens_per_second': '4179'}
+{'loss': '0.5497', 'grad_norm': '1.388', 'learning_rate': '6.216e-06', 'epoch': '2.444', 'num_input_tokens_seen': 56246376, 'train_runtime': '1.342e+04', 'train_tokens_per_second': '4191'}
+{'loss': '0.4171', 'grad_norm': '1.353', 'learning_rate': '6.097e-06', 'epoch': '2.485', 'num_input_tokens_seen': 56865392, 'train_runtime': '1.352e+04', 'train_tokens_per_second': '4206'}
+{'loss': '0.6607', 'grad_norm': '1.341', 'learning_rate': '5.978e-06', 'epoch': '2.525', 'num_input_tokens_seen': 58337792, 'train_runtime': '1.386e+04', 'train_tokens_per_second': '4210'}
+{'loss': '0.4835', 'grad_norm': '1.374', 'learning_rate': '5.859e-06', 'epoch': '2.566', 'num_input_tokens_seen': 59073064, 'train_runtime': '1.402e+04', 'train_tokens_per_second': '4214'}
+{'loss': '0.4903', 'grad_norm': '1.48', 'learning_rate': '5.739e-06', 'epoch': '2.606', 'num_input_tokens_seen': 59910096, 'train_runtime': '1.419e+04', 'train_tokens_per_second': '4221'}
+{'loss': '0.4049', 'grad_norm': '1.537', 'learning_rate': '5.62e-06', 'epoch': '2.646', 'num_input_tokens_seen': 60321936, 'train_runtime': '1.425e+04', 'train_tokens_per_second': '4234'}
+{'loss': '0.4916', 'grad_norm': '1.187', 'learning_rate': '5.5e-06', 'epoch': '2.687', 'num_input_tokens_seen': 61263640, 'train_runtime': '1.445e+04', 'train_tokens_per_second': '4240'}
+{'loss': '0.6251', 'grad_norm': '1.266', 'learning_rate': '5.38e-06', 'epoch': '2.727', 'num_input_tokens_seen': 62562056, 'train_runtime': '1.475e+04', 'train_tokens_per_second': '4242'}
+{'loss': '0.4292', 'grad_norm': '1.294', 'learning_rate': '5.261e-06', 'epoch': '2.768', 'num_input_tokens_seen': 63175224, 'train_runtime': '1.485e+04', 'train_tokens_per_second': '4253'}
+{'loss': '0.5109', 'grad_norm': '1.325', 'learning_rate': '5.141e-06', 'epoch': '2.808', 'num_input_tokens_seen': 64222488, 'train_runtime': '1.51e+04', 'train_tokens_per_second': '4254'}
+{'loss': '0.4614', 'grad_norm': '1.377', 'learning_rate': '5.022e-06', 'epoch': '2.848', 'num_input_tokens_seen': 65186904, 'train_runtime': '1.529e+04', 'train_tokens_per_second': '4262'}
+{'loss': '0.5544', 'grad_norm': '1.575', 'learning_rate': '4.903e-06', 'epoch': '2.889', 'num_input_tokens_seen': 66351304, 'train_runtime': '1.558e+04', 'train_tokens_per_second': '4258'}
+{'loss': '0.365', 'grad_norm': '1.332', 'learning_rate': '4.784e-06', 'epoch': '2.929', 'num_input_tokens_seen': 67145312, 'train_runtime': '1.574e+04', 'train_tokens_per_second': '4265'}
+{'loss': '0.424', 'grad_norm': '1.403', 'learning_rate': '4.666e-06', 'epoch': '2.97', 'num_input_tokens_seen': 67948920, 'train_runtime': '1.593e+04', 'train_tokens_per_second': '4266'}
+{'loss': '0.5905', 'grad_norm': '1.556', 'learning_rate': '4.549e-06', 'epoch': '3', 'num_input_tokens_seen': 68721864, 'train_runtime': '1.612e+04', 'train_tokens_per_second': '4263'}
+[INFO|trainer.py:2668] 2026-11-02 07:17:33,727 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 07:17:33,727 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 07:17:33,727 >>   Batch size = 1
+{'eval_loss': '0.8016', 'eval_runtime': '104.3', 'eval_samples_per_second': '0.824', 'eval_steps_per_second': '0.211', 'epoch': '3', 'num_input_tokens_seen': 68721864}
+[INFO|trainer.py:2668] 2026-11-02 07:19:18,060 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 07:19:18,060 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 07:19:18,060 >>   Batch size = 1
+{'cf_validation_loss': '0.7577', 'cf_validation_runtime': '223.7', 'cf_validation_samples_per_second': '0.653', 'cf_validation_steps_per_second': '0.165', 'epoch': '3', 'num_input_tokens_seen': 68721864}
+[INFO|trainer.py:3815] 2026-11-02 07:23:07,900 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75
+[INFO|configuration_utils.py:542] 2026-11-02 07:23:07,910 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 07:23:07,911 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:04<00:00,  4.97s/it]Writing model shards: 100%|██████████| 1/1 [00:04<00:00,  4.97s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 07:23:12,953 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 07:23:12,954 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 07:23:12,954 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/tokenizer_config.json
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 07:23:35,346 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 07:23:35,346 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 07:23:35,513 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 07:23:35,514 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-75/processor_config.json
+{'loss': '0.3129', 'grad_norm': '1.105', 'learning_rate': '4.432e-06', 'epoch': '3.04', 'num_input_tokens_seen': 69299104, 'train_runtime': '1.658e+04', 'train_tokens_per_second': '4180'}
+{'loss': '0.4433', 'grad_norm': '1.152', 'learning_rate': '4.316e-06', 'epoch': '3.081', 'num_input_tokens_seen': 70253984, 'train_runtime': '1.681e+04', 'train_tokens_per_second': '4179'}
+{'loss': '0.4486', 'grad_norm': '1.263', 'learning_rate': '4.201e-06', 'epoch': '3.121', 'num_input_tokens_seen': 71032984, 'train_runtime': '1.698e+04', 'train_tokens_per_second': '4183'}
+{'loss': '0.3614', 'grad_norm': '1.343', 'learning_rate': '4.087e-06', 'epoch': '3.162', 'num_input_tokens_seen': 71842000, 'train_runtime': '1.715e+04', 'train_tokens_per_second': '4189'}
+{'loss': '0.4296', 'grad_norm': '0.9745', 'learning_rate': '3.973e-06', 'epoch': '3.202', 'num_input_tokens_seen': 72750896, 'train_runtime': '1.734e+04', 'train_tokens_per_second': '4197'}
+{'loss': '0.4839', 'grad_norm': '1.586', 'learning_rate': '3.861e-06', 'epoch': '3.242', 'num_input_tokens_seen': 73797704, 'train_runtime': '1.753e+04', 'train_tokens_per_second': '4209'}
+{'loss': '0.3792', 'grad_norm': '1.233', 'learning_rate': '3.75e-06', 'epoch': '3.283', 'num_input_tokens_seen': 74651400, 'train_runtime': '1.769e+04', 'train_tokens_per_second': '4219'}
+{'loss': '0.4647', 'grad_norm': '1.308', 'learning_rate': '3.641e-06', 'epoch': '3.323', 'num_input_tokens_seen': 75631544, 'train_runtime': '1.788e+04', 'train_tokens_per_second': '4230'}
+{'loss': '0.5658', 'grad_norm': '1.249', 'learning_rate': '3.532e-06', 'epoch': '3.364', 'num_input_tokens_seen': 76860120, 'train_runtime': '1.816e+04', 'train_tokens_per_second': '4233'}
+{'loss': '0.2841', 'grad_norm': '1.302', 'learning_rate': '3.425e-06', 'epoch': '3.404', 'num_input_tokens_seen': 77768176, 'train_runtime': '1.838e+04', 'train_tokens_per_second': '4232'}
+{'loss': '0.3347', 'grad_norm': '1.621', 'learning_rate': '3.32e-06', 'epoch': '3.444', 'num_input_tokens_seen': 78657904, 'train_runtime': '1.86e+04', 'train_tokens_per_second': '4228'}
+{'loss': '0.4288', 'grad_norm': '1.256', 'learning_rate': '3.216e-06', 'epoch': '3.485', 'num_input_tokens_seen': 79661552, 'train_runtime': '1.876e+04', 'train_tokens_per_second': '4247'}
+{'loss': '0.3249', 'grad_norm': '1.447', 'learning_rate': '3.113e-06', 'epoch': '3.525', 'num_input_tokens_seen': 80388264, 'train_runtime': '1.893e+04', 'train_tokens_per_second': '4247'}
+{'loss': '0.4265', 'grad_norm': '1.285', 'learning_rate': '3.012e-06', 'epoch': '3.566', 'num_input_tokens_seen': 81279288, 'train_runtime': '1.91e+04', 'train_tokens_per_second': '4255'}
+{'loss': '0.2883', 'grad_norm': '1.116', 'learning_rate': '2.913e-06', 'epoch': '3.606', 'num_input_tokens_seen': 81969320, 'train_runtime': '1.925e+04', 'train_tokens_per_second': '4259'}
+{'loss': '0.5172', 'grad_norm': '1.214', 'learning_rate': '2.816e-06', 'epoch': '3.646', 'num_input_tokens_seen': 83036184, 'train_runtime': '1.946e+04', 'train_tokens_per_second': '4268'}
+{'loss': '0.5805', 'grad_norm': '1.193', 'learning_rate': '2.721e-06', 'epoch': '3.687', 'num_input_tokens_seen': 84307256, 'train_runtime': '1.972e+04', 'train_tokens_per_second': '4276'}
+{'loss': '0.4428', 'grad_norm': '1.353', 'learning_rate': '2.628e-06', 'epoch': '3.727', 'num_input_tokens_seen': 85021432, 'train_runtime': '1.986e+04', 'train_tokens_per_second': '4281'}
+{'loss': '0.3118', 'grad_norm': '1.269', 'learning_rate': '2.537e-06', 'epoch': '3.768', 'num_input_tokens_seen': 85639256, 'train_runtime': '1.998e+04', 'train_tokens_per_second': '4286'}
+{'loss': '0.5711', 'grad_norm': '1.33', 'learning_rate': '2.448e-06', 'epoch': '3.808', 'num_input_tokens_seen': 87132560, 'train_runtime': '2.022e+04', 'train_tokens_per_second': '4310'}
+{'loss': '0.4069', 'grad_norm': '1.079', 'learning_rate': '2.361e-06', 'epoch': '3.848', 'num_input_tokens_seen': 88057944, 'train_runtime': '2.046e+04', 'train_tokens_per_second': '4304'}
+{'loss': '0.4545', 'grad_norm': '1.257', 'learning_rate': '2.276e-06', 'epoch': '3.889', 'num_input_tokens_seen': 88953216, 'train_runtime': '2.066e+04', 'train_tokens_per_second': '4305'}
+{'loss': '0.3668', 'grad_norm': '0.9959', 'learning_rate': '2.194e-06', 'epoch': '3.929', 'num_input_tokens_seen': 90022064, 'train_runtime': '2.09e+04', 'train_tokens_per_second': '4308'}
+{'loss': '0.3827', 'grad_norm': '1.231', 'learning_rate': '2.113e-06', 'epoch': '3.97', 'num_input_tokens_seen': 90851160, 'train_runtime': '2.11e+04', 'train_tokens_per_second': '4305'}
+{'loss': '0.4902', 'grad_norm': '1.463', 'learning_rate': '2.036e-06', 'epoch': '4', 'num_input_tokens_seen': 91629152, 'train_runtime': '2.123e+04', 'train_tokens_per_second': '4315'}
+[INFO|trainer.py:2668] 2026-11-02 08:42:47,402 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 08:42:47,402 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 08:42:47,402 >>   Batch size = 1
+{'eval_loss': '0.8196', 'eval_runtime': '105.6', 'eval_samples_per_second': '0.814', 'eval_steps_per_second': '0.208', 'epoch': '4', 'num_input_tokens_seen': 91629152}
+[INFO|trainer.py:2668] 2026-11-02 08:44:33,033 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 08:44:33,034 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 08:44:33,034 >>   Batch size = 1
+{'cf_validation_loss': '0.7739', 'cf_validation_runtime': '224', 'cf_validation_samples_per_second': '0.652', 'cf_validation_steps_per_second': '0.165', 'epoch': '4', 'num_input_tokens_seen': 91629152}
+[INFO|trainer.py:3815] 2026-11-02 08:48:21,783 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100
+[INFO|configuration_utils.py:542] 2026-11-02 08:48:21,793 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 08:48:21,794 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.40s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.40s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 08:48:27,263 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 08:48:27,264 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 08:48:27,265 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/tokenizer_config.json
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 08:48:52,978 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 08:48:52,979 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 08:48:53,155 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 08:48:53,156 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-100/processor_config.json
+{'loss': '0.4481', 'grad_norm': '1.085', 'learning_rate': '1.961e-06', 'epoch': '4.04', 'num_input_tokens_seen': 92794216, 'train_runtime': '2.188e+04', 'train_tokens_per_second': '4240'}
+{'loss': '0.4727', 'grad_norm': '0.9279', 'learning_rate': '1.888e-06', 'epoch': '4.081', 'num_input_tokens_seen': 93728264, 'train_runtime': '2.208e+04', 'train_tokens_per_second': '4245'}
+{'loss': '0.3516', 'grad_norm': '1.255', 'learning_rate': '1.818e-06', 'epoch': '4.121', 'num_input_tokens_seen': 94503304, 'train_runtime': '2.226e+04', 'train_tokens_per_second': '4246'}
+{'loss': '0.3194', 'grad_norm': '0.8592', 'learning_rate': '1.75e-06', 'epoch': '4.162', 'num_input_tokens_seen': 95315960, 'train_runtime': '2.24e+04', 'train_tokens_per_second': '4255'}
+{'loss': '0.426', 'grad_norm': '1.04', 'learning_rate': '1.685e-06', 'epoch': '4.202', 'num_input_tokens_seen': 96277280, 'train_runtime': '2.261e+04', 'train_tokens_per_second': '4258'}
+{'loss': '0.3549', 'grad_norm': '1.154', 'learning_rate': '1.623e-06', 'epoch': '4.242', 'num_input_tokens_seen': 97206152, 'train_runtime': '2.283e+04', 'train_tokens_per_second': '4258'}
+{'loss': '0.3832', 'grad_norm': '0.9782', 'learning_rate': '1.564e-06', 'epoch': '4.283', 'num_input_tokens_seen': 98079520, 'train_runtime': '2.3e+04', 'train_tokens_per_second': '4264'}
+{'loss': '0.3602', 'grad_norm': '1.241', 'learning_rate': '1.507e-06', 'epoch': '4.323', 'num_input_tokens_seen': 98941488, 'train_runtime': '2.319e+04', 'train_tokens_per_second': '4267'}
+{'loss': '0.4611', 'grad_norm': '1.416', 'learning_rate': '1.453e-06', 'epoch': '4.364', 'num_input_tokens_seen': 100200152, 'train_runtime': '2.348e+04', 'train_tokens_per_second': '4268'}
+{'loss': '0.3091', 'grad_norm': '0.929', 'learning_rate': '1.402e-06', 'epoch': '4.404', 'num_input_tokens_seen': 100953944, 'train_runtime': '2.367e+04', 'train_tokens_per_second': '4265'}
+{'loss': '0.3459', 'grad_norm': '0.9661', 'learning_rate': '1.354e-06', 'epoch': '4.444', 'num_input_tokens_seen': 102095248, 'train_runtime': '2.395e+04', 'train_tokens_per_second': '4263'}
+{'loss': '0.4192', 'grad_norm': '1.022', 'learning_rate': '1.309e-06', 'epoch': '4.485', 'num_input_tokens_seen': 102976888, 'train_runtime': '2.412e+04', 'train_tokens_per_second': '4269'}
+{'loss': '0.4189', 'grad_norm': '1.047', 'learning_rate': '1.267e-06', 'epoch': '4.525', 'num_input_tokens_seen': 104107952, 'train_runtime': '2.441e+04', 'train_tokens_per_second': '4265'}
+{'loss': '0.3258', 'grad_norm': '0.9633', 'learning_rate': '1.228e-06', 'epoch': '4.566', 'num_input_tokens_seen': 104997952, 'train_runtime': '2.457e+04', 'train_tokens_per_second': '4274'}
+{'loss': '0.3192', 'grad_norm': '1.251', 'learning_rate': '1.192e-06', 'epoch': '4.606', 'num_input_tokens_seen': 105734096, 'train_runtime': '2.471e+04', 'train_tokens_per_second': '4279'}
+{'loss': '0.3189', 'grad_norm': '1.355', 'learning_rate': '1.159e-06', 'epoch': '4.646', 'num_input_tokens_seen': 106509408, 'train_runtime': '2.49e+04', 'train_tokens_per_second': '4278'}
+{'loss': '0.3544', 'grad_norm': '1.03', 'learning_rate': '1.129e-06', 'epoch': '4.687', 'num_input_tokens_seen': 107319712, 'train_runtime': '2.505e+04', 'train_tokens_per_second': '4283'}
+{'loss': '0.363', 'grad_norm': '1.213', 'learning_rate': '1.102e-06', 'epoch': '4.727', 'num_input_tokens_seen': 107979416, 'train_runtime': '2.517e+04', 'train_tokens_per_second': '4290'}
+{'loss': '0.3711', 'grad_norm': '1.374', 'learning_rate': '1.078e-06', 'epoch': '4.768', 'num_input_tokens_seen': 109063952, 'train_runtime': '2.537e+04', 'train_tokens_per_second': '4299'}
+{'loss': '0.3464', 'grad_norm': '1.025', 'learning_rate': '1.057e-06', 'epoch': '4.808', 'num_input_tokens_seen': 110015440, 'train_runtime': '2.556e+04', 'train_tokens_per_second': '4305'}
+{'loss': '0.5543', 'grad_norm': '1.069', 'learning_rate': '1.04e-06', 'epoch': '4.848', 'num_input_tokens_seen': 111296008, 'train_runtime': '2.578e+04', 'train_tokens_per_second': '4317'}
+{'loss': '0.3736', 'grad_norm': '1.1', 'learning_rate': '1.025e-06', 'epoch': '4.889', 'num_input_tokens_seen': 112096976, 'train_runtime': '2.595e+04', 'train_tokens_per_second': '4319'}
+{'loss': '0.2929', 'grad_norm': '1.139', 'learning_rate': '1.014e-06', 'epoch': '4.929', 'num_input_tokens_seen': 113096136, 'train_runtime': '2.619e+04', 'train_tokens_per_second': '4318'}
+{'loss': '0.3608', 'grad_norm': '1.53', 'learning_rate': '1.006e-06', 'epoch': '4.97', 'num_input_tokens_seen': 114155648, 'train_runtime': '2.642e+04', 'train_tokens_per_second': '4321'}
+{'loss': '0.2358', 'grad_norm': '1.684', 'learning_rate': '1.002e-06', 'epoch': '5', 'num_input_tokens_seen': 114536440, 'train_runtime': '2.65e+04', 'train_tokens_per_second': '4322'}
+[INFO|trainer.py:2668] 2026-11-02 10:10:33,418 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 10:10:33,418 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 10:10:33,418 >>   Batch size = 1
+{'eval_loss': '0.8333', 'eval_runtime': '105.6', 'eval_samples_per_second': '0.815', 'eval_steps_per_second': '0.208', 'epoch': '5', 'num_input_tokens_seen': 114536440}
+[INFO|trainer.py:2668] 2026-11-02 10:12:19,011 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 10:12:19,011 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 10:12:19,011 >>   Batch size = 1
+{'cf_validation_loss': '0.7849', 'cf_validation_runtime': '223.5', 'cf_validation_samples_per_second': '0.653', 'cf_validation_steps_per_second': '0.166', 'epoch': '5', 'num_input_tokens_seen': 114536440}
+[INFO|trainer.py:3815] 2026-11-02 10:16:07,521 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125
+[INFO|configuration_utils.py:542] 2026-11-02 10:16:07,532 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 10:16:07,532 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.83s/it]Writing model shards: 100%|██████████| 1/1 [00:05<00:00,  5.83s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 10:16:13,426 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 10:16:13,427 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 10:16:13,428 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/tokenizer_config.json
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 10:16:43,425 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 10:16:43,426 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 10:16:43,593 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 10:16:43,594 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/checkpoint-125/processor_config.json
+[INFO|trainer.py:1823] 2026-11-02 10:16:44,609 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+{'train_runtime': '2.687e+04', 'train_samples_per_second': '0.147', 'train_steps_per_second': '0.005', 'train_loss': '0.5381', 'epoch': '5', 'num_input_tokens_seen': 114536440}
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 10:16:44,613 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 10:16:44,613 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/tokenizer_config.json
+[INFO|processing_utils.py:881] 2026-11-02 10:16:44,818 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/chat_template.jinja
+[INFO|processing_utils.py:899] 2026-11-02 10:16:44,818 >> processor saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/processor_config.json
+[INFO|trainer.py:3815] 2026-11-02 10:16:49,047 >> Saving model checkpoint to /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5
+[INFO|configuration_utils.py:542] 2026-11-02 10:16:49,060 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/config.json
+[INFO|configuration_utils.py:875] 2026-11-02 10:16:49,061 >> Configuration saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/generation_config.json
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.75s/it]Writing model shards: 100%|██████████| 1/1 [00:06<00:00,  6.75s/it]
+[INFO|modeling_utils.py:3501] 2026-11-02 10:16:55,890 >> Model weights saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/model.safetensors
+[INFO|tokenization_utils_base.py:3281] 2026-11-02 10:16:55,891 >> chat template saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/chat_template.jinja
+[INFO|tokenization_utils_base.py:2114] 2026-11-02 10:16:55,891 >> tokenizer config file saved in /ssd/chenkeyi/qwen35-sft-772-20261101/runs/new-m2-tmax356-128k-e5/tokenizer_config.json
+***** train metrics *****
+  epoch                    =        5.0
+  num_input_tokens_seen    =  114536440
+  train_loss               =     0.5381
+  train_runtime            = 7:27:51.18
+  train_samples_per_second =      0.147
+  train_steps_per_second   =      0.005
+[INFO|trainer.py:2668] 2026-11-02 10:16:56,428 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 10:16:56,428 >>   Num examples = 86
+[INFO|trainer.py:2673] 2026-11-02 10:16:56,428 >>   Batch size = 1
+{'eval_loss': '0.8333', 'eval_runtime': '105.3', 'eval_samples_per_second': '0.817', 'eval_steps_per_second': '0.209', 'epoch': '5', 'num_input_tokens_seen': 114536440}
+[INFO|trainer.py:2668] 2026-11-02 10:18:41,752 >> 
+***** Running Evaluation *****
+[INFO|trainer.py:2670] 2026-11-02 10:18:41,752 >>   Num examples = 146
+[INFO|trainer.py:2673] 2026-11-02 10:18:41,752 >>   Batch size = 1
+{'cf_validation_loss': '0.7849', 'cf_validation_runtime': '223.7', 'cf_validation_samples_per_second': '0.653', 'cf_validation_steps_per_second': '0.165', 'epoch': '5', 'num_input_tokens_seen': 114536440}
+***** eval metrics *****
+  epoch                   =        5.0
+  eval_loss               =     0.8333
+  eval_runtime            = 0:01:45.31
+  eval_samples_per_second =      0.817
+  eval_steps_per_second   =      0.209
+  num_input_tokens_seen   =  114536440
+[INFO|modelcard.py:263] 2026-11-02 10:22:25,408 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}, 'dataset': {'name': 'new-cf416-tmax356-m2', 'type': 'generator', 'config': 'default', 'split': 'train', 'args': 'default'}}

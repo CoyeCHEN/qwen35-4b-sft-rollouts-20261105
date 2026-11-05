@@ -1,0 +1,329 @@
+{
+  "agent_setup_timeout_multiplier": null,
+  "agent_timeout_multiplier": null,
+  "agents": [
+    {
+      "name": "open-harness",
+      "import_path": null,
+      "model_name": "openai/qwen35-reliability-new-m2-e1",
+      "n_concurrent": 1,
+      "concurrency_group": "common30-wheel6-gpu1-m2e1",
+      "skills": [],
+      "override_timeout_sec": 10800.0,
+      "override_setup_timeout_sec": null,
+      "max_timeout_sec": null,
+      "resume_trajectory": false,
+      "load_trajectory": null,
+      "extra_allowed_hosts": [],
+      "kwargs": {
+        "wheel_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/openharness-wheel6-artifacts-r1/open_harness_ai-0.3.0+rsi.reliability.20261104.6-py3-none-any.whl",
+        "wheel_sha256": "8c84a8659c136b027c36c48a7100d956fdb58c873b347ef6b240b561cc75e85d",
+        "bootstrap_fd_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/cli-public/fd",
+        "bootstrap_fd_sha256": "ebcfc522da2a3086435d4e932770ea7eab53609d0377ea1f387e82fae3d447ce",
+        "profile": "native-cli-v1",
+        "config": {
+          "model": {
+            "id": "qwen35-reliability-new-m2-e1",
+            "name": "qwen35-reliability-new-m2-e1",
+            "api": "openai-completions",
+            "provider": "openai",
+            "baseUrl": "http://172.30.249.1:18301/v1",
+            "reasoning": true,
+            "reasoningContent": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "thinkingLevelMap": {
+              "high": "high",
+              "max": "high"
+            },
+            "contextWindow": 262144,
+            "maxTokens": 81920,
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            }
+          },
+          "thinkingLevel": "high",
+          "tools": [
+            "read",
+            "bash",
+            "edit",
+            "write",
+            "grep",
+            "find",
+            "ls",
+            "edit_patch",
+            "trajectory_read",
+            "bash_job",
+            "finish"
+          ],
+          "enableAgentTool": false,
+          "enableSkillTool": false,
+          "toolSearch": "off",
+          "resources": {
+            "autoDiscover": false,
+            "skillsEnabled": false,
+            "templatesEnabled": false,
+            "contextPaths": [],
+            "promptPaths": [],
+            "skillPaths": [],
+            "systemPromptFile": null,
+            "appendSystemPromptFile": null,
+            "skillAutoDiscover": false
+          },
+          "persist": true,
+          "sessionDir": "/logs/agent/openharness-sessions",
+          "recording": {
+            "enabled": true,
+            "directory": "/logs/agent/openharness-rollout"
+          },
+          "tokenObservation": {
+            "enabled": false
+          },
+          "requestOptions": {
+            "maxTokens": 81920,
+            "temperature": 1.0,
+            "timeout": 120,
+            "topP": 0.95,
+            "topK": 20,
+            "minP": 0.0,
+            "presencePenalty": 1.5,
+            "repetitionPenalty": 1.0,
+            "chatTemplateKwargs": {
+              "enable_thinking": true
+            },
+            "inputTokenCount": {
+              "expectedIdentity": {
+                "service_instance_id": "c806749ce8c748c79296dee7c0f09d97",
+                "pid": 1500848,
+                "tokenizer_json_sha256": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+                "chat_template_sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+                "serving_chat_source_sha256": "74a71b459e1ce19720a7cdda5f19a0097e265dfc4a6c75f6590c612bf5b6f076",
+                "tokenizer_manager_source_sha256": "df576ca19c319585a8da82be594059338dfe25cb125e1cdf67c67a81c61ca8f8",
+                "processor_class": "Qwen3VLProcessor",
+                "processor_source_sha256": "e5abbaf1d035fe49cd8354f1e92fd3f92ab1103a39173c147471f30ff1908b6a",
+                "processor_config_sha256": "060c30e94c0fb32c5628c6a5ea8a99539e5543f1c0ce82094d230b6227964785",
+                "image_processor_source_sha256": "78c451e9ce15613491928979e1b78df02dbc68aba377f2e2bb464d7ac2f71aa0",
+                "image_processor_config_sha256": "690f46517e55acdd2fbe081afab6d27bc22d6beda5cee00ed05839820820418e",
+                "model_path": "/ssd/chenkeyi/qwen35-sft-772-20261101/epoch-models/new-m2-epoch1",
+                "served_model_name": "qwen35-reliability-new-m2-e1"
+              },
+              "inputLimitExclusive": 180224,
+              "outputTokenReservation": 81920
+            }
+          },
+          "retry": {
+            "enabled": true,
+            "maxRetries": 3,
+            "baseDelayMs": 2000,
+            "maxAgentDelayMs": 60000
+          },
+          "compaction": {
+            "enabled": true,
+            "reserveTokens": 81920,
+            "keepRecentTokens": 20000,
+            "maxTurns": 0,
+            "summaryThinkingLevel": "off",
+            "summaryMaxTokens": 16384
+          },
+          "toolResultBudget": {
+            "enabled": true
+          },
+          "backgroundJobs": {
+            "enabled": true,
+            "maxConcurrent": 2,
+            "maxOutputBytes": 20000000,
+            "keepProcesses": true,
+            "handoffTimeout": 600
+          },
+          "finish": {
+            "enabled": true
+          },
+          "timeBudget": {
+            "seconds": 0
+          },
+          "branchSummary": {
+            "reserveTokens": 81920,
+            "summaryThinkingLevel": "off",
+            "summaryMaxTokens": 16384
+          }
+        },
+        "record_trajectory": true,
+        "install_env": {
+          "PIP_NO_INDEX": "1",
+          "PIP_FIND_LINKS": "/opt/rsi-public-cli-wheels",
+          "UV_NO_INDEX": "1",
+          "UV_FIND_LINKS": "/opt/rsi-public-cli-wheels",
+          "UV_PYTHON_INSTALL_MIRROR": "file:///harbor/public-cli-bootstrap/python"
+        },
+        "bootstrap_uv_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/public-cli-bootstrap-uv013-r1/sealed/uv",
+        "bootstrap_uv_sha256": "3e801df892439f5cde65d8b51ea69b69abff199ef37cc3cae4481be15d592df0"
+      },
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      },
+      "mcp_servers": []
+    }
+  ],
+  "artifacts": [],
+  "datasets": [],
+  "debug": false,
+  "environment": {
+    "cpu_enforcement_policy": "auto",
+    "delete": true,
+    "extra_allowed_hosts": [],
+    "extra_docker_compose": [],
+    "force_build": false,
+    "import_path": "harbor_remote_docker:RemoteDockerEnvironment",
+    "kwargs": {
+      "agent_runtime_volume": true,
+      "endpoint": "ssh://chenkeyi@127.0.0.1",
+      "project_namespace": "q35common30w6g1r1",
+      "remote_socket_path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/engine17-r1/socket/docker.sock",
+      "staging_root": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-campaigns-r2/gpu1-m2e1/staging",
+      "verifier_test_volume": true
+    },
+    "memory_enforcement_policy": "auto",
+    "mounts": null,
+    "override_cpus": null,
+    "override_gpus": null,
+    "override_memory_mb": null,
+    "override_storage_mb": null,
+    "override_tpu": null,
+    "type": null
+  },
+  "environment_build_timeout_multiplier": null,
+  "extra_instruction_paths": [],
+  "extra_instructions": [],
+  "install_only": false,
+  "job_name": "qwen35-common30-wheel6-gpu1-m2e1-n1-20261104-r1",
+  "jobs_dir": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/common30-wheel6-native-jobs-r1",
+  "metrics": [],
+  "n_attempts": 1,
+  "n_concurrent_trials": 1,
+  "quiet": true,
+  "retry": {
+    "exclude_exceptions": [
+      "ModelNotFoundError",
+      "AgentTimeoutError",
+      "VerifierTimeoutError",
+      "VerifierOutputParseError",
+      "RewardFileNotFoundError",
+      "AgentAuthenticationError",
+      "AgentSafetyRefusalError",
+      "RewardFileEmptyError",
+      "ApiUsageLimitError"
+    ],
+    "include_exceptions": null,
+    "max_retries": 0,
+    "max_wait_sec": 60.0,
+    "min_wait_sec": 1.0,
+    "wait_multiplier": 1.0
+  },
+  "source_jobs": [],
+  "tasks": [
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/regex-log"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/llm-inference-batching-scheduler"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/extract-moves-from-video"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/chess-best-move"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/video-processing"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/adaptive-rejection-sampler"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/filter-js-from-html"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/polyglot-rust-c"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/install-windows-3.11"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/sparql-university"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/mteb-leaderboard"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/mcmc-sampling-stan"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/sam-cell-seg"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/build-cython-ext"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/feal-differential-cryptanalysis"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/train-fasttext"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/portfolio-optimization"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/constraints-scheduling"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/tune-mjcf"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/crack-7z-hash"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/fix-git"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/code-from-image"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/build-pov-ray"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/write-compressor"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/torch-tensor-parallelism"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/cobol-modernization"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/winning-avg-corewars"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/circuit-fibsqrt"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/configure-git-webserver"
+    },
+    {
+      "path": "/ssd/chenkeyi/qwen35-new-cf500-tmax500-20261029/reliability-qwen35-reliability-20261103-r1/tasks/qemu-alpine-ssh"
+    }
+  ],
+  "timeout_multiplier": 1.0,
+  "user_agent": null,
+  "verifier": {
+    "disable": false,
+    "env": {},
+    "max_timeout_sec": null,
+    "override_timeout_sec": null
+  },
+  "verifier_timeout_multiplier": null
+}

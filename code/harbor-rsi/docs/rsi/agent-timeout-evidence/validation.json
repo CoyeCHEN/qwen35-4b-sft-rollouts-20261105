@@ -1,0 +1,39 @@
+{
+  "base_commit": "e0f89d39a3d0f8ca9abba125e4092dc88da15692",
+  "branch": "codex/agent-timeout-harbor-hardening",
+  "offline_test_result": {
+    "collected": 312,
+    "passed": 294,
+    "skipped": 18,
+    "skip_reason": "ALFWorld optional dependency unavailable"
+  },
+  "pre_fix_failures_observed": 13,
+  "ruff_check": "passed",
+  "ruff_format": "passed",
+  "diff_check": "passed",
+  "changed_source_ty": "passed",
+  "full_repository_ty": {
+    "exit_code": 1,
+    "diagnostics": 50,
+    "all_diagnostic_files_byte_identical_to_base": true,
+    "files": [
+      "src/harbor/cli/traces.py",
+      "src/harbor/environments/e2b.py",
+      "src/harbor/environments/e2b_resumable.py",
+      "src/harbor/environments/skypilot.py",
+      "src/harbor/extensions/rsi/legacy/jobbench_launch.py",
+      "src/harbor/extensions/rsi/legacy/original_pi.py",
+      "src/harbor/extensions/rsi/legacy/results.py",
+      "src/harbor/extensions/rsi/legacy/webshop_campaign.py"
+    ]
+  },
+  "frozen_campaign": {
+    "cases": 40,
+    "attempts": 42,
+    "tracked_artifacts_byte_identical_to_base": true,
+    "native_source_hashes_verified": 71
+  },
+  "models_called": false,
+  "cases_rerun": false,
+  "openharness2_modified": false
+}
