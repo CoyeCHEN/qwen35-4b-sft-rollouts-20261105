@@ -1,0 +1,61 @@
+{
+  "scope": "54 frozen trained-Qwen3.5-4B checkpoint diagnostic records",
+  "groups": {
+    "NEW_M1_E5": 12,
+    "NEW_M2_E1": 14,
+    "NEW_M2_E3": 14,
+    "NEW_M2_E5": 14
+  },
+  "full_zip_sha256": "a5f6cd5196935016897161f480606f206c84c24e83bf083a38abe54082290191",
+  "assets": [
+    {
+      "name": "Qwen35-SFT-54-offline-review.zip",
+      "bytes": 122596452,
+      "sha256": "6e120dc2ccdc71db2c8062777a7c35a4c25f0d89618bf4b419757e633713cffc",
+      "github_asset_id": 713445761,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/Qwen35-SFT-54-offline-review.zip"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.00.part",
+      "bytes": 1624572081,
+      "sha256": "b031b56d5d7825b9d9f7fc3a6e83cd39ab6fc4dbd5ce4d5a7bf43af4941b7fd4",
+      "github_asset_id": 713446451,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.00.part"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.01.part",
+      "bytes": 1624572081,
+      "sha256": "573a8dfaaf5835406d023427eef466a37a7933037b1b3f3d19f22f6c916ed332",
+      "github_asset_id": 713455691,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.01.part"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.02.part",
+      "bytes": 1624572081,
+      "sha256": "0d9c70c10cae287950affed3d6826744feb58e70964513ca046177ea4062d8ff",
+      "github_asset_id": 713464247,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.02.part"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.03.part",
+      "bytes": 1624572082,
+      "sha256": "966f2e47d3e2aa7c7e83be29f254a403d7615f69d6277072a9e9f9eac7b9b561",
+      "github_asset_id": 713473567,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.03.part"
+    },
+    {
+      "name": "PARTS_MANIFEST.json",
+      "bytes": 1004,
+      "sha256": "2ee600854fc36e2a651710316716341379bd46f1b6a45ac108d02c1db1078191",
+      "github_asset_id": 713483342,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/PARTS_MANIFEST.json"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 696,
+      "sha256": "d3dd9078c52618ef764d7800a8a4718c9919a77cbf2e0405decb81934acc2718",
+      "github_asset_id": 713483401,
+      "download_url": "https://github.com/CoyeCHEN/qwen35-4b-sft-rollouts-20261105/releases/download/v2026.11.05/SHA256SUMS.txt"
+    }
+  ]
+}

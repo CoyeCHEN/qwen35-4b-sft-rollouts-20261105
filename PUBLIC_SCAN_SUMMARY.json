@@ -1,0 +1,36 @@
+{
+  "raw_archive": {
+    "finished_at": "2026-11-05T13:02:24.919769+00:00",
+    "status": "CLEAR",
+    "files_checked": 249158,
+    "uncompressed_bytes_checked": 35161190595,
+    "rules": [
+      "api_token",
+      "aws_access_id",
+      "private_key",
+      "credential_environment_value"
+    ],
+    "findings": [],
+    "counts": {},
+    "credential_values_printed_or_persisted": false,
+    "elapsed_seconds": 501.0
+  },
+  "offline_review": {
+    "finished_at": "2026-11-05T12:58:04.590249+00:00",
+    "status": "CLEAR",
+    "files_checked": 59,
+    "uncompressed_bytes_checked": 160742215,
+    "rules": [
+      "api_token",
+      "aws_access_id",
+      "private_key",
+      "credential_environment_value"
+    ],
+    "findings": [],
+    "counts": {},
+    "credential_values_printed_or_persisted": false,
+    "elapsed_seconds": 2.1
+  },
+  "scope_note": "Rule-based scan; records retain authorized runtime metadata. The original payloads and HTML are covered separately; no claim to detect every possible secret format.",
+  "credential_values_in_scan_report": false
+}

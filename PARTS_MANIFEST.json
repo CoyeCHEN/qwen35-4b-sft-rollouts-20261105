@@ -1,0 +1,28 @@
+{
+  "archive_name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip",
+  "archive_bytes": 6498288325,
+  "archive_sha256": "a5f6cd5196935016897161f480606f206c84c24e83bf083a38abe54082290191",
+  "trial_count": 54,
+  "parts": [
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.00.part",
+      "size": 1624572081,
+      "sha256": "b031b56d5d7825b9d9f7fc3a6e83cd39ab6fc4dbd5ce4d5a7bf43af4941b7fd4"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.01.part",
+      "size": 1624572081,
+      "sha256": "573a8dfaaf5835406d023427eef466a37a7933037b1b3f3d19f22f6c916ed332"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.02.part",
+      "size": 1624572081,
+      "sha256": "0d9c70c10cae287950affed3d6826744feb58e70964513ca046177ea4062d8ff"
+    },
+    {
+      "name": "Qwen35-SFT-checkpoint-54-rollouts-20261105.zip.03.part",
+      "size": 1624572082,
+      "sha256": "966f2e47d3e2aa7c7e83be29f254a403d7615f69d6277072a9e9f9eac7b9b561"
+    }
+  ]
+}
